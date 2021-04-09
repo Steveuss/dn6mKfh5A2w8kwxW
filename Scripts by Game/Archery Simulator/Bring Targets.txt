@@ -1,0 +1,6 @@
+local p = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+for _,v in ipairs(workspace.World1:GetChildren()) do
+  if v.Name == "target" then
+      v:MoveTo(Vector3.new(p.x, p.y, p.z))
+  end
+end

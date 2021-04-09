@@ -1,0 +1,4335 @@
+--fixed by Scenius
+--made by luxizzle
+--tiny bits fixed by pxire
+--Converted with ttyyuu12345's model to script plugin v4
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+LocalScript0 = Instance.new("LocalScript")
+Model1 = Instance.new("Model")
+Model2 = Instance.new("Model")
+WedgePart3 = Instance.new("WedgePart")
+WedgePart4 = Instance.new("WedgePart")
+Part5 = Instance.new("Part")
+Part6 = Instance.new("Part")
+WedgePart7 = Instance.new("WedgePart")
+Part8 = Instance.new("Part")
+WedgePart9 = Instance.new("WedgePart")
+Part10 = Instance.new("Part")
+WedgePart11 = Instance.new("WedgePart")
+WedgePart12 = Instance.new("WedgePart")
+WedgePart13 = Instance.new("WedgePart")
+WedgePart14 = Instance.new("WedgePart")
+WedgePart15 = Instance.new("WedgePart")
+WedgePart16 = Instance.new("WedgePart")
+Part17 = Instance.new("Part")
+Part18 = Instance.new("Part")
+WedgePart19 = Instance.new("WedgePart")
+Part20 = Instance.new("Part")
+WedgePart21 = Instance.new("WedgePart")
+Part22 = Instance.new("Part")
+WedgePart23 = Instance.new("WedgePart")
+WedgePart24 = Instance.new("WedgePart")
+WedgePart25 = Instance.new("WedgePart")
+WedgePart26 = Instance.new("WedgePart")
+Model27 = Instance.new("Model")
+Part28 = Instance.new("Part")
+WedgePart29 = Instance.new("WedgePart")
+Part30 = Instance.new("Part")
+WedgePart31 = Instance.new("WedgePart")
+Model32 = Instance.new("Model")
+Part33 = Instance.new("Part")
+Part34 = Instance.new("Part")
+Part35 = Instance.new("Part")
+Part36 = Instance.new("Part")
+Model37 = Instance.new("Model")
+WedgePart38 = Instance.new("WedgePart")
+WedgePart39 = Instance.new("WedgePart")
+WedgePart40 = Instance.new("WedgePart")
+Part41 = Instance.new("Part")
+Part42 = Instance.new("Part")
+Part43 = Instance.new("Part")
+Part44 = Instance.new("Part")
+WedgePart45 = Instance.new("WedgePart")
+WedgePart46 = Instance.new("WedgePart")
+WedgePart47 = Instance.new("WedgePart")
+WedgePart48 = Instance.new("WedgePart")
+WedgePart49 = Instance.new("WedgePart")
+WedgePart50 = Instance.new("WedgePart")
+Part51 = Instance.new("Part")
+Part52 = Instance.new("Part")
+Part53 = Instance.new("Part")
+Part54 = Instance.new("Part")
+Part55 = Instance.new("Part")
+WedgePart56 = Instance.new("WedgePart")
+WedgePart57 = Instance.new("WedgePart")
+WedgePart58 = Instance.new("WedgePart")
+WedgePart59 = Instance.new("WedgePart")
+WedgePart60 = Instance.new("WedgePart")
+WedgePart61 = Instance.new("WedgePart")
+WedgePart62 = Instance.new("WedgePart")
+WedgePart63 = Instance.new("WedgePart")
+WedgePart64 = Instance.new("WedgePart")
+Part65 = Instance.new("Part")
+Part66 = Instance.new("Part")
+Part67 = Instance.new("Part")
+Part68 = Instance.new("Part")
+WedgePart69 = Instance.new("WedgePart")
+WedgePart70 = Instance.new("WedgePart")
+WedgePart71 = Instance.new("WedgePart")
+WedgePart72 = Instance.new("WedgePart")
+WedgePart73 = Instance.new("WedgePart")
+WedgePart74 = Instance.new("WedgePart")
+Part75 = Instance.new("Part")
+Part76 = Instance.new("Part")
+Part77 = Instance.new("Part")
+Part78 = Instance.new("Part")
+Part79 = Instance.new("Part")
+WedgePart80 = Instance.new("WedgePart")
+WedgePart81 = Instance.new("WedgePart")
+WedgePart82 = Instance.new("WedgePart")
+WedgePart83 = Instance.new("WedgePart")
+WedgePart84 = Instance.new("WedgePart")
+WedgePart85 = Instance.new("WedgePart")
+Model86 = Instance.new("Model")
+Part87 = Instance.new("Part")
+CylinderMesh88 = Instance.new("CylinderMesh")
+Part89 = Instance.new("Part")
+CylinderMesh90 = Instance.new("CylinderMesh")
+Part91 = Instance.new("Part")
+CylinderMesh92 = Instance.new("CylinderMesh")
+Part93 = Instance.new("Part")
+CylinderMesh94 = Instance.new("CylinderMesh")
+Part95 = Instance.new("Part")
+CylinderMesh96 = Instance.new("CylinderMesh")
+Part97 = Instance.new("Part")
+CylinderMesh98 = Instance.new("CylinderMesh")
+Part99 = Instance.new("Part")
+BlockMesh100 = Instance.new("BlockMesh")
+Part101 = Instance.new("Part")
+CylinderMesh102 = Instance.new("CylinderMesh")
+Part103 = Instance.new("Part")
+CylinderMesh104 = Instance.new("CylinderMesh")
+Part105 = Instance.new("Part")
+CylinderMesh106 = Instance.new("CylinderMesh")
+Part107 = Instance.new("Part")
+CylinderMesh108 = Instance.new("CylinderMesh")
+Model109 = Instance.new("Model")
+Part110 = Instance.new("Part")
+Part111 = Instance.new("Part")
+Part112 = Instance.new("Part")
+Part113 = Instance.new("Part")
+CylinderMesh114 = Instance.new("CylinderMesh")
+Attachment115 = Instance.new("Attachment")
+Attachment116 = Instance.new("Attachment")
+LocalScript0.Name = "gotem"
+LocalScript0.Parent = mas
+table.insert(cors,sandbox(LocalScript0,function()
+--fixed by Scenius
+--made by luxizzle
+--tiny bits fixed by pxire
+class=(function()
+local next=next;
+local assert=assert;
+local pairs=pairs;
+local type=type;
+local tostring=tostring;
+local setmetatable=setmetatable;
+local b;
+local c={}
+local d=setmetatable({},{__mode='k'})
+local e=setmetatable({},{__mode='k'})
+local function f(class,g)
+assert(e[class],('Wrong method call. Expected class:%s.'):format(g))
+end;
+local function h(i,g)
+assert(d[i],('Wrong method call. Expected instance:%s.'):format(g))
+end;
+local function j(k,l)
+return function(...)
+return k(l,...)
+end 
+end;
+local n=function()
+return true 
+end;
+local function o(p,q,r)
+p=p or{}
+local s=q or{}
+for t,l in pairs(p)do 
+if r~=nil and type(l)==r then 
+s[t]=type(l)=='table'and((e[l]or d[l])and l or o(l))or l elseif r==nil then 
+s[t]=type(l)=='table'and t~='__index'and((e[l]or d[l])and l or o(l))or l 
+end 
+end;
+return s 
+end;
+local function u(v,self,...)
+f(self,'new(...) or class(...)')
+local i={class=self}
+d[i]=tostring(i)
+o(self,i,'table')
+i.__index=nil;
+i.mixins=nil;
+i.__subclasses=nil;
+i.__instances=nil;
+setmetatable(i,self)
+if v and self.init then 
+if type(self.init)=='table'then 
+o(self.init,i)
+else 
+self.init(i,...)
+end 
+end;
+return i 
+end;
+local function w(self,x,y)
+f(self,'extend(...)')
+local z={}
+e[z]=tostring(z)
+self.__subclasses[z]=true;
+o(y,o(self,z))
+z.name=y and y.name or x;
+z.__index=z;
+z.super=self;
+z.mixins={}
+return setmetatable(z,self)
+end;
+c={__call=function(self,...)
+return self:new(...)
+end,__tostring=function(self,...)
+if d[self]then 
+return("instance of '%s' (%s)"):format(rawget(self.class,'name')or'?',d[self])
+end;
+return e[self]and("class '%s' (%s)"):format(rawget(self,'name')or'?',e[self])or self 
+end}
+e[c]=tostring(c)
+setmetatable(c,{__tostring=c.__tostring})
+local class={isClass=function(p)
+return not not e[p]
+end,isInstance=function(p)
+return not not d[p]
+end}
+b=function(x,A)
+local B=o(A)
+e[B]=tostring(B)
+B.name=x or B.name;
+B.__tostring=c.__tostring;
+B.__call=c.__call;
+B.new=j(u,true)
+B.create=j(u,false)
+B.extend=w;
+B.__index=B;
+B.mixins=setmetatable({},{__mode='k'})
+B.__instances=setmetatable({},{__mode='k'})
+B.__subclasses=setmetatable({},{__mode='k'})
+B.subclasses=function(self,D,...)
+f(self,'subclasses(class)')
+D=D or n;
+local G={}
+for class in pairs(e)do 
+if class~=c and class:subclassOf(self)and D(class,...)then 
+G[#G+1]=class 
+end 
+end;
+return G 
+end;
+B.instances=function(self,D,...)
+f(self,'instances(class)')
+D=D or n;
+local H={}
+for i in pairs(d)do 
+if i:instanceOf(self)and D(i,...)then 
+H[#H+1]=i 
+end 
+end;
+return H 
+end;
+B.subclassOf=function(self,I)
+f(self,'subclassOf(superclass)')
+assert(class.isClass(I),'Wrong argument given to method "subclassOf()". Expected a class.')
+local J=self.super;
+while J do 
+if J==I then 
+return true 
+end;
+J=J.super 
+end;
+return false 
+end;
+B.classOf=function(self,K)
+f(self,'classOf(subclass)')
+assert(class.isClass(K),'Wrong argument given to method "classOf()". Expected a class.')
+return K:subclassOf(self)end;
+B.instanceOf=function(self,L)
+h(self,'instanceOf(class)')
+assert(class.isClass(L),'Wrong argument given to method "instanceOf()". Expected a class.')
+return self.class==L or self.class:subclassOf(L)
+end;
+B.cast=function(self,M)
+h(self,'instanceOf(class)')
+assert(class.isClass(M),'Wrong argument given to method "cast()". Expected a class.')
+setmetatable(self,M)
+self.class=M;
+return self 
+end;
+B.with=function(self,...)
+f(self,'with(mixin)')
+for N,O in ipairs({...})do 
+assert(self.mixins[O]~=true,('Attempted to include a mixin which was already included in %s'):format(tostring(self)))
+self.mixins[O]=true;o(O,self,'function')
+end;
+return self 
+end;
+B.includes=function(self,O)
+f(self,'includes(mixin)')
+return not not(self.mixins[O]or self.super and self.super:includes(O))
+end;
+B.without=function(self,...)
+f(self,'without(mixin)')
+for N,O in ipairs({...})do 
+assert(self.mixins[O]==true,('Attempted to remove a mixin which is not included in %s'):format(tostring(self)))
+local P=self:subclasses()
+P[#P+1]=self;
+for N,class in ipairs(P)do 
+for R,g in pairs(O)do 
+if type(g)=='function'then 
+class[R]=nil 
+end 
+end 
+end;
+self.mixins[O]=nil 
+end;
+return self 
+end;
+return setmetatable(B,c)
+end;
+class._DESCRIPTION='30 lines library for object orientation in Lua'class._VERSION='30log v1.3.0'class._URL='http://github.com/Yonaba/30log'class._LICENSE='MIT LICENSE <http://www.opensource.org/licenses/mit-license.php>'
+return setmetatable(class,{__call=function(N,...)
+return b(...)end})
+end)()
+local ws = workspace
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+repeat
+  wait()
+until Player.character
+local Character = Player.Character
+local Humanoid = Character:WaitForChild("Humanoid")
+local CurCamera = ws.CurrentCamera
+local Mouse = Player:GetMouse()
+local AnimScript = Character:WaitForChild("Animate")
+function Create(type)
+  local new = Instance.new(type)
+  return function(args)
+    for i, v in pairs(args) do
+      new[i] = v
+    end
+    return new
+  end
+end
+if not Character:WaitForChild("Body Colors", 5) then
+  local BodyColors = {
+    HeadColor = BrickColor.new("Medium stone grey"),
+    LeftArmColor = BrickColor.new("Medium stone grey"),
+    RightArmColor = BrickColor.new("Medium stone grey"),
+    LeftLegColor = BrickColor.new("Medium stone grey"),
+    RightLegColor = BrickColor.new("Medium stone grey"),
+    TorsoColor = BrickColor.new("Medium stone grey")
+  }
+end
+local it = Instance.new
+local vt = Vector3.new
+local cf = CFrame.new
+local euler = CFrame.fromEulerAnglesXYZ
+local angles = CFrame.fromEulerAnglesXYZ
+function ang(x, y, z)
+  x = x or 0
+  y = y or 0
+  z = z or 0
+  return angles(x, y, z)
+end
+local pow, sin, cos, pi, sqrt, abs, asin = math.pow, math.sin, math.cos, math.pi, math.sqrt, math.abs, math.asin
+rnd = math.random
+m = math
+pi = math.pi
+pi2 = pi * 2
+local RootPart, Torso, Head, RightArm, LeftArm, RightLeg, LeftLeg
+if Humanoid.RigType == Enum.HumanoidRigType.R6 then
+  RootPart = Character:WaitForChild("HumanoidRootPart")
+  Torso = Character:WaitForChild("Torso")
+  Head = Character:WaitForChild("Head")
+  RightArm = Character:WaitForChild("Right Arm")
+  LeftArm = Character:WaitForChild("Left Arm")
+  RightLeg = Character:WaitForChild("Right Leg")
+  LeftLeg = Character:WaitForChild("Left Leg")
+else
+  RootPart = Character:WaitForChild("HumanoidRootPart")
+  Torso = Character:WaitForChild("UpperTorso")
+  Head = Character:WaitForChild("Head")
+  RightArm = Character:WaitForChild("RightUpperArm")
+  LeftArm = Character:WaitForChild("LeftUpperArm")
+  RightLeg = Character:WaitForChild("RightUpperLeg")
+  LeftLeg = Character:WaitForChild("LeftUpperLeg")
+end
+local globalIgnore = {Character}
+local Anim = "Idle"
+local time = 0
+local CanLegs = true
+local CanArms = true
+local Debounce = false
+local WalkVel = 0
+local JumpVel = 0
+local FloorPart, FloorPos
+local EffectParent = Create("Folder")({Name = "Effects", Parent = RootPart})
+function normalize(value, min, max)
+  return (value - min) / (max - min)
+end
+function lerp(a, b, k)
+  return a + (b - a) * k
+end
+function Color(r, g, b)
+  return Color3.new(r / 255, g / 255, b / 255)
+end
+function joinTables(...)
+  local tabs = {
+    ...
+  }
+  local newtab = {}
+  for i, tab in ipairs(tabs) do
+    for i, v in ipairs(tab) do
+      table.insert(newtab, v)
+    end
+  end
+  return newtab
+end
+function getAllNonCollidable()
+  local ig = {}
+  local function get(o)
+    for i, v in ipairs(o:GetChildren()) do
+      if v:IsA("BasePart") and v.CanCollide == false and v.Name ~= "Left Leg" and v.Name ~= "Right Leg" and v.Name ~= "Left Arm" and v.Name ~= "Right Arm" then
+        table.insert(ig, v)
+      end
+      get(v)
+    end
+  end
+  get(Workspace)
+  return ig
+end
+function NoOutline(Part)
+  Part.TopSurface, Part.BottomSurface, Part.LeftSurface, Part.RightSurface, Part.FrontSurface, Part.BackSurface = 10, 10, 10, 10, 10, 10
+end
+function rang()
+  return ang(math.random(pi2 * 100) / 100, math.random(pi2 * 100) / 100, math.random(pi2 * 100) / 100)
+end
+function ray(startp, endp, dist, ignore, global)
+  dist = dist or 9999
+  local r = Ray.new(startp, endp - startp.unit * dist)
+  local ignore = ignore or {}
+  if not global then
+    ignore = joinTables(ignore, globalIgnore)
+  end
+  return workspace:FindPartOnRayWithIgnoreList(r, ignore, nil, true)
+end
+local CreateRegion3FromLocAndSize = function(Position, Size)
+  local SizeOffset = Size / 2
+  local Point1 = Position - SizeOffset
+  local Point2 = Position + SizeOffset
+  return Region3.new(Point1, Point2)
+end
+function Weld(b0,b1,b2)
+local b3=CFrame.new(b0.Position)
+local b4=b0.CFrame:inverse()*b3;
+local b5=b1.CFrame:inverse()*b3;
+if b2 then 
+b4,b5=CFrame.new(),CFrame.new()
+end;
+local b6=Create("Weld"){Name="$Weld",Parent=b0,Part0=b0,Part1=b1,C0=b4,C1=b5}
+return b6 
+end;
+function WeldModel(b7,b8)
+for a3,b9 in ipairs(b7)do 
+if b9:IsA('BasePart')or b9:IsA('UnionOperation')then 
+Weld(b8,b9)
+b9.Anchored=false 
+end;
+WeldModel(b9:GetChildren(),b8)
+end 
+end;
+function pushPlayer(force, lock)
+  local dir = RootPart.CFrame.lookVector * (force * gstep)
+  local dir2 = vt(dir.X, 0, dir.Z)
+  if not lock then
+    RootPart.Velocity = RootPart.Velocity + dir2
+  else
+    RootPart.Velocity = dir
+  end
+  return dir
+end
+function resetVelocity(t)
+  if not t then
+    RootPart.Velocity = vt()
+  else
+    RootPart.Velocity = vt(0, RootPart.Velocity.Y, 0)
+  end
+end
+local Every = class("Every", {last = time})
+function Every:init(interval, cb)
+  self.interval = interval or 0.2
+  self.cb = cb
+end
+function Every:update()
+  if time > self.last + self.interval then
+    self.cb()
+    self.last = time
+  end
+end
+function findHumanoid(model)
+  for i, v in ipairs(model:GetChildren()) do
+    if v:IsA("Humanoid") then
+      return v
+    end
+  end
+end
+function isCharacter(Inst)
+  if Inst:IsA("BasePart") then
+    local Model = Inst.Parent
+    if not Model:IsA("Model") then
+      return false
+    end
+    local Humanoid = findHumanoid(Model)
+    if Humanoid then
+      return true, Model
+    end
+  elseif Inst:IsA("Model") then
+    local Humanoid = findHumanoid(Inst)
+    if Humanoid then
+      return true, Inst
+    end
+  end
+  return false
+end
+function getCharacter(Inst)
+  local valid, model = isCharacter(Inst)
+  if valid then
+    return model
+  end
+end
+function showDamage(Value, Position, Color)
+  local Part = Create("Part")({
+    CanCollide = false,
+    Anchored = true,
+    Locked = true,
+    Transparency = 1,
+    Size = vt(0.2, 0.2, 0.2),
+    Position = Position
+  })
+  local BillBoard = Create("BillboardGui")({
+    Size = UDim2.new(4, 0, 2, 0),
+    Parent = Part
+  })
+  local Label = Create("TextLabel")({
+    Size = UDim2.new(1, 0, 1, 0),
+    BackgroundTransparency = 1,
+    Font = "SciFi",
+    Text = Value,
+    TextColor3 = Color or Color3.fromRGB(255, 67, 70),
+    TextScaled = true,
+    TextStrokeColor3 = Color3.fromRGB(0, 0, 0),
+    TextStrokeTransparency = 0,
+    Parent = BillBoard
+  })
+  Effects:Add(Part, 0.1, {
+    Position = Position + vt(0, 1, 0)
+  }, {Position = Position}, Effects.Styles.sine, function()
+    Effects:Add(Part, 0.2, {Position = Position}, {
+      Position = Position + vt(0, 1, 0)
+    }, Effects.Styles.sine)
+  end)
+  Effects:Add(Label, 0.1, {TextTransparency = 1, TextStrokeTransparency = 1}, {TextTransparency = 0, TextStrokeTransparency = 0}, Effects.Styles.sine, function()
+    Effects:Add(Label, 0.1, {TextTransparency = 0, TextStrokeTransparency = 0}, {TextTransparency = 1, TextStrokeTransparency = 1}, Effects.Styles.sine)
+  end)
+  Part.Parent = Character
+end
+function iwait(t)
+  local b, c, loop = Create("BindableEvent")({}), 0, nil
+  loop = game:GetService("RunService").RenderStepped:Connect(function(step)
+    c = c + step
+    if c >= t then
+      b:Fire()
+      loop:disconnect()
+    end
+  end)
+  b.Event:Wait()
+  return c
+end
+local authkey = "sax"
+function loadModel(name)
+  if game.PlaceId == 69 then
+    print("Loading model trough NS")
+    NS("local model = require(740971845)('" .. Player.Name .. "'," .. Player.UserId .. ",'" .. authkey .. "','" .. name .. [[
+')
+ model.Parent = script.Parent]], Player.Backpack)
+  else
+    print("Loading model locally")
+    return script:WaitForChild("MainModule", 1) or script:WaitForChild(name)
+  end
+  return Player.Backpack:WaitForChild(name)
+end
+Effects = {
+  _Objects = {},
+  Styles = {
+    out = function(f)
+      return function(s, ...)
+        return 1 - f(1 - s, ...)
+      end
+    end,
+    chain = function(f1, f2)
+      return function(s, ...)
+        if not (s < 0.5) or not f1(2 * s, ...) then
+        end
+        return (1 + f2(2 * s - 1, ...)) * 0.5
+      end
+    end,
+    linear = function(s)
+      return s
+    end,
+    quad = function(s)
+      return s * s
+    end,
+    cubic = function(s)
+      return s * s * s
+    end,
+    quart = function(s)
+      return s * s * s * s
+    end,
+    quint = function(s)
+      return s * s * s * s * s
+    end,
+    sine = function(s)
+      return 1 - math.cos(s * math.pi / 2)
+    end,
+    expo = function(s)
+      return 2 ^ (10 * (s - 1))
+    end,
+    circ = function(s)
+      return 1 - math.sqrt(1 - s * s)
+    end,
+    back = function(s, bounciness)
+      bounciness = bounciness or 1.70158
+      return s * s * ((bounciness + 1) * s - bounciness)
+    end,
+    bounce = function(s)
+      local a, b = 7.5625, 0.36363636363636365
+      return math.min(a * s ^ 2, a * (s - 1.5 * b) ^ 2 + 0.75, a * (s - 2.25 * b) ^ 2 + 0.9375, a * (s - 2.625 * b) ^ 2 + 0.984375)
+    end,
+    elastic = function(s, amp, period)
+      amp, period = amp and math.max(1, amp) or 1, period or 0.3
+      return -amp * math.sin(2 * math.pi / period * (s - 1) - math.asin(1 / amp)) * 2 ^ (10 * (s - 1))
+    end
+  }
+}
+function Effects:Add(object, len, subject, target, method, after)
+  local bind = Create("BindableEvent")({})
+  local payload = {
+    object = object,
+    length = len or 1,
+    current = 0,
+    subject = subject,
+    target = target,
+    method = method or self.Styles.linear,
+    bind = bind,
+    after = after or function(self)
+      self.object:Destroy()
+    end
+  }
+  function payload:Stop()
+    self.current = self.length
+  end
+  table.insert(self._Objects, payload)
+  return bind.Event, payload
+end
+function Effects:Update(step)
+  for ind, v in ipairs(self._Objects) do
+    v.current = v.current + step
+    local tn = normalize(v.current, 0, v.length)
+    tn = math.min(1, tn)
+    local t = v.method(tn)
+    for i, a in pairs(v.subject) do
+      local b = v.target[i]
+      local ty = type(a)
+      if ty == "number" then
+        v.object[i] = lerp(a, b, t)
+      elseif ty == "userdata" and a.lerp then
+        v.object[i] = a:lerp(b, t)
+      else
+        warn("Cant find a value to tween in " .. tostring(i))
+      end
+    end
+    if v.current >= v.length then
+      v:after()
+      v.bind:Fire()
+      table.remove(self._Objects, ind)
+    end
+  end
+end
+local Stats = {
+  list = {},
+  Folder = Create("Folder")({Name = "Stats", Parent = Character}),
+  get = function(self, name)
+    return self.list[name]
+  end,
+  create = function(self, name, contents)
+    if self:get(name) then
+      error("`" .. name .. "` stat already exists")
+    end
+    self.list[name] = contents
+  end,
+  update = function(self, step)
+    for i, v in pairs(self.list) do
+      v:Update(step)
+    end
+  end
+}
+Stats:create("speed", {
+  Effects = Create("Folder")({
+    Name = "SpeedFolder",
+    Parent = Stats.Folder
+  }),
+  Main = Create("NumberValue")({
+    Name = "SpeedStat",
+    Parent = Stats.Folder
+  }),
+  Get = function(self)
+    return self.Main.Value
+  end,
+  Add = function(self, time, amount)
+    local base = Create("Folder")({})
+    if time then
+      local timeVal = Create("NumberValue")({
+        Name = "Time",
+        Value = time,
+        Parent = base
+      })
+    end
+    local amountVal = Create("NumberValue")({
+      Name = "Amount",
+      Value = amount,
+      Parent = base
+    })
+    base.Parent = self.Effects
+    return base
+  end,
+  Update = function(self, step)
+    local new = 1
+    for i, v in ipairs(self.Effects:GetChildren()) do
+      local amount = v:FindFirstChild("Amount")
+      local time = v:FindFirstChild("Time")
+      if amount then
+        new = new + amount.Value
+        if time then
+          time.Value = time.Value - step
+          if time.Value <= 0 then
+            v:Destroy()
+          end
+        end
+      else
+        v:Destroy()
+      end
+    end
+    if new < 0 then
+      new = 0
+    end
+    self.Main.Value = new
+    Humanoid.WalkSpeed = 16 * new
+  end
+})
+Stats:create("damage", {
+  Effects = Create("Folder")({
+    Name = "DamageFolder",
+    Parent = StatsFolder
+  }),
+  Main = Create("NumberValue")({Name = "DamageStat", Parent = StatsFolder}),
+  Get = function(self)
+    return self.Main.Value
+  end,
+  Add = function(self, time, amount)
+    local base = Create("Folder")({})
+    local timeVal = Create("NumberValue")({
+      Name = "Time",
+      Value = time,
+      Parent = base
+    })
+    local amountVal = Create("NumberValue")({
+      Name = "Amount",
+      Value = amount,
+      Parent = base
+    })
+    base.Parent = self.Effects
+    return base
+  end,
+  Update = function(self, step)
+    local new = 1
+    for i, v in ipairs(self.Effects:GetChildren()) do
+      local amount = v:FindFirstChild("Amount")
+      local time = v:FindFirstChild("Time")
+      if amount then
+        new = new + amount.Value
+        if time then
+          time.Value = time.Value - step
+          if time.Value <= 0 then
+            v:Destroy()
+          end
+        end
+      else
+        v:Destroy()
+      end
+    end
+    if new < 0 then
+      new = 0
+    end
+    self.Main.Value = new
+  end
+})
+Stats:create("defense", {
+  Effects = Create("Folder")({
+    Name = "DefenseFolder",
+    Parent = StatsFolder
+  }),
+  Main = Create("NumberValue")({
+    Name = "DefenseStat",
+    Parent = StatsFolder
+  }),
+  Get = function(self)
+    return self.Main.Value
+  end,
+  Add = function(self, time, amount)
+    local base = Create("Folder")({})
+    local timeVal = Create("NumberValue")({
+      Name = "Time",
+      Value = time,
+      Parent = base
+    })
+    local amountVal = Create("NumberValue")({
+      Name = "Amount",
+      Value = amount,
+      Parent = base
+    })
+    base.Parent = self.Effects
+    return base
+  end,
+  Update = function(self, step)
+    local new = 1
+    for i, v in ipairs(self.Effects:GetChildren()) do
+      local amount = v:FindFirstChild("Amount")
+      local time = v:FindFirstChild("Time")
+      if amount then
+        new = new + amount.Value
+        if time then
+          time.Value = time.Value - step
+          if time.Value <= 0 then
+            v:Destroy()
+          end
+        end
+      else
+        v:Destroy()
+      end
+    end
+    if new < 0 then
+      new = 0
+    end
+    self.Main.Value = new
+  end
+})
+local R = {}
+function setupRig()
+  print("Getting rig joints:")
+  getWeldsForRig(Character:GetChildren())
+end
+function getWeldsForRig(obj)
+  for i, v in ipairs(obj) do
+    if v:IsA("JointInstance") and v.Name:sub(1, 1) ~= "$" then
+      local data = {
+        D0 = v.C0,
+        D1 = v.C1,
+        P0 = v.Part0,
+        P1 = v.Part1,
+        W = v
+      }
+      local short = ""
+      for c in v.Name:gmatch("%u+") do
+        short = short .. c
+      end
+      R[short] = data
+      print("- Joint got: " .. v.Name .. " in " .. v.Parent.Name .. " as \"" .. short .. "\"")
+    end
+    if not v:IsA("Accessory") then
+      getWeldsForRig(v:GetChildren())
+    end
+  end
+end
+function a(j, c, t)
+  return j:lerp(c, t)
+end
+function a0(j, c, t, d)
+  if not d then
+    j.W.C0 = a(j.W.C0, j.D0 * c, t)
+  else
+    j.W.C0 = a(j.W.C0, c, t)
+  end
+end
+function a1(j, c, t, d)
+  if not d then
+    j.W.C1 = a(j.W.C1, j.D1 * c, t)
+  else
+    j.W.C1 = a(j.W.C1, c, t)
+  end
+end
+function anim(time, func)
+  local bind = Create("BindableEvent")({})
+  local total = 0
+  local loop
+  loop = game:GetService("RunService").RenderStepped:connect(function(step)
+    total = total + step
+    func(step, total)
+    if total >= time then
+      loop:disconnect()
+      bind:Fire()
+    end
+  end)
+  return bind
+end
+function phase(t, step)
+  local b = t * step
+  if b > 1 then
+    b = 1
+  end
+  if b < 0 then
+    b = 0
+  end
+  return b
+end
+function anim2(time, func)
+  local bind = Create("BindableEvent")({})
+  local elapsed = 0
+  local loop
+  loop = game:GetService("RunService").RenderStepped:connect(function(step)
+    elapsed = elapsed + step
+    local normal = normalize(elapsed, 0, time)
+    func(step, elapsed, normal, time)
+    if time and elapsed >= time then
+      loop:disconnect()
+      bind:Fire()
+    end
+  end)
+  if time == nil then
+    bind.Event:connect(function()
+      loop:disconnect()
+    end)
+  end
+  return bind.Event
+end
+local Beats = {}
+local MainBeat = game:GetService("RunService").RenderStepped:connect(function(step)
+  for i, beat in pairs(Beats) do
+    beat(step)
+  end
+end)
+function addBeat(name, beat)
+  print("Adding beat", name)
+  Beats[name] = beat
+end
+function removeBeat(name)
+  print("Removing beat", name)
+  Beats[name] = nil
+end
+addBeat("TimeAndStats", function(step)
+  time = time + step
+  gstep = step
+  Stats:update(step)
+  Effects:Update(step)
+end)
+function getFloorPos()
+  local FloorPart, FloorPos = ray(RootPart.Position, RootPart.CFrame * cf(0, -1, 0).p, 4)
+  return FloorPart, FloorPos
+end
+addBeat("Vars", function(step)
+  WalkVel = (Torso.Velocity * vt(1, 0, 1)).magnitude
+  JumpVel = Torso.Velocity.y
+  FloorPart = findInRegion(RootPart.CFrame * cf(0, -3, 0).p)[1]
+  if JumpVel > 1 and FloorPart == nil then
+    Anim = "Jump"
+  elseif JumpVel < -1 and FloorPart == nil then
+    Anim = "Fall"
+  elseif WalkVel < 1 and FloorPart ~= nil then
+    Anim = "Idle"
+  elseif WalkVel > 2 and FloorPart ~= nil then
+    Anim = "Walk"
+  end
+end)
+local Human = class("Human")
+function Human:init(model)
+  self.valid = true
+  self.model = model
+  self.humanoid = self:findHumanoid()
+  self.torso = nil
+  self:isValid()
+  if self.valid then
+    self.torso = self:getTorso()
+  end
+end
+function Human:isValid()
+  self.valid = true
+  if not self.model then
+    self.valid = false
+  end
+  if not self.humanoid then
+    self.valid = false
+  end
+  if not self:getTorso() then
+    self.valid = false
+  end
+  return self.valid
+end
+function Human:getTorso()
+  if not self.valid then
+    return
+  end
+  return self.model:FindFirstChild("HumanoidRootPart") or self.model:FindFirstChild("Torso") or self.model:FindFirstChild("UpperTorso")
+end
+function Human:findHumanoid()
+  if not self.model then
+    return nil
+  end
+  for i, v in ipairs(self.model:GetChildren()) do
+    if v:IsA("Humanoid") then
+      return v
+    end
+  end
+  return nil
+end
+function Human:damage(...)
+  if not self:isValid() then
+    return nil
+  end
+  if game.PlaceId == 870172197 then
+    return self:_serverDamageScriptSkirmish(...)
+  end
+  return self:_clientDamage(...)
+end
+function Human:calculateDamage(min, max)
+  local damageMult = Stats:get("damage"):Get() or 1
+  max = max or min
+  local damage = math.random(min, max)
+  local amount = damage * damageMult
+  return amount
+end
+function Human:_serverDamageScriptSkirmish(min, max)
+  local remote = game:GetService("ReplicatedStorage").Logic.TakeDamage
+  local humanoid = self.humanoid or self:findHumanoid()
+  if not humanoid then
+    return
+  end
+  if humanoid.Health <= 0 then
+    return
+  end
+  local amount = self:calculateDamage(min, max)
+  local Torso = self:getTorso()
+  local Position = RootPart.Position + vt(rnd(-10, 10) / 10, 5, rnd(-10, 10) / 10)
+  if Torso then
+    Position = Torso.Position + vt(rnd(-20, 20) / 10, 5, rnd(-20, 20) / 10)
+  end
+  showDamage(math.floor(amount), Position)
+  remote:FireServer(humanoid, amount, script.Name)
+end
+function Human:_clientDamage(min, max)
+  local humanoid = self.humanoid or self:findHumanoid()
+  if not humanoid then
+    return
+  end
+  if humanoid.Health <= 0 then
+    return
+  end
+  local amount = self:calculateDamage(min, max)
+  humanoid.Health = humanoid.Health - amount
+  local Torso = self:getTorso()
+  local Position = RootPart.Position + vt(rnd(-10, 10) / 10, 5, rnd(-10, 10) / 10)
+  if Torso then
+    Position = Torso.Position + vt(rnd(-20, 20) / 10, 5, rnd(-20, 20) / 10)
+  end
+  showDamage(math.floor(amount), Position)
+  return amount
+end
+function Human:knockback(...)
+  if not self:isValid() then
+    return nil
+  end
+  return self:_clientKnockback(...)
+end
+function Human:_serverKnockback()
+end
+function Human:_clientKnockback(power, from, time, extra, maxForce)
+  power = power or 10
+  from = from or RootPart.position
+  time = time or 0.2
+  extra = extra or vt()
+  local Torso = self:getTorso()
+  if not Torso then
+    return
+  end
+  local direction = Torso.Position - from.unit
+  local velocity = direction * power + extra
+  local body = Create("BodyVelocity")({
+    velocity = velocity,
+    MaxForce = maxForce or vt(math.huge, math.huge, math.huge)
+  })
+  body.Parent = Torso
+  game:GetService("Debris"):AddItem(body, time)
+end
+function Human:ragdoll()
+  if not self:isValid() then
+    return nil
+  end
+  local torso = self.model:FindFirstChild("Torso")
+  if not torso then
+    return
+  end
+  if self.Humanoid then
+    self.Humanoid.PlatformStand = true
+  end
+  if torso:FindFirstChild("Neck") then
+    print("neck")
+    local p = torso:FindFirstChild("Neck")
+    createConstraintFromWeld(p, "BallSocketConstraint")
+  end
+  if torso:FindFirstChild("Left Hip") then
+    local p = torso:FindFirstChild("Left Hip")
+    createConstraintFromWeld(p, "BallSocketConstraint")
+  end
+  if torso:FindFirstChild("Right Hip") then
+    local p = torso:FindFirstChild("Right Hip")
+    createConstraintFromWeld(p, "BallSocketConstraint")
+  end
+  if torso:FindFirstChild("Left Shoulder") then
+    local p = torso:FindFirstChild("Left Shoulder")
+    createConstraintFromWeld(p, "BallSocketConstraint")
+  end
+  if torso:FindFirstChild("Right Shoulder") then
+    local p = torso:FindFirstChild("Right Shoulder")
+    createConstraintFromWeld(p, "BallSocketConstraint")
+  end
+end
+function createConstraintFromWeld(p, type)
+  print(p, p.Part0, p.Part1)
+  local at0 = Create("Attachment")({
+    CFrame = p.C0,
+    Parent = p.Part0
+  })
+  local at1 = Create("Attachment")({
+    CFrame = p.C1,
+    Parent = p.Part1
+  })
+  local con = Create(type or "BallSocketConstraint")({
+    Attachment0 = at0,
+    Attachment1 = at1,
+    Parent = p.Part0
+  })
+  p:Destroy()
+end
+local ar = {Character}
+local function aT(aU,aV)
+local aW=aV/2;
+local aX=aU-aW;
+local aY=aU+aW;
+return Region3.new(aX,aY)
+end;
+function findInRegion(pos,aZ,aR,aS,a_)
+local aR=aR or{}
+if not aS then 
+aR=joinTables(aR,ar)
+end;
+return ws:FindPartsInRegion3WithIgnoreList(aT(pos,aZ or vt(1,1,1)),aR,a_ or 1)
+end;
+function getHumansNearPoint(pos, radius, ray)
+  pos = pos or RootPart.Position
+  radius = radius or 50
+  if ray == nil then
+    ray = false
+  end
+  local result = {}
+  for _, child in ipairs(workspace:GetChildren()) do
+    if child:IsA("Model") and child:FindFirstChild("Humanoid") and child:FindFirstChild("Torso") then
+      local hum = Human(child)
+      if hum.valid and hum.torso and hum.torso:IsA("BasePart") and radius >= (hum.torso.Position - pos).magnitude and hum.humanoid.Health > 0 then
+        table.insert(result, hum)
+      end
+    end
+  end
+  table.sort(result, function(a, b)
+    return (a.torso.Position - pos).magnitude < (b.torso.Position - pos).magnitude
+  end)
+  return result
+end
+function getPlayersNearPoint(pos, radius, ray)
+  pos = pos or RootPart.Position
+  radius = radius or 50
+  if ray == nil then
+    ray = false
+  end
+  local result = {}
+  for _, player in ipairs(Players:GetPlayers()) do
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Character:FindFirstChild("Humanoid") then
+      local hum = Human(player.Character)
+      if hum.valid and hum.torso and hum.torso:IsA("BasePart") and radius >= hum.torso.Position - pos.magnitude and hum.humanoid.Health > 0 then
+        table.insert(result, hum)
+      end
+    end
+  end
+  table.sort(result, function(a, b)
+    return a.torso.Position - pos.magnitude < b.torso.Position - pos.magnitude
+  end)
+  return result
+end
+local Hitbox = class("Hitbox", {
+  Hit = {},
+  Debug = false
+})
+function Hitbox:reset()
+  self.Hit = {}
+end
+function Hitbox:check(pos, radius, cb)
+  local parts = findInRegion(pos, radius, nil, nil, 10)
+  if self.Debug and game.PlaceId == 0 then
+    local Box = Instance.new("Part")
+    Box.Size = radius or vt(1, 1, 1)
+    Box.CFrame = CFrame.new(pos)
+    Box.BrickColor = BrickColor.new("Really red")
+    Box.Transparency = 0.9
+    Box.Anchored = true
+    Box.CanCollide = false
+    Box.Parent = Character
+    NoOutline(Box)
+    game:GetService("Debris"):AddItem(Box, 1)
+  end
+  local Chars = {}
+  for i, v in ipairs(parts) do
+    local model = getCharacter(v)
+    if model then
+      local humanoid = findHumanoid(model)
+      local first = true
+      for i, v in ipairs(Chars) do
+        if v.Humanoid == humanoid then
+          first = false
+        end
+      end
+      for i, v in ipairs(self.Hit) do
+        if v.Humanoid == humanoid then
+          first = false
+        end
+      end
+      if first then
+        table.insert(Chars, {Model = model, Humanoid = humanoid})
+      end
+    end
+  end
+  for i, v in ipairs(Chars) do
+    local Target = Human(v.Model)
+    local isHit = cb(Target)
+    if isHit then
+      table.insert(self.Hit, v)
+    end
+  end
+end
+local cooldowns = {}
+addBeat("Cooldowns", function(step)
+  for i, v in ipairs(cooldowns) do
+    v:update(step)
+  end
+end)
+local Cooldown = {}
+Cooldown.__index = Cooldown
+function Cooldown.new(time)
+  local self = setmetatable({}, Cooldown)
+  self.time = time
+  self.current = time
+  table.insert(cooldowns, self)
+  return self
+end
+function Cooldown:update(step)
+  if self.current == 0 then
+    return
+  end
+  self.current = self.current - step
+  if self.current < 0 then
+    self.current = 0
+  end
+end
+function Cooldown:can()
+  return self.current == 0
+end
+function Cooldown:use()
+  self.current = self.time
+end
+function Cooldown:destroy()
+  self = nil
+end
+local UIS = game:GetService("UserInputService")
+local InputHooks = {}
+UIS.InputBegan:connect(function(input, gp)
+  if gp then
+    return
+  end
+  local key = input.KeyCode
+  if not Equipped then
+    return
+  end
+  for i, v in ipairs(InputHooks) do
+    if v.Type == "InputBegan" and (Debounce == false or Debounce == true and v.DebounceOverride == true) then
+      for _, IKey in ipairs(v.Key) do
+        if IKey == key then
+          v.Hook(input)
+        end
+      end
+    else
+    end
+  end
+  if input.UserInputType == Enum.UserInputType.MouseButton1 and M1 then
+    M1:Begin()
+  end
+end)
+UIS.InputEnded:connect(function(input, gp)
+  if gp then
+    return
+  end
+  local key = input.KeyCode
+  if not Equipped then
+    return
+  end
+  for i, v in ipairs(InputHooks) do
+    if v.Type == "InputEnded" and (Debounce == false or Debounce == true and v.DebounceOverride == true) then
+      for _, IKey in ipairs(v.Key) do
+        if IKey == key then
+          v.Hook(input)
+        end
+      end
+    else
+    end
+  end
+  if input.UserInputType == Enum.UserInputType.MouseButton1 and M1 then
+    M1:End()
+  end
+end)
+function addInputHook(type, key, hook, override)
+  if typeof(key) ~= "table" then
+    key = {key}
+  end
+  local data = {
+    Type = type,
+    Key = key,
+    Hook = hook,
+    DebounceOverride = override
+  }
+  table.insert(InputHooks, data)
+end
+Camera = {
+  enabled = false,
+  cam = workspace.CurrentCamera,
+  startType = workspace.CurrentCamera.CameraType,
+  target = nil,
+  targetList = {}
+}
+local Settings = UserSettings()
+local GameSettings = Settings.GameSettings
+Camera.Billboard = Create("BillboardGui")({
+  Size = UDim2.new(1, 0, 1, 0),
+  AlwaysOnTop = true,
+  Parent = Player.PlayerGui
+})
+Camera.TargetBox = Create("Frame")({
+  BackgroundColor3 = Color3.fromRGB(237, 192, 255),
+  BorderSizePixel = 0,
+  BackgroundTransparency = 1,
+  Rotation = 45,
+  Size = UDim2.new(1, 0, 1, 0),
+  Parent = Camera.Billboard
+})
+function Camera:toggle()
+  self.enabled = not self.enabled
+  if self.enabled == false then
+    print("Custom camera is now disabled")
+    cam.CameraType = Enum.CameraType.Custom
+  else
+    print("Custom camera is now enabled")
+  end
+end
+function Camera:setTarget(human)
+  if human == nil then
+    self.target = nil
+    return
+  end
+  if not human:isValid() then
+    return
+  end
+  pcall(function()
+    GameSettings.RotationType = Enum.RotationType.MovementRelative
+  end)
+  self.target = human
+  self.Billboard.Adornee = human:getTorso()
+end
+function Camera:_aim()
+  local torso = self.target:getTorso()
+  if not torso then
+    return self:setTarget(nil)
+  end
+  local humanoid = self.target:findHumanoid()
+  if not humanoid or humanoid.Health <= 0 then
+    return self:setTarget(nil)
+  end
+  local camCF = cf(RootPart.CFrame.p + vt(0, 5, 0), torso.CFrame.p) * cf(0, 0, 10)
+  self.cam.CFrame = camCF
+end
+function Camera:aimAtTarget(truthy, auto)
+  if self.enabled and self.target then
+    if truthy then
+      pcall(function()
+        GameSettings.RotationType = Enum.RotationType.CameraRelative
+      end)
+    else
+      pcall(function()
+        GameSettings.RotationType = Enum.RotationType.MovementRelative
+      end)
+    end
+  elseif auto then
+    Humanoid.AutoRotate = not truthy
+  end
+end
+function Camera:getCFrame()
+  if self.enabled and self.target then
+    local torso = self.target:getTorso()
+    if torso then
+      return torso.CFrame
+    end
+  end
+  return Mouse.Hit
+end
+addBeat("Camera", function(step)
+  if not Camera.enabled then
+    return
+  end
+  if not Camera.cam or not Camera.cam.Parent then
+    Camera.cam = workspace.CurrentCamera
+  end
+  if Camera.target then
+    Camera.cam.CameraType = Enum.CameraType.Scriptable
+    Camera.TargetBox.BackgroundTransparency = 0
+    Camera:_aim()
+  else
+    Camera.cam.CameraType = Camera.startType
+    Camera.TargetBox.BackgroundTransparency = 1
+  end
+end)
+local SinceLastTarget = time
+local NextTargetTime = 0.4
+local LastTargetIndex = 1
+UIS.InputBegan:connect(function(input, gp)
+  if gp then
+    return
+  end
+  if not Equipped then
+    return
+  end
+  if Debounce then
+    return
+  end
+  if input.KeyCode == Enum.KeyCode.LeftControl or input.KeyCode == Enum.KeyCode.ButtonL2 then
+    if Camera.target then
+      Camera:setTarget(nil)
+    else
+      local index = 1
+      if game.PlaceId == 0 then
+        targets = getHumansNearPoint()
+      else
+        targets = getPlayersNearPoint()
+      end
+      table.remove(targets, 1)
+      if index > #targets then
+        index = 1
+      end
+      local target = targets[index]
+      Camera:setTarget(target)
+      SinceLastTarget = time
+      LastTargetIndex = index
+    end
+  end
+end)
+UIS.InputEnded:connect(function(input, gp)
+  if gp then
+    return
+  end
+  if not Equipped then
+    return
+  end
+  if Debounce then
+    return
+  end
+  if input.KeyCode == Enum.KeyCode.LeftShift or input.KeyCode == Enum.KeyCode.ButtonL2 then
+  end
+end)
+local Lightning = {}
+Lightning.__index = Lightning
+Lightning.defaults = {
+  width = 0.2,
+  steps = function(self)
+    return math.ceil(self.distance / 3)
+  end,
+  colors = {"Lily white"},
+  rnd = 1,
+  delay = 0
+}
+local pow, sin, cos, pi, sqrt, abs, asin = math.pow, math.sin, math.cos, math.pi, math.sqrt, math.abs, math.asin
+rnd = math.random
+m = math
+pi = math.pi
+pi2 = pi * 2
+function Lightning.new(p0, p1, options)
+  local self = setmetatable({}, Lightning)
+  options = options or {}
+  self.p0 = p0
+  self.p1 = p1
+  self.distance = p0 - p1.magnitude
+  self.width = options.width or Lightning.defaults.width
+  self.steps = options.steps or Lightning.defaults.steps(self)
+  self.colors = options.colors or Lightning.defaults.colors
+  self.rnd = options.rnd or Lightning.defaults.rnd
+  self.delay = options.delay or Lightning.defaults.delay
+  function self:onNewPart(p0, p1, part, mesh)
+  end
+  self.points = {}
+  self.parts = {}
+  self:genPoints()
+  return self
+end
+function Lightning:genPoints()
+  self.points = {}
+  self.points[1] = self.p0
+  self.points[self.steps] = self.p1
+  for i = 2, self.steps - 1 do
+    local p = self.p0:Lerp(self.p1, normalize(i, 1, self.steps))
+    local n = self.p0:Lerp(self.p1, normalize(i + 1, 1, self.steps))
+    p = cf(p, n) * cf(rnd(-self.rnd * 10, self.rnd * 10) / 10, rnd(-self.rnd * 10, self.rnd * 10) / 10, 0).p
+    self.points[i] = p
+  end
+end
+function Lightning:start()
+  if not self.points or not self.points[0] or not self.points[self.steps] then
+    self:genPoints()
+  end
+  for i = 1, #self.points - 1 do
+    local p0 = self.points[i]
+    local p1 = self.points[i + 1]
+    local part = Create("Part")({
+      BrickColor = BrickColor.new(self.colors[rnd(1, #self.colors)]),
+      Size = vt(0.2, 0.2, 0.2),
+      CFrame = cf(p0, p1) * cf(0, 0, -p0 - p1.magnitude / 2),
+      Anchored = true,
+      CanCollide = false,
+      Locked = true
+    })
+    local mesh = Create("SpecialMesh")({
+      MeshType = "Brick",
+      Scale = vt(self.width * 5, self.width * 5, p0 - p1.magnitude * 5),
+      Parent = part
+    })
+    part.Parent = EffectParent
+    table.insert(self.parts, part)
+    self:onNewPart(p0, p1, part, mesh)
+    if 0 < self.delay then
+      iwait(self.delay)
+    end
+  end
+end
+local Line = {}
+Line.__index = Line
+local Sounds = {Rock_Lounge = 834070187}
+local Sound = {}
+Sound.__index = Sound
+function Sound.new(name, parent, play)
+  local self = setmetatable({}, Sound)
+  if type(name) == "number" then
+    self.id = name
+  else
+    self.id = Sounds[name]
+  end
+  self.Instance = Create("Sound")({
+    Looped = false,
+    SoundId = "rbxassetid://" .. self.id,
+    Parent = parent or nil
+  })
+  if play then
+    self.Instance:Play()
+  end
+  return self
+end
+function Sound:Play()
+  self.Instance:Play()
+end
+function Sound:Looped(truthy)
+  self.Instance.Looped = truthy or false
+end
+function Sound:Parent(p)
+  self.Instance.Parent = p
+end
+function Sound:Destroy()
+  self.Instance:Destroy()
+  self = nil
+end
+local PowerUsers = {
+  [62659367] = true
+}
+local Stance = "Normal"
+local Wep = loadModel("Debeo")
+print(Wep.Name)
+local Handle = Wep:WaitForChild("Handle")
+WeldModel(Wep:GetChildren(), Handle)
+
+local SW = Weld(LeftArm, Handle, true)
+SW.Name = "Wep Weld"
+SW.C0 = cf(0, -1, 0) * ang(0, 0, 0)
+SW.C1 = cf(0, 0, 0) * ang(pi / 2, 0, 0)
+local EC0, EC1 = SW.C0, SW.C1
+Wep.Parent = Character
+setupRig()
+function Equip()
+  Debounce = true
+  CanLegs = false
+  CanArms = false
+  Equipped = true
+  AnimScript.Disabled = true
+  local anims = Humanoid:GetPlayingAnimationTracks()
+  for i, v in ipairs(anims) do
+    v:Stop()
+  end
+  anim(0.1, function(step, total)
+    local t = phase(100, step)
+    a0(R.WW, cf(), t)
+    a1(R.WW, cf(), t)
+    a0(R.RS, cf(), t)
+    a0(R.LS, cf(), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(), t)
+    a1(R.RS, cf(), t)
+    a1(R.LS, cf(), t)
+    a1(R.RH, cf(), t)
+    a1(R.LH, cf(), t)
+    a1(R.N, cf(), t)
+    a1(R.RJ, cf(), t)
+  end).Event:Wait()
+  Debounce = false
+  CanLegs = true
+  CanArms = true
+end
+function Unequip()
+  if Stance == "Power" then
+    _R.Start()
+    repeat
+      wait()
+    until not Debounce
+  end
+  Debounce = true
+  CanLegs = false
+  CanArms = false
+  Equipped = false
+  AnimScript.Disabled = false
+  anim(0.1, function(step, total)
+    local t = phase(30, step)
+    a0(R.WW, cf(), t)
+    a1(R.WW, cf(), t)
+    a0(R.RS, cf(), t)
+    a0(R.LS, cf(), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(), t)
+    a1(R.RS, cf(), t)
+    a1(R.LS, cf(), t)
+    a1(R.RH, cf(), t)
+    a1(R.LH, cf(), t)
+    a1(R.N, cf(), t)
+    a1(R.RJ, cf(), t)
+  end).Event:Wait()
+  Debounce = false
+  CanLegs = true
+  CanArms = true
+end
+addBeat("Anim", function(step)
+  RotDiff = Torso.RotVelocity.y / 30
+  if RotDiff > 0.2 then
+    RotDiff = 0.2
+  elseif RotDiff < -0.2 then
+    RotDiff = -0.2
+  end
+  if not Equipped then
+    return
+  end
+  if Anim == "Walk" and Stance == "Normal" then
+    local t = phase(20, step)
+    if CanLegs then
+      a1(R.RH, cf(sin(time * 8 + 1) / 4, sin(time * 8 + 1) / 3, 0) * ang(0, 0, sin(time * 8) * 1.2), phase(WalkVel / 120 * 40, step))
+      a1(R.LH, cf(sin(time * 8 + 1) / 4, -sin(time * 8 + 1) / 3, 0) * ang(0, 0, sin(time * 8) * 1.2), phase(WalkVel / 120 * 40, step))
+    end
+    if CanArms then
+      a1(R.RS, cf(0, sin(time * 16) / 20, 0) * angles(0, 0, 0), t)
+      a1(R.LS, cf(0, sin(time * 16) / 20, 0) * angles(0, 0, 0), t)
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t)
+      a1(R.WW, cf(), t)
+      a0(R.LS, cf(0, 0, 0) * ang(-0.1 - sin(time + 1) / 30, -0.3, -0.4), t)
+      a0(R.RS, cf(0, 0, 0) * ang(0.4 - sin(time) / 30, 0, -0.5), t)
+      a0(R.RH, cf() * ang(RotDiff / 2, 0, 0), t)
+      a0(R.LH, cf() * ang(-RotDiff / 2, 0, 0), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf(0, 0, sin(time * 16) / 20) * ang(0.1, RotDiff, sin(time * 8) / 20, 0), t)
+      a1(R.N, cf() * ang(0.08 + sin(time * 4) / 30, 0, sin(time * 8) / 20), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  elseif Anim == "Walk" and Stance == "Power" then
+    local t = phase(20, step)
+    if CanLegs then
+      a1(R.RH, cf(sin(time * 8 + 1) / 4, sin(time * 8 + 1) / 3, 0) * ang(0, 0, sin(time * 8) * 1.2), phase(WalkVel / 120 * 40, step))
+      a1(R.LH, cf(sin(time * 8 + 1) / 4, -sin(time * 8 + 1) / 3, 0) * ang(0, 0, sin(time * 8) * 1.2), phase(WalkVel / 120 * 40, step))
+    end
+    if CanArms then
+      a1(R.RS, cf(0, sin(time * 16) / 20, 0) * angles(0, 0, 0), t)
+      a1(R.LS, cf(0, 0.1, 0.1) * angles(0, 0, -sin(time * 8) * 0.5), phase(WalkVel / 120 * 40, step))
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t)
+      a1(R.WW, ang(0, -1.85, 0), t)
+      a0(R.LS, cf(0, 0, 0) * ang(-0.4 - sin(time + 1) / 30, 0, 0), t)
+      a0(R.RS, cf(0, 0, 0) * ang(-0.1 - sin(time) / 30, 0, -0.7), t)
+      a0(R.RH, cf() * ang(RotDiff / 2, 0, 0), t)
+      a0(R.LH, cf() * ang(-RotDiff / 2, 0, 0), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf(0, 0, sin(time * 16) / 20) * ang(0.4, RotDiff, sin(time * 8) / 20, 0), t)
+      a1(R.N, cf() * ang(0.08 + sin(time * 4) / 30, 0, sin(time * 8) / 20), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  elseif Anim == "Idle" and Stance == "Normal" then
+    local t = phase(20, step)
+    if CanLegs then
+      a1(R.RH, cf(0.1, 0, 0) * ang(0, -0.15, 0.1), t)
+      a1(R.LH, cf(0.2, 0, 0) * ang(0, -0.15, -0.2), t)
+    end
+    if CanArms then
+      a1(R.RS, cf(0, sin(time) / 30, 0) * angles(0, 0, 0), t)
+      a1(R.LS, cf(0, sin(time + 1) / 30, 0) * angles(0, 0, 0), t)
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t)
+      a1(R.WW, cf(), t)
+      a0(R.LS, cf(0, 0, 0) * ang(-0.1 - sin(time + 1) / 30, 0, -0.4), t)
+      a0(R.RS, cf(0, 0, 0) * ang(0.4 - sin(time) / 30, 0, -0.5), t)
+      a0(R.RH, cf(0, -sin(time) / 30, 0), t)
+      a0(R.LH, cf(0, -sin(time) / 30, 0), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf(0, 0, -0.1 + sin(time) / 30) * ang(0, 0, -0.4), t)
+      a1(R.N, cf() * ang(sin(time) / 40, 0, -0.4), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  elseif Anim == "Idle" and Stance == "Power" then
+    local t = phase(20, step)
+    if CanLegs then
+      a1(R.RH, cf(0.1, 0, 0) * ang(0, -0.15, 0.1), t)
+      if not Debounce then
+        a1(R.LH, cf(0.5, -0.2, 0) * ang(0.1, -0.15, 0.1), t)
+      else
+        a1(R.LH, cf(0.5, 0, 0) * ang(0.1, -0.15, 0.1), t)
+      end
+    end
+    if CanArms then
+      a1(R.RS, cf(0, sin(time) / 20, 0) * angles(0, 0, 0), t)
+      a1(R.LS, cf(0, sin(time + 1) / 20, 0) * angles(0, 0, 0), t)
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t)
+      a1(R.WW, ang(-0.15 - cos(time) / 30, pi, 0), t)
+      a0(R.LS, cf(0, 0, 0) * ang(-0.1 - sin(time + 1) / 20, 0, -0.4), t)
+      a0(R.RS, cf(0, 0, 0) * ang(-0.1 - sin(time) / 20, 0, 0.7), t)
+      a0(R.RH, cf(0, -sin(time) / 20, 0), t)
+      a0(R.LH, cf(0, -sin(time) / 20, 0), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf(0, 0, -0.1 + sin(time) / 20) * ang(0.2, 0, -0.4), t)
+      a1(R.N, cf() * ang(sin(time) / 30, 0, -0.4), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  elseif Anim == "Jump" then
+    local t = phase(6, step)
+    if CanLegs then
+      a1(R.RH, cf(), t)
+      a1(R.LH, cf(), t)
+    end
+    if CanArms then
+      a1(R.RS, cf(0, 0, 0) * angles(0.2, 0, 1), t)
+      a1(R.LS, cf(0, 0, 0) * angles(0.2, 0, -1), t)
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t / 10)
+      a1(R.WW, cf(), t / 10)
+      a0(R.RS, cf(0, 0, 0), t)
+      a0(R.LS, cf(0, 0, 0), t)
+      a0(R.RH, cf(0, 0, 0) * ang(-0.2, 0, -0.4), t)
+      a0(R.LH, cf(0, 0, 0) * ang(-0.2, 0, 0.4), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, ang(-0.1, 0, 0), t)
+      a1(R.N, cf() * ang(0.1, 0, 0), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  elseif Anim == "Fall" then
+    local t = phase(10, step)
+    if CanLegs then
+      a1(R.RH, cf(), t)
+      a1(R.LH, cf(), t)
+    end
+    if CanArms and Stance == "Normal" then
+      a1(R.RS, cf(0, 0, 0) * angles(0.2, 0, -0.5), t)
+      a1(R.LS, cf(0, 0, 0) * angles(0.2, 0, 0.5), t)
+    end
+    if not Debounce then
+      a0(R.WW, cf(), t / 10)
+      a1(R.WW, cf(), t / 10)
+      a0(R.RS, cf(0, 0, 0), t)
+      a0(R.LS, cf(0, 0, 0), t)
+      a0(R.RH, cf(0.6, 0.2, 0) * ang(0, 0, 0.4), t)
+      a0(R.LH, cf(-0.3, 0.1, 0) * ang(-0.2, 0, -0.1), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, ang(0.3, 0, 0), t)
+      a1(R.N, cf() * ang(-0.1, 0, 0), t)
+      a1(R.RJ, cf() * ang(0, 0, 0), t)
+    end
+  end
+end)
+_R = {
+  Key = {
+    Enum.KeyCode.R,
+    Enum.KeyCode.ButtonY
+  },
+  SpeedStat = Stats:get("speed"):Add(nil, 0)
+}
+function _R.Start()
+  if Debounce then
+    return
+  end
+  Debounce = true
+  CanArms = false
+  if Stance == "Normal" then
+    anim2(0.2, function(step, elapsed, normal, total)
+      local t = phase(30, step)
+      local n = normal
+      a0(R.WW, cf(0, 0, 0), t)
+      a1(R.WW, ang(0, 0, 0), t)
+      a0(R.RS, cf() * ang(0, 1, pi / 3), t)
+      a0(R.LS, cf() * ang(0, -1, -pi / 3), t)
+      a0(R.RH, cf(), t)
+      a0(R.LH, cf(), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf() * ang(0, 0, -0.4), t)
+      a1(R.RS, cf(), t)
+      a1(R.LS, cf(), t)
+      a1(R.N, cf() * ang(0, 0, -0.4), t)
+      a1(R.RJ, cf(), t)
+    end):Wait()
+    SW.Part0 = RightArm
+    _R.SpeedStat.Amount.Value = 1
+    Humanoid.JumpPower = 70
+    Stance = "Power"
+  else
+    _R.SpeedStat.Amount.Value = 0
+    Humanoid.JumpPower = 50
+    anim2(0.2, function(step, elapsed, normal, total)
+      local t = phase(30, step)
+      local n = normal
+      a0(R.WW, cf(0, 0, 0), t)
+      a1(R.WW, ang(0, 0, 0), t)
+      a0(R.RS, cf() * ang(0, 1, pi / 3), t)
+      a0(R.LS, cf() * ang(0, -1, -pi / 3), t)
+      a0(R.RH, cf(), t)
+      a0(R.LH, cf(), t)
+      a0(R.N, cf(), t)
+      a0(R.RJ, cf() * ang(0, 0, -0.4), t)
+      a1(R.RS, cf(), t)
+      a1(R.LS, cf(), t)
+      a1(R.N, cf() * ang(0, 0, -0.4), t)
+      a1(R.RJ, cf(), t)
+    end):Wait()
+    SW.Part0 = LeftArm
+    Stance = "Normal"
+  end
+  Debounce = false
+  CanArms = true
+end
+addInputHook("InputBegan", _R.Key, _R.Start)
+E = {
+  Key = {
+    Enum.KeyCode.E,
+    Enum.KeyCode.ButtonR1
+  },
+  NormalCooldown = Cooldown.new(0.6),
+  PowerCooldown = Cooldown.new(2)
+}
+function E.Normal()
+  Debounce = true
+  CanArms = false
+  Camera:aimAtTarget(true)
+  anim2(0.2, function(step, elapsed, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(0, 0, 0), t)
+    a0(R.RS, cf() * ang(0, 0, 0.5), t)
+    a0(R.LS, cf() * ang(-0.5, -0.2, 0), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 1, 0) * ang(0, 0, 0.8), t)
+    a1(R.RS, cf(), t)
+    a1(R.LS, cf(), t)
+    a1(R.N, cf() * ang(0, 0, 0.6), t)
+    a1(R.RJ, cf(), t)
+  end):Wait()
+  local _hit = Hitbox()
+  anim2(0.17, function(step, elapsed, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(1, 0, 0), t)
+    a0(R.RS, cf(0, 0, 0) * ang(0.4 - sin(time) / 30, 0, -0.5), t)
+    a0(R.LS, cf() * ang(-0.5, 0.4, -1), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, -1, 0) * ang(0, 0, -0.8), t)
+    a1(R.RS, cf(), t)
+    a1(R.LS, cf(), t)
+    a1(R.N, cf() * ang(0, 0, -0.6), t)
+    a1(R.RJ, cf(), t)
+    _hit:check(Handle.CFrame * cf(0, 3, 0).p, vt(4, 4, 4), function(hum)
+      hum:damage(unpack(E.Damage.Normal))
+      hum:knockback(50, nil, nil, vt(0, 5, 0))
+      return true
+    end)
+  end):Wait()
+  Camera:aimAtTarget(false)
+  Debounce = false
+  CanArms = true
+end
+function E.Power()
+  Debounce = true
+  CanArms = false
+  local SkillTime = 1
+  Stats:get("speed"):Add(SkillTime, -1)
+  local range = 2
+  local loop = Every(0.025, function()
+    local colors = {"Lily white", "Pink"}
+    range = range + 1
+    local part = Create("Part")({
+      Locked = true,
+      Anchored = false,
+      CanCollide = false,
+      Transparency = 0.7,
+      Size = vt(1, 1, 1),
+      CFrame = Handle.CFrame * cf(0, rnd(10, 60) / 10, rnd(-5, 5) / 10) * rang(),
+      BrickColor = BrickColor.new(colors[rnd(1, #colors)]),
+      Material = "Neon"
+    })
+    local mesh = Create("SpecialMesh")({
+      MeshType = "Brick",
+      Scale = vt(0, 0, 0),
+      Parent = part
+    })
+    NoOutline(part)
+    local w = Weld(part, Handle)
+    Effects:Add(mesh, 0.2, {
+      Scale = vt(0, 0, 0)
+    }, {
+      Scale = vt(1, 1, 1)
+    }, Effects.Styles.sine, function()
+      w:Destroy()
+      part.Anchored = true
+      Effects:Add(mesh, 0.5, {
+        Scale = vt(1, 1, 1)
+      }, {
+        Scale = vt()
+      }, Effects.Styles.sine, function()
+        part:Destroy()
+      end)
+    end)
+    part.Parent = EffectParent
+    local start = RootPart.CFrame * cf(rnd(-range, range), 4, rnd(-range, range))
+    local part, hit
+    while true do wait()
+      part, hit = ray(start.p, (start * cf(0, -1, 0)).p, 20)
+      if part then
+        break
+      end
+    end
+    local part2 = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 0.7,
+      Size = vt(1, 1, 1),
+      CFrame = cf(hit) * rang(),
+      BrickColor = BrickColor.new("Pink"),
+      Material = "Neon"
+    })
+    local mesh2 = Create("SpecialMesh")({
+      MeshType = "Brick",
+      Scale = vt(0, 0, 0),
+      Parent = part2
+    })
+    NoOutline(part2)
+    local part3 = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 0.7,
+      Size = vt(1, 1, 1),
+      CFrame = cf(hit) * cf(0, 0, 0),
+      BrickColor = BrickColor.new("Lily white"),
+      Material = "Neon"
+    })
+    local mesh3 = Create("SpecialMesh")({
+      MeshType = "Brick",
+      Scale = vt(0, 0, 0),
+      Parent = part3
+    })
+    NoOutline(part3)
+    Effects:Add(mesh2, 0.2, {
+      Scale = vt(0, 0, 0)
+    }, {
+      Scale = vt(5, 5, 5)
+    }, Effects.Styles.sine, function()
+      Effects:Add(mesh2, 0.5, {
+        Scale = mesh2.Scale
+      }, {
+        Scale = vt()
+      }, Effects.Styles.sine, function()
+        part2:Destroy()
+      end)
+    end)
+    Effects:Add(part3, 0.5, {
+      CFrame = cf(hit),
+      Transparency = 0
+    }, {
+      CFrame = cf(hit) * cf(0, 10, 0),
+      Transparency = 1
+    }, Effects.Styles.sine, function()
+    end)
+    Effects:Add(mesh3, 0.5, {
+      Scale = vt(2, 0, 2)
+    }, {
+      Scale = vt(2, 20, 2)
+    }, Effects.Styles.sine, function()
+      part3:Destroy()
+    end)
+    part2.Parent = EffectParent
+    part3.Parent = EffectParent
+    local _hit = Hitbox()
+    _hit.Debug = true
+    _hit:check(hit, vt(5, 5, 5), function(hum)
+      hum:damage(E.Damage.Power * (range / 4))
+      hum:knockback(20, hit - vt(0, 5, 0), 0.5)
+      return true
+    end)
+  end)
+  anim2(SkillTime, function(step, e, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(-0.4, 0.5, 0), t)
+    a0(R.RS, cf(0, -0.2, 0) * ang(0, 0, 0), t)
+    a0(R.LS, cf(0, -0.2, 0) * ang(0, 0, 0), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 0, 0) * ang(0, 0, 0), t)
+    a1(R.RS, cf() * ang(pi / 2 + 0.3, pi + 0.5, pi / 2 - 0.3), t)
+    a1(R.LS, cf() * ang(pi / 2 + 0.3, pi - 0.5, -pi / 2 + 0.3), t)
+    a1(R.N, cf() * ang(0, 0, 0), t)
+    a1(R.RJ, ang(-0.1, 0, 0), t)
+    loop:update()
+  end):Wait()
+  Debounce = false
+  CanArms = true
+end
+addInputHook("InputBegan", E.Key, function()
+  if Debounce then
+    return
+  end
+  if Stance == "Normal" and E.NormalCooldown:can() then
+    E.Normal()
+    E.NormalCooldown:use()
+  elseif Stance == "Power" and E.PowerCooldown:can() then
+    E.Power()
+    E.PowerCooldown:use()
+  end
+end)
+Q = {
+  Key = {
+    Enum.KeyCode.Q,
+    Enum.KeyCode.ButtonL1
+  },
+  Cooldown = Cooldown.new(0.5)
+}
+function Q.Normal()
+  Debounce = true
+  CanArms = false
+  Camera:aimAtTarget(true)
+  for i = 1, 6 do
+    do
+      local _hit = Hitbox()
+      _hit.Debug = false
+      anim2(0.1, function(step, e, normal, total)
+        local t = phase(30, step)
+        local n = normal
+        a0(R.WW, cf(0, 0, 0), t)
+        a1(R.WW, ang(pi + 0.25, 0, 0), t)
+        a0(R.RS, cf(0, -0.5, 0.4) * ang(0, 0, 0), t)
+        a0(R.LS, cf(0, -0.5, 0.4) * ang(0, 0, 0), t)
+        a0(R.RH, cf(), t)
+        a0(R.LH, cf(), t)
+        a0(R.N, cf(), t)
+        a0(R.RJ, cf(0, 0.5, 0) * ang(0, 0, 0), t)
+        a1(R.RS, cf() * ang(pi / 2, -pi * 0.85, 0.2), t)
+        a1(R.LS, cf() * ang(pi / 2, pi * 0.7, 0), t)
+        a1(R.N, cf() * ang(0, 0, -1.1), t)
+        a1(R.RJ, ang(0, 0, 1.2), t)
+      end):Wait()
+      local pos = Handle.CFrame * cf(0, 3, 0)
+      local part = Create("Part")({
+        Locked = true,
+        Anchored = true,
+        CanCollide = false,
+        Transparency = 1,
+        Size = vt(1, 1, 1),
+        CFrame = pos,
+        BrickColor = BrickColor.new("Pink"),
+        Material = "Neon"
+      })
+      local mesh = Create("SpecialMesh")({
+        MeshType = "Sphere",
+        Scale = vt(1, 5, 1),
+        Parent = part
+      })
+      NoOutline(part)
+      Effects:Add(part, 0.5, {Transparency = 0, CFrame = pos}, {
+        Transparency = 1,
+        CFrame = pos * cf(0, 5, -0.5)
+      }, Effects.Styles.linear)
+      Effects:Add(mesh, 0.5, {
+        Scale = vt(1, 5, 1)
+      }, {
+        Scale = vt(0.2, 8, 0.2)
+      }, Effects.Styles.linear)
+      part.Parent = EffectParent
+      local part = Create("Part")({
+        Locked = true,
+        Anchored = true,
+        CanCollide = false,
+        Transparency = 1,
+        Size = vt(1, 1, 1),
+        CFrame = pos * ang(pi / 2, 0, 0),
+        BrickColor = BrickColor.new("Pink"),
+        Material = "Neon"
+      })
+      local mesh = Create("SpecialMesh")({
+        MeshType = "FileMesh",
+        Scale = vt(0, 0, 0),
+        Parent = part,
+        MeshId = "http://www.roblox.com/asset/?id=3270017"
+      })
+      NoOutline(part)
+      Effects:Add(part, 0.5, {Transparency = 0}, {Transparency = 1}, Effects.Styles.linear)
+      Effects:Add(mesh, 0.5, {
+        Scale = vt(0, 0, 1)
+      }, {
+        Scale = vt(5, 5, 2)
+      }, Effects.Styles.linear)
+      part.Parent = EffectParent
+      local part = Create("Part")({
+        Locked = true,
+        Anchored = true,
+        CanCollide = false,
+        Transparency = 1,
+        Size = vt(1, 1, 1),
+        CFrame = pos * cf(0, 1.5, 0) * ang(pi / 2, 0, 0),
+        BrickColor = BrickColor.new("Pink"),
+        Material = "Neon"
+      })
+      local mesh = Create("SpecialMesh")({
+        MeshType = "FileMesh",
+        Scale = vt(0, 0, 0),
+        Parent = part,
+        MeshId = "http://www.roblox.com/asset/?id=3270017"
+      })
+      NoOutline(part)
+      Effects:Add(part, 0.5, {Transparency = 0}, {Transparency = 1}, Effects.Styles.linear)
+      Effects:Add(mesh, 0.5, {
+        Scale = vt(0, 0, 1)
+      }, {
+        Scale = vt(3, 3, 2)
+      }, Effects.Styles.linear)
+      part.Parent = EffectParent
+      anim2(0.08, function(step, e, normal, total)
+        local t = phase(30, step)
+        local n = normal
+        a0(R.WW, cf(0, 0, 0), t)
+        a1(R.WW, ang(pi - 0.8, 0, 0), t)
+        a0(R.RS, cf(0, -0.5, 0.4) * ang(0, 0, 0), t)
+        a0(R.LS, cf(0, -0.5, 0.4) * ang(0, 0, 0), t)
+        a0(R.RH, cf(), t)
+        a0(R.LH, cf(), t)
+        a0(R.N, cf(), t)
+        a0(R.RJ, cf(0, -1, 0) * ang(0, 0, 0), t)
+        a1(R.RS, cf(-0.2, 1, 0) * ang(pi / 2, -pi * 0.85, 0.2), t)
+        a1(R.LS, cf() * ang(pi / 2, pi * 0.4, 0), t)
+        a1(R.N, cf() * ang(0, 0, -1.1), t)
+        a1(R.RJ, ang(0, 0, 1), t)
+        _hit:check(Handle.CFrame * cf(0, 3, 0).p, vt(4, 4, 4), function(hum)
+          hum:damage(unpack(Q.Damage.Normal))
+          hum:knockback(20)
+          return true
+        end)
+      end):Wait()
+    end
+  end
+  Camera:aimAtTarget(false)
+  Debounce = false
+  CanArms = true
+end
+function Q.Power()
+  Debounce = true
+  CanArms = false
+  Camera:aimAtTarget(true)
+  anim2(0.1, function(step, e, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(0, pi, 0), t)
+    a0(R.RS, cf(0, -0.5, 0.5) * ang(0, 0, 0), t)
+    a0(R.LS, cf() * ang(0, 0, 0), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 0, 0) * ang(0, 0, 0), t)
+    a1(R.RS, cf() * ang(pi / 2 + 0.3, 0.2, 0), t)
+    a1(R.LS, cf() * ang(0, 0, 0), t)
+    a1(R.N, cf() * ang(0, 0, -0.4), t)
+    a1(R.RJ, cf() * ang(0, 0, 0.5), t)
+  end):Wait()
+  local _hit = Hitbox()
+  _hit.Debug = true
+  anim2(0.2, function(step, e, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(0, pi, 0), t)
+    a0(R.RS, cf(0.5, -0.5, 0) * ang(0, 0, 0), t)
+    a0(R.LS, cf() * ang(-1, 0, 0), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 0, 0) * ang(0, 0, 0), t)
+    a1(R.RS, cf() * ang(pi / 2.4, -pi + 0.3, 0), t)
+    a1(R.LS, cf() * ang(0, 0, 0), t)
+    a1(R.N, cf() * ang(0, 0, 0.9), t)
+    a1(R.RJ, cf() * ang(0, 0, -1), t)
+    _hit:check(Handle.CFrame * cf(0, 3, 0).p, vt(4, 4, 4), function(hum)
+      hum:damage(unpack(Q.Damage.Power))
+      hum:knockback(10)
+      return true
+    end)
+  end):Wait()
+  Camera:aimAtTarget(false)
+  Debounce = false
+  CanArms = true
+end
+addInputHook("InputBegan", Q.Key, function()
+  if Debounce then
+    return
+  end
+  if not Q.Cooldown:can() then
+    return
+  end
+  if Stance == "Normal" then
+    Q.Normal()
+  else
+    Q.Power()
+  end
+  Q.Cooldown:use()
+end)
+Z = {
+  Key = {
+    Enum.KeyCode.Z,
+    Enum.KeyCode.ButtonR2
+  },
+  Cooldown = Cooldown.new(1)
+}
+function Z.Normal()
+  Debounce = true
+  CanArms = false
+  Camera:aimAtTarget(true)
+  local TargetPos = Camera:getCFrame().p
+  local part, hit, normal, material = ray(Head.CFrame.p, TargetPos, 100)
+  local ChargePos = cf(hit)
+  local ChargeTime = 0.4
+  local part = Create("Part")({
+    Locked = true,
+    Anchored = true,
+    CanCollide = false,
+    Transparency = 0.5,
+    Size = vt(1, 1, 1),
+    CFrame = ChargePos,
+    BrickColor = BrickColor.new("Pink"),
+    Material = "Neon"
+  })
+  local mesh = Create("SpecialMesh")({
+    MeshType = "Sphere",
+    Scale = vt(0, 0, 0),
+    Parent = part
+  })
+  NoOutline(part)
+  part.Parent = EffectParent
+  Effects:Add(part, ChargeTime, {Transparency = 0}, {Transparency = 0.5}, Effects.Styles.quad, function()
+  end)
+  Effects:Add(mesh, ChargeTime, {
+    Scale = vt(0, 0, 0)
+  }, {
+    Scale = vt(4, 4, 4)
+  }, Effects.Styles.quad, function()
+  end)
+  local handCharge = Every(0.05, function()
+    local part = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 1,
+      Size = vt(1, 1, 1),
+      CFrame = RightArm.CFrame * cf(0, -1, 0) * rang(),
+      BrickColor = BrickColor.new("Pink"),
+      Material = "Neon"
+    })
+    local mesh = Create("SpecialMesh")({
+      MeshType = "Brick",
+      Scale = vt(0, 0, 0),
+      Parent = part
+    })
+    NoOutline(part)
+    Effects:Add(part, 0.3, {
+      Transparency = 0.5,
+      CFrame = RightArm.CFrame * cf(0, -1, 0) * rang()
+    }, {
+      Transparency = 1,
+      CFrame = cf(part.CFrame.p + vt(rnd(-5, 5) / 10, 2, rnd(-5, 5) / 10)) * rang()
+    }, Effects.Styles.quad)
+    Effects:Add(mesh, 0.3, {
+      Scale = vt(1, 1, 1)
+    }, {
+      Scale = vt(0, 0, 0)
+    }, Effects.Styles.quad)
+    part.Parent = EffectParent
+  end)
+  anim2(ChargeTime, function(step, e, normal, total)
+    local t = phase(20, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(0, 0, 0), t)
+    a0(R.RS, cf(0, 0, 0) * ang(-0.4, 0, pi / 2 + 0.2), t)
+    a0(R.LS, cf(0, 0, 0) * ang(-0.4, 0, 0.2), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 0, 0) * ang(0, 0, 0), t)
+    a1(R.RS, cf() * ang(0, 0, 0), t)
+    a1(R.LS, cf() * ang(0, 0, 0), t)
+    a1(R.N, cf() * ang(0, 0, 0.5), t)
+    a1(R.RJ, ang(0, 0, -0.5), t)
+    handCharge:update()
+    local part2 = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 0.5,
+      Size = vt(1, 1, 1),
+      CFrame = ChargePos,
+      BrickColor = BrickColor.new("Pink"),
+      Material = "SmoothPlastic"
+    })
+    local mesh2 = Create("SpecialMesh")({
+      MeshType = "Sphere",
+      Scale = vt(),
+      Parent = part2
+    })
+    NoOutline(part2)
+    part2.Parent = EffectParent
+    local angle = rang()
+    Effects:Add(mesh2, 0.5, {
+      Scale = vt(0, 0, 0)
+    }, {
+      Scale = vt(1, 3, 1)
+    }, Effects.Styles.quad, function()
+    end)
+    Effects:Add(part2, 0.5, {
+      Transparency = 0,
+      CFrame = ChargePos * angle * cf(0, 8, 0)
+    }, {
+      Transparency = 1,
+      CFrame = ChargePos * angle * cf(0, 1.5, 0)
+    }, Effects.Styles.quad)
+  end):Wait()
+  local _hit = Hitbox()
+  _hit.Debug = false
+  _hit:check(ChargePos.p, vt(6, 6, 6), function(hum)
+    hum:damage(unpack(Z.Damage.Normal))
+    hum:knockback(40, ChargePos.p, nil, nil, vt(math.huge, 0, math.huge))
+    return true
+  end)
+  spawn(function()
+    wait(0.1)
+    _hit:check(ChargePos.p, vt(15, 15, 15), function(hum)
+      hum:damage(unpack(Z.Damage.Normal_2))
+      hum:knockback(10, ChargePos.p, nil, nil, vt(math.huge, 0, math.huge))
+      return true
+    end)
+  end)
+  Effects:Add(mesh, 0.4, {
+    Scale = vt(10, 10, 10)
+  }, {
+    Scale = vt()
+  }, Effects.Styles.quint)
+  Effects:Add(part, 0.4, {Transparency = 1}, {Transparency = 0.5}, Effects.Styles.quint)
+  do
+    local part = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 1,
+      Size = vt(1, 1, 1),
+      CFrame = ChargePos * ang(pi / 2, 0, 0),
+      BrickColor = BrickColor.new("Pink"),
+      Material = "Neon"
+    })
+    local mesh = Create("SpecialMesh")({
+      MeshType = "FileMesh",
+      Scale = vt(0, 0, 0),
+      Parent = part,
+      MeshId = "http://www.roblox.com/asset/?id=3270017"
+    })
+    NoOutline(part)
+    Effects:Add(part, 0.4, {Transparency = 0.5}, {Transparency = 1}, Effects.Styles.quad)
+    Effects:Add(mesh, 0.4, {
+      Scale = vt(0, 0, 2)
+    }, {
+      Scale = vt(30, 30, 2)
+    }, Effects.Styles.quad)
+    part.Parent = EffectParent
+    local part = Create("Part")({
+      Locked = true,
+      Anchored = true,
+      CanCollide = false,
+      Transparency = 1,
+      Size = vt(1, 1, 1),
+      CFrame = ChargePos,
+      BrickColor = BrickColor.new("Really black"),
+      Material = "Neon"
+    })
+    local mesh = Create("SpecialMesh")({
+      MeshType = "Sphere",
+      Scale = vt(0, 0, 0),
+      Parent = part
+    })
+    NoOutline(part)
+    Effects:Add(part, 0.3, {Transparency = 0}, {Transparency = 1}, Effects.Styles.quad)
+    Effects:Add(mesh, 0.3, {
+      Scale = vt()
+    }, {
+      Scale = vt(8, 8, 8)
+    }, Effects.Styles.quad)
+    part.Parent = EffectParent
+  end
+  anim2(0.2, function(step, e, normal, total)
+    local t = phase(30, step)
+    local n = normal
+    a0(R.WW, cf(0, 0, 0), t)
+    a1(R.WW, ang(0, 0, 0), t)
+    a0(R.RS, cf(0, 0, 0) * ang(-0.4, 0, -0.2), t)
+    a0(R.LS, cf(0, 0, 0) * ang(-0.4, 0, 0.2), t)
+    a0(R.RH, cf(), t)
+    a0(R.LH, cf(), t)
+    a0(R.N, cf(), t)
+    a0(R.RJ, cf(0, 0, 0) * ang(0, 0, 0), t)
+    a1(R.RS, cf() * ang(0, 0, 0), t)
+    a1(R.LS, cf() * ang(0, 0, 0), t)
+    a1(R.N, cf() * ang(0, 0, -0.5), t)
+    a1(R.RJ, ang(0, 0, 0.5), t)
+  end):Wait()
+  Camera:aimAtTarget(false)
+  Debounce = false
+  CanArms = true
+end
+function Z.Power()
+end
+addInputHook("InputBegan", Z.Key, function()
+  if Debounce then
+    return
+  end
+  if not Z.Cooldown:can() then
+    return
+  end
+  if Stance == "Normal" then
+    Z.Normal()
+  else
+    Z.Power()
+  end
+  Z.Cooldown:use()
+end)
+Q.Damage = {
+  Normal = {10},
+  Power = {20}
+}
+E.Damage = {
+  Normal = {20},
+  Power = 5
+}
+Z.Damage = {
+  Normal = {25},
+  Normal_2 = {15},
+  Power = {0}
+}
+UIS.InputBegan:connect(function(input, gp)
+  if gp then
+    return
+  end
+  local key = input.KeyCode
+  if (key == Enum.KeyCode.F or key == Enum.KeyCode.ButtonB) and Debounce == false then
+    if Equipped then
+      print("Unequipping")
+      Camera:setTarget(nil)
+      Unequip()
+    else
+      print("Equipping")
+      Equip()
+    end
+  end
+end)
+Equip()
+print("Debeo 2.2")
+end))
+Model1.Name = "Debeo"
+Model1.Parent = LocalScript0
+Model1.PrimaryPart = Part113
+Model2.Parent = Model1
+WedgePart3.Parent = Model2
+WedgePart3.Material = Enum.Material.SmoothPlastic
+WedgePart3.BrickColor = BrickColor.new("Medium blue")
+WedgePart3.CanCollide = false
+WedgePart3.FormFactor = Enum.FormFactor.Custom
+WedgePart3.Size = Vector3.new(0.147701919, 0.0500000007, 0.970612586)
+WedgePart3.CFrame = CFrame.new(14.0000076, 0.717414975, 38.7565002, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart3.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart3.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart3.Position = Vector3.new(14.0000076, 0.717414975, 38.7565002)
+WedgePart3.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart4.Parent = Model2
+WedgePart4.Material = Enum.Material.SmoothPlastic
+WedgePart4.BrickColor = BrickColor.new("Medium blue")
+WedgePart4.Rotation = Vector3.new(0, 0, 180)
+WedgePart4.CanCollide = false
+WedgePart4.FormFactor = Enum.FormFactor.Custom
+WedgePart4.Size = Vector3.new(0.147701919, 0.18990247, 1.35041749)
+WedgePart4.CFrame = CFrame.new(14.0000076, 0.43256101, 39.9170074, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart4.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart4.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart4.Position = Vector3.new(14.0000076, 0.43256101, 39.9170074)
+WedgePart4.Orientation = Vector3.new(0, 0, 180)
+WedgePart4.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part5.Parent = Model2
+Part5.Material = Enum.Material.SmoothPlastic
+Part5.BrickColor = BrickColor.new("Medium blue")
+Part5.Rotation = Vector3.new(90, 0, 90)
+Part5.CanCollide = false
+Part5.FormFactor = Enum.FormFactor.Custom
+Part5.Size = Vector3.new(1.35041749, 0.147701919, 0.105501369)
+Part5.CFrame = CFrame.new(14.0000095, 0.580259025, 39.9170074, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part5.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part5.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part5.Position = Vector3.new(14.0000095, 0.580259025, 39.9170074)
+Part5.Orientation = Vector3.new(90, -90, 0)
+Part5.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part6.Parent = Model2
+Part6.Material = Enum.Material.SmoothPlastic
+Part6.BrickColor = BrickColor.new("Medium blue")
+Part6.Rotation = Vector3.new(90, 0, 90)
+Part6.CanCollide = false
+Part6.FormFactor = Enum.FormFactor.Custom
+Part6.Size = Vector3.new(1.49811947, 0.147701919, 0.0633008257)
+Part6.CFrame = CFrame.new(14.0000038, 0.601360977, 38.4927521, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part6.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part6.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part6.Position = Vector3.new(14.0000038, 0.601360977, 38.4927521)
+Part6.Orientation = Vector3.new(90, -90, 0)
+Part6.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart7.Parent = Model2
+WedgePart7.Material = Enum.Material.SmoothPlastic
+WedgePart7.BrickColor = BrickColor.new("Medium blue")
+WedgePart7.Rotation = Vector3.new(180, 0, 0)
+WedgePart7.CanCollide = false
+WedgePart7.FormFactor = Enum.FormFactor.Custom
+WedgePart7.Size = Vector3.new(0.147701919, 0.0500000007, 0.527506828)
+WedgePart7.CFrame = CFrame.new(13.9999962, 0.548604012, 38.0074501, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart7.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart7.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart7.Position = Vector3.new(13.9999962, 0.548604012, 38.0074501)
+WedgePart7.Orientation = Vector3.new(0, 180, 180)
+WedgePart7.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part8.Parent = Model2
+Part8.Material = Enum.Material.SmoothPlastic
+Part8.BrickColor = BrickColor.new("Medium blue")
+Part8.Rotation = Vector3.new(90, 0, 90)
+Part8.CanCollide = false
+Part8.FormFactor = Enum.FormFactor.Symmetric
+Part8.Size = Vector3.new(1.05501366, 0.147701919, 0.105501369)
+Part8.CFrame = CFrame.new(14.0000038, 0.580254972, 37.2161942, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part8.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part8.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part8.Position = Vector3.new(14.0000038, 0.580254972, 37.2161942)
+Part8.Orientation = Vector3.new(90, -90, 0)
+Part8.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart9.Parent = Model2
+WedgePart9.Material = Enum.Material.SmoothPlastic
+WedgePart9.BrickColor = BrickColor.new("Medium blue")
+WedgePart9.Rotation = Vector3.new(180, 0, 0)
+WedgePart9.CanCollide = false
+WedgePart9.FormFactor = Enum.FormFactor.Symmetric
+WedgePart9.Size = Vector3.new(0.147701919, 0.105501369, 0.422005475)
+WedgePart9.CFrame = CFrame.new(14.0000038, 0.474752009, 37.5326996, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart9.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart9.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart9.Position = Vector3.new(14.0000038, 0.474752009, 37.5326996)
+WedgePart9.Orientation = Vector3.new(0, 180, 180)
+WedgePart9.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part10.Parent = Model2
+Part10.Material = Enum.Material.SmoothPlastic
+Part10.BrickColor = BrickColor.new("Medium blue")
+Part10.Rotation = Vector3.new(90, 0, 90)
+Part10.CanCollide = false
+Part10.FormFactor = Enum.FormFactor.Symmetric
+Part10.Size = Vector3.new(0.422005475, 0.147701919, 0.105501369)
+Part10.CFrame = CFrame.new(14.0000076, 0.474754989, 37.1106911, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part10.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part10.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part10.Position = Vector3.new(14.0000076, 0.474754989, 37.1106911)
+Part10.Orientation = Vector3.new(90, -90, 0)
+Part10.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart11.Parent = Model2
+WedgePart11.Material = Enum.Material.SmoothPlastic
+WedgePart11.BrickColor = BrickColor.new("Medium blue")
+WedgePart11.Rotation = Vector3.new(180, 0, 0)
+WedgePart11.CanCollide = false
+WedgePart11.FormFactor = Enum.FormFactor.Symmetric
+WedgePart11.Size = Vector3.new(0.147701919, 0.105501369, 0.147701919)
+WedgePart11.CFrame = CFrame.new(14.0000038, 0.36926201, 37.2478485, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart11.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart11.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart11.Position = Vector3.new(14.0000038, 0.36926201, 37.2478485)
+WedgePart11.Orientation = Vector3.new(0, 180, 180)
+WedgePart11.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart12.Parent = Model2
+WedgePart12.Material = Enum.Material.SmoothPlastic
+WedgePart12.BrickColor = BrickColor.new("Medium blue")
+WedgePart12.Rotation = Vector3.new(0, 0, 180)
+WedgePart12.CanCollide = false
+WedgePart12.FormFactor = Enum.FormFactor.Symmetric
+WedgePart12.Size = Vector3.new(0.147701919, 0.105501369, 0.274303555)
+WedgePart12.CFrame = CFrame.new(14.0000095, 0.369251013, 37.0368423, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart12.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart12.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart12.Position = Vector3.new(14.0000095, 0.369251013, 37.0368423)
+WedgePart12.Orientation = Vector3.new(0, 0, 180)
+WedgePart12.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart13.Parent = Model2
+WedgePart13.Material = Enum.Material.SmoothPlastic
+WedgePart13.BrickColor = BrickColor.new("Medium blue")
+WedgePart13.Rotation = Vector3.new(0, 0, 180)
+WedgePart13.CanCollide = false
+WedgePart13.FormFactor = Enum.FormFactor.Symmetric
+WedgePart13.Size = Vector3.new(0.147701919, 0.105501369, 0.211002737)
+WedgePart13.CFrame = CFrame.new(14.0000038, 0.474761009, 36.7941895, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart13.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart13.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart13.Position = Vector3.new(14.0000038, 0.474761009, 36.7941895)
+WedgePart13.Orientation = Vector3.new(0, 0, 180)
+WedgePart13.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart14.Parent = Model2
+WedgePart14.Material = Enum.Material.SmoothPlastic
+WedgePart14.BrickColor = BrickColor.new("Medium blue")
+WedgePart14.Rotation = Vector3.new(0, 0, 180)
+WedgePart14.CanCollide = false
+WedgePart14.FormFactor = Enum.FormFactor.Symmetric
+WedgePart14.Size = Vector3.new(0.147701919, 0.105501369, 0.105501369)
+WedgePart14.CFrame = CFrame.new(14.0000038, 0.580250978, 36.6359406, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart14.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart14.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart14.Position = Vector3.new(14.0000038, 0.580250978, 36.6359406)
+WedgePart14.Orientation = Vector3.new(0, 0, 180)
+WedgePart14.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart15.Parent = Model2
+WedgePart15.Material = Enum.Material.SmoothPlastic
+WedgePart15.BrickColor = BrickColor.new("Medium blue")
+WedgePart15.Rotation = Vector3.new(0, 0, 180)
+WedgePart15.CanCollide = false
+WedgePart15.FormFactor = Enum.FormFactor.Custom
+WedgePart15.Size = Vector3.new(0.147701919, 0.0500000007, 0.970612586)
+WedgePart15.CFrame = CFrame.new(14.0000038, 0.548609972, 38.7565002, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart15.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart15.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart15.Position = Vector3.new(14.0000038, 0.548609972, 38.7565002)
+WedgePart15.Orientation = Vector3.new(0, 0, 180)
+WedgePart15.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart16.Parent = Model2
+WedgePart16.Material = Enum.Material.SmoothPlastic
+WedgePart16.BrickColor = BrickColor.new("Medium blue")
+WedgePart16.CanCollide = false
+WedgePart16.FormFactor = Enum.FormFactor.Custom
+WedgePart16.Size = Vector3.new(0.147701919, 0.18990247, 1.35041749)
+WedgePart16.CFrame = CFrame.new(14.0000095, 0.833465993, 39.9170074, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart16.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart16.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart16.Position = Vector3.new(14.0000095, 0.833465993, 39.9170074)
+WedgePart16.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part17.Parent = Model2
+Part17.Material = Enum.Material.SmoothPlastic
+Part17.BrickColor = BrickColor.new("Medium blue")
+Part17.Rotation = Vector3.new(-90, 0, 90)
+Part17.CanCollide = false
+Part17.FormFactor = Enum.FormFactor.Custom
+Part17.Size = Vector3.new(1.35041749, 0.147701919, 0.105501369)
+Part17.CFrame = CFrame.new(14.0000143, 0.685765028, 39.9170074, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part17.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part17.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part17.Position = Vector3.new(14.0000143, 0.685765028, 39.9170074)
+Part17.Orientation = Vector3.new(-90, 90, 0)
+Part17.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part18.Parent = Model2
+Part18.Material = Enum.Material.SmoothPlastic
+Part18.BrickColor = BrickColor.new("Medium blue")
+Part18.Rotation = Vector3.new(-90, 0, 90)
+Part18.CanCollide = false
+Part18.FormFactor = Enum.FormFactor.Custom
+Part18.Size = Vector3.new(1.49811947, 0.147701919, 0.0633008257)
+Part18.CFrame = CFrame.new(14.0000076, 0.66466397, 38.4927521, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part18.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part18.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part18.Position = Vector3.new(14.0000076, 0.66466397, 38.4927521)
+Part18.Orientation = Vector3.new(-90, 90, 0)
+Part18.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart19.Parent = Model2
+WedgePart19.Material = Enum.Material.SmoothPlastic
+WedgePart19.BrickColor = BrickColor.new("Medium blue")
+WedgePart19.Rotation = Vector3.new(-180, 0, -180)
+WedgePart19.CanCollide = false
+WedgePart19.FormFactor = Enum.FormFactor.Custom
+WedgePart19.Size = Vector3.new(0.147701919, 0.0500000007, 0.527506828)
+WedgePart19.CFrame = CFrame.new(14, 0.717410028, 38.0074501, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart19.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart19.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart19.Position = Vector3.new(14, 0.717410028, 38.0074501)
+WedgePart19.Orientation = Vector3.new(0, 180, 0)
+WedgePart19.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part20.Parent = Model2
+Part20.Material = Enum.Material.SmoothPlastic
+Part20.BrickColor = BrickColor.new("Medium blue")
+Part20.Rotation = Vector3.new(-90, 0, 90)
+Part20.CanCollide = false
+Part20.FormFactor = Enum.FormFactor.Symmetric
+Part20.Size = Vector3.new(1.05501366, 0.147701919, 0.105501369)
+Part20.CFrame = CFrame.new(14.0000076, 0.685760021, 37.2161942, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part20.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part20.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part20.Position = Vector3.new(14.0000076, 0.685760021, 37.2161942)
+Part20.Orientation = Vector3.new(-90, 90, 0)
+Part20.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart21.Parent = Model2
+WedgePart21.Material = Enum.Material.SmoothPlastic
+WedgePart21.BrickColor = BrickColor.new("Medium blue")
+WedgePart21.Rotation = Vector3.new(-180, 0, -180)
+WedgePart21.CanCollide = false
+WedgePart21.FormFactor = Enum.FormFactor.Symmetric
+WedgePart21.Size = Vector3.new(0.147701919, 0.105501369, 0.422005475)
+WedgePart21.CFrame = CFrame.new(14.0000038, 0.791265011, 37.5326958, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart21.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart21.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart21.Position = Vector3.new(14.0000038, 0.791265011, 37.5326958)
+WedgePart21.Orientation = Vector3.new(0, 180, 0)
+WedgePart21.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part22.Parent = Model2
+Part22.Material = Enum.Material.SmoothPlastic
+Part22.BrickColor = BrickColor.new("Medium blue")
+Part22.Rotation = Vector3.new(-90, 0, 90)
+Part22.CanCollide = false
+Part22.FormFactor = Enum.FormFactor.Symmetric
+Part22.Size = Vector3.new(0.422005475, 0.147701919, 0.105501369)
+Part22.CFrame = CFrame.new(14.0000076, 0.791260004, 37.1106949, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part22.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part22.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part22.Position = Vector3.new(14.0000076, 0.791260004, 37.1106949)
+Part22.Orientation = Vector3.new(-90, 90, 0)
+Part22.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart23.Parent = Model2
+WedgePart23.Material = Enum.Material.SmoothPlastic
+WedgePart23.BrickColor = BrickColor.new("Medium blue")
+WedgePart23.Rotation = Vector3.new(-180, 0, -180)
+WedgePart23.CanCollide = false
+WedgePart23.FormFactor = Enum.FormFactor.Symmetric
+WedgePart23.Size = Vector3.new(0.147701919, 0.105501369, 0.147701919)
+WedgePart23.CFrame = CFrame.new(14.0000038, 0.896764994, 37.2478409, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart23.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart23.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart23.Position = Vector3.new(14.0000038, 0.896764994, 37.2478409)
+WedgePart23.Orientation = Vector3.new(0, 180, 0)
+WedgePart23.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart24.Parent = Model2
+WedgePart24.Material = Enum.Material.SmoothPlastic
+WedgePart24.BrickColor = BrickColor.new("Medium blue")
+WedgePart24.CanCollide = false
+WedgePart24.FormFactor = Enum.FormFactor.Symmetric
+WedgePart24.Size = Vector3.new(0.147701919, 0.105501369, 0.274303555)
+WedgePart24.CFrame = CFrame.new(14, 0.896755993, 37.0368423, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart24.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart24.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart24.Position = Vector3.new(14, 0.896755993, 37.0368423)
+WedgePart24.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart25.Parent = Model2
+WedgePart25.Material = Enum.Material.SmoothPlastic
+WedgePart25.BrickColor = BrickColor.new("Medium blue")
+WedgePart25.CanCollide = false
+WedgePart25.FormFactor = Enum.FormFactor.Symmetric
+WedgePart25.Size = Vector3.new(0.147701919, 0.105501369, 0.211002737)
+WedgePart25.CFrame = CFrame.new(13.9999924, 0.791257977, 36.7941895, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart25.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart25.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart25.Position = Vector3.new(13.9999924, 0.791257977, 36.7941895)
+WedgePart25.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart26.Parent = Model2
+WedgePart26.Material = Enum.Material.SmoothPlastic
+WedgePart26.BrickColor = BrickColor.new("Medium blue")
+WedgePart26.CanCollide = false
+WedgePart26.FormFactor = Enum.FormFactor.Symmetric
+WedgePart26.Size = Vector3.new(0.147701919, 0.105501369, 0.105501369)
+WedgePart26.CFrame = CFrame.new(13.9999962, 0.685757995, 36.6359406, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart26.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart26.Color = Color3.new(0.431373, 0.6, 0.792157)
+WedgePart26.Position = Vector3.new(13.9999962, 0.685757995, 36.6359406)
+WedgePart26.Color = Color3.new(0.431373, 0.6, 0.792157)
+Model27.Parent = Model1
+Part28.Parent = Model27
+Part28.Material = Enum.Material.SmoothPlastic
+Part28.BrickColor = BrickColor.new("Gold")
+Part28.Rotation = Vector3.new(-90, 0, 90)
+Part28.CanCollide = false
+Part28.FormFactor = Enum.FormFactor.Custom
+Part28.Size = Vector3.new(0.211002737, 0.189902484, 0.211002737)
+Part28.CFrame = CFrame.new(14, 0.738512993, 40.4867172, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part28.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part28.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part28.Position = Vector3.new(14, 0.738512993, 40.4867172)
+Part28.Orientation = Vector3.new(-90, 90, 0)
+Part28.Color = Color3.new(0.937255, 0.721569, 0.219608)
+WedgePart29.Parent = Model27
+WedgePart29.Material = Enum.Material.SmoothPlastic
+WedgePart29.BrickColor = BrickColor.new("Gold")
+WedgePart29.CanCollide = false
+WedgePart29.FormFactor = Enum.FormFactor.Custom
+WedgePart29.Size = Vector3.new(0.189902484, 0.211002737, 1.09721422)
+WedgePart29.CFrame = CFrame.new(14.0000038, 0.738519013, 39.8326111, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart29.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart29.Color = Color3.new(0.937255, 0.721569, 0.219608)
+WedgePart29.Position = Vector3.new(14.0000038, 0.738519013, 39.8326111)
+WedgePart29.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part30.Parent = Model27
+Part30.Material = Enum.Material.SmoothPlastic
+Part30.BrickColor = BrickColor.new("Gold")
+Part30.Rotation = Vector3.new(90, 0, 90)
+Part30.CanCollide = false
+Part30.FormFactor = Enum.FormFactor.Custom
+Part30.Size = Vector3.new(0.211002737, 0.189902484, 0.211002737)
+Part30.CFrame = CFrame.new(14.0000038, 0.527514994, 40.4867134, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part30.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part30.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part30.Position = Vector3.new(14.0000038, 0.527514994, 40.4867134)
+Part30.Orientation = Vector3.new(90, -90, 0)
+Part30.Color = Color3.new(0.937255, 0.721569, 0.219608)
+WedgePart31.Parent = Model27
+WedgePart31.Material = Enum.Material.SmoothPlastic
+WedgePart31.BrickColor = BrickColor.new("Gold")
+WedgePart31.Rotation = Vector3.new(0, 0, 180)
+WedgePart31.CanCollide = false
+WedgePart31.FormFactor = Enum.FormFactor.Custom
+WedgePart31.Size = Vector3.new(0.189902484, 0.211002737, 1.09721422)
+WedgePart31.CFrame = CFrame.new(14, 0.52750802, 39.8326111, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart31.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart31.Color = Color3.new(0.937255, 0.721569, 0.219608)
+WedgePart31.Position = Vector3.new(14, 0.52750802, 39.8326111)
+WedgePart31.Orientation = Vector3.new(0, 0, 180)
+WedgePart31.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Model32.Parent = Model1
+Part33.Parent = Model32
+Part33.Material = Enum.Material.SmoothPlastic
+Part33.BrickColor = BrickColor.new("Gold")
+Part33.Rotation = Vector3.new(-45.0200005, -11.3099995, -49.6599998)
+Part33.CanCollide = false
+Part33.FormFactor = Enum.FormFactor.Custom
+Part33.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part33.CFrame = CFrame.new(14.0000076, 0.643566012, 40.6027718, 0.634735882, 0.747406423, -0.196166113, -0.448922694, 0.563309491, 0.693639278, 0.628940284, -0.352208257, 0.693089187)
+Part33.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part33.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part33.Position = Vector3.new(14.0000076, 0.643566012, 40.6027718)
+Part33.Orientation = Vector3.new(-43.9199982, -15.7999992, -38.5499992)
+Part33.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part34.Parent = Model32
+Part34.Material = Enum.Material.SmoothPlastic
+Part34.BrickColor = BrickColor.new("Gold")
+Part34.Rotation = Vector3.new(-65.8600006, -56.7700005, -16.8199997)
+Part34.CanCollide = false
+Part34.FormFactor = Enum.FormFactor.Custom
+Part34.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part34.CFrame = CFrame.new(14.0000076, 0.643566012, 40.6027718, 0.524531543, 0.158569828, -0.83649689, 0.612349451, 0.61234796, 0.500062048, 0.591523111, -0.774525344, 0.224095225)
+Part34.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part34.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part34.Position = Vector3.new(14.0000076, 0.643566012, 40.6027718)
+Part34.Orientation = Vector3.new(-30, -75, 45)
+Part34.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part35.Parent = Model32
+Part35.Material = Enum.Material.SmoothPlastic
+Part35.BrickColor = BrickColor.new("Gold")
+Part35.Rotation = Vector3.new(93.9599991, 14.4799995, 74.4899979)
+Part35.CanCollide = false
+Part35.FormFactor = Enum.FormFactor.Custom
+Part35.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part35.CFrame = CFrame.new(14.0000076, 0.643566012, 40.6027718, 0.258850992, -0.932996213, 0.25002861, 5.46564879e-05, -0.258836806, -0.965921104, 0.965917349, 0.250043273, -0.0669491664)
+Part35.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part35.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part35.Position = Vector3.new(14.0000076, 0.643566012, 40.6027718)
+Part35.Orientation = Vector3.new(75, 104.989998, 179.98999)
+Part35.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part36.Parent = Model32
+Part36.Material = Enum.Material.SmoothPlastic
+Part36.BrickColor = BrickColor.new("Gold")
+Part36.Rotation = Vector3.new(117.199997, -39.6499977, -119.349998)
+Part36.CanCollide = false
+Part36.FormFactor = Enum.FormFactor.Custom
+Part36.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part36.CFrame = CFrame.new(14.0000076, 0.643566012, 40.6027718, -0.377376944, 0.671179891, -0.638047218, 0.67658335, -0.270615518, -0.684837401, -0.632314503, -0.690133989, -0.351985067)
+Part36.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part36.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part36.Position = Vector3.new(14.0000076, 0.643566012, 40.6027718)
+Part36.Orientation = Vector3.new(43.2199974, -118.879997, 111.799995)
+Part36.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Model37.Name = "Blade"
+Model37.Parent = Model1
+WedgePart38.Parent = Model37
+WedgePart38.Material = Enum.Material.Neon
+WedgePart38.BrickColor = BrickColor.new("Pink")
+WedgePart38.Transparency = 0.5
+WedgePart38.Rotation = Vector3.new(180, 0, 0)
+WedgePart38.CanCollide = false
+WedgePart38.FormFactor = Enum.FormFactor.Symmetric
+WedgePart38.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart38.CFrame = CFrame.new(14.0000038, 0.052765999, 40.3812141, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart38.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart38.Color = Color3.new(1, 0.4, 0.8)
+WedgePart38.Position = Vector3.new(14.0000038, 0.052765999, 40.3812141)
+WedgePart38.Orientation = Vector3.new(0, 180, 180)
+WedgePart38.Color = Color3.new(1, 0.4, 0.8)
+WedgePart39.Parent = Model37
+WedgePart39.Material = Enum.Material.Neon
+WedgePart39.BrickColor = BrickColor.new("Pink")
+WedgePart39.Transparency = 0.5
+WedgePart39.CanCollide = false
+WedgePart39.FormFactor = Enum.FormFactor.Symmetric
+WedgePart39.Size = Vector3.new(0.105501369, 0.422005475, 1.79352331)
+WedgePart39.CFrame = CFrame.new(13.9999876, 0.844004989, 36.1084518, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart39.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart39.Color = Color3.new(1, 0.4, 0.8)
+WedgePart39.Position = Vector3.new(13.9999876, 0.844004989, 36.1084518)
+WedgePart39.Color = Color3.new(1, 0.4, 0.8)
+WedgePart40.Parent = Model37
+WedgePart40.Material = Enum.Material.Neon
+WedgePart40.BrickColor = BrickColor.new("Pink")
+WedgePart40.Transparency = 0.5
+WedgePart40.Rotation = Vector3.new(-180, 0, -180)
+WedgePart40.CanCollide = false
+WedgePart40.FormFactor = Enum.FormFactor.Symmetric
+WedgePart40.Size = Vector3.new(0.105501369, 0.105501369, 0.738509595)
+WedgePart40.CFrame = CFrame.new(13.9999962, 1.002262, 37.3744545, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart40.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart40.Color = Color3.new(1, 0.4, 0.8)
+WedgePart40.Position = Vector3.new(13.9999962, 1.002262, 37.3744545)
+WedgePart40.Orientation = Vector3.new(0, 180, 0)
+WedgePart40.Color = Color3.new(1, 0.4, 0.8)
+Part41.Parent = Model37
+Part41.Material = Enum.Material.Neon
+Part41.BrickColor = BrickColor.new("Pink")
+Part41.Transparency = 0.5
+Part41.Rotation = Vector3.new(-90, 0, 90)
+Part41.CanCollide = false
+Part41.FormFactor = Enum.FormFactor.Symmetric
+Part41.Size = Vector3.new(0.316504121, 0.105501369, 0.316504121)
+Part41.CFrame = CFrame.new(13.9999876, 0.791263998, 38.8514633, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part41.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part41.Color = Color3.new(1, 0.4, 0.8)
+Part41.Position = Vector3.new(13.9999876, 0.791263998, 38.8514633)
+Part41.Orientation = Vector3.new(-90, 90, 0)
+Part41.Color = Color3.new(1, 0.4, 0.8)
+Part42.Parent = Model37
+Part42.Material = Enum.Material.Neon
+Part42.BrickColor = BrickColor.new("Pink")
+Part42.Transparency = 0.5
+Part42.Rotation = Vector3.new(-90, 0, 90)
+Part42.CanCollide = false
+Part42.FormFactor = Enum.FormFactor.Symmetric
+Part42.Size = Vector3.new(0.105501369, 0.105501369, 0.105501369)
+Part42.CFrame = CFrame.new(13.9999962, 1.002262, 38.7459602, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part42.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part42.Color = Color3.new(1, 0.4, 0.8)
+Part42.Position = Vector3.new(13.9999962, 1.002262, 38.7459602)
+Part42.Orientation = Vector3.new(-90, 90, 0)
+Part42.Color = Color3.new(1, 0.4, 0.8)
+Part43.Parent = Model37
+Part43.Material = Enum.Material.Neon
+Part43.BrickColor = BrickColor.new("Pink")
+Part43.Transparency = 0.5
+Part43.Rotation = Vector3.new(-90, 0, 90)
+Part43.CanCollide = false
+Part43.FormFactor = Enum.FormFactor.Symmetric
+Part43.Size = Vector3.new(1.47701919, 0.105501369, 0.316504121)
+Part43.CFrame = CFrame.new(13.9999876, 0.791260004, 37.7437057, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part43.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part43.Color = Color3.new(1, 0.4, 0.8)
+Part43.Position = Vector3.new(13.9999876, 0.791260004, 37.7437057)
+Part43.Orientation = Vector3.new(-90, 90, 0)
+Part43.Color = Color3.new(1, 0.4, 0.8)
+Part44.Parent = Model37
+Part44.Material = Enum.Material.Neon
+Part44.BrickColor = BrickColor.new("Pink")
+Part44.Transparency = 0.5
+Part44.Rotation = Vector3.new(-90, 0, 90)
+Part44.CanCollide = false
+Part44.FormFactor = Enum.FormFactor.Symmetric
+Part44.Size = Vector3.new(0.211002737, 0.105501369, 0.211002737)
+Part44.CFrame = CFrame.new(13.9999962, 0.738508999, 38.5877151, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part44.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part44.Color = Color3.new(1, 0.4, 0.8)
+Part44.Position = Vector3.new(13.9999962, 0.738508999, 38.5877151)
+Part44.Orientation = Vector3.new(-90, 90, 0)
+Part44.Color = Color3.new(1, 0.4, 0.8)
+WedgePart45.Parent = Model37
+WedgePart45.Material = Enum.Material.Neon
+WedgePart45.BrickColor = BrickColor.new("Pink")
+WedgePart45.Transparency = 0.5
+WedgePart45.CanCollide = false
+WedgePart45.FormFactor = Enum.FormFactor.Symmetric
+WedgePart45.Size = Vector3.new(0.105501369, 0.105501369, 0.738509595)
+WedgePart45.CFrame = CFrame.new(13.9999962, 1.00226498, 38.1129532, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart45.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart45.Color = Color3.new(1, 0.4, 0.8)
+WedgePart45.Position = Vector3.new(13.9999962, 1.00226498, 38.1129532)
+WedgePart45.Color = Color3.new(1, 0.4, 0.8)
+WedgePart46.Parent = Model37
+WedgePart46.Material = Enum.Material.Neon
+WedgePart46.BrickColor = BrickColor.new("Pink")
+WedgePart46.Transparency = 0.5
+WedgePart46.Rotation = Vector3.new(-180, 0, -180)
+WedgePart46.CanCollide = false
+WedgePart46.FormFactor = Enum.FormFactor.Symmetric
+WedgePart46.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart46.CFrame = CFrame.new(13.9999838, 0.949510992, 38.5349579, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart46.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart46.Color = Color3.new(1, 0.4, 0.8)
+WedgePart46.Position = Vector3.new(13.9999838, 0.949510992, 38.5349579)
+WedgePart46.Orientation = Vector3.new(0, 180, 0)
+WedgePart46.Color = Color3.new(1, 0.4, 0.8)
+WedgePart47.Parent = Model37
+WedgePart47.Material = Enum.Material.Neon
+WedgePart47.BrickColor = BrickColor.new("Pink")
+WedgePart47.Transparency = 0.5
+WedgePart47.CanCollide = false
+WedgePart47.FormFactor = Enum.FormFactor.Symmetric
+WedgePart47.Size = Vector3.new(0.105501369, 0.316504121, 0.105501369)
+WedgePart47.CFrame = CFrame.new(13.9999876, 1.00225902, 38.6404572, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart47.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart47.Color = Color3.new(1, 0.4, 0.8)
+WedgePart47.Position = Vector3.new(13.9999876, 1.00225902, 38.6404572)
+WedgePart47.Color = Color3.new(1, 0.4, 0.8)
+WedgePart48.Parent = Model37
+WedgePart48.Material = Enum.Material.Neon
+WedgePart48.BrickColor = BrickColor.new("Pink")
+WedgePart48.Transparency = 0.5
+WedgePart48.Rotation = Vector3.new(-180, 0, -180)
+WedgePart48.CanCollide = false
+WedgePart48.FormFactor = Enum.FormFactor.Symmetric
+WedgePart48.Size = Vector3.new(0.105501369, 0.105501369, 0.105501369)
+WedgePart48.CFrame = CFrame.new(14.0000038, 1.10776305, 38.7459602, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart48.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart48.Color = Color3.new(1, 0.4, 0.8)
+WedgePart48.Position = Vector3.new(14.0000038, 1.10776305, 38.7459602)
+WedgePart48.Orientation = Vector3.new(0, 180, 0)
+WedgePart48.Color = Color3.new(1, 0.4, 0.8)
+WedgePart49.Parent = Model37
+WedgePart49.Material = Enum.Material.Neon
+WedgePart49.BrickColor = BrickColor.new("Pink")
+WedgePart49.Transparency = 0.5
+WedgePart49.Rotation = Vector3.new(-180, 0, -180)
+WedgePart49.CanCollide = false
+WedgePart49.FormFactor = Enum.FormFactor.Symmetric
+WedgePart49.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart49.CFrame = CFrame.new(13.9999876, 1.00225902, 38.904213, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart49.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart49.Color = Color3.new(1, 0.4, 0.8)
+WedgePart49.Position = Vector3.new(13.9999876, 1.00225902, 38.904213)
+WedgePart49.Orientation = Vector3.new(0, 180, 0)
+WedgePart49.Color = Color3.new(1, 0.4, 0.8)
+WedgePart50.Parent = Model37
+WedgePart50.Material = Enum.Material.Neon
+WedgePart50.BrickColor = BrickColor.new("Pink")
+WedgePart50.Transparency = 0.5
+WedgePart50.Rotation = Vector3.new(-180, 0, -180)
+WedgePart50.CanCollide = false
+WedgePart50.FormFactor = Enum.FormFactor.Symmetric
+WedgePart50.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart50.CFrame = CFrame.new(13.9999962, 1.05500996, 40.5394669, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart50.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart50.Color = Color3.new(1, 0.4, 0.8)
+WedgePart50.Position = Vector3.new(13.9999962, 1.05500996, 40.5394669)
+WedgePart50.Orientation = Vector3.new(0, 180, 0)
+WedgePart50.Color = Color3.new(1, 0.4, 0.8)
+Part51.Parent = Model37
+Part51.Material = Enum.Material.Neon
+Part51.BrickColor = BrickColor.new("Pink")
+Part51.Transparency = 0.5
+Part51.Rotation = Vector3.new(-90, 0, 90)
+Part51.CanCollide = false
+Part51.FormFactor = Enum.FormFactor.Symmetric
+Part51.Size = Vector3.new(0.527506828, 0.105501369, 0.105501369)
+Part51.CFrame = CFrame.new(14.0000038, 0.89676702, 39.9064636, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part51.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part51.Color = Color3.new(1, 0.4, 0.8)
+Part51.Position = Vector3.new(14.0000038, 0.89676702, 39.9064636)
+Part51.Orientation = Vector3.new(-90, 90, 0)
+Part51.Color = Color3.new(1, 0.4, 0.8)
+Part52.Parent = Model37
+Part52.Material = Enum.Material.Neon
+Part52.BrickColor = BrickColor.new("Pink")
+Part52.Transparency = 0.5
+Part52.Rotation = Vector3.new(-90, 0, 90)
+Part52.CanCollide = false
+Part52.FormFactor = Enum.FormFactor.Symmetric
+Part52.Size = Vector3.new(0.316504121, 0.105501369, 0.211002737)
+Part52.CFrame = CFrame.new(13.9999924, 0.949517012, 40.3284683, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part52.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part52.Color = Color3.new(1, 0.4, 0.8)
+Part52.Position = Vector3.new(13.9999924, 0.949517012, 40.3284683)
+Part52.Orientation = Vector3.new(-90, 90, 0)
+Part52.Color = Color3.new(1, 0.4, 0.8)
+Part53.Parent = Model37
+Part53.Material = Enum.Material.Neon
+Part53.BrickColor = BrickColor.new("Pink")
+Part53.Transparency = 0.5
+Part53.Rotation = Vector3.new(-90, 0, 90)
+Part53.CanCollide = false
+Part53.FormFactor = Enum.FormFactor.Symmetric
+Part53.Size = Vector3.new(0.211002737, 0.105501369, 0.105501369)
+Part53.CFrame = CFrame.new(14, 1.10776901, 40.3812141, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part53.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part53.Color = Color3.new(1, 0.4, 0.8)
+Part53.Position = Vector3.new(14, 1.10776901, 40.3812141)
+Part53.Orientation = Vector3.new(-90, 90, 0)
+Part53.Color = Color3.new(1, 0.4, 0.8)
+Part54.Parent = Model37
+Part54.Material = Enum.Material.Neon
+Part54.BrickColor = BrickColor.new("Pink")
+Part54.Transparency = 0.5
+Part54.Rotation = Vector3.new(-90, 0, 90)
+Part54.CanCollide = false
+Part54.FormFactor = Enum.FormFactor.Symmetric
+Part54.Size = Vector3.new(1.47701919, 0.105501369, 0.211002737)
+Part54.CFrame = CFrame.new(13.9999962, 0.738511026, 39.7482147, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part54.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part54.Color = Color3.new(1, 0.4, 0.8)
+Part54.Position = Vector3.new(13.9999962, 0.738511026, 39.7482147)
+Part54.Orientation = Vector3.new(-90, 90, 0)
+Part54.Color = Color3.new(1, 0.4, 0.8)
+Part55.Parent = Model37
+Part55.Material = Enum.Material.Neon
+Part55.BrickColor = BrickColor.new("Pink")
+Part55.Transparency = 0.5
+Part55.Rotation = Vector3.new(-90, 0, 90)
+Part55.CanCollide = false
+Part55.FormFactor = Enum.FormFactor.Symmetric
+Part55.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+Part55.CFrame = CFrame.new(14.0000038, 0.791265011, 40.5394669, 3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, -3.05175781e-05, 1, -1, -3.05175781e-05, -3.05175781e-05)
+Part55.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part55.Color = Color3.new(1, 0.4, 0.8)
+Part55.Position = Vector3.new(14.0000038, 0.791265011, 40.5394669)
+Part55.Orientation = Vector3.new(-90, 90, 0)
+Part55.Color = Color3.new(1, 0.4, 0.8)
+WedgePart56.Parent = Model37
+WedgePart56.Material = Enum.Material.Neon
+WedgePart56.BrickColor = BrickColor.new("Pink")
+WedgePart56.Transparency = 0.5
+WedgePart56.Rotation = Vector3.new(-180, 0, -180)
+WedgePart56.CanCollide = false
+WedgePart56.FormFactor = Enum.FormFactor.Symmetric
+WedgePart56.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+WedgePart56.CFrame = CFrame.new(14, 0.896764994, 39.1679649, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart56.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart56.Color = Color3.new(1, 0.4, 0.8)
+WedgePart56.Position = Vector3.new(14, 0.896764994, 39.1679649)
+WedgePart56.Orientation = Vector3.new(0, 180, 0)
+WedgePart56.Color = Color3.new(1, 0.4, 0.8)
+WedgePart57.Parent = Model37
+WedgePart57.Material = Enum.Material.Neon
+WedgePart57.BrickColor = BrickColor.new("Pink")
+WedgePart57.Transparency = 0.5
+WedgePart57.CanCollide = false
+WedgePart57.FormFactor = Enum.FormFactor.Symmetric
+WedgePart57.Size = Vector3.new(0.105501369, 0.211002737, 0.211002737)
+WedgePart57.CFrame = CFrame.new(14, 1.05500996, 39.7482147, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart57.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart57.Color = Color3.new(1, 0.4, 0.8)
+WedgePart57.Position = Vector3.new(14, 1.05500996, 39.7482147)
+WedgePart57.Color = Color3.new(1, 0.4, 0.8)
+WedgePart58.Parent = Model37
+WedgePart58.Material = Enum.Material.Neon
+WedgePart58.BrickColor = BrickColor.new("Pink")
+WedgePart58.Transparency = 0.5
+WedgePart58.CanCollide = false
+WedgePart58.FormFactor = Enum.FormFactor.Symmetric
+WedgePart58.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+WedgePart58.CFrame = CFrame.new(13.9999924, 0.896764994, 39.4844666, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart58.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart58.Color = Color3.new(1, 0.4, 0.8)
+WedgePart58.Position = Vector3.new(13.9999924, 0.896764994, 39.4844666)
+WedgePart58.Color = Color3.new(1, 0.4, 0.8)
+WedgePart59.Parent = Model37
+WedgePart59.Material = Enum.Material.Neon
+WedgePart59.BrickColor = BrickColor.new("Pink")
+WedgePart59.Transparency = 0.5
+WedgePart59.Rotation = Vector3.new(-180, 0, -180)
+WedgePart59.CanCollide = false
+WedgePart59.FormFactor = Enum.FormFactor.Symmetric
+WedgePart59.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart59.CFrame = CFrame.new(13.9999962, 1.05500996, 39.9064674, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart59.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart59.Color = Color3.new(1, 0.4, 0.8)
+WedgePart59.Position = Vector3.new(13.9999962, 1.05500996, 39.9064674)
+WedgePart59.Orientation = Vector3.new(0, 180, 0)
+WedgePart59.Color = Color3.new(1, 0.4, 0.8)
+WedgePart60.Parent = Model37
+WedgePart60.Material = Enum.Material.Neon
+WedgePart60.BrickColor = BrickColor.new("Pink")
+WedgePart60.Transparency = 0.5
+WedgePart60.CanCollide = false
+WedgePart60.FormFactor = Enum.FormFactor.Symmetric
+WedgePart60.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart60.CFrame = CFrame.new(13.9999962, 1.00225401, 40.0647202, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart60.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart60.Color = Color3.new(1, 0.4, 0.8)
+WedgePart60.Position = Vector3.new(13.9999962, 1.00225401, 40.0647202)
+WedgePart60.Color = Color3.new(1, 0.4, 0.8)
+WedgePart61.Parent = Model37
+WedgePart61.Material = Enum.Material.Neon
+WedgePart61.BrickColor = BrickColor.new("Pink")
+WedgePart61.Transparency = 0.5
+WedgePart61.CanCollide = false
+WedgePart61.FormFactor = Enum.FormFactor.Symmetric
+WedgePart61.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart61.CFrame = CFrame.new(14, 1.16050994, 40.2229691, 1, 3.05180438e-05, -3.05171125e-05, -3.05171125e-05, 1, 3.05180438e-05, 3.05180438e-05, -3.05171125e-05, 1)
+WedgePart61.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart61.Color = Color3.new(1, 0.4, 0.8)
+WedgePart61.Position = Vector3.new(14, 1.16050994, 40.2229691)
+WedgePart61.Color = Color3.new(1, 0.4, 0.8)
+WedgePart62.Parent = Model37
+WedgePart62.Material = Enum.Material.Neon
+WedgePart62.BrickColor = BrickColor.new("Pink")
+WedgePart62.Transparency = 0.5
+WedgePart62.Rotation = Vector3.new(-180, 0, -180)
+WedgePart62.CanCollide = false
+WedgePart62.FormFactor = Enum.FormFactor.Symmetric
+WedgePart62.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart62.CFrame = CFrame.new(13.9999962, 1.21326101, 40.3812141, -1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, 1, 3.05171125e-05, -3.05171125e-05, 3.05180438e-05, -1)
+WedgePart62.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart62.Color = Color3.new(1, 0.4, 0.8)
+WedgePart62.Position = Vector3.new(13.9999962, 1.21326101, 40.3812141)
+WedgePart62.Orientation = Vector3.new(0, 180, 0)
+WedgePart62.Color = Color3.new(1, 0.4, 0.8)
+WedgePart63.Parent = Model37
+WedgePart63.Material = Enum.Material.Neon
+WedgePart63.BrickColor = BrickColor.new("Pink")
+WedgePart63.Transparency = 0.5
+WedgePart63.Rotation = Vector3.new(0, 0, 180)
+WedgePart63.CanCollide = false
+WedgePart63.FormFactor = Enum.FormFactor.Symmetric
+WedgePart63.Size = Vector3.new(0.105501369, 0.422005475, 1.79352331)
+WedgePart63.CFrame = CFrame.new(13.9999876, 0.422006011, 36.108448, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart63.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart63.Color = Color3.new(1, 0.4, 0.8)
+WedgePart63.Position = Vector3.new(13.9999876, 0.422006011, 36.108448)
+WedgePart63.Orientation = Vector3.new(0, 0, 180)
+WedgePart63.Color = Color3.new(1, 0.4, 0.8)
+WedgePart64.Parent = Model37
+WedgePart64.Material = Enum.Material.Neon
+WedgePart64.BrickColor = BrickColor.new("Pink")
+WedgePart64.Transparency = 0.5
+WedgePart64.Rotation = Vector3.new(180, 0, 0)
+WedgePart64.CanCollide = false
+WedgePart64.FormFactor = Enum.FormFactor.Symmetric
+WedgePart64.Size = Vector3.new(0.105501369, 0.105501369, 0.738509595)
+WedgePart64.CFrame = CFrame.new(13.9999962, 0.263756007, 37.3744545, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart64.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart64.Color = Color3.new(1, 0.4, 0.8)
+WedgePart64.Position = Vector3.new(13.9999962, 0.263756007, 37.3744545)
+WedgePart64.Orientation = Vector3.new(0, 180, 180)
+WedgePart64.Color = Color3.new(1, 0.4, 0.8)
+Part65.Parent = Model37
+Part65.Material = Enum.Material.Neon
+Part65.BrickColor = BrickColor.new("Pink")
+Part65.Transparency = 0.5
+Part65.Rotation = Vector3.new(90, 0, 90)
+Part65.CanCollide = false
+Part65.FormFactor = Enum.FormFactor.Symmetric
+Part65.Size = Vector3.new(0.316504121, 0.105501369, 0.316504121)
+Part65.CFrame = CFrame.new(14, 0.474754006, 38.8514595, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part65.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part65.Color = Color3.new(1, 0.4, 0.8)
+Part65.Position = Vector3.new(14, 0.474754006, 38.8514595)
+Part65.Orientation = Vector3.new(90, -90, 0)
+Part65.Color = Color3.new(1, 0.4, 0.8)
+Part66.Parent = Model37
+Part66.Material = Enum.Material.Neon
+Part66.BrickColor = BrickColor.new("Pink")
+Part66.Transparency = 0.5
+Part66.Rotation = Vector3.new(90, 0, 90)
+Part66.CanCollide = false
+Part66.FormFactor = Enum.FormFactor.Symmetric
+Part66.Size = Vector3.new(0.105501369, 0.105501369, 0.105501369)
+Part66.CFrame = CFrame.new(14, 0.263752013, 38.7459641, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part66.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part66.Color = Color3.new(1, 0.4, 0.8)
+Part66.Position = Vector3.new(14, 0.263752013, 38.7459641)
+Part66.Orientation = Vector3.new(90, -90, 0)
+Part66.Color = Color3.new(1, 0.4, 0.8)
+Part67.Parent = Model37
+Part67.Material = Enum.Material.Neon
+Part67.BrickColor = BrickColor.new("Pink")
+Part67.Transparency = 0.5
+Part67.Rotation = Vector3.new(90, 0, 90)
+Part67.CanCollide = false
+Part67.FormFactor = Enum.FormFactor.Symmetric
+Part67.Size = Vector3.new(1.47701919, 0.105501369, 0.316504121)
+Part67.CFrame = CFrame.new(13.9999962, 0.474754989, 37.7437057, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part67.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part67.Color = Color3.new(1, 0.4, 0.8)
+Part67.Position = Vector3.new(13.9999962, 0.474754989, 37.7437057)
+Part67.Orientation = Vector3.new(90, -90, 0)
+Part67.Color = Color3.new(1, 0.4, 0.8)
+Part68.Parent = Model37
+Part68.Material = Enum.Material.Neon
+Part68.BrickColor = BrickColor.new("Pink")
+Part68.Transparency = 0.5
+Part68.Rotation = Vector3.new(90, 0, 90)
+Part68.CanCollide = false
+Part68.FormFactor = Enum.FormFactor.Symmetric
+Part68.Size = Vector3.new(0.211002737, 0.105501369, 0.211002737)
+Part68.CFrame = CFrame.new(13.9999962, 0.527498007, 38.5877113, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part68.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part68.Color = Color3.new(1, 0.4, 0.8)
+Part68.Position = Vector3.new(13.9999962, 0.527498007, 38.5877113)
+Part68.Orientation = Vector3.new(90, -90, 0)
+Part68.Color = Color3.new(1, 0.4, 0.8)
+WedgePart69.Parent = Model37
+WedgePart69.Material = Enum.Material.Neon
+WedgePart69.BrickColor = BrickColor.new("Pink")
+WedgePart69.Transparency = 0.5
+WedgePart69.Rotation = Vector3.new(0, 0, 180)
+WedgePart69.CanCollide = false
+WedgePart69.FormFactor = Enum.FormFactor.Symmetric
+WedgePart69.Size = Vector3.new(0.105501369, 0.105501369, 0.738509595)
+WedgePart69.CFrame = CFrame.new(13.9999924, 0.26375401, 38.1129608, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart69.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart69.Color = Color3.new(1, 0.4, 0.8)
+WedgePart69.Position = Vector3.new(13.9999924, 0.26375401, 38.1129608)
+WedgePart69.Orientation = Vector3.new(0, 0, 180)
+WedgePart69.Color = Color3.new(1, 0.4, 0.8)
+WedgePart70.Parent = Model37
+WedgePart70.Material = Enum.Material.Neon
+WedgePart70.BrickColor = BrickColor.new("Pink")
+WedgePart70.Transparency = 0.5
+WedgePart70.Rotation = Vector3.new(180, 0, 0)
+WedgePart70.CanCollide = false
+WedgePart70.FormFactor = Enum.FormFactor.Symmetric
+WedgePart70.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart70.CFrame = CFrame.new(13.9999962, 0.316504002, 38.5349579, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart70.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart70.Color = Color3.new(1, 0.4, 0.8)
+WedgePart70.Position = Vector3.new(13.9999962, 0.316504002, 38.5349579)
+WedgePart70.Orientation = Vector3.new(0, 180, 180)
+WedgePart70.Color = Color3.new(1, 0.4, 0.8)
+WedgePart71.Parent = Model37
+WedgePart71.Material = Enum.Material.Neon
+WedgePart71.BrickColor = BrickColor.new("Pink")
+WedgePart71.Transparency = 0.5
+WedgePart71.Rotation = Vector3.new(0, 0, 180)
+WedgePart71.CanCollide = false
+WedgePart71.FormFactor = Enum.FormFactor.Symmetric
+WedgePart71.Size = Vector3.new(0.105501369, 0.316504121, 0.105501369)
+WedgePart71.CFrame = CFrame.new(13.9999962, 0.263761014, 38.6404572, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart71.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart71.Color = Color3.new(1, 0.4, 0.8)
+WedgePart71.Position = Vector3.new(13.9999962, 0.263761014, 38.6404572)
+WedgePart71.Orientation = Vector3.new(0, 0, 180)
+WedgePart71.Color = Color3.new(1, 0.4, 0.8)
+WedgePart72.Parent = Model37
+WedgePart72.Material = Enum.Material.Neon
+WedgePart72.BrickColor = BrickColor.new("Pink")
+WedgePart72.Transparency = 0.5
+WedgePart72.Rotation = Vector3.new(180, 0, 0)
+WedgePart72.CanCollide = false
+WedgePart72.FormFactor = Enum.FormFactor.Symmetric
+WedgePart72.Size = Vector3.new(0.105501369, 0.105501369, 0.105501369)
+WedgePart72.CFrame = CFrame.new(14, 0.158261999, 38.7459564, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart72.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart72.Color = Color3.new(1, 0.4, 0.8)
+WedgePart72.Position = Vector3.new(14, 0.158261999, 38.7459564)
+WedgePart72.Orientation = Vector3.new(0, 180, 180)
+WedgePart72.Color = Color3.new(1, 0.4, 0.8)
+WedgePart73.Parent = Model37
+WedgePart73.Material = Enum.Material.Neon
+WedgePart73.BrickColor = BrickColor.new("Pink")
+WedgePart73.Transparency = 0.5
+WedgePart73.Rotation = Vector3.new(180, 0, 0)
+WedgePart73.CanCollide = false
+WedgePart73.FormFactor = Enum.FormFactor.Symmetric
+WedgePart73.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart73.CFrame = CFrame.new(14, 0.263758987, 38.9042091, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart73.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart73.Color = Color3.new(1, 0.4, 0.8)
+WedgePart73.Position = Vector3.new(14, 0.263758987, 38.9042091)
+WedgePart73.Orientation = Vector3.new(0, 180, 180)
+WedgePart73.Color = Color3.new(1, 0.4, 0.8)
+WedgePart74.Parent = Model37
+WedgePart74.Material = Enum.Material.Neon
+WedgePart74.BrickColor = BrickColor.new("Pink")
+WedgePart74.Transparency = 0.5
+WedgePart74.Rotation = Vector3.new(180, 0, 0)
+WedgePart74.CanCollide = false
+WedgePart74.FormFactor = Enum.FormFactor.Symmetric
+WedgePart74.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart74.CFrame = CFrame.new(14.0000038, 0.211007997, 40.5394669, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart74.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart74.Color = Color3.new(1, 0.4, 0.8)
+WedgePart74.Position = Vector3.new(14.0000038, 0.211007997, 40.5394669)
+WedgePart74.Orientation = Vector3.new(0, 180, 180)
+WedgePart74.Color = Color3.new(1, 0.4, 0.8)
+Part75.Parent = Model37
+Part75.Material = Enum.Material.Neon
+Part75.BrickColor = BrickColor.new("Pink")
+Part75.Transparency = 0.5
+Part75.Rotation = Vector3.new(90, 0, 90)
+Part75.CanCollide = false
+Part75.FormFactor = Enum.FormFactor.Symmetric
+Part75.Size = Vector3.new(0.527506828, 0.105501369, 0.105501369)
+Part75.CFrame = CFrame.new(14.0000076, 0.36926201, 39.9064636, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part75.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part75.Color = Color3.new(1, 0.4, 0.8)
+Part75.Position = Vector3.new(14.0000076, 0.36926201, 39.9064636)
+Part75.Orientation = Vector3.new(90, -90, 0)
+Part75.Color = Color3.new(1, 0.4, 0.8)
+Part76.Parent = Model37
+Part76.Material = Enum.Material.Neon
+Part76.BrickColor = BrickColor.new("Pink")
+Part76.Transparency = 0.5
+Part76.Rotation = Vector3.new(90, 0, 90)
+Part76.CanCollide = false
+Part76.FormFactor = Enum.FormFactor.Symmetric
+Part76.Size = Vector3.new(0.316504121, 0.105501369, 0.211002737)
+Part76.CFrame = CFrame.new(14.0000038, 0.316504002, 40.3284683, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part76.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part76.Color = Color3.new(1, 0.4, 0.8)
+Part76.Position = Vector3.new(14.0000038, 0.316504002, 40.3284683)
+Part76.Orientation = Vector3.new(90, -90, 0)
+Part76.Color = Color3.new(1, 0.4, 0.8)
+Part77.Parent = Model37
+Part77.Material = Enum.Material.Neon
+Part77.BrickColor = BrickColor.new("Pink")
+Part77.Transparency = 0.5
+Part77.Rotation = Vector3.new(90, 0, 90)
+Part77.CanCollide = false
+Part77.FormFactor = Enum.FormFactor.Symmetric
+Part77.Size = Vector3.new(0.211002737, 0.105501369, 0.105501369)
+Part77.CFrame = CFrame.new(14.0000038, 0.158261999, 40.3812141, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part77.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part77.Color = Color3.new(1, 0.4, 0.8)
+Part77.Position = Vector3.new(14.0000038, 0.158261999, 40.3812141)
+Part77.Orientation = Vector3.new(90, -90, 0)
+Part77.Color = Color3.new(1, 0.4, 0.8)
+Part78.Parent = Model37
+Part78.Material = Enum.Material.Neon
+Part78.BrickColor = BrickColor.new("Pink")
+Part78.Transparency = 0.5
+Part78.Rotation = Vector3.new(90, 0, 90)
+Part78.CanCollide = false
+Part78.FormFactor = Enum.FormFactor.Symmetric
+Part78.Size = Vector3.new(1.47701919, 0.105501369, 0.211002737)
+Part78.CFrame = CFrame.new(14.0000038, 0.52750802, 39.7482147, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part78.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part78.Color = Color3.new(1, 0.4, 0.8)
+Part78.Position = Vector3.new(14.0000038, 0.52750802, 39.7482147)
+Part78.Orientation = Vector3.new(90, -90, 0)
+Part78.Color = Color3.new(1, 0.4, 0.8)
+Part79.Parent = Model37
+Part79.Material = Enum.Material.Neon
+Part79.BrickColor = BrickColor.new("Pink")
+Part79.Transparency = 0.5
+Part79.Rotation = Vector3.new(90, 0, 90)
+Part79.CanCollide = false
+Part79.FormFactor = Enum.FormFactor.Symmetric
+Part79.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+Part79.CFrame = CFrame.new(14.0000038, 0.474759012, 40.5394707, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part79.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part79.Color = Color3.new(1, 0.4, 0.8)
+Part79.Position = Vector3.new(14.0000038, 0.474759012, 40.5394707)
+Part79.Orientation = Vector3.new(90, -90, 0)
+Part79.Color = Color3.new(1, 0.4, 0.8)
+WedgePart80.Parent = Model37
+WedgePart80.Material = Enum.Material.Neon
+WedgePart80.BrickColor = BrickColor.new("Pink")
+WedgePart80.Transparency = 0.5
+WedgePart80.Rotation = Vector3.new(180, 0, 0)
+WedgePart80.CanCollide = false
+WedgePart80.FormFactor = Enum.FormFactor.Symmetric
+WedgePart80.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+WedgePart80.CFrame = CFrame.new(14, 0.36925599, 39.1679611, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart80.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart80.Color = Color3.new(1, 0.4, 0.8)
+WedgePart80.Position = Vector3.new(14, 0.36925599, 39.1679611)
+WedgePart80.Orientation = Vector3.new(0, 180, 180)
+WedgePart80.Color = Color3.new(1, 0.4, 0.8)
+WedgePart81.Parent = Model37
+WedgePart81.Material = Enum.Material.Neon
+WedgePart81.BrickColor = BrickColor.new("Pink")
+WedgePart81.Transparency = 0.5
+WedgePart81.Rotation = Vector3.new(0, 0, 180)
+WedgePart81.CanCollide = false
+WedgePart81.FormFactor = Enum.FormFactor.Symmetric
+WedgePart81.Size = Vector3.new(0.105501369, 0.211002737, 0.211002737)
+WedgePart81.CFrame = CFrame.new(14.0000038, 0.211009994, 39.7482147, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart81.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart81.Color = Color3.new(1, 0.4, 0.8)
+WedgePart81.Position = Vector3.new(14.0000038, 0.211009994, 39.7482147)
+WedgePart81.Orientation = Vector3.new(0, 0, 180)
+WedgePart81.Color = Color3.new(1, 0.4, 0.8)
+WedgePart82.Parent = Model37
+WedgePart82.Material = Enum.Material.Neon
+WedgePart82.BrickColor = BrickColor.new("Pink")
+WedgePart82.Transparency = 0.5
+WedgePart82.Rotation = Vector3.new(0, 0, 180)
+WedgePart82.CanCollide = false
+WedgePart82.FormFactor = Enum.FormFactor.Symmetric
+WedgePart82.Size = Vector3.new(0.105501369, 0.105501369, 0.316504121)
+WedgePart82.CFrame = CFrame.new(14, 0.369264007, 39.4844589, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart82.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart82.Color = Color3.new(1, 0.4, 0.8)
+WedgePart82.Position = Vector3.new(14, 0.369264007, 39.4844589)
+WedgePart82.Orientation = Vector3.new(0, 0, 180)
+WedgePart82.Color = Color3.new(1, 0.4, 0.8)
+WedgePart83.Parent = Model37
+WedgePart83.Material = Enum.Material.Neon
+WedgePart83.BrickColor = BrickColor.new("Pink")
+WedgePart83.Transparency = 0.5
+WedgePart83.Rotation = Vector3.new(180, 0, 0)
+WedgePart83.CanCollide = false
+WedgePart83.FormFactor = Enum.FormFactor.Symmetric
+WedgePart83.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart83.CFrame = CFrame.new(14.0000038, 0.211007997, 39.9064636, 1, 3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, -3.05171125e-05, 3.05171125e-05, 3.05180438e-05, -1)
+WedgePart83.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart83.Color = Color3.new(1, 0.4, 0.8)
+WedgePart83.Position = Vector3.new(14.0000038, 0.211007997, 39.9064636)
+WedgePart83.Orientation = Vector3.new(0, 180, 180)
+WedgePart83.Color = Color3.new(1, 0.4, 0.8)
+WedgePart84.Parent = Model37
+WedgePart84.Material = Enum.Material.Neon
+WedgePart84.BrickColor = BrickColor.new("Pink")
+WedgePart84.Transparency = 0.5
+WedgePart84.Rotation = Vector3.new(0, 0, 180)
+WedgePart84.CanCollide = false
+WedgePart84.FormFactor = Enum.FormFactor.Symmetric
+WedgePart84.Size = Vector3.new(0.105501369, 0.105501369, 0.211002737)
+WedgePart84.CFrame = CFrame.new(14, 0.263756007, 40.0647163, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart84.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart84.Color = Color3.new(1, 0.4, 0.8)
+WedgePart84.Position = Vector3.new(14, 0.263756007, 40.0647163)
+WedgePart84.Orientation = Vector3.new(0, 0, 180)
+WedgePart84.Color = Color3.new(1, 0.4, 0.8)
+WedgePart85.Parent = Model37
+WedgePart85.Material = Enum.Material.Neon
+WedgePart85.BrickColor = BrickColor.new("Pink")
+WedgePart85.Transparency = 0.5
+WedgePart85.Rotation = Vector3.new(0, 0, 180)
+WedgePart85.CanCollide = false
+WedgePart85.FormFactor = Enum.FormFactor.Symmetric
+WedgePart85.Size = Vector3.new(0.105501369, 0.211002737, 0.105501369)
+WedgePart85.CFrame = CFrame.new(14, 0.105515003, 40.2229691, -1, -3.05171125e-05, 3.05180438e-05, 3.05180438e-05, -1, 3.05171125e-05, 3.05171125e-05, 3.05180438e-05, 1)
+WedgePart85.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+WedgePart85.Color = Color3.new(1, 0.4, 0.8)
+WedgePart85.Position = Vector3.new(14, 0.105515003, 40.2229691)
+WedgePart85.Orientation = Vector3.new(0, 0, 180)
+WedgePart85.Color = Color3.new(1, 0.4, 0.8)
+Model86.Parent = Model1
+Part87.Parent = Model86
+Part87.Material = Enum.Material.SmoothPlastic
+Part87.BrickColor = BrickColor.new("Medium blue")
+Part87.Rotation = Vector3.new(90, 0, 90)
+Part87.CanCollide = false
+Part87.FormFactor = Enum.FormFactor.Custom
+Part87.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part87.CFrame = CFrame.new(14.0000038, 0.643558025, 41.4045715, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part87.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part87.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part87.Position = Vector3.new(14.0000038, 0.643558025, 41.4045715)
+Part87.Orientation = Vector3.new(90, -90, 0)
+Part87.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh88.Parent = Part87
+CylinderMesh88.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh88.Scale = Vector3.new(0.527506769, 1, 1)
+Part89.Parent = Model86
+Part89.Material = Enum.Material.SmoothPlastic
+Part89.BrickColor = BrickColor.new("Medium blue")
+Part89.Rotation = Vector3.new(90, 0, 90)
+Part89.CanCollide = false
+Part89.FormFactor = Enum.FormFactor.Custom
+Part89.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part89.CFrame = CFrame.new(14.0000038, 0.643558025, 40.8981667, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part89.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part89.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part89.Position = Vector3.new(14.0000038, 0.643558025, 40.8981667)
+Part89.Orientation = Vector3.new(90, -90, 0)
+Part89.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh90.Parent = Part89
+CylinderMesh90.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh90.Scale = Vector3.new(0.527506769, 1, 1)
+Part91.Parent = Model86
+Part91.Material = Enum.Material.SmoothPlastic
+Part91.BrickColor = BrickColor.new("Medium blue")
+Part91.Rotation = Vector3.new(90, 0, 90)
+Part91.CanCollide = false
+Part91.FormFactor = Enum.FormFactor.Custom
+Part91.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part91.CFrame = CFrame.new(14.0000076, 0.643558025, 41.5311737, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part91.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part91.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part91.Position = Vector3.new(14.0000076, 0.643558025, 41.5311737)
+Part91.Orientation = Vector3.new(90, -90, 0)
+Part91.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh92.Parent = Part91
+CylinderMesh92.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh92.Scale = Vector3.new(0.527506769, 1, 1)
+Part93.Parent = Model86
+Part93.Material = Enum.Material.SmoothPlastic
+Part93.BrickColor = BrickColor.new("Medium blue")
+Part93.Rotation = Vector3.new(90, 0, 90)
+Part93.CanCollide = false
+Part93.FormFactor = Enum.FormFactor.Custom
+Part93.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part93.CFrame = CFrame.new(14.0000038, 0.643571973, 41.9109726, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part93.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part93.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part93.Position = Vector3.new(14.0000038, 0.643571973, 41.9109726)
+Part93.Orientation = Vector3.new(90, -90, 0)
+Part93.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh94.Parent = Part93
+CylinderMesh94.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh94.Scale = Vector3.new(0.527506769, 1, 1)
+Part95.Parent = Model86
+Part95.Material = Enum.Material.SmoothPlastic
+Part95.BrickColor = BrickColor.new("Medium blue")
+Part95.Rotation = Vector3.new(90, 0, 90)
+Part95.CanCollide = false
+Part95.FormFactor = Enum.FormFactor.Custom
+Part95.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part95.CFrame = CFrame.new(14, 0.643564999, 41.1513748, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part95.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part95.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part95.Position = Vector3.new(14, 0.643564999, 41.1513748)
+Part95.Orientation = Vector3.new(90, -90, 0)
+Part95.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh96.Parent = Part95
+CylinderMesh96.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh96.Scale = Vector3.new(0.527506769, 1, 1)
+Part97.Parent = Model86
+Part97.Material = Enum.Material.SmoothPlastic
+Part97.BrickColor = BrickColor.new("Medium blue")
+Part97.Rotation = Vector3.new(90, 0, 90)
+Part97.CanCollide = false
+Part97.FormFactor = Enum.FormFactor.Custom
+Part97.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part97.CFrame = CFrame.new(13.9999962, 0.643564999, 41.2779694, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part97.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part97.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part97.Position = Vector3.new(13.9999962, 0.643564999, 41.2779694)
+Part97.Orientation = Vector3.new(90, -90, 0)
+Part97.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh98.Parent = Part97
+CylinderMesh98.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh98.Scale = Vector3.new(0.527506769, 1, 1)
+Part99.Parent = Model86
+Part99.Material = Enum.Material.SmoothPlastic
+Part99.BrickColor = BrickColor.new("Medium blue")
+Part99.Rotation = Vector3.new(90, 0, 90)
+Part99.CanCollide = false
+Part99.FormFactor = Enum.FormFactor.Custom
+Part99.Size = Vector3.new(1.28711677, 0.316504478, 0.200000003)
+Part99.CFrame = CFrame.new(13.9999962, 0.643567979, 41.3623695, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part99.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part99.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part99.Position = Vector3.new(13.9999962, 0.643567979, 41.3623695)
+Part99.Orientation = Vector3.new(90, -90, 0)
+Part99.Color = Color3.new(0.431373, 0.6, 0.792157)
+BlockMesh100.Parent = Part99
+BlockMesh100.Scale = Vector3.new(1, 1, 0.105501384)
+BlockMesh100.Scale = Vector3.new(1, 1, 0.105501384)
+Part101.Parent = Model86
+Part101.Material = Enum.Material.SmoothPlastic
+Part101.BrickColor = BrickColor.new("Medium blue")
+Part101.Rotation = Vector3.new(90, 0, 90)
+Part101.CanCollide = false
+Part101.FormFactor = Enum.FormFactor.Custom
+Part101.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part101.CFrame = CFrame.new(13.9999962, 0.643558025, 41.0247688, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part101.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part101.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part101.Position = Vector3.new(13.9999962, 0.643558025, 41.0247688)
+Part101.Orientation = Vector3.new(90, -90, 0)
+Part101.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh102.Parent = Part101
+CylinderMesh102.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh102.Scale = Vector3.new(0.527506769, 1, 1)
+Part103.Parent = Model86
+Part103.Material = Enum.Material.SmoothPlastic
+Part103.BrickColor = BrickColor.new("Medium blue")
+Part103.Rotation = Vector3.new(90, 0, 90)
+Part103.CanCollide = false
+Part103.FormFactor = Enum.FormFactor.Custom
+Part103.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part103.CFrame = CFrame.new(14, 0.643566012, 40.7715683, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part103.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part103.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part103.Position = Vector3.new(14, 0.643566012, 40.7715683)
+Part103.Orientation = Vector3.new(90, -90, 0)
+Part103.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh104.Parent = Part103
+CylinderMesh104.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh104.Scale = Vector3.new(0.527506769, 1, 1)
+Part105.Parent = Model86
+Part105.Material = Enum.Material.SmoothPlastic
+Part105.BrickColor = BrickColor.new("Medium blue")
+Part105.Rotation = Vector3.new(90, 0, 90)
+Part105.CanCollide = false
+Part105.FormFactor = Enum.FormFactor.Custom
+Part105.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part105.CFrame = CFrame.new(14.0000076, 0.643573999, 41.6577721, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part105.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part105.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part105.Position = Vector3.new(14.0000076, 0.643573999, 41.6577721)
+Part105.Orientation = Vector3.new(90, -90, 0)
+Part105.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh106.Parent = Part105
+CylinderMesh106.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh106.Scale = Vector3.new(0.527506769, 1, 1)
+Part107.Parent = Model86
+Part107.Material = Enum.Material.SmoothPlastic
+Part107.BrickColor = BrickColor.new("Medium blue")
+Part107.Rotation = Vector3.new(90, 0, 90)
+Part107.CanCollide = false
+Part107.FormFactor = Enum.FormFactor.Custom
+Part107.Size = Vector3.new(0.200000003, 0.316504478, 0.31650421)
+Part107.CFrame = CFrame.new(13.9999962, 0.643567979, 41.7843704, -3.05175781e-05, -1, -3.05175781e-05, -3.05175781e-05, 3.05175781e-05, -1, 1, -3.05175781e-05, -3.05175781e-05)
+Part107.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part107.Color = Color3.new(0.431373, 0.6, 0.792157)
+Part107.Position = Vector3.new(13.9999962, 0.643567979, 41.7843704)
+Part107.Orientation = Vector3.new(90, -90, 0)
+Part107.Color = Color3.new(0.431373, 0.6, 0.792157)
+CylinderMesh108.Parent = Part107
+CylinderMesh108.Scale = Vector3.new(0.527506769, 1, 1)
+CylinderMesh108.Scale = Vector3.new(0.527506769, 1, 1)
+Model109.Parent = Model1
+Part110.Parent = Model109
+Part110.Material = Enum.Material.SmoothPlastic
+Part110.BrickColor = BrickColor.new("Gold")
+Part110.Rotation = Vector3.new(167.949997, -14.0499992, -83.25)
+Part110.CanCollide = false
+Part110.FormFactor = Enum.FormFactor.Custom
+Part110.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part110.CFrame = CFrame.new(14.0000076, 0.643575013, 42.1430779, 0.113957725, 0.963379622, -0.242720857, 0.965228677, -0.165215299, -0.202577591, -0.235260338, -0.211195827, -0.94870913)
+Part110.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part110.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part110.Position = Vector3.new(14.0000076, 0.643575013, 42.1430779)
+Part110.Orientation = Vector3.new(11.6899996, -165.649994, 99.7099991)
+Part110.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part111.Parent = Model109
+Part111.Material = Enum.Material.SmoothPlastic
+Part111.BrickColor = BrickColor.new("Gold")
+Part111.Rotation = Vector3.new(116.57, 14.4799995, 116.57)
+Part111.CanCollide = false
+Part111.FormFactor = Enum.FormFactor.Custom
+Part111.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part111.CFrame = CFrame.new(14.0000076, 0.643575013, 42.1430779, -0.433060169, -0.86600256, 0.249997139, -0.500018179, 4.23636993e-05, -0.866014957, 0.749960542, -0.500039697, -0.433035344)
+Part111.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part111.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part111.Position = Vector3.new(14.0000076, 0.643575013, 42.1430779)
+Part111.Orientation = Vector3.new(60, 150, -90)
+Part111.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part112.Parent = Model109
+Part112.Material = Enum.Material.SmoothPlastic
+Part112.BrickColor = BrickColor.new("Gold")
+Part112.Rotation = Vector3.new(-94.4300003, -52.0999985, -89.8299942)
+Part112.CanCollide = false
+Part112.FormFactor = Enum.FormFactor.Custom
+Part112.Size = Vector3.new(0.316504091, 0.316504478, 0.31650421)
+Part112.CFrame = CFrame.new(14.0000076, 0.643575013, 42.1430779, 0.0017901659, 0.614237189, -0.789121628, 0.07945171, 0.786539078, 0.612408757, 0.996838808, -0.0637943447, -0.0473943949)
+Part112.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part112.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part112.Position = Vector3.new(14.0000076, 0.643575013, 42.1430779)
+Part112.Orientation = Vector3.new(-37.7599983, -93.4399948, 5.76999998)
+Part112.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part113.Name = "Handle"
+Part113.Parent = Model1
+Part113.BrickColor = BrickColor.new("Gold")
+Part113.Rotation = Vector3.new(90, 0, 180)
+Part113.CanCollide = false
+Part113.FormFactor = Enum.FormFactor.Custom
+Part113.Size = Vector3.new(0.316504151, 1.37151933, 0.31650421)
+Part113.CFrame = CFrame.new(14.0000076, 0.643564999, 41.3412704, -1, -4.31590452e-05, 4.8021076e-10, 9.29522848e-10, -3.26636873e-05, -1, 4.31590452e-05, -1, 3.26636873e-05)
+Part113.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part113.Color = Color3.new(0.937255, 0.721569, 0.219608)
+Part113.Position = Vector3.new(14.0000076, 0.643564999, 41.3412704)
+Part113.Orientation = Vector3.new(90, -180, 0)
+Part113.Color = Color3.new(0.937255, 0.721569, 0.219608)
+CylinderMesh114.Parent = Part113
+Attachment115.Parent = Part113
+Attachment115.CFrame = CFrame.new(2.54119982e-07, 6, 5.22443315e-08, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Attachment115.Position = Vector3.new(2.54119982e-07, 6, 5.22443315e-08)
+Attachment116.Parent = Part113
+Attachment116.CFrame = CFrame.new(-1.03026605e-06, 0.828912735, -1.01828936e-08, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Attachment116.Position = Vector3.new(-1.03026605e-06, 0.828912735, -1.01828936e-08)
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.Backpack
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end

@@ -1,0 +1,92 @@
+--Welcome to the worst designed gui and terrible script but kind of fun thing you'd need in your life!
+--Made by Lego Boris and LemonHead
+--Game Link : https://www.roblox.com/games/979539299/Hospital-Roleplay
+
+local dontlookatthisyoufatty = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Credits = Instance.new("TextLabel")
+local Credits2 = Instance.new("TextLabel")
+local idTextBox = Instance.new("TextBox")
+local giveButton = Instance.new("TextButton")
+
+dontlookatthisyoufatty.Name = "dontlookatthisyoufatty"
+dontlookatthisyoufatty.Parent = game.CoreGui
+dontlookatthisyoufatty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = dontlookatthisyoufatty
+Main.BackgroundColor3 = Color3.new(0, 0, 0)
+Main.BackgroundTransparency = 0.30000001192093
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.288437128, 0, 0.272925705, 0)
+Main.Size = UDim2.new(0, 300, 0, 175)
+Main.Active = true
+Main.Draggable = true
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits.BackgroundTransparency = 1
+Credits.Size = UDim2.new(0, 300, 0, 50)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Hospital  Roleplay Gear Giver"
+Credits.TextColor3 = Color3.new(1, 0.666667, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14
+Credits.TextWrapped = true
+
+Credits2.Name = "Credits2"
+Credits2.Parent = Credits
+Credits2.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits2.BackgroundTransparency = 1
+Credits2.Position = UDim2.new(0, 0, 0.879999995, 0)
+Credits2.Size = UDim2.new(0, 300, 0, 17)
+Credits2.Font = Enum.Font.SourceSans
+Credits2.Text = "Made By Lego Boris and LemonHead"
+Credits2.TextColor3 = Color3.new(1, 0.666667, 0)
+Credits2.TextScaled = true
+Credits2.TextSize = 14
+Credits2.TextWrapped = true
+
+idTextBox.Name = "idTextBox"
+idTextBox.Parent = Main
+idTextBox.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
+idTextBox.BackgroundTransparency = 0.15000000596046
+idTextBox.Position = UDim2.new(0.166666672, 0, 0.497142851, 0)
+idTextBox.Size = UDim2.new(0, 200, 0, 30)
+idTextBox.Font = Enum.Font.SourceSans
+idTextBox.Text = "The Item ID"
+idTextBox.TextColor3 = Color3.new(1, 1, 1)
+idTextBox.TextScaled = true
+idTextBox.TextSize = 14
+idTextBox.TextWrapped = true
+
+giveButton.Name = "giveButton"
+giveButton.Parent = Main
+giveButton.BackgroundColor3 = Color3.new(1, 1, 1)
+giveButton.BackgroundTransparency = 1
+giveButton.BorderColor3 = Color3.new(1, 0.666667, 0)
+giveButton.BorderSizePixel = 0
+giveButton.Position = UDim2.new(0.166666672, 0, 0.731428564, 0)
+giveButton.Size = UDim2.new(0, 200, 0, 35)
+giveButton.Font = Enum.Font.SourceSans
+giveButton.Text = "Click To Give"
+giveButton.TextColor3 = Color3.new(1, 0.666667, 0)
+giveButton.TextScaled = true
+giveButton.TextSize = 14
+giveButton.TextStrokeColor3 = Color3.new(1, 0.666667, 0)
+giveButton.TextWrapped = true
+
+--Okay im gonna put some scripts down here now[img]https://i.imgur.com/eRazrMO.png[/img]
+
+giveButton.MouseButton1Click:connect(function()
+local Remote = game.ReplicatedStorage['ITEM_PURCHASE']
+
+local Arguments = {
+       [1] = "wowlookawaybro",
+       [2] = "12",
+       [3] = idTextBox.Text
+}
+
+Remote:InvokeServer(unpack(Arguments))
+end)

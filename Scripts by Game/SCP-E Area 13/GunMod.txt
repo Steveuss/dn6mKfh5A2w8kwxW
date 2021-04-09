@@ -1,0 +1,10 @@
+local WeaponToMod = game.Players.LocalPlayer.Backpack.P90
+
+getsenv(WeaponToMod.GunScript).SprintSpeed = 100
+getsenv(WeaponToMod.GunScript).TimeBetweenShots = 0.01
+getsenv(WeaponToMod.GunScript).Damage = 666
+getsenv(WeaponToMod.GunScript).ClipSize = 694201337
+getsenv(WeaponToMod.GunScript).ReloadTime = 0.01
+getsenv(WeaponToMod.GunScript).CrouchSpeed = 100
+getsenv(WeaponToMod.GunScript).BulletDistance = 1337
+getsenv(WeaponToMod.GunScript).FireEnabled = true

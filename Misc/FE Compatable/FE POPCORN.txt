@@ -1,0 +1,32 @@
+--[[ FE Popcorn
+Script made by Cyclically
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+Wear this first before executing!
+https://www.roblox.com/catalog/2758798071/Showtime-Bloxy-Popcorn-Hat
+]]
+
+-- Don't edit script unless you know what you're doing. If you wanna add this into a script, please give credits and message me on discord that you added it in a script at Cyclically#4905
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local tool = Instance.new("Tool", LocalPlayer.Backpack)
+local hat = LocalPlayer.Character:FindFirstChild("Popcorm")
+local tooldebounce = false
+local hathandle = hat.Handle
+hathandle:FindFirstChildOfClass("Weld"):Destroy()
+hathandle.Parent = tool
+hathandle.Massless = true
+tool.Activated:Connect(function()
+if tooldebounce == false then
+tooldebounce = true
+tool.Parent = LocalPlayer.Backpack
+tool.Grip = CFrame.new(1.5, -0.30, -0.30) * CFrame.Angles(math.rad(-45), 0, 0)
+LocalPlayer.Character:FindFirstChild("Head").Died:Play()
+tool.Parent = LocalPlayer.Character
+wait(1)
+tooldebounce = false
+tool.Parent = LocalPlayer.Backpack
+tool.Grip = CFrame.new(0, 0, 0)
+tool.Parent = LocalPlayer.Character
+end
+end)

@@ -1,0 +1,4 @@
+--Best Axe
+local A_1 = "Holy Axe"
+local A_2 = "Axe"
+game:GetService("ReplicatedStorage").Remotes.EquipToolF:InvokeServer(A_1, A_2)

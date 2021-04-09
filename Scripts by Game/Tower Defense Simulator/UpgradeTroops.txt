@@ -1,0 +1,13 @@
+local Remote = game.ReplicatedStorage.Remotes['UpgradeTroop']
+
+
+local Arguments = {
+     
+   [1] = Workspace.Units.Scout
+
+}
+
+
+
+
+Remote:InvokeServer(unpack(Arguments))

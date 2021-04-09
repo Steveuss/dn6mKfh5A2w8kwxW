@@ -1,0 +1,9 @@
+while wait() do
+local tool = game.ReplicatedStorage.Weapons:FindFirstChild("Sentry")--Weapon name you want to get in the ("Weapon Name")
+
+game.ReplicatedStorage.Events.CrateClaim:FireServer("Gear",tool)
+
+game.ReplicatedStorage.WeaponItems.RemoteEvents.PlaceSentry:FireServer(game.Players.LocalPlayer.Backpack:FindFirstChild("Sentry"))
+end
+
+local noclip = true char = game.Players.LocalPlayer.Character while true do if noclip == true then for _,v in pairs(char:children()) do pcall(function() if v.className == "Part" then v.CanCollide = false elseif v.ClassName == "Model" then v.Head.CanCollide = false end end) end end game:service("RunService").Stepped:wait() end

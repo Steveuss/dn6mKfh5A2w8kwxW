@@ -1,0 +1,45 @@
+Hello! Thank you for purchasing!
+
+Tutorial
+
+ Make sure you own the following accessories (all free)
+
+Links to the accessories you will need: 
+
+International Fedora - Mexico
+
+International Fedora - Argentina
+
+Pal Hair
+
+Lavender Updo
+
+Chestnut Bun      (Requires you to own the Woman Package)
+
+Brown Hair          (Requires you to own the Man Package)
+
+    Open the ‘Advanced’ menu to equip the hats
+	        It should open up a menu like shown: 
+
+(If there are any other hats you have equipped, make sure you have enough room to wear the 6 hats required since you can only wear a maximum of 10 hats at once.) 
+
+            Copy and Paste the following Asset IDs
+
+  (These are the Asset IDs of the 6 accessories listed above)
+
+4094878701               63690008               451220849
+
+3438342658               62724852               62234425
+
+
+
+
+            Join a game and run the script 
+
+The script will initially give you a PP. 
+
+Press E on your keyboard to make it extend and retract.
+
+
+NOTE: 
+If nothing happens, it is because you are missing one of the required hats. Please go back to the beginning and make sure you have all 6 hats equipped or else the script will not work.

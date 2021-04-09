@@ -1,0 +1,4 @@
+
+local waed= game:GetService("Workspace")[game.Players.LocalPlayer.Name].HumanoidRootPart
+		local scp = game:GetService("Workspace")["SCP-457"].Torso.Position
+waed.Position = Vector3.new(scp)

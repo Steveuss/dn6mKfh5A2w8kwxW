@@ -1,0 +1,66 @@
+local lp = game.Players.LocalPlayer
+local anims = lp.Character.Animate
+local hat = lp.Character:FindFirstChildOfClass("Accessory")
+local bp = Instance.new("BodyPosition",hat.Handle)
+
+bp.P = 10000
+bp.D = 65
+
+local hathandle = hat.Handle
+
+hathandle:FindFirstChildOfClass("Weld"):Destroy()
+hathandle.Massless = true
+hathandle:FindFirstChildOfClass("SpecialMesh"):Destroy()
+
+spawn(function()
+lp.Character.HumanoidRootPart.CFrame = hathandle.CFrame
+
+wait()
+lp.Character.HumanoidRootPart.CFrame = hathandle.CFrame
+
+wait()
+lp.Character.HumanoidRootPart.CFrame = hathandle.CFrame
+
+end)
+
+anims.idle.Animation2:Destroy()
+
+anims.idle:FindFirstChildOfClass("Animation").AnimationId = "rbxassetid://30235165"
+
+anims.walk:FindFirstChildOfClass("Animation").AnimationId = "rbxassetid://30235165"
+
+anims.run:FindFirstChildOfClass("Animation").AnimationId = "rbxassetid://30235165"
+
+anims.toolnone:FindFirstChildOfClass("Animation").AnimationId = "rbxassetid://0"
+
+local function destroy(arg1)
+game:GetService("ReplicatedStorage").Events.destryObj:FireServer(arg1)
+end
+
+
+spawn(function()
+while wait() do
+bp.Position = lp.Character["Left Arm"].CFrame.p + Vector3.new(0,1,0)
+end
+end)
+
+spawn(function()
+	repeat
+		wait()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v:DistanceFromCharacter(lp.Character.HumanoidRootPart.CFrame.p)<= 20 and v.Name ~= lp.Name then
+				local c = game.Workspace:FindFirstChild(v.Name)
+				if c ~= nil then
+				local h = c:FindFirstChildOfClass("Humanoid")
+				if h ~= nil then
+					destroy(h)
+				end
+				end
+			end
+		end
+	until lp.Character.Humanoid.Health == 0
+end)
+
+lp.Character.Humanoid.WalkSpeed = 30
+
+print("ScriptX#3145")

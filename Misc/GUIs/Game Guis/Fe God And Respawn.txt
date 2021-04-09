@@ -1,0 +1,196 @@
+local AAAAAA = Instance.new("ScreenGui")
+
+local Frame = Instance.new("Frame")
+
+local TextLabel = Instance.new("TextLabel")
+
+local TextLabel_2 = Instance.new("TextLabel")
+
+local god = Instance.new("TextButton")
+
+local shadow = Instance.new("ImageLabel")
+
+local respawn = Instance.new("TextButton")
+
+local shadow_2 = Instance.new("ImageLabel")
+
+local shadow_3 = Instance.new("ImageLabel")
+
+local shadow_4 = Instance.new("ImageLabel")
+
+AAAAAA.Name = "AAAAAA"
+
+AAAAAA.Parent = game:GetService('CoreGui')
+
+Frame.Parent = AAAAAA
+
+Frame.Active = true
+
+Frame.Draggable = true
+
+Frame.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
+
+Frame.BorderSizePixel = 0
+
+Frame.Position = UDim2.new(0.240594074, 0, 0.670846343, 0)
+
+Frame.Size = UDim2.new(0, 265, 0, 144)
+
+TextLabel.Parent = Frame
+
+TextLabel.BackgroundColor3 = Color3.new(0.541176, 0.329412, 1)
+
+TextLabel.BorderSizePixel = 0
+
+TextLabel.Size = UDim2.new(0, 265, 0, 26)
+
+TextLabel.Font = Enum.Font.Gotham
+
+TextLabel.Text = "FE God & Respawn"
+
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+
+TextLabel.TextSize = 14
+
+TextLabel_2.Parent = Frame
+
+TextLabel_2.BackgroundColor3 = Color3.new(0.45098, 0.278431, 0.847059)
+
+TextLabel_2.BorderSizePixel = 0
+
+TextLabel_2.Position = UDim2.new(0, 0, 0.180555552, 0)
+
+TextLabel_2.Size = UDim2.new(0, 265, 0, 6)
+
+TextLabel_2.Font = Enum.Font.SourceSans
+
+TextLabel_2.Text = ""
+
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+
+TextLabel_2.TextSize = 14
+
+god.Name = "god"
+
+god.Parent = Frame
+
+god.BackgroundColor3 = Color3.new(0.541176, 0.329412, 1)
+
+god.BorderSizePixel = 0
+
+god.Position = UDim2.new(0.0641509444, 0, 0.277777791, 0)
+
+god.Size = UDim2.new(0, 111, 0, 92)
+
+god.Font = Enum.Font.SourceSans
+
+god.Text = "God"
+
+god.TextColor3 = Color3.new(0, 0, 0)
+
+god.TextSize = 14
+
+shadow.Name = "shadow"
+
+shadow.Parent = god
+
+shadow.BackgroundTransparency = 1
+
+shadow.Position = UDim2.new(0, 0, 1, 0)
+
+shadow.Size = UDim2.new(1, 0, 0, 3)
+
+shadow.ZIndex = 4
+
+shadow.Image = "rbxasset://textures/ui/TopBar/dropshadow.png"
+
+shadow.ImageColor3 = Color3.new(1, 0, 0)
+
+respawn.Name = "respawn"
+
+respawn.Parent = Frame
+
+respawn.BackgroundColor3 = Color3.new(0.541176, 0.329412, 1)
+
+respawn.BorderSizePixel = 0
+
+respawn.Position = UDim2.new(0.524528325, 0, 0.277777791, 0)
+
+respawn.Size = UDim2.new(0, 111, 0, 92)
+
+respawn.Font = Enum.Font.SourceSans
+
+respawn.Text = "Respawn"
+
+respawn.TextColor3 = Color3.new(0, 0, 0)
+
+respawn.TextSize = 14
+
+shadow_2.Name = "shadow"
+
+shadow_2.Parent = respawn
+
+shadow_2.BackgroundTransparency = 1
+
+shadow_2.Position = UDim2.new(0, 0, 1, 0)
+
+shadow_2.Size = UDim2.new(1, 0, 0, 3)
+
+shadow_2.ZIndex = 4
+
+shadow_2.Image = "rbxasset://textures/ui/TopBar/dropshadow.png"
+
+shadow_2.ImageColor3 = Color3.new(1, 0, 0)
+
+shadow_3.Name = "shadow"
+
+shadow_3.Parent = Frame
+
+shadow_3.BackgroundTransparency = 1
+
+shadow_3.BorderSizePixel = 0
+
+shadow_3.Position = UDim2.new(0, 0, 1, 0)
+
+shadow_3.Size = UDim2.new(1, 0, 0, 3)
+
+shadow_3.ZIndex = 4
+
+shadow_3.Image = "rbxasset://textures/ui/TopBar/dropshadow.png"
+
+shadow_4.Name = "shadow"
+
+shadow_4.Parent = Frame
+
+shadow_4.BackgroundTransparency = 1
+
+shadow_4.BorderSizePixel = 0
+
+shadow_4.Position = UDim2.new(0, 0, 0.215277791, 0)
+
+shadow_4.Size = UDim2.new(1, 0, 0, 3)
+
+shadow_4.ZIndex = 4
+
+shadow_4.Image = "rbxasset://textures/ui/TopBar/dropshadow.png"
+
+shadow_4.ImageColor3 = Color3.new(0.45098, 0.278431, 0.847059)
+
+god.MouseButton1Click:Connect(function()
+
+game:GetService('Players').LocalPlayer.Character.Humanoid:SetStateEnabled('Dead',false)
+
+wait()
+
+game:GetService('Players').LocalPlayer.Character.Humanoid.Health = 0
+
+end)
+
+respawn.MouseButton1Click:Connect(function()
+
+game:GetService('Players').LocalPlayer.Character.Humanoid:SetStateEnabled('Dead',true)
+
+wait()
+
+game:GetService('Players').LocalPlayer.Character.Humanoid.Health = 0
+end)

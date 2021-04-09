@@ -1,0 +1,5 @@
+for _,v in ipairs(workspace.aimignore.pickups.World4:GetChildren()) do --You Can Change World4 To 1-2-3
+   if v.Name == "pickup" then
+       v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+   end
+end

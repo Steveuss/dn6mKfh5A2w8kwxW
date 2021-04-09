@@ -1,0 +1,137 @@
+--made by caspertheghost--
+
+get = setmetatable({}, {
+	__index = function(t,k)
+		if k == "player" then
+			return game:GetService("Players").LocalPlayer
+		end
+
+		if k == "backpack" then
+			return game:GetService("Players").LocalPlayer.Backpack
+		end
+
+		if k == "character" then
+			return game:GetService("Players").LocalPlayer.Character
+		end
+
+		if k == "pos" then
+			return game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
+		end
+
+		if k == "mouse" then
+			return game:GetService("Players").LocalPlayer:GetMouse()
+		end
+
+		return game:GetService(k)
+	end
+})
+
+getTune = function()
+	local tun
+	for i,v in pairs(debug.getregistry()) do
+		if typeof(v) == "table" then
+			if v.TopSpeed then
+				tun = v
+			end
+		end
+	end
+	return tun
+end
+
+getValue = function(func, vname)
+	local vals = debug.getupvalues(func)
+	if vals[vname] then
+		return vals[vname]
+	end
+end
+
+carCollection = workspace.CarCollection
+
+data = {
+	car = nil,
+	tune = nil,
+	speed = false
+}
+
+for i,v in pairs(debug.getregistry()) do
+	if typeof(v) == "table" then
+		if v.TopSpeed then
+			data.tune = v
+		end
+	end
+end
+
+ModifyCar = function(t)
+	if data.tune then
+		for k,v in pairs(t) do
+			data.tune[k] = v
+		end
+	else
+		data.tune = getTune()
+	end
+end
+
+carCollection.ChildAdded:connect(function(new)
+	if new.Name == get.player.Name then
+		data.car = new:FindFirstChild("Car") or nil
+		if not data.tune then
+			data.tune = getTune()
+		end
+		if data.speed then
+			ModifyCar({
+				TopSpeed = 1000,
+				Horsepower = 1000,
+				Acceleration = 500
+			})
+		end
+	end
+end)
+
+speed = function(bool)
+	if bool then
+		data.tune = getTune()
+		if not data.backup then
+			data.backup = {}
+			for k,v in pairs(data.tune) do
+				data.backup[k] = v
+			end
+			print("backup created")
+		end
+		ModifyCar({
+			TopSpeed = 1000,
+			Horsepower = 1000,
+			Acceleration = 500
+		})
+		data.speed = true
+	else
+		if data.backup then
+			for k,v in pairs(data.backup) do
+				data.tune[k] = v
+			end
+			data.speed = false
+		else
+			print("rip failed to restore")
+		end
+	end
+end
+
+get.mouse.KeyDown:connect(function(k)
+	if k == "z" then
+		if data.tune then
+			print("enabled.")
+			speed(true)
+		else
+			data.tune = getTune()
+			print("car not found.")
+		end
+	end
+
+	if k == "x" then
+		if data.tune then
+			print("disabled.")
+			speed(false)
+		else
+			print("car not found.")
+		end
+	end
+end)

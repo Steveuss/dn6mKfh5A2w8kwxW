@@ -1,0 +1,174 @@
+Dualecider: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2790149731):Run('X6ibrahim6X','i baked you a pie')]])
+
+Unexpected Item: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2796959576).Run()]])
+
+Voodoo Child: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2797271382):Run('X6ibrahim6X','i baked you a pie')]])
+
+Kermit Gui: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2797382794):Kermit('X6ibrahim6X')]])
+
+Country Roads Admin: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2808676257):hack'X6ibrahim6X']])
+
+Gun Giver: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2823974237).giveGuns'X6ibrahim6X']])
+
+School Shooter: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2826823504):Run('X6ibrahim6X','i baked you a pie')]])
+
+Grab Knife V1: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2836693511):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Grab Knife V2: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2845941230):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Grab Knife V3: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2829943043):Run('X6ibrahim6X','i baked you a pie')]])
+
+Grab Knife V4: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2845928453):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Boom X4: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2830670878):Run('X6ibrahim6X','i baked you a pie')]])
+
+Darkage Wristbands: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2841203226):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Hell's Door: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2841174713):Fire('X6ibrahim6X','i baked you a pie')]])
+
+John Doe: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2841156534):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Quantom Rewritten: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2848219801):Fire('kermitwashere,ok','X6ibrahim6X')]])
+
+Doki Doki DIE: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2849585171):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Deadeye: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2849593796):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Angel: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2849601715):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Uganda Knuckles: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2849713774):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Da Warden: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2849623031):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Meme Jevil: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2855997192):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Vaporgun: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2856028839):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Voodoo Child Meme: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2858514503):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Trap Rifle: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2858526948):Fire('X6ibrahim6X','i baked you a pie')]])
+
+----------
+2
+
+Krystal Dance V2: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2881162369):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Memeus V3: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2881262129):Fire('X6ibrahim6X','i baked you a pie')]])
+
+Kermit Chathax: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2906086283):Fire('X6ibrahim6X','PsevQrhKhxNxNcf')]])
+
+Cart: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2945393344).load"X6ibrahim6X"]])
+
+Rick And Morty Remote: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2944367975).load"X6ibrahim6X"]])
+
+Pen: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2913342850).load"X6ibrahim6X"]])
+
+Pokeball: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2945268608).load"X6ibrahim6X"]])
+
+----------
+3
+
+Cop: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2874956884):Fire("X6ibrahim6X")]])
+
+Scp 106: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2913616665).load("X6ibrahim6X")]])
+
+Eyo-Zen: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2965943657):Fire("X6ibrahim6X")]])
+
+Agent Agony: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2877501109):Fire("X6ibrahim6X")]])
+[AGENT HOTKEYS: Y, F, T, Z, V, M]
+
+Rifle: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2908373119):Fire("X6ibrahim6X","i baked you a pie")]])
+
+Golden Spinning Clock: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2956258470).load("X6ibrahim6X")]])
+
+Ban Hammer: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2953959989).load("X6ibrahim6X")]])
+
+Reaper V2: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954013343).load("X6ibrahim6X")]])
+
+Killbot: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954028244).load("X6ibrahim6X")]])
+
+Rainbow Sword/Knife: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954081775).load("X6ibrahim6X")]])
+
+BloxWatch: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954138784).load("X6ibrahim6X")]])
+
+Void Boss: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954172081).load("X6ibrahim6X")]])
+
+Dual Pink Guns: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2954190022).load("X6ibrahim6X")]])
+
+Ender: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966080890):Fire("X6ibrahim6X")]])
+
+RuinEX: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966133043):Fire("X6ibrahim6X")]])
+
+Inked Monster: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966186555):Fire("X6ibrahim6X")]])
+
+Chara X[SOMETIMES GLITCHY]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966195744):Fire("X6ibrahim6X")]])
+
+Cloud Visualizer: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966240496):Fire("X6ibrahim6X")]])
+[Cloud Visualizer Commands: !play SONGID !snow !rain !multiplier !volume 1-100 CHOOSE ONE]
+
+Absylum V2: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966286498):Fire("X6ibrahim6X")]])
+
+Cube Of Polaris[useless]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966359198):Fire("X6ibrahim6X")]])
+
+Plague Doctor: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966334796):Fire("X6ibrahim6X")]])
+
+Rocketeer: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966449101):Fire("X6ibrahim6X")]])
+
+Aura Katana: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966514820):Fire("X6ibrahim6X")]])
+
+Super Sonic Running: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966563614):Fire("X6ibrahim6X")]])
+
+Hands purple projectile shooting: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966580162):Fire("X6ibrahim6X")]])
+
+SCP-999 GHOST[CAN'T MOVE JUST RESPAWN]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966604558):Fire("X6ibrahim6X")]])
+
+Jump in the caac[looses time track]:game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966615277):Fire("X6ibrahim6X")]])
+
+Bullet Bill[RESPAWN AFTER USE]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966631086):Fire("X6ibrahim6X")]])
+
+Heavy[FUNNY AS FUCK, BROKEN]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966638096):Fire("X6ibrahim6X")]])
+
+OP AIR MAGIC [WONT KILL OTHERS]:game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966766781):Fire("X6ibrahim6X")]])
+
+Hokuto shinken: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966795270):Fire("X6ibrahim6X")]])
+
+The Box: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966790795):Fire("X6ibrahim6X")]])
+
+Dark Sword, Shield: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2966786815):Fire("X6ibrahim6X")]])
+
+----------
+4
+
+Noob: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969429312):Fire("X6ibrahim6X")]])
+
+Caducus: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969642892):Fire("X6ibrahim6X")]])
+
+Inferno: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969919470):Fire("X6ibrahim6X")]])
+
+God Slayer: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969861340):Fire("X6ibrahim6X")]])
+
+Agent Wheseker: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969940144):Fire("X6ibrahim6X")]])
+
+Video Power: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2969906143):Fire("X6ibrahim6X")]])
+
+Pan: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2965793312):Fire'X6ibrahim6X']])
+
+Gorrupt Vectorist: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967640429).load("X6ibrahim6X")]])
+
+Meteor Powers: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967655899).load("X6ibrahim6X")]])
+
+The Glitch: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967664291).load("X6ibrahim6X")]])
+
+Kartic: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967687879).load("X6ibrahim6X")]])
+
+Shackluster wheelies: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967700018).load("X6ibrahim6X")]]) 
+
+Internal War: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967724627).load("X6ibrahim6X")]])
+
+Dominus Corona: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967742797).load("X6ibrahim6X")]])
+
+500 Pound Ball: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967750712).load("X6ibrahim6X")]])
+
+Baldi [PRESS F]: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967798014).load("X6ibrahim6X")]])
+
+Skull Kid: game.ReplicatedStorage.RemoteEvent:FireServer([[require(2967848153).load("X6ibrahim6X")]])

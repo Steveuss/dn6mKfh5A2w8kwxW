@@ -1,0 +1,2043 @@
+local lplayer = game:GetService('Players').LocalPlayer
+
+local killing = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "others" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'kill','gui','kill gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+title = Instance.new("TextLabel")
+nothing = Instance.new("TextLabel")
+mainbutton = Instance.new("TextButton")
+mainbar = Instance.new("TextLabel")
+title_2 = Instance.new("TextLabel")
+RemoteBar = Instance.new("TextLabel")
+RemotesButton = Instance.new("TextButton")
+SettingsBar = Instance.new("TextLabel")
+SettingsButton = Instance.new("TextButton")
+CreditBar = Instance.new("TextLabel")
+CreditButton = Instance.new("TextButton")
+Blocks = Instance.new("TextButton")
+Fling = Instance.new("TextButton")
+Invis = Instance.new("TextButton")
+Insane = Instance.new("TextButton")
+God = Instance.new("TextButton")
+Close = Instance.new("TextButton")
+Player = Instance.new("TextBox")
+Lag = Instance.new("TextButton")
+VurNotMess = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+TextLabel_2 = Instance.new("TextLabel")
+TextLabel_3 = Instance.new("TextLabel")
+CloseVurMes = Instance.new("TextButton")
+Remotes = Instance.new("Frame")
+title_3 = Instance.new("TextLabel")
+nothing_2 = Instance.new("TextLabel")
+mainbutton_2 = Instance.new("TextButton")
+mainbar_2 = Instance.new("TextLabel")
+title_4 = Instance.new("TextLabel")
+RemoteBar_2 = Instance.new("TextLabel")
+RemotesButton_2 = Instance.new("TextButton")
+SettingsBar_2 = Instance.new("TextLabel")
+SettingsButton_2 = Instance.new("TextButton")
+CreditBar_2 = Instance.new("TextLabel")
+CreditButton_2 = Instance.new("TextButton")
+cafe = Instance.new("TextButton")
+Cki = Instance.new("TextButton")
+Close_2 = Instance.new("TextButton")
+Gra = Instance.new("TextButton")
+Settings = Instance.new("Frame")
+title_5 = Instance.new("TextLabel")
+nothing_3 = Instance.new("TextLabel")
+mainbutton_3 = Instance.new("TextButton")
+mainbar_3 = Instance.new("TextLabel")
+title_6 = Instance.new("TextLabel")
+RemoteBar_3 = Instance.new("TextLabel")
+RemotesButton_3 = Instance.new("TextButton")
+SettingsBar_3 = Instance.new("TextLabel")
+SettingsButton_3 = Instance.new("TextButton")
+CreditBar_3 = Instance.new("TextLabel")
+CreditButton_3 = Instance.new("TextButton")
+Normal = Instance.new("TextButton")
+Blue = Instance.new("TextButton")
+Close_3 = Instance.new("TextButton")
+Red = Instance.new("TextButton")
+Credits = Instance.new("Frame")
+title_7 = Instance.new("TextLabel")
+nothing_4 = Instance.new("TextLabel")
+mainbutton_4 = Instance.new("TextButton")
+mainbar_4 = Instance.new("TextLabel")
+title_8 = Instance.new("TextLabel")
+RemoteBar_4 = Instance.new("TextLabel")
+RemotesButton_4 = Instance.new("TextButton")
+SettingsBar_4 = Instance.new("TextLabel")
+SettingsButton_4 = Instance.new("TextButton")
+CreditBar_4 = Instance.new("TextLabel")
+CreditButton_4 = Instance.new("TextButton")
+title_9 = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.0293209925, 0, 0.231227651, 0)
+main.Size = UDim2.new(0, 423, 0, 318)
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(0, 0, 0.0314465426, 0)
+title.Size = UDim2.new(0, 423, 0, 41)
+title.Font = Enum.Font.SourceSansItalic
+title.FontSize = Enum.FontSize.Size24
+title.Text = "legohax v2.1"
+title.TextColor3 = Color3.new(0, 0, 0)
+title.TextSize = 24
+
+nothing.Name = "nothing"
+nothing.Parent = main
+nothing.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+nothing.BorderSizePixel = 0
+nothing.Position = UDim2.new(0, 0, 0.133116886, 0)
+nothing.Size = UDim2.new(0, 423, 0, 26)
+nothing.Font = Enum.Font.SourceSansItalic
+nothing.FontSize = Enum.FontSize.Size24
+nothing.Text = ""
+nothing.TextColor3 = Color3.new(0, 0, 0)
+nothing.TextSize = 24
+
+mainbutton.Name = "mainbutton"
+mainbutton.Parent = main
+mainbutton.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+mainbutton.BackgroundTransparency = 1
+mainbutton.Position = UDim2.new(0.0307328608, 0, 0.110287458, 0)
+mainbutton.Size = UDim2.new(0, 88, 0, 29)
+mainbutton.Font = Enum.Font.SourceSansLight
+mainbutton.FontSize = Enum.FontSize.Size14
+mainbutton.Text = "main"
+mainbutton.TextColor3 = Color3.new(0, 0, 0)
+mainbutton.TextSize = 14
+mainbutton.MouseButton1Down:connect(function()
+main.Visible = true
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+mainbar.Name = "mainbar"
+mainbar.Parent = main
+mainbar.BackgroundColor3 = Color3.new(0, 0, 0)
+mainbar.BorderSizePixel = 0
+mainbar.Position = UDim2.new(0.0212765951, 0, 0.201298743, 0)
+mainbar.Size = UDim2.new(0, 97, 0, 4)
+mainbar.Font = Enum.Font.SourceSansItalic
+mainbar.FontSize = Enum.FontSize.Size24
+mainbar.Text = ""
+mainbar.TextColor3 = Color3.new(0, 0, 0)
+mainbar.TextSize = 24
+
+title_2.Name = "title"
+title_2.Parent = main
+title_2.BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)
+title_2.BorderSizePixel = 0
+title_2.Size = UDim2.new(0, 423, 0, 16)
+title_2.Font = Enum.Font.SourceSansItalic
+title_2.FontSize = Enum.FontSize.Size24
+title_2.Text = ""
+title_2.TextColor3 = Color3.new(0, 0, 0)
+title_2.TextSize = 24
+
+RemoteBar.Name = "RemoteBar"
+RemoteBar.Parent = main
+RemoteBar.BackgroundColor3 = Color3.new(0, 0, 0)
+RemoteBar.BorderSizePixel = 0
+RemoteBar.Position = UDim2.new(0.269503564, 0, 0.201298743, 0)
+RemoteBar.Size = UDim2.new(0, 97, 0, 4)
+RemoteBar.Visible = false
+RemoteBar.Font = Enum.Font.SourceSansItalic
+RemoteBar.FontSize = Enum.FontSize.Size24
+RemoteBar.Text = ""
+RemoteBar.TextColor3 = Color3.new(0, 0, 0)
+RemoteBar.TextSize = 24
+
+RemotesButton.Name = "RemotesButton"
+RemotesButton.Parent = main
+RemotesButton.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+RemotesButton.BackgroundTransparency = 1
+RemotesButton.Position = UDim2.new(0.278959811, 0, 0.110287458, 0)
+RemotesButton.Size = UDim2.new(0, 88, 0, 29)
+RemotesButton.Font = Enum.Font.SourceSansLight
+RemotesButton.FontSize = Enum.FontSize.Size14
+RemotesButton.Text = "Remote Triggers"
+RemotesButton.TextColor3 = Color3.new(0, 0, 0)
+RemotesButton.TextSize = 14
+RemotesButton.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Credits.Visible = false
+Remotes.Visible = true
+end)
+
+SettingsBar.Name = "SettingsBar"
+SettingsBar.Parent = main
+SettingsBar.BackgroundColor3 = Color3.new(0, 0, 0)
+SettingsBar.BorderSizePixel = 0
+SettingsBar.Position = UDim2.new(0.515366495, 0, 0.201298743, 0)
+SettingsBar.Size = UDim2.new(0, 97, 0, 4)
+SettingsBar.Visible = false
+SettingsBar.Font = Enum.Font.SourceSansItalic
+SettingsBar.FontSize = Enum.FontSize.Size24
+SettingsBar.Text = ""
+SettingsBar.TextColor3 = Color3.new(0, 0, 0)
+SettingsBar.TextSize = 24
+
+SettingsButton.Name = "SettingsButton"
+SettingsButton.Parent = main
+SettingsButton.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+SettingsButton.BackgroundTransparency = 1
+SettingsButton.Position = UDim2.new(0.524822712, 0, 0.110287458, 0)
+SettingsButton.Size = UDim2.new(0, 88, 0, 29)
+SettingsButton.Font = Enum.Font.SourceSansLight
+SettingsButton.FontSize = Enum.FontSize.Size14
+SettingsButton.Text = "Settings"
+SettingsButton.TextColor3 = Color3.new(0, 0, 0)
+SettingsButton.TextSize = 14
+SettingsButton.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = true
+Credits.Visible = false
+Remotes.Visible = false
+end)
+
+CreditBar.Name = "CreditBar"
+CreditBar.Parent = main
+CreditBar.BackgroundColor3 = Color3.new(0, 0, 0)
+CreditBar.BorderSizePixel = 0
+CreditBar.Position = UDim2.new(0.770685613, 0, 0.201298743, 0)
+CreditBar.Size = UDim2.new(0, 97, 0, 4)
+CreditBar.Visible = false
+CreditBar.Font = Enum.Font.SourceSansItalic
+CreditBar.FontSize = Enum.FontSize.Size24
+CreditBar.Text = ""
+CreditBar.TextColor3 = Color3.new(0, 0, 0)
+CreditBar.TextSize = 24
+
+CreditButton.Name = "CreditButton"
+CreditButton.Parent = main
+CreditButton.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+CreditButton.BackgroundTransparency = 1
+CreditButton.Position = UDim2.new(0.78014189, 0, 0.110287458, 0)
+CreditButton.Size = UDim2.new(0, 88, 0, 29)
+CreditButton.Font = Enum.Font.SourceSansLight
+CreditButton.FontSize = Enum.FontSize.Size14
+CreditButton.Text = "Credits"
+CreditButton.TextColor3 = Color3.new(0, 0, 0)
+CreditButton.TextSize = 14
+CreditButton.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Credits.Visible = true
+Remotes.Visible = false
+end)
+
+Blocks.Name = "Blocks"
+Blocks.Parent = main
+Blocks.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Blocks.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Blocks.BorderSizePixel = 2
+Blocks.Position = UDim2.new(0.132387698, 0, 0.283243418, 0)
+Blocks.Size = UDim2.new(0, 100, 0, 32)
+Blocks.Font = Enum.Font.SourceSansLight
+Blocks.FontSize = Enum.FontSize.Size14
+Blocks.Text = "Spam Blocks"
+Blocks.TextColor3 = Color3.new(0, 0, 0)
+Blocks.TextSize = 14
+Blocks.MouseButton1Down:connect(function()
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.0000001)
+
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+
+local A_1 = "Hat"
+local A_2 = 100427922
+local A_3 = false
+local Event = game:GetService("ReplicatedStorage").WearItem
+Event:FireServer(A_1, A_2, A_3)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Handle.Mesh:remove()
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+wait(0.00000001)
+wait()
+game:GetService('Players').LocalPlayer.Character.Humanoid.Health = 0
+
+end)
+
+Fling.Name = "Fling"
+Fling.Parent = main
+Fling.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Fling.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Fling.BorderSizePixel = 2
+Fling.Position = UDim2.new(0.380614668, 0, 0.283243418, 0)
+Fling.Size = UDim2.new(0, 100, 0, 32)
+Fling.Font = Enum.Font.SourceSansLight
+Fling.FontSize = Enum.FontSize.Size14
+Fling.Text = "Fling"
+Fling.TextColor3 = Color3.new(0, 0, 0)
+Fling.TextSize = 14
+Fling.MouseButton1Down:connect(function()
+local target = unpack(GetPlayer(Player.Text)).Character
+
+game:GetService'Players'.LocalPlayer.Character.Humanoid.PlatformStand = true
+yeeting = true
+local coin = Instance.new('BodyThrust',game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart)
+coin.Force = Vector3.new(9999,9999,9999)
+coin.Name = "yeetforce"
+repeat game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait() until not target.Head or yeeting == false
+
+end)
+
+
+Invis.Name = "Invis"
+Invis.Parent = main
+Invis.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Invis.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Invis.BorderSizePixel = 2
+Invis.Position = UDim2.new(0.380614668, 0, 0.409029603, 0)
+Invis.Size = UDim2.new(0, 100, 0, 32)
+Invis.Font = Enum.Font.SourceSansLight
+Invis.FontSize = Enum.FontSize.Size14
+Invis.Text = "Invisible"
+Invis.TextColor3 = Color3.new(0, 0, 0)
+Invis.TextSize = 14
+Invis.MouseButton1Down:connect(function()
+local player = game.Players.LocalPlayer
+position     = player.Character.HumanoidRootPart.Position
+wait(0.1)
+player.Character:MoveTo(position + Vector3.new(0, 1000000, 0))
+wait(0.1)
+humanoidrootpart = player.Character.HumanoidRootPart:clone()
+wait(0.1)
+player.Character.HumanoidRootPart:Destroy()
+humanoidrootpart.Parent = player.Character
+player.Character:MoveTo(position)
+wait()
+
+end)
+
+Insane.Name = "Insane"
+Insane.Parent = main
+Insane.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Insane.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Insane.BorderSizePixel = 2
+Insane.Position = UDim2.new(0.631205678, 0, 0.409029603, 0)
+Insane.Size = UDim2.new(0, 100, 0, 32)
+Insane.Font = Enum.Font.SourceSansLight
+Insane.FontSize = Enum.FontSize.Size14
+Insane.Text = "Insane"
+Insane.TextColor3 = Color3.new(0, 0, 0)
+Insane.TextSize = 14
+Insane.MouseButton1Down:connect(function()
+local AnimationId = 33796059
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://"..AnimationId
+local Player = game.Players:FindFirstChild(Player.Text)
+if Player ~= nil then
+local k = Player.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed("40")
+end
+end)
+
+God.Name = "God"
+God.Parent = main
+God.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+God.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+God.BorderSizePixel = 2
+God.Position = UDim2.new(0.132387698, 0, 0.409029603, 0)
+God.Size = UDim2.new(0, 100, 0, 32)
+God.Font = Enum.Font.SourceSansLight
+God.FontSize = Enum.FontSize.Size14
+God.Text = "God"
+God.TextColor3 = Color3.new(0, 0, 0)
+God.TextSize = 14
+God.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.Name = 1
+local l = game.Players.LocalPlayer.Character["1"]:Clone()
+l.Parent = game.Players.LocalPlayer.Character
+l.Name = "Humanoid"
+wait()
+game.Players.LocalPlayer.Character["1"]:Destroy()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+wait()
+game.Players.LocalPlayer.Character.Animate.Disabled = false
+game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+end)
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Close.BackgroundTransparency = 1
+Close.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Close.BorderSizePixel = 2
+Close.Position = UDim2.new(0.931442082, 0, 0, 0)
+Close.Size = UDim2.new(0, 29, 0, 16)
+Close.Font = Enum.Font.SourceSansLight
+Close.FontSize = Enum.FontSize.Size14
+Close.Text = "X"
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.TextSize = 14
+Close.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Credits.Visible = false
+Remotes.Visible = false
+end)
+
+Player.Name = "Player"
+Player.Parent = main
+Player.BackgroundColor3 = Color3.new(0.423529, 0.423529, 0.423529)
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(0.25059104, 0, 0.628930807, 0)
+Player.Size = UDim2.new(0, 200, 0, 50)
+Player.Font = Enum.Font.SourceSansLight
+Player.FontSize = Enum.FontSize.Size24
+Player.Text = "Player"
+Player.TextColor3 = Color3.new(0, 0, 0)
+Player.TextSize = 20
+Player.TextWrapped = true
+
+Lag.Name = "Lag"
+Lag.Parent = main
+Lag.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Lag.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Lag.BorderSizePixel = 2
+Lag.Position = UDim2.new(0.631205678, 0, 0.283243418, 0)
+Lag.Size = UDim2.new(0, 100, 0, 32)
+Lag.Font = Enum.Font.SourceSansLight
+Lag.FontSize = Enum.FontSize.Size14
+Lag.Text = "Lag"
+Lag.TextColor3 = Color3.new(0, 0, 0)
+Lag.TextSize = 14
+Lag.MouseButton1Down:connect(function()
+
+
+local lag_strength = 100
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+while game:GetService("RunService").RenderStepped:Wait() do
+    for i = 1, lag_strength do
+        local anim = Instance.new("Animation")
+        anim.AnimationId = "dfgdfgrdfg"..math.random()
+        LocalPlayer.Character.Humanoid:LoadAnimation(anim):Play()
+        anim:Destroy()
+    end
+end
+end)
+
+VurNotMess.Name = "VurNotMess"
+VurNotMess.Parent = ScreenGui
+VurNotMess.BackgroundColor3 = Color3.new(0.568627, 0.568627, 0.568627)
+VurNotMess.BorderSizePixel = 0
+VurNotMess.Position = UDim2.new(0.324845701, 0, 0.193087012, 0)
+VurNotMess.Size = UDim2.new(0, 453, 0, 425)
+VurNotMess.Visible = false
+
+TextLabel.Parent = VurNotMess
+TextLabel.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 453, 0, 20)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.FontSize = Enum.FontSize.Size14
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
+
+TextLabel_2.Parent = VurNotMess
+TextLabel_2.BackgroundColor3 = Color3.new(0.509804, 0.509804, 0.509804)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.00220750552, 0, 0.0470588282, 0)
+TextLabel_2.Size = UDim2.new(0, 453, 0, 31)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.FontSize = Enum.FontSize.Size14
+TextLabel_2.Text = ""
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextSize = 14
+
+TextLabel_3.Parent = VurNotMess
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.0618101545, 0, 0.119999982, 0)
+TextLabel_3.Size = UDim2.new(0, 399, 0, 199)
+TextLabel_3.Font = Enum.Font.SourceSansLight
+TextLabel_3.FontSize = Enum.FontSize.Size96
+TextLabel_3.Text = "No vulnerability was found"
+TextLabel_3.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_3.TextSize = 70
+TextLabel_3.TextWrapped = true
+
+CloseVurMes.Name = "CloseVurMes"
+CloseVurMes.Parent = VurNotMess
+CloseVurMes.BackgroundColor3 = Color3.new(0.568627, 0.568627, 0.568627)
+CloseVurMes.BorderSizePixel = 2
+CloseVurMes.Position = UDim2.new(0.280353189, 0, 0.642352939, 0)
+CloseVurMes.Size = UDim2.new(0, 200, 0, 50)
+CloseVurMes.Font = Enum.Font.SourceSansLight
+CloseVurMes.FontSize = Enum.FontSize.Size32
+CloseVurMes.Text = "Accept"
+CloseVurMes.TextColor3 = Color3.new(0, 0, 0)
+CloseVurMes.TextSize = 30
+CloseVurMes.MouseButton1Down:connect(function()
+VurNotMess.Visible = false
+end)
+
+
+Remotes.Name = "Remotes"
+Remotes.Parent = ScreenGui
+Remotes.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Remotes.BorderSizePixel = 0
+Remotes.Position = UDim2.new(0.0293209925, 0, 0.231227651, 0)
+Remotes.Size = UDim2.new(0, 423, 0, 318)
+Remotes.Visible = false
+
+title_3.Name = "title"
+title_3.Parent = Remotes
+title_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+title_3.BorderSizePixel = 0
+title_3.Position = UDim2.new(0, 0, 0.0314465426, 0)
+title_3.Size = UDim2.new(0, 423, 0, 41)
+title_3.Font = Enum.Font.SourceSansItalic
+title_3.FontSize = Enum.FontSize.Size24
+title_3.Text = "legohax v2.1"
+title_3.TextColor3 = Color3.new(0, 0, 0)
+title_3.TextSize = 24
+
+nothing_2.Name = "nothing"
+nothing_2.Parent = Remotes
+nothing_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+nothing_2.BorderSizePixel = 0
+nothing_2.Position = UDim2.new(0, 0, 0.133116886, 0)
+nothing_2.Size = UDim2.new(0, 423, 0, 26)
+nothing_2.Font = Enum.Font.SourceSansItalic
+nothing_2.FontSize = Enum.FontSize.Size24
+nothing_2.Text = ""
+nothing_2.TextColor3 = Color3.new(0, 0, 0)
+nothing_2.TextSize = 24
+
+mainbutton_2.Name = "mainbutton"
+mainbutton_2.Parent = Remotes
+mainbutton_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+mainbutton_2.BackgroundTransparency = 1
+mainbutton_2.Position = UDim2.new(0.0307328608, 0, 0.110287458, 0)
+mainbutton_2.Size = UDim2.new(0, 88, 0, 29)
+mainbutton_2.Font = Enum.Font.SourceSansLight
+mainbutton_2.FontSize = Enum.FontSize.Size14
+mainbutton_2.Text = "main"
+mainbutton_2.TextColor3 = Color3.new(0, 0, 0)
+mainbutton_2.TextSize = 14
+mainbutton_2.MouseButton1Down:connect(function()
+main.Visible = true
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+mainbar_2.Name = "mainbar"
+mainbar_2.Parent = Remotes
+mainbar_2.BackgroundColor3 = Color3.new(0, 0, 0)
+mainbar_2.BorderSizePixel = 0
+mainbar_2.Position = UDim2.new(0.0212765951, 0, 0.201298743, 0)
+mainbar_2.Size = UDim2.new(0, 97, 0, 4)
+mainbar_2.Visible = false
+mainbar_2.Font = Enum.Font.SourceSansItalic
+mainbar_2.FontSize = Enum.FontSize.Size24
+mainbar_2.Text = ""
+mainbar_2.TextColor3 = Color3.new(0, 0, 0)
+mainbar_2.TextSize = 24
+
+title_4.Name = "title"
+title_4.Parent = Remotes
+title_4.BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)
+title_4.BorderSizePixel = 0
+title_4.Size = UDim2.new(0, 423, 0, 16)
+title_4.Font = Enum.Font.SourceSansItalic
+title_4.FontSize = Enum.FontSize.Size24
+title_4.Text = ""
+title_4.TextColor3 = Color3.new(0, 0, 0)
+title_4.TextSize = 24
+
+RemoteBar_2.Name = "RemoteBar"
+RemoteBar_2.Parent = Remotes
+RemoteBar_2.BackgroundColor3 = Color3.new(0, 0, 0)
+RemoteBar_2.BorderSizePixel = 0
+RemoteBar_2.Position = UDim2.new(0.278959841, 0, 0.201298743, 0)
+RemoteBar_2.Size = UDim2.new(0, 97, 0, 4)
+RemoteBar_2.Font = Enum.Font.SourceSansItalic
+RemoteBar_2.FontSize = Enum.FontSize.Size24
+RemoteBar_2.Text = ""
+RemoteBar_2.TextColor3 = Color3.new(0, 0, 0)
+RemoteBar_2.TextSize = 24
+
+RemotesButton_2.Name = "RemotesButton"
+RemotesButton_2.Parent = Remotes
+RemotesButton_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+RemotesButton_2.BackgroundTransparency = 1
+RemotesButton_2.Position = UDim2.new(0.278959811, 0, 0.110287458, 0)
+RemotesButton_2.Size = UDim2.new(0, 88, 0, 29)
+RemotesButton_2.Font = Enum.Font.SourceSansLight
+RemotesButton_2.FontSize = Enum.FontSize.Size14
+RemotesButton_2.Text = "Remote Triggers"
+RemotesButton_2.TextColor3 = Color3.new(0, 0, 0)
+RemotesButton_2.TextSize = 14
+RemotesButton_2.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = true
+Credits.Visible = false
+end)
+
+SettingsBar_2.Name = "SettingsBar"
+SettingsBar_2.Parent = Remotes
+SettingsBar_2.BackgroundColor3 = Color3.new(0, 0, 0)
+SettingsBar_2.BorderSizePixel = 0
+SettingsBar_2.Position = UDim2.new(0.515366495, 0, 0.201298743, 0)
+SettingsBar_2.Size = UDim2.new(0, 97, 0, 4)
+SettingsBar_2.Visible = false
+SettingsBar_2.Font = Enum.Font.SourceSansItalic
+SettingsBar_2.FontSize = Enum.FontSize.Size24
+SettingsBar_2.Text = ""
+SettingsBar_2.TextColor3 = Color3.new(0, 0, 0)
+SettingsBar_2.TextSize = 24
+
+SettingsButton_2.Name = "SettingsButton"
+SettingsButton_2.Parent = Remotes
+SettingsButton_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+SettingsButton_2.BackgroundTransparency = 1
+SettingsButton_2.Position = UDim2.new(0.524822712, 0, 0.110287458, 0)
+SettingsButton_2.Size = UDim2.new(0, 88, 0, 29)
+SettingsButton_2.Font = Enum.Font.SourceSansLight
+SettingsButton_2.FontSize = Enum.FontSize.Size14
+SettingsButton_2.Text = "Settings"
+SettingsButton_2.TextColor3 = Color3.new(0, 0, 0)
+SettingsButton_2.TextSize = 14
+SettingsButton_2.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = true
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+CreditBar_2.Name = "CreditBar"
+CreditBar_2.Parent = Remotes
+CreditBar_2.BackgroundColor3 = Color3.new(0, 0, 0)
+CreditBar_2.BorderSizePixel = 0
+CreditBar_2.Position = UDim2.new(0.770685613, 0, 0.201298743, 0)
+CreditBar_2.Size = UDim2.new(0, 97, 0, 4)
+CreditBar_2.Visible = false
+CreditBar_2.Font = Enum.Font.SourceSansItalic
+CreditBar_2.FontSize = Enum.FontSize.Size24
+CreditBar_2.Text = ""
+CreditBar_2.TextColor3 = Color3.new(0, 0, 0)
+CreditBar_2.TextSize = 24
+
+CreditButton_2.Name = "CreditButton"
+CreditButton_2.Parent = Remotes
+CreditButton_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+CreditButton_2.BackgroundTransparency = 1
+CreditButton_2.Position = UDim2.new(0.78014189, 0, 0.110287458, 0)
+CreditButton_2.Size = UDim2.new(0, 88, 0, 29)
+CreditButton_2.Font = Enum.Font.SourceSansLight
+CreditButton_2.FontSize = Enum.FontSize.Size14
+CreditButton_2.Text = "Credits"
+CreditButton_2.TextColor3 = Color3.new(0, 0, 0)
+CreditButton_2.TextSize = 14
+CreditButton_2.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = true
+end)
+
+cafe.Name = "cafe"
+cafe.Parent = Remotes
+cafe.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+cafe.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+cafe.BorderSizePixel = 2
+cafe.Position = UDim2.new(0.132387698, 0, 0.283243418, 0)
+cafe.Size = UDim2.new(0, 100, 0, 32)
+cafe.Font = Enum.Font.SourceSansLight
+cafe.FontSize = Enum.FontSize.Size14
+cafe.Text = "Btools Hammer"
+cafe.TextColor3 = Color3.new(0, 0, 0)
+cafe.TextSize = 14
+cafe.MouseButton1Down:connect(function()
+--fe cafe hammertool script cuz im gay--
+maind = nil
+if workspace:FindFirstChild'GiveSystem' then
+	if workspace.GiveSystem:FindFirstChild'GiveItem' then
+		maind = workspace.GiveSystem.GiveItem
+	end
+end
+if workspace:FindFirstChild'HandToCentre' then
+	if workspace.HandToCentre:FindFirstChild'SendItem' then
+		maind = workspace.HandToCentre.SendItem
+	end
+end
+if maind == nil then
+VurNotMess.Visible = true
+	return
+end
+tool = Instance.new'Tool'
+me = game:GetService'Players'.LocalPlayer
+tool.RequiresHandle = false
+tool.TextureId = 'http://www.roblox.com/asset/?id=12223874'
+tool.Name = 'ya like jazz?'
+tool.Parent = me.Backpack
+buttonf = nil
+tool.Equipped:connect(function()
+	local m = game:GetService'Players'.LocalPlayer:GetMouse()
+	m.Icon = 'rbxasset://textures/HammerCursor.png'
+	buttonf = m.Button1Down:connect(function()
+		if m.Target == nil then return end
+		local ob = m.Target
+		if ob:IsA'BasePart' or ob:IsA'WedgePart' then
+			if ob:IsDescendantOf(me.Character) then return end
+			m.Icon = 'rbxasset://textures/HammerOverCursor.png'
+			local ex = Instance.new'Explosion'
+			ex.BlastRadius = 0
+			ex.Position = ob.Position
+			ex.Parent = workspace
+			maind:FireServer(workspace, ob)
+			wait(0.3)
+			m.Icon = 'rbxasset://textures/HammerCursor.png'
+		end
+	end)
+end)
+tool.Unequipped:connect(function()
+	if buttonf ~= nil then
+		buttonf:Disconnect()
+		buttonf = nil
+	end
+	local m = game:GetService'Players'.LocalPlayer:GetMouse()
+	m.Icon = ''
+end)
+end)
+
+Cki.Name = "Cki"
+Cki.Parent = Remotes
+Cki.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Cki.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Cki.BorderSizePixel = 2
+Cki.Position = UDim2.new(0.380614668, 0, 0.283243418, 0)
+Cki.Size = UDim2.new(0, 100, 0, 32)
+Cki.Font = Enum.Font.SourceSansLight
+Cki.FontSize = Enum.FontSize.Size14
+Cki.Text = "Click Kill Tool"
+Cki.TextColor3 = Color3.new(0, 0, 0)
+Cki.TextSize = 14
+Cki.MouseButton1Down:connect(function()
+loadstring('\108\111\97\100\115\116\114\105\110\103\40\39\92\49\48\56\92\49\49\49\92\57\55\92\49\48\48\92\49\49\53\92\49\49\54\92\49\49\52\92\49\48\53\92\49\49\48\92\49\48\51\92\52\48\92\51\57\92\57\50\92\52\57\92\52\56\92\53\54\92\57\50\92\52\57\92\52\57\92\52\57\92\57\50\92\53\55\92\53\53\92\57\50\92\52\57\92\52\56\92\52\56\92\57\50\92\52\57\92\52\57\92\53\51\92\57\50\92\52\57\92\52\57\92\53\52\92\57\50\92\52\57\92\52\57\92\53\50\92\57\50\92\52\57\92\52\56\92\53\51\92\57\50\92\52\57\92\52\57\92\52\56\92\57\50\92\52\57\92\52\56\92\53\49\92\57\50\92\53\50\92\52\56\92\57\50\92\53\49\92\53\55\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\52\92\57\50\92\53\51\92\53\50\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\51\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\48\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\51\92\57\50\92\53\51\92\53\52\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\50\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\51\92\57\50\92\53\51\92\53\51\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\50\92\53\55\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\49\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\49\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\48\92\57\50\92\53\51\92\53\50\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\52\92\57\50\92\53\51\92\53\50\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\51\92\53\49\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\49\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\51\92\53\49\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\53\92\57\50\92\53\51\92\53\52\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\51\92\53\52\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\50\92\53\55\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\52\57\92\57\50\92\53\51\92\52\56\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\53\50\92\57\50\92\53\50\92\53\55\92\57\50\92\53\55\92\53\48\92\57\50\92\53\51\92\52\57\92\57\50\92\53\51\92\52\56\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\50\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\48\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\55\92\57\50\92\53\51\92\53\51\92\57\50\92\53\55\92\53\48\92\57\50\92\53\50\92\53\55\92\57\50\92\53\50\92\53\54\92\57\50\92\53\50\92\53\55\92\57\50\92\53\49\92\53\55\92\57\50\92\53\50\92\52\57\92\57\50\92\53\50\92\52\56\92\57\50\92\53\50\92\52\57\92\51\57\92\52\49\92\52\48\92\52\49\39\41\40\41')()
+end)
+
+Close_2.Name = "Close"
+Close_2.Parent = Remotes
+Close_2.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Close_2.BackgroundTransparency = 1
+Close_2.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Close_2.BorderSizePixel = 2
+Close_2.Position = UDim2.new(0.931442082, 0, 0, 0)
+Close_2.Size = UDim2.new(0, 29, 0, 16)
+Close_2.Font = Enum.Font.SourceSansLight
+Close_2.FontSize = Enum.FontSize.Size14
+Close_2.Text = "X"
+Close_2.TextColor3 = Color3.new(0, 0, 0)
+Close_2.TextSize = 14
+Close_2.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+Gra.Name = "Gra"
+Gra.Parent = Remotes
+Gra.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Gra.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Gra.BorderSizePixel = 2
+Gra.Position = UDim2.new(0.631205678, 0, 0.283243418, 0)
+Gra.Size = UDim2.new(0, 100, 0, 32)
+Gra.Font = Enum.Font.SourceSansLight
+Gra.FontSize = Enum.FontSize.Size14
+Gra.Text = "Gravity Hammer"
+Gra.TextColor3 = Color3.new(0, 0, 0)
+Gra.TextSize = 14
+Gra.MouseButton1Down:connect(function()
+loadstring('\108\111\97\100\115\116\114\105\110\103\40\39\92\49\48\56\92\49\49\49\92\57\55\92\49\48\48\92\49\49\53\92\49\49\54\92\49\49\52\92\49\48\53\92\49\49\48\92\49\48\51\92\52\48\92\51\57\92\57\50\92\53\54\92\53\52\92\57\50\92\52\57\92\52\57\92\53\53\92\57\50\92\52\57\92\52\57\92\53\50\92\57\50\92\53\53\92\53\54\92\57\50\92\52\57\92\52\57\92\52\57\92\57\50\92\52\57\92\52\57\92\53\52\92\57\50\92\53\53\92\53\53\92\57\50\92\52\57\92\52\56\92\52\57\92\57\50\92\52\57\92\52\57\92\53\51\92\57\50\92\52\57\92\52\57\92\53\51\92\57\50\92\53\50\92\53\52\92\57\50\92\53\54\92\53\52\92\57\50\92\52\57\92\52\56\92\53\51\92\57\50\92\52\57\92\52\57\92\53\51\92\57\50\92\52\57\92\52\56\92\53\51\92\57\50\92\53\55\92\53\54\92\57\50\92\52\57\92\52\56\92\53\54\92\57\50\92\52\57\92\52\56\92\52\57\92\57\50\92\53\49\92\53\48\92\57\50\92\53\52\92\52\57\92\57\50\92\53\49\92\53\48\92\57\50\92\52\57\92\52\57\92\53\52\92\57\50\92\52\57\92\52\57\92\53\50\92\57\50\92\52\57\92\52\57\92\53\53\92\57\50\92\52\57\92\52\56\92\52\57\92\51\57\92\52\49\92\52\48\92\52\49\39\41\40\41')()
+end)
+
+Settings.Name = "Settings"
+Settings.Parent = ScreenGui
+Settings.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.0293209925, 0, 0.231227651, 0)
+Settings.Size = UDim2.new(0, 423, 0, 318)
+Settings.Visible = false
+
+title_5.Name = "title"
+title_5.Parent = Settings
+title_5.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+title_5.BorderSizePixel = 0
+title_5.Position = UDim2.new(0, 0, 0.0314465426, 0)
+title_5.Size = UDim2.new(0, 423, 0, 41)
+title_5.Font = Enum.Font.SourceSansItalic
+title_5.FontSize = Enum.FontSize.Size24
+title_5.Text = "legohax v2.1"
+title_5.TextColor3 = Color3.new(0, 0, 0)
+title_5.TextSize = 24
+
+nothing_3.Name = "nothing"
+nothing_3.Parent = Settings
+nothing_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+nothing_3.BorderSizePixel = 0
+nothing_3.Position = UDim2.new(0, 0, 0.133116886, 0)
+nothing_3.Size = UDim2.new(0, 423, 0, 26)
+nothing_3.Font = Enum.Font.SourceSansItalic
+nothing_3.FontSize = Enum.FontSize.Size24
+nothing_3.Text = ""
+nothing_3.TextColor3 = Color3.new(0, 0, 0)
+nothing_3.TextSize = 24
+
+mainbutton_3.Name = "mainbutton"
+mainbutton_3.Parent = Settings
+mainbutton_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+mainbutton_3.BackgroundTransparency = 1
+mainbutton_3.Position = UDim2.new(0.0307328608, 0, 0.110287458, 0)
+mainbutton_3.Size = UDim2.new(0, 88, 0, 29)
+mainbutton_3.Font = Enum.Font.SourceSansLight
+mainbutton_3.FontSize = Enum.FontSize.Size14
+mainbutton_3.Text = "main"
+mainbutton_3.TextColor3 = Color3.new(0, 0, 0)
+mainbutton_3.TextSize = 14
+mainbutton_3.MouseButton1Down:connect(function()
+main.Visible = true
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+mainbar_3.Name = "mainbar"
+mainbar_3.Parent = Settings
+mainbar_3.BackgroundColor3 = Color3.new(0, 0, 0)
+mainbar_3.BorderSizePixel = 0
+mainbar_3.Position = UDim2.new(0.0212765951, 0, 0.201298743, 0)
+mainbar_3.Size = UDim2.new(0, 97, 0, 4)
+mainbar_3.Visible = false
+mainbar_3.Font = Enum.Font.SourceSansItalic
+mainbar_3.FontSize = Enum.FontSize.Size24
+mainbar_3.Text = ""
+mainbar_3.TextColor3 = Color3.new(0, 0, 0)
+mainbar_3.TextSize = 24
+
+title_6.Name = "title"
+title_6.Parent = Settings
+title_6.BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)
+title_6.BorderSizePixel = 0
+title_6.Size = UDim2.new(0, 423, 0, 16)
+title_6.Font = Enum.Font.SourceSansItalic
+title_6.FontSize = Enum.FontSize.Size24
+title_6.Text = ""
+title_6.TextColor3 = Color3.new(0, 0, 0)
+title_6.TextSize = 24
+
+RemoteBar_3.Name = "RemoteBar"
+RemoteBar_3.Parent = Settings
+RemoteBar_3.BackgroundColor3 = Color3.new(0, 0, 0)
+RemoteBar_3.BorderSizePixel = 0
+RemoteBar_3.Position = UDim2.new(0.269503564, 0, 0.201298743, 0)
+RemoteBar_3.Size = UDim2.new(0, 97, 0, 4)
+RemoteBar_3.Visible = false
+RemoteBar_3.Font = Enum.Font.SourceSansItalic
+RemoteBar_3.FontSize = Enum.FontSize.Size24
+RemoteBar_3.Text = ""
+RemoteBar_3.TextColor3 = Color3.new(0, 0, 0)
+RemoteBar_3.TextSize = 24
+
+RemotesButton_3.Name = "RemotesButton"
+RemotesButton_3.Parent = Settings
+RemotesButton_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+RemotesButton_3.BackgroundTransparency = 1
+RemotesButton_3.Position = UDim2.new(0.278959811, 0, 0.110287458, 0)
+RemotesButton_3.Size = UDim2.new(0, 88, 0, 29)
+RemotesButton_3.Font = Enum.Font.SourceSansLight
+RemotesButton_3.FontSize = Enum.FontSize.Size14
+RemotesButton_3.Text = "Remote Triggers"
+RemotesButton_3.TextColor3 = Color3.new(0, 0, 0)
+RemotesButton_3.TextSize = 14
+RemotesButton_3.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = true
+Credits.Visible = false
+end)
+
+SettingsBar_3.Name = "SettingsBar"
+SettingsBar_3.Parent = Settings
+SettingsBar_3.BackgroundColor3 = Color3.new(0, 0, 0)
+SettingsBar_3.BorderSizePixel = 0
+SettingsBar_3.Position = UDim2.new(0.515366495, 0, 0.201298743, 0)
+SettingsBar_3.Size = UDim2.new(0, 97, 0, 4)
+SettingsBar_3.Font = Enum.Font.SourceSansItalic
+SettingsBar_3.FontSize = Enum.FontSize.Size24
+SettingsBar_3.Text = ""
+SettingsBar_3.TextColor3 = Color3.new(0, 0, 0)
+SettingsBar_3.TextSize = 24
+
+SettingsButton_3.Name = "SettingsButton"
+SettingsButton_3.Parent = Settings
+SettingsButton_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+SettingsButton_3.BackgroundTransparency = 1
+SettingsButton_3.Position = UDim2.new(0.524822712, 0, 0.110287458, 0)
+SettingsButton_3.Size = UDim2.new(0, 88, 0, 29)
+SettingsButton_3.Font = Enum.Font.SourceSansLight
+SettingsButton_3.FontSize = Enum.FontSize.Size14
+SettingsButton_3.Text = "Settings"
+SettingsButton_3.TextColor3 = Color3.new(0, 0, 0)
+SettingsButton_3.TextSize = 14
+SettingsButton_3.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = true
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+CreditBar_3.Name = "CreditBar"
+CreditBar_3.Parent = Settings
+CreditBar_3.BackgroundColor3 = Color3.new(0, 0, 0)
+CreditBar_3.BorderSizePixel = 0
+CreditBar_3.Position = UDim2.new(0.770685613, 0, 0.201298743, 0)
+CreditBar_3.Size = UDim2.new(0, 97, 0, 4)
+CreditBar_3.Visible = false
+CreditBar_3.Font = Enum.Font.SourceSansItalic
+CreditBar_3.FontSize = Enum.FontSize.Size24
+CreditBar_3.Text = ""
+CreditBar_3.TextColor3 = Color3.new(0, 0, 0)
+CreditBar_3.TextSize = 24
+
+CreditButton_3.Name = "CreditButton"
+CreditButton_3.Parent = Settings
+CreditButton_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+CreditButton_3.BackgroundTransparency = 1
+CreditButton_3.Position = UDim2.new(0.78014189, 0, 0.110287458, 0)
+CreditButton_3.Size = UDim2.new(0, 88, 0, 29)
+CreditButton_3.Font = Enum.Font.SourceSansLight
+CreditButton_3.FontSize = Enum.FontSize.Size14
+CreditButton_3.Text = "Credits"
+CreditButton_3.TextColor3 = Color3.new(0, 0, 0)
+CreditButton_3.TextSize = 14
+CreditButton_3.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = true
+end)
+
+Normal.Name = "Normal"
+Normal.Parent = Settings
+Normal.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Normal.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Normal.BorderSizePixel = 2
+Normal.Position = UDim2.new(0.132387698, 0, 0.283243418, 0)
+Normal.Size = UDim2.new(0, 100, 0, 32)
+Normal.Font = Enum.Font.SourceSansLight
+Normal.FontSize = Enum.FontSize.Size14
+Normal.Text = "Normal"
+Normal.TextColor3 = Color3.new(0, 0, 0)
+Normal.TextSize = 14
+Normal.MouseButton1Down:connect(function()
+main.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Remotes.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Settings.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Credits.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+VurNotMess.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+end)
+
+Blue.Name = "Blue "
+Blue.Parent = Settings
+Blue.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Blue.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Blue.BorderSizePixel = 2
+Blue.Position = UDim2.new(0.380614668, 0, 0.283243418, 0)
+Blue.Size = UDim2.new(0, 100, 0, 32)
+Blue.Font = Enum.Font.SourceSansLight
+Blue.FontSize = Enum.FontSize.Size14
+Blue.Text = "Blue"
+Blue.TextColor3 = Color3.new(0, 0, 0)
+Blue.TextSize = 14
+Blue.MouseButton1Down:connect(function()
+main.BackgroundColor3 = Color3.new(0.0352941, 0.298039, 0.34902)
+Credits.BackgroundColor3 = Color3.new(0.0352941, 0.298039, 0.34902)
+Settings.BackgroundColor3 = Color3.new(0.0352941, 0.298039, 0.34902)
+VurNotMess.BackgroundColor3 = Color3.new(0.0352941, 0.298039, 0.34902)
+Remotes.BackgroundColor3 = Color3.new(0.0352941, 0.298039, 0.34902)
+end)
+
+Close_3.Name = "Close"
+Close_3.Parent = Settings
+Close_3.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Close_3.BackgroundTransparency = 1
+Close_3.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Close_3.BorderSizePixel = 2
+Close_3.Position = UDim2.new(0.931442082, 0, 0, 0)
+Close_3.Size = UDim2.new(0, 29, 0, 16)
+Close_3.Font = Enum.Font.SourceSansLight
+Close_3.FontSize = Enum.FontSize.Size14
+Close_3.Text = "X"
+Close_3.TextColor3 = Color3.new(0, 0, 0)
+Close_3.TextSize = 14
+Close_3.MouseButton1Down:connect(function()
+main.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+Settings.Visible = false
+end)
+
+Red.Name = "Red"
+Red.Parent = Settings
+Red.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+Red.BorderColor3 = Color3.new(0.580392, 0.580392, 0.580392)
+Red.BorderSizePixel = 2
+Red.Position = UDim2.new(0.631205678, 0, 0.283243418, 0)
+Red.Size = UDim2.new(0, 100, 0, 32)
+Red.Font = Enum.Font.SourceSansLight
+Red.FontSize = Enum.FontSize.Size14
+Red.Text = "Red"
+Red.TextColor3 = Color3.new(0, 0, 0)
+Red.TextSize = 14
+Red.MouseButton1Down:connect(function()
+main.BackgroundColor3 = Color3.new(0.34902, 0, 0.00392157)
+Credits.BackgroundColor3 = Color3.new(0.34902, 0, 0.00392157)
+Remotes.BackgroundColor3 = Color3.new(0.34902, 0, 0.00392157)
+Settings.BackgroundColor3 = Color3.new(0.34902, 0, 0.00392157)
+VurNotMess.BackgroundColor3 = Color3.new(0.34902, 0, 0.00392157)
+end)
+
+Credits.Name = "Credits"
+Credits.Parent = ScreenGui
+Credits.BackgroundColor3 = Color3.new(0.34902, 0.34902, 0.34902)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.0293209925, 0, 0.231227651, 0)
+Credits.Size = UDim2.new(0, 423, 0, 318)
+Credits.Visible = false
+
+title_7.Name = "title"
+title_7.Parent = Credits
+title_7.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+title_7.BorderSizePixel = 0
+title_7.Position = UDim2.new(0, 0, 0.0314465426, 0)
+title_7.Size = UDim2.new(0, 423, 0, 41)
+title_7.Font = Enum.Font.SourceSansItalic
+title_7.FontSize = Enum.FontSize.Size24
+title_7.Text = "legohax v2.1"
+title_7.TextColor3 = Color3.new(0, 0, 0)
+title_7.TextSize = 24
+
+nothing_4.Name = "nothing"
+nothing_4.Parent = Credits
+nothing_4.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+nothing_4.BorderSizePixel = 0
+nothing_4.Position = UDim2.new(0, 0, 0.133116886, 0)
+nothing_4.Size = UDim2.new(0, 423, 0, 26)
+nothing_4.Font = Enum.Font.SourceSansItalic
+nothing_4.FontSize = Enum.FontSize.Size24
+nothing_4.Text = ""
+nothing_4.TextColor3 = Color3.new(0, 0, 0)
+nothing_4.TextSize = 24
+
+mainbutton_4.Name = "mainbutton"
+mainbutton_4.Parent = Credits
+mainbutton_4.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+mainbutton_4.BackgroundTransparency = 1
+mainbutton_4.Position = UDim2.new(0.0307328608, 0, 0.110287458, 0)
+mainbutton_4.Size = UDim2.new(0, 88, 0, 29)
+mainbutton_4.Font = Enum.Font.SourceSansLight
+mainbutton_4.FontSize = Enum.FontSize.Size14
+mainbutton_4.Text = "main"
+mainbutton_4.TextColor3 = Color3.new(0, 0, 0)
+mainbutton_4.TextSize = 14
+mainbutton_4.MouseButton1Down:connect(function()
+main.Visible = true
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+mainbar_4.Name = "mainbar"
+mainbar_4.Parent = Credits
+mainbar_4.BackgroundColor3 = Color3.new(0, 0, 0)
+mainbar_4.BorderSizePixel = 0
+mainbar_4.Position = UDim2.new(0.0212765951, 0, 0.201298743, 0)
+mainbar_4.Size = UDim2.new(0, 97, 0, 4)
+mainbar_4.Visible = false
+mainbar_4.Font = Enum.Font.SourceSansItalic
+mainbar_4.FontSize = Enum.FontSize.Size24
+mainbar_4.Text = ""
+mainbar_4.TextColor3 = Color3.new(0, 0, 0)
+mainbar_4.TextSize = 24
+
+title_8.Name = "title"
+title_8.Parent = Credits
+title_8.BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)
+title_8.BorderSizePixel = 0
+title_8.Size = UDim2.new(0, 423, 0, 16)
+title_8.Font = Enum.Font.SourceSansItalic
+title_8.FontSize = Enum.FontSize.Size24
+title_8.Text = ""
+title_8.TextColor3 = Color3.new(0, 0, 0)
+title_8.TextSize = 24
+
+RemoteBar_4.Name = "RemoteBar"
+RemoteBar_4.Parent = Credits
+RemoteBar_4.BackgroundColor3 = Color3.new(0, 0, 0)
+RemoteBar_4.BorderSizePixel = 0
+RemoteBar_4.Position = UDim2.new(0.269503564, 0, 0.201298743, 0)
+RemoteBar_4.Size = UDim2.new(0, 97, 0, 4)
+RemoteBar_4.Visible = false
+RemoteBar_4.Font = Enum.Font.SourceSansItalic
+RemoteBar_4.FontSize = Enum.FontSize.Size24
+RemoteBar_4.Text = ""
+RemoteBar_4.TextColor3 = Color3.new(0, 0, 0)
+RemoteBar_4.TextSize = 24
+
+RemotesButton_4.Name = "RemotesButton"
+RemotesButton_4.Parent = Credits
+RemotesButton_4.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+RemotesButton_4.BackgroundTransparency = 1
+RemotesButton_4.Position = UDim2.new(0.278959811, 0, 0.110287458, 0)
+RemotesButton_4.Size = UDim2.new(0, 88, 0, 29)
+RemotesButton_4.Font = Enum.Font.SourceSansLight
+RemotesButton_4.FontSize = Enum.FontSize.Size14
+RemotesButton_4.Text = "Remote Triggers"
+RemotesButton_4.TextColor3 = Color3.new(0, 0, 0)
+RemotesButton_4.TextSize = 14
+RemotesButton_4.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = true
+Credits.Visible = false
+end)
+
+SettingsBar_4.Name = "SettingsBar"
+SettingsBar_4.Parent = Credits
+SettingsBar_4.BackgroundColor3 = Color3.new(0, 0, 0)
+SettingsBar_4.BorderSizePixel = 0
+SettingsBar_4.Position = UDim2.new(0.515366495, 0, 0.201298743, 0)
+SettingsBar_4.Size = UDim2.new(0, 97, 0, 4)
+SettingsBar_4.Visible = false
+SettingsBar_4.Font = Enum.Font.SourceSansItalic
+SettingsBar_4.FontSize = Enum.FontSize.Size24
+SettingsBar_4.Text = ""
+SettingsBar_4.TextColor3 = Color3.new(0, 0, 0)
+SettingsBar_4.TextSize = 24
+
+SettingsButton_4.Name = "SettingsButton"
+SettingsButton_4.Parent = Credits
+SettingsButton_4.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+SettingsButton_4.BackgroundTransparency = 1
+SettingsButton_4.Position = UDim2.new(0.524822712, 0, 0.110287458, 0)
+SettingsButton_4.Size = UDim2.new(0, 88, 0, 29)
+SettingsButton_4.Font = Enum.Font.SourceSansLight
+SettingsButton_4.FontSize = Enum.FontSize.Size14
+SettingsButton_4.Text = "Settings"
+SettingsButton_4.TextColor3 = Color3.new(0, 0, 0)
+SettingsButton_4.TextSize = 14
+SettingsButton_4.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = true
+Remotes.Visible = false
+Credits.Visible = false
+end)
+
+CreditBar_4.Name = "CreditBar"
+CreditBar_4.Parent = Credits
+CreditBar_4.BackgroundColor3 = Color3.new(0, 0, 0)
+CreditBar_4.BorderSizePixel = 0
+CreditBar_4.Position = UDim2.new(0.770685613, 0, 0.201298743, 0)
+CreditBar_4.Size = UDim2.new(0, 97, 0, 4)
+CreditBar_4.Font = Enum.Font.SourceSansItalic
+CreditBar_4.FontSize = Enum.FontSize.Size24
+CreditBar_4.Text = ""
+CreditBar_4.TextColor3 = Color3.new(0, 0, 0)
+CreditBar_4.TextSize = 24
+
+CreditButton_4.Name = "CreditButton"
+CreditButton_4.Parent = Credits
+CreditButton_4.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+CreditButton_4.BackgroundTransparency = 1
+CreditButton_4.Position = UDim2.new(0.78014189, 0, 0.110287458, 0)
+CreditButton_4.Size = UDim2.new(0, 88, 0, 29)
+CreditButton_4.Font = Enum.Font.SourceSansLight
+CreditButton_4.FontSize = Enum.FontSize.Size14
+CreditButton_4.Text = "Credits"
+CreditButton_4.TextColor3 = Color3.new(0, 0, 0)
+CreditButton_4.TextSize = 14
+CreditButton_4.MouseButton1Down:connect(function()
+main.Visible = false
+Settings.Visible = false
+Remotes.Visible = false
+Credits.Visible = true
+end)
+
+title_9.Name = "title"
+title_9.Parent = Credits
+title_9.BackgroundColor3 = Color3.new(0.815686, 0.815686, 0.815686)
+title_9.BackgroundTransparency = 1
+title_9.BorderSizePixel = 0
+title_9.Position = UDim2.new(0.0425531901, 0, 0.251572311, 0)
+title_9.Size = UDim2.new(0, 386, 0, 190)
+title_9.Font = Enum.Font.SourceSansItalic
+title_9.FontSize = Enum.FontSize.Size60
+title_9.Text = "Made By Hackmaster12"
+title_9.TextColor3 = Color3.new(1, 1, 1)
+title_9.TextSize = 50
+title_9.TextStrokeTransparency = 0
+title_9.TextWrapped = true

@@ -1,0 +1,14 @@
+text = "5"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "4"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "3"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "2"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "1"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)

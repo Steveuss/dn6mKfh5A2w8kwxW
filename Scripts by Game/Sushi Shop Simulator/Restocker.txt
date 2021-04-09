@@ -1,0 +1,192 @@
+local StockChecker = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local FishStock = Instance.new("TextLabel")
+local RiceStock = Instance.new("TextLabel")
+local VegtiStock = Instance.new("TextLabel")
+local PlateStock = Instance.new("TextLabel")
+local SoyaStock = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+StockChecker.Name = "StockChecker"
+StockChecker.Parent = game.CoreGui
+StockChecker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = StockChecker
+Frame.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+Frame.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.379283488, 0, 0.360632181, 0)
+Frame.Size = UDim2.new(0, 309, 0, 306)
+
+FishStock.Name = "FishStock"
+FishStock.Parent = Frame
+FishStock.BackgroundColor3 = Color3.new(1, 1, 1)
+FishStock.BackgroundTransparency = 1
+FishStock.Position = UDim2.new(0.177993521, 0, -0.00326797389, 0)
+FishStock.Size = UDim2.new(0, 200, 0, 50)
+FishStock.Font = Enum.Font.SourceSans
+FishStock.Text = "g"
+FishStock.TextColor3 = Color3.new(1, 1, 1)
+FishStock.TextSize = 25
+
+RiceStock.Name = "RiceStock"
+RiceStock.Parent = Frame
+RiceStock.BackgroundColor3 = Color3.new(1, 1, 1)
+RiceStock.BackgroundTransparency = 1
+RiceStock.Position = UDim2.new(0.177993521, 0, 0.134500176, 0)
+RiceStock.Size = UDim2.new(0, 200, 0, 50)
+RiceStock.Font = Enum.Font.SourceSans
+RiceStock.Text = "g"
+RiceStock.TextColor3 = Color3.new(1, 1, 1)
+RiceStock.TextSize = 25
+
+VegtiStock.Name = "VegtiStock"
+VegtiStock.Parent = Frame
+VegtiStock.BackgroundColor3 = Color3.new(1, 1, 1)
+VegtiStock.BackgroundTransparency = 1
+VegtiStock.Position = UDim2.new(0.177993521, 0, 0.295144141, 0)
+VegtiStock.Size = UDim2.new(0, 200, 0, 50)
+VegtiStock.Font = Enum.Font.SourceSans
+VegtiStock.Text = "g"
+VegtiStock.TextColor3 = Color3.new(1, 1, 1)
+VegtiStock.TextSize = 25
+
+PlateStock.Name = "PlateStock"
+PlateStock.Parent = Frame
+PlateStock.BackgroundColor3 = Color3.new(1, 1, 1)
+PlateStock.BackgroundTransparency = 1
+PlateStock.Position = UDim2.new(0.177993521, 0, 0.455788136, 0)
+PlateStock.Size = UDim2.new(0, 200, 0, 50)
+PlateStock.Font = Enum.Font.SourceSans
+PlateStock.Text = "g"
+PlateStock.TextColor3 = Color3.new(1, 1, 1)
+PlateStock.TextSize = 25
+
+SoyaStock.Name = "SoyaStock"
+SoyaStock.Parent = Frame
+SoyaStock.BackgroundColor3 = Color3.new(1, 1, 1)
+SoyaStock.BackgroundTransparency = 1
+SoyaStock.Position = UDim2.new(0.177993521, 0, 0.619102001, 0)
+SoyaStock.Size = UDim2.new(0, 200, 0, 50)
+SoyaStock.Font = Enum.Font.SourceSans
+SoyaStock.Text = "g"
+SoyaStock.TextColor3 = Color3.new(1, 1, 1)
+SoyaStock.TextSize = 25
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+Frame_2.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.000642716885, 0, -0.0539779067, 0)
+Frame_2.Size = UDim2.new(0, 309, 0, 27)
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 308, 0, 26)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "  Stock Checker"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 20
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0, 0, 0.934640527, 0)
+TextLabel_2.Size = UDim2.new(0, 183, 0, 20)
+TextLabel_2.Font = Enum.Font.SourceSansLight
+TextLabel_2.Text = "Programmed and Designed by Arlo"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextSize = 14
+
+function SCRIPT_NBPN68_FAKESCRIPT()
+	local script = Instance.new('LocalScript')
+	script.Parent = Frame
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_NBPN68_FAKESCRIPT))
+function SCRIPT_AMLI90_FAKESCRIPT()
+	local script = Instance.new('LocalScript')
+	script.Parent = FishStock
+	while wait() do
+		script.Parent.Text = game:GetService("Workspace").CounterFish.Imp.SurfaceGui.Fish.Text
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_AMLI90_FAKESCRIPT))
+function SCRIPT_OBET88_FAKESCRIPT() 
+	local script = Instance.new('LocalScript')
+	script.Parent = RiceStock
+	while wait() do
+		script.Parent.Text = game:GetService("Workspace").CounterRice.Imp.SurfaceGui.Rice.Text
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_OBET88_FAKESCRIPT))
+function SCRIPT_WXBJ79_FAKESCRIPT()
+	local script = Instance.new('LocalScript')
+	script.Parent = VegtiStock
+	while wait() do
+		script.Parent.Text = game:GetService("Workspace").CounterVegi.Imp.SurfaceGui.Vegetable.Text
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_WXBJ79_FAKESCRIPT))
+function SCRIPT_HIYM88_FAKESCRIPT()
+	local script = Instance.new('LocalScript')
+	script.Parent = PlateStock
+	while wait() do
+		script.Parent.Text = game:GetService("Workspace").CounterPlates.Imp.SurfaceGui.Plates.Text
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_HIYM88_FAKESCRIPT))
+function SCRIPT_NAKX78_FAKESCRIPT()
+	local script = Instance.new('LocalScript')
+	script.Parent = SoyaStock
+	while wait() do
+		script.Parent.Text = game:GetService("Workspace").CounterSoyaSauce.Imp.SurfaceGui.SoyaSauce.Text
+	end
+
+end
+coroutine.resume(coroutine.create(SCRIPT_NAKX78_FAKESCRIPT))

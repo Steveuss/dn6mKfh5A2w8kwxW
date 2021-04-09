@@ -1,0 +1,34 @@
+local GGGGGGGGGGGG,AAAAAAAAAAAA=pcall(function()
+
+for a,b in pairs(debug.getregistry()) do
+
+   if type(b) == "table" then
+
+       if b.Horsepower then
+
+       b.Horsepower=999
+
+       b.ClutchTol=999
+
+       b.RevAccel=999
+
+       b.Redline = 22500
+
+       b.TurboEnabled = true
+
+       b.BrakeForce = 15000
+
+end
+
+   end
+
+end
+
+
+
+end)
+
+
+
+if not GGGGGGGGGGGG then
+print(AAAAAAAAAAAA) end

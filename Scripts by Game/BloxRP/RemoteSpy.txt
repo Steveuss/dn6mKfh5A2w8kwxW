@@ -1,0 +1,105 @@
+--FuncDoor
+local Remote = game.ReplicatedStorage['FuncDoor']
+
+
+local Arguments = {
+        
+	[1] = Workspace.building_warehouse_2.prop_door_right_armored1.test_door,
+        
+	[2] = "open_from_outside",
+        
+	[3] = "Open"
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--ManageDoor
+local Remote = game.ReplicatedStorage['FuncDoor']
+local Arguments = {
+        
+	[1] = Workspace.building_warehouse_3.prop_door_double_1.test_door,
+        
+	[2] = "open_from_outside",
+        
+	[3] = "Open"
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--SwitchJob
+local Remote = game.ReplicatedStorage['SwitchJob']
+
+
+local Arguments = {
+        
+	[1] = Teams.Security
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--PlaceProp
+local Remote = game.ReplicatedStorage['PlaceProp']
+
+
+local Arguments = {
+        
+	[1] = "ConcreteWall1m",
+        
+	[2] = CFrame.new(-48.5,9,53.5,1,0,0,0,1,0,0,0,1)
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--FuncChat
+local Remote = game.ReplicatedStorage['FuncChat']
+
+
+local Arguments = {
+        
+	[1] = "Local",
+        
+	[2] = "chat",
+        
+	[3] = "none"
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--GiveMoney
+local Remote = game.ReplicatedStorage['GiveMoneyWeapon']
+
+
+local Arguments = {
+        
+	[1] = "GiveMoney",
+        
+	[2] = Players.halfcitypcverion,
+        
+	[3] = 1
+}
+
+
+Remote:FireServer(unpack(Arguments))
+
+--FuncWeapon
+local Remote = game.ReplicatedStorage['FuncWeapon']
+
+
+local Arguments = {
+        
+	[1] = Workspace.TurkishCapitalist.Uzi,
+
+        [2] = "SingleBullet",
+ 
+	[3] = Workspace.building_warehouse_2.Building_Model.Metal,
+        
+	[4] = Vector3.new(61.3537025,6.75734711,-44.3423996)
+}
+
+
+Remote:FireServer(unpack(Arguments))

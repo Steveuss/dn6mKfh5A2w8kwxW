@@ -1,0 +1,7 @@
+local player = game.Players.LocalPlayer
+local collection = game:WaitForChild("CarCollection")
+local pcar = collection:WaitForChild(player.Name)
+
+pcar.Parts.Value = 10000
+pcar.Value.Value = 100000
+pcar.Speed.Value = 250

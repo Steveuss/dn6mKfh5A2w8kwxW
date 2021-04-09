@@ -1,0 +1,7 @@
+for i, v in ipairs(game:GetDescendants()) do
+   if v:IsA("Tool") then
+       if v.Name == "Handcuffs" then
+            v.Parent = game.Players.LocalPlayer.Backpack
+        end
+   end
+end

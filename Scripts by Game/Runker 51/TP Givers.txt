@@ -1,0 +1,11 @@
+local GetBrick = true -- Edit this to false if you don't want to get bricks.
+
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == "Giver" and v:IsA("BasePart") and (v.Parent.Name ~= "Bricks" or not GetBrick) then
+v.CanCollide = false
+v.Anchored = true
+v.Transparency = 0
+v.Material = Enum.Material.Neon
+v.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(10, 0, 0)
+end
+end

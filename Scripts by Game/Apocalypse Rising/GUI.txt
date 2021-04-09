@@ -1,0 +1,312 @@
+if game.CoreGui:FindFirstChild('APOC') then
+game.CoreGui.APOC:Destroy()
+end
+
+game:GetObjects('rbxassetid://291330215')[1].Parent = game.CoreGui
+
+wait(0.1)
+
+local Player = game.Players.LocalPlayer
+
+local apocGUI = game.CoreGui.APOC
+local MAIN = apocGUI.MAIN
+
+local Open = apocGUI.Open
+local Exit = MAIN.Exit
+
+Open:TweenPosition(UDim2.new(0,0,0,380), 'InOut', 'Quad', 0.5, true)
+
+local Clip = true
+local ESP = false
+local Floating = false
+local Stamina = false
+local BoostReady = true
+local GodMode = false
+
+-- Open and Exit --
+
+Open.MouseButton1Down:connect(function()
+Open.Active = false
+Exit.Active = true
+Open:TweenPosition(UDim2.new(0,-30,0,380), 'InOut', 'Quad', 0.5, true)
+MAIN:TweenPosition(UDim2.new(0,10,0,420), 'InOut', 'Quad', 0.5, true)
+end)
+
+Exit.MouseButton1Down:connect(function()
+Open.Active = true
+Exit.Active = false
+Open:TweenPosition(UDim2.new(0,0,0,380), 'InOut', 'Quad', 0.5, true)
+MAIN:TweenPosition(UDim2.new(0,-230,0,420), 'InOut', 'Quad', 0.5, true)
+end)
+
+-- ESP --
+
+local track = false
+
+function Create(base, team)
+   local espMAIN = apocGUI.ESP:Clone()
+   local F = espMAIN.DOT
+
+   espMAIN.Parent = Player.PlayerGui
+espMAIN.Adornee = base
+
+F.Visible = true
+end
+
+function Clear()
+for _,v in pairs(Player.PlayerGui:children()) do
+if v.Name == "ESP" and v:IsA("BillboardGui") then
+v:Destroy()
+end
+end
+end
+
+function Find()
+Clear()
+track = true
+spawn(function()
+while wait() do
+if track then
+Clear()
+for i,v in pairs(game.Players:players()) do
+if v.Character and v.Character.Head then
+Create(v.Character.Head, true)
+end
+end
+end
+wait(1)
+end
+end)
+end
+
+-- Night Vision --
+
+function NightVision()
+local nvGUI = Instance.new('ScreenGui', Player.PlayerGui)
+nvGUI.Name = 'NightVision'
+local nvMAIN = Instance.new('TextLabel', nvGUI)
+nvMAIN.Name = 'MAIN'
+nvMAIN.BackgroundColor = BrickColor.new(0,1,0)
+nvMAIN.BackgroundTransparency = 0.75
+nvMAIN.BorderSizePixel = 0
+nvMAIN.Size = UDim2.new(1,0,1,0)
+nvMAIN.Text = ''
+
+for i,v in pairs(game.Players:GetChildren()) do
+if v and v.Character and not (v.Name == '' .. Player.Name) then
+for i,v in pairs(v.Character:GetChildren()) do
+if v:IsA('BasePart') then
+local nvBox = Instance.new('SelectionBox', nvMAIN)
+nvBox.Adornee = v
+nvBox.Color = BrickColor.new('Lime green')
+end
+end
+end
+end
+end
+
+-- Main Functions --
+
+-- NoClip --
+
+MAIN.NoClip.MouseButton1Down:connect(function()
+MAIN.NoClip.Visible = false
+MAIN.Clip.Visible = true
+Clip = false
+wait(1)
+Player.PlayerGui.ChildAdded:connect(function(NC)
+delay(0,function()
+if NC.Name == 'NC' then
+NC:Destroy()
+end
+end)
+end)
+game:GetService('RunService').Stepped:connect(function()
+game.Workspace[Player.Name].Torso.CanCollide = Clip
+game.Workspace[Player.Name].Head.CanCollide = Clip
+end)
+game.Workspace[Player.Name].Torso.Changed:connect(function()
+game.Workspace[Player.Name].Torso.CanCollide = Clip
+game.Workspace[Player.Name].Head.CanCollide = Clip
+end)
+end)
+
+MAIN.Clip.MouseButton1Down:connect(function()
+MAIN.Clip.Visible = false
+MAIN.NoClip.Visible = true
+Clip = true
+end)
+
+-- ESP --
+
+MAIN.ESPF.MouseButton1Down:connect(function()
+MAIN.ESPF.Visible = false
+MAIN.ESPT.Visible = true
+Find()
+ESP = true
+end)
+
+MAIN.ESPT.MouseButton1Down:connect(function()
+MAIN.ESPT.Visible = false
+MAIN.ESPF.Visible = true
+Clear()
+track = false
+ESP = false
+end)
+
+-- Floating --
+
+MAIN.FloatF.MouseButton1Down:connect(function()
+MAIN.FloatF.Visible = false
+MAIN.FloatT.Visible = true
+Floating = true
+local Float = apocGUI.Float:Clone()
+Float.Parent = Player.Character
+Float.CFrame = Player.Character.Torso.CFrame * CFrame.new(0,-3.5,0)
+spawn(function()
+while wait(0.1) do
+if Player.Character:FindFirstChild('Float') then
+Float.CFrame = Player.Character.Torso.CFrame * CFrame.new(0,-3.5,0)
+else
+break
+end
+end
+end)
+end)
+
+MAIN.FloatT.MouseButton1Down:connect(function()
+MAIN.FloatT.Visible = false
+MAIN.FloatF.Visible = true
+Floating = false
+if Player.Character:FindFirstChild('Float') then
+Player.Character.Float:Destroy()
+end
+end)
+
+-- Thirst --
+
+MAIN.Thirst.MouseButton1Down:connect(function()
+Player.playerstats.Thirst.Value = MAIN.Thirst.TNumber.Text
+end)
+
+-- Hunger --
+
+MAIN.Hunger.MouseButton1Down:connect(function()
+Player.playerstats.Hunger.Value = MAIN.Hunger.HNumber.Text
+end)
+
+-- Health --
+
+MAIN.Health.MouseButton1Down:connect(function()
+Player.Character.Humanoid.Health = MAIN.Hunger.HNumber.Text
+end)
+
+-- Stamina --
+
+MAIN.StaminaF.MouseButton1Down:connect(function()
+MAIN.StaminaF.Visible = false
+MAIN.StaminaT.Visible = true
+Stamina = true
+while wait() do
+if Stamina == true then
+Player.Backpack.GlobalFunctions.Stamina.Value = 100
+end
+end
+end)
+
+MAIN.StaminaT.MouseButton1Down:connect(function()
+MAIN.StaminaT.Visible = false
+MAIN.StaminaF.Visible = true
+Stamina = false
+end)
+
+-- Boost --
+
+MAIN.Boost.MouseButton1Down:connect(function()
+MAIN.FloatF.Visible = true
+MAIN.FloatT.Visible = false
+Floating = false
+if Player.Character:FindFirstChild('Float') then
+Player.Character.Float:Destroy()
+end
+if BoostReady == true then
+   Player.Character.HumanoidRootPart.Velocity = Player.Character.HumanoidRootPart.CFrame.lookVector * 500
+   BoostReady = false
+   MAIN.Boost.Text = '5'
+   wait(1)
+   MAIN.Boost.Text = '4'
+   wait(1)
+   MAIN.Boost.Text = '3'
+   wait(1)
+   MAIN.Boost.Text = '2'
+   wait(1)
+   MAIN.Boost.Text = '1'
+   wait(1)
+   BoostReady = true
+   MAIN.Boost.Text = 'Boost'
+end
+end)
+
+-- GodMode --
+
+MAIN.GodModeF.MouseButton1Down:connect(function()
+MAIN.GodModeF.Visible = false
+MAIN.GodModeT.Visible = true
+GodMode = true
+if GodMode == true then
+repeat wait()
+Player.Character.Humanoid.Health = Player.Character.Humanoid.MaxHealth
+wait()
+Player.playerstats.Health.Value = Player.Character.Humanoid.Health
+until GodMode == false
+end
+end)
+
+MAIN.GodModeT.MouseButton1Down:connect(function()
+MAIN.GodModeT.Visible = false
+MAIN.GodModeF.Visible = true
+GodMode = false
+end)
+
+-- NoGrav --
+
+MAIN.NoGrav.MouseButton1Down:connect(function()
+MAIN.NoGrav.Visible = false
+MAIN.Grav.Visible = true
+for i,v in pairs(Player.Character.Torso:GetChildren()) do
+if v.Name == 'NoGrav' and v:IsA('BodyForce') then
+v:Destroy()
+end
+end
+local BF = Instance.new('BodyForce', Player.Character.Torso)
+BF.Name = 'NoGrav'
+BF.Force = Vector3.new(0,4000,0)
+end)
+
+MAIN.Grav.MouseButton1Down:connect(function()
+MAIN.Grav.Visible = false
+MAIN.NoGrav.Visible = true
+for i,v in pairs(Player.Character.Torso:GetChildren()) do
+if v.Name == 'NoGrav' and v:IsA('BodyForce') then
+v:Destroy()
+end
+end
+end)
+
+-- Night Vision --
+
+MAIN.NightVision.MouseButton1Down:connect(function()
+MAIN.NightVision.Visible = false
+MAIN.Vision.Visible = true
+NightVision()
+end)
+
+MAIN.Vision.MouseButton1Down:connect(function()
+MAIN.Vision.Visible = false
+MAIN.NightVision.Visible = true
+for i,v in pairs(Player.PlayerGui:GetChildren()) do
+if v.Name == 'NightVision' and v:IsA('ScreenGui') then
+v:Destroy()
+end
+end
+end)

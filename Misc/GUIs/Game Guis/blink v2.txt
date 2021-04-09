@@ -1,0 +1,57 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+lp = game:GetService('Players').LocalPlayer
+-- Properties
+ScreenGui.Parent = game:GetService('CoreGui')
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.Draggable = true
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.Position = UDim2.new(0.0306603797, 0, 0.787106395, 0)
+Frame.Size = UDim2.new(0, 241, 0, 100)
+Frame.Style = Enum.FrameStyle.RobloxRound
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0497925319, 0, -0.0799999982, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "FE Blink Gui V2 by xFunnieuss"
+TextLabel.TextColor3 = Color3.new(0.941177, 0.682353, 0.0745098)
+TextLabel.TextSize = 14
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.Position = UDim2.new(0.0436976291, 0, 0.407200336, 0)
+TextButton.Size = UDim2.new(0, 88, 0, 50)
+TextButton.Font = Enum.Font.GothamBlack
+TextButton.Text = "On"
+TextButton.TextColor3 = Color3.new(0.0862745, 0.811765, 0.109804)
+TextButton.TextSize = 20
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.BackgroundTransparency = 1
+TextButton_2.Position = UDim2.new(0.512577295, 0, 0.407200336, 0)
+TextButton_2.Size = UDim2.new(0, 88, 0, 50)
+TextButton_2.Font = Enum.Font.GothamBlack
+TextButton_2.Text = "Off"
+TextButton_2.TextColor3 = Color3.new(0.921569, 0.0352941, 0.0352941)
+TextButton_2.TextSize = 20
+TextButton.MouseButton1Down:connect(function()
+discon = game:GetService('RunService').Stepped:Connect(function() 
+lp.Character.HumanoidRootPart.Anchored = true 
+end)
+discon2 = game:GetService('RunService').Heartbeat:Connect(function()
+lp.Character.HumanoidRootPart.Anchored = false
+end)
+game:GetService('StarterGui'):SetCore("SendNotification", {Title = "Blink GUI Notification", Text = "Blink Is On, Press OFF to return to normal!"})
+end)
+TextButton_2.MouseButton1Down:connect(function()
+        discon:Disconnect()
+        discon2:Disconnect()
+        game:GetService('StarterGui'):SetCore("SendNotification", {Title = "Blink GUI Notification", Text = "Blink Is Off, You have returned back to normal"})
+end)

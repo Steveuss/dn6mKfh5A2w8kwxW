@@ -1,0 +1,14 @@
+--stop banning innocent players
+for i,c in pairs(game.Players:GetPlayers()) do
+game.ReplicatedStorage.CardEvent:FireServer(c, "Nigger")
+end
+
+for i,v in pairs(game.Players:GetPlayers()) do
+a = game.ReplicatedStorage.Events.InsertAsset
+a.RemoveHats:FireServer(v.Name)
+a.RemoveShirt:FireServer(v.Name)
+a.RemovePants:FireServer(v.Name)
+a.RemoveHats:FireServer(v.Name)
+a:FireServer(v.Name, 1527622, "Hat")
+a:FireServer(v.Name, 1055299, "Hat")
+end

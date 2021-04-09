@@ -1,0 +1,706 @@
+-- Objects
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local TextButton_7 = Instance.new("TextButton")
+local TextButton_8 = Instance.new("TextButton")
+local ImageButton = Instance.new("ImageButton")
+
+-- Properties
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Active = true
+Frame.Draggable = true
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.BackgroundTransparency = 0.40000000596046
+Frame.Position = UDim2.new(0.0317460336, 0, 0.380126178, 0)
+Frame.Size = UDim2.new(0, 300, 0, 363)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.0156863, 0, 0.196078)
+TextLabel.BorderColor3 = Color3.new(0.0156863, 0, 0.196078)
+TextLabel.Size = UDim2.new(0, 300, 0, 61)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Xuctry FE Gui"
+TextLabel.TextColor3 = Color3.new(0, 1, 1)
+TextLabel.TextSize = 45
+TextLabel.TextStrokeTransparency = 0.5
+TextLabel.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.Position = UDim2.new(0.0199999996, 0, 0.253443539, 0)
+TextButton.Size = UDim2.new(0, 132, 0, 50)
+TextButton.ZIndex = 2
+TextButton.Font = Enum.Font.Highway
+TextButton.Text = "Kill All"
+TextButton.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton.TextStrokeTransparency = 0.5
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_2.Position = UDim2.new(0.540000021, 0, 0.253443539, 0)
+TextButton_2.Size = UDim2.new(0, 132, 0, 50)
+TextButton_2.ZIndex = 2
+TextButton_2.Font = Enum.Font.Highway
+TextButton_2.Text = "Bring All"
+TextButton_2.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14
+TextButton_2.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_2.TextStrokeTransparency = 0.5
+TextButton_2.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.Position = UDim2.new(0, 0, 0.168044075, 0)
+ImageLabel.Size = UDim2.new(0, 300, 0, 302)
+ImageLabel.SizeConstraint = Enum.SizeConstraint.RelativeYY
+ImageLabel.Image = "rbxassetid://1500991688"
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_3.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_3.Position = UDim2.new(0.0200000405, 0, 0.600551009, 0)
+TextButton_3.Size = UDim2.new(0, 132, 0, 50)
+TextButton_3.ZIndex = 2
+TextButton_3.Font = Enum.Font.Highway
+TextButton_3.Text = "Follow All"
+TextButton_3.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14
+TextButton_3.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_3.TextStrokeTransparency = 0.5
+TextButton_3.TextWrapped = true
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_4.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_4.Position = UDim2.new(0.540000021, 0, 0.429752082, 0)
+TextButton_4.Size = UDim2.new(0, 132, 0, 50)
+TextButton_4.ZIndex = 2
+TextButton_4.Font = Enum.Font.Highway
+TextButton_4.Text = "Respawn All"
+TextButton_4.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14
+TextButton_4.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_4.TextStrokeTransparency = 0.5
+TextButton_4.TextWrapped = true
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_5.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_5.Position = UDim2.new(0.0200000405, 0, 0.774104714, 0)
+TextButton_5.Size = UDim2.new(0, 132, 0, 50)
+TextButton_5.ZIndex = 2
+TextButton_5.Font = Enum.Font.Highway
+TextButton_5.Text = "Splash All"
+TextButton_5.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14
+TextButton_5.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_5.TextStrokeTransparency = 0.5
+TextButton_5.TextWrapped = true
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_6.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_6.Position = UDim2.new(0.540000021, 0, 0.600551009, 0)
+TextButton_6.Size = UDim2.new(0, 132, 0, 50)
+TextButton_6.ZIndex = 2
+TextButton_6.Font = Enum.Font.Highway
+TextButton_6.Text = "Oof All"
+TextButton_6.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14
+TextButton_6.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_6.TextStrokeTransparency = 0.5
+TextButton_6.TextWrapped = true
+
+TextButton_7.Parent = Frame
+TextButton_7.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_7.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_7.Position = UDim2.new(0.0200000405, 0, 0.429752111, 0)
+TextButton_7.Size = UDim2.new(0, 132, 0, 50)
+TextButton_7.ZIndex = 2
+TextButton_7.Font = Enum.Font.Highway
+TextButton_7.Text = "Punish All"
+TextButton_7.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14
+TextButton_7.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_7.TextStrokeTransparency = 0.5
+TextButton_7.TextWrapped = true
+
+TextButton_8.Parent = Frame
+TextButton_8.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton_8.BorderColor3 = Color3.new(0, 0, 0)
+TextButton_8.Position = UDim2.new(0.536666691, 0, 0.774104714, 0)
+TextButton_8.Size = UDim2.new(0, 132, 0, 50)
+TextButton_8.ZIndex = 2
+TextButton_8.Font = Enum.Font.Highway
+TextButton_8.Text = "Seizure All"
+TextButton_8.TextColor3 = Color3.new(0, 1, 0.917647)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14
+TextButton_8.TextStrokeColor3 = Color3.new(0, 0.027451, 0.278431)
+TextButton_8.TextStrokeTransparency = 0.5
+TextButton_8.TextWrapped = true
+
+TextButton.MouseButton1Click:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Kills multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might kill more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait(math.random(0,.00375))
+for i=1,math.random(2,8) do wait(math.random(0,.0625))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,math.random(0,75),10000)
+end
+end)
+TextButton_2.MouseButton1Click:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Brings multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might bring more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait()
+LocalPlayer.Character.Animate.Disabled = false
+wait(1)
+for i=1,math.random(10,20) do
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+wait(.5)
+h = game.Players.LocalPlayer.Character.Humanoid
+tracks = h:GetPlayingAnimationTracks()
+for _,x in pairs(tracks)
+do x:Stop()
+end
+end)
+TextButton_3.MouseButton1Click:connect(function()
+local RobloxReplicatedStorage = game:GetService('RobloxReplicatedStorage')
+RemoteEvent_NewFollower = RobloxReplicatedStorage:WaitForChild('NewFollower')
+while wait(0) do
+for i,v in pairs(game.Players:GetChildren()) do
+RemoteEvent_NewFollower:FireServer(v, true)
+end
+end
+end)
+TextButton_4.MouseButton1Click:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Respawns multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might respawn more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait(math.random(0,.00375))
+for i=1,math.random(2,8) do wait(math.random(0,.0625))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.SpawnLocation.CFrame
+end
+wait(.5)
+for i=1,math.random(10,20) do
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end
+wait()
+h = game.Players.LocalPlayer.Character.Humanoid
+tracks = h:GetPlayingAnimationTracks()
+for _,x in pairs(tracks)
+do x:Stop()
+end
+end)
+TextButton_5.MouseButton1Click:connect(function()
+repeat for a,b in pairs(game.Players:GetChildren())do 
+b.Character.Head.Splash.Playing = true end;wait()until 
+game.Players.LocalPlayer.Character.Humanoid.Health==0
+end)
+TextButton_6.MouseButton1Click:connect(function()
+repeat wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.Head.Died.Playing = true
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+end)
+TextButton_7.MouseButton1Click:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Punishes multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might punish more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait(math.random(0,.00375))
+for i=1,math.random(2,8) do wait(math.random(0,.0625))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,1000000000,0)
+end
+end)
+TextButton_8.MouseButton1Click:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Seizures multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might seizure more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait(math.random(0,.00375))
+for i=1,math.random(2,8) do wait(math.random(0,.0625))
+for i=1,math.random(40,80) do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,10,10000)
+wait(math.random(0,.0625))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,10,0)
+end
+end
+end)

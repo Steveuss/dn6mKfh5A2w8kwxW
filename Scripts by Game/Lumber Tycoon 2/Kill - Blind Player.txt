@@ -1,0 +1,41 @@
+local Target = "PlayerName" --Target name here
+
+
+local Func = "Kill"
+
+
+for i,v in pairs(game.Players:GetChildren()) do
+if v.Name:find(Target) then
+Target = v.Character
+break
+end
+end
+
+Land = nil
+
+for i,v in pairs(game.Workspace.Properties:GetChildren()) do
+if v.Owner.Value == game.Players.LocalPlayer or v.Owner.Value == nil then
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v)
+break
+end
+end
+
+for i,v in pairs(game.Workspace.Properties:GetChildren()) do
+if v.Owner.Value == game.Players.LocalPlayer then
+Land = v
+break
+end
+end
+
+if not Land or not Target then
+print("Retry")
+return
+end
+
+local Position = Land.OriginSquare.CFrame - Vector3.new(0,1000,0)
+
+if Func == "Blind" then 
+Position = Land.OriginSquare.CFrame + Vector3.new(0,10e10,0)
+end
+
+game.ReplicatedStorage.PlaceStructure.ClientPlacedStructure:FireServer(false, Position, false, false, Target)

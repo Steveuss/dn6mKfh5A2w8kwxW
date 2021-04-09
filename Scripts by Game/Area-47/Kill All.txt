@@ -1,0 +1,34 @@
+--Equip a gun first!
+
+_G.kill = true
+
+local lplr = game.Players.LocalPlayer
+
+function kill(plr)
+    pcall(function()
+        local tbl_252453D8 = 
+        {
+              math.huge, 
+              2.4, 
+              0.1
+        }
+        local tbl_main = 
+        {      plr.Character.Head, 
+              tbl_252453D8, nil,
+              --lplr.Character:FindFirstChildOfClass("Tool").BPoint.MuzzleFlash, 
+              lplr.Character:FindFirstChildOfClass("Tool")
+        }
+        game:GetService("ReplicatedStorage").GunFE.Shoot:FireServer(unpack(tbl_main))
+    end)
+end
+
+
+while wait(2) and _G.kill do
+    for i, plr in pairs(game.Players:GetPlayers()) do
+        pcall(function()
+        if plr.Name ~= lplr.Name and plr.Character and plr.Character.Head and plr.Character.Humanoid then
+            kill(plr)
+        end
+        end)
+    end
+end

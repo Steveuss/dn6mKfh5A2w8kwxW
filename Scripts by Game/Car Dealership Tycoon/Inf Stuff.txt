@@ -1,0 +1,4 @@
+local A_1 = "Carpet1"
+local A_2 = -99999999
+local Event = game:GetService("ReplicatedStorage").Remotes.Purchase
+Event:FireServer(A_1, A_2)

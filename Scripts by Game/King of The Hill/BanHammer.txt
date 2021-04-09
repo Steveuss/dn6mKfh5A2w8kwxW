@@ -1,0 +1,6 @@
+local tbl_main = 
+{
+     "Ban Hammer", 
+     -1000
+}
+game:GetService("ReplicatedStorage").Events.purchaseWeapon:InvokeServer(unpack(tbl_main))

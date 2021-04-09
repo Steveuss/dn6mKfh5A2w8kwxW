@@ -1,0 +1,13 @@
+Cup_Amount = 50
+
+for i=1,Cup_Amount do
+fireclickdetector(workspace.CupGiver.Touch.ClickDetector)
+end
+repeat game:GetService("RunService").Heartbeat:Wait()
+until #game.Players.LocalPlayer.Backpack:GetChildren() >= Cup_Amount
+for i=1,Cup_Amount do
+game.Players.LocalPlayer.Backpack.Cup.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Character.Cup.Parent = workspace.Terrain
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+wait() -- I'm not using Heartbeat on this because it lags too much with the game, sorry.
+end

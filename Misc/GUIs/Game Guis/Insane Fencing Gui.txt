@@ -1,0 +1,262 @@
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+Killhax = Instance.new("TextButton")
+God = Instance.new("TextButton")
+Punch = Instance.new("TextButton")
+Speed = Instance.new("TextButton")
+Close = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.172549, 0.552941, 0.960784)
+main.BorderColor3 = Color3.new(0.129412, 0.411765, 0.713726)
+main.BorderSizePixel = 8
+main.Position = UDim2.new(0.752314806, 0, 0.650774777, 0)
+main.Size = UDim2.new(0, 223, 0, 124)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(-0.23094134, 0, -0.00327444077, 0)
+TextLabel.Size = UDim2.new(0, 338, 0, 50)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "Fencing Hax By Hackmaster12"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 25
+TextLabel.TextStrokeTransparency = 0
+TextLabel.TextWrapped = true
+
+Killhax.Name = "Killhax"
+Killhax.Parent = main
+Killhax.BackgroundColor3 = Color3.new(0.258824, 0.482353, 1)
+Killhax.BorderColor3 = Color3.new(0.14902, 0.286275, 0.584314)
+Killhax.BorderSizePixel = 4
+Killhax.Position = UDim2.new(0.525658906, 0, 0.746012092, 0)
+Killhax.Size = UDim2.new(0, 77, 0, 24)
+Killhax.Font = Enum.Font.SourceSans
+Killhax.FontSize = Enum.FontSize.Size24
+Killhax.Text = "KillHax"
+Killhax.TextColor3 = Color3.new(1, 1, 1)
+Killhax.TextSize = 20
+Killhax.TextStrokeTransparency = 0
+Killhax.MouseButton1Down:connect(function()
+local lplayer = game:GetService('Players').LocalPlayer
+
+local killing = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "others" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'kill','gui','kill gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+Playr = Instance.new("TextBox")
+KL = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.2, 0.694118, 1)
+main.BorderColor3 = Color3.new(0.105882, 0.258824, 0.32549)
+main.BorderSizePixel = 10
+main.Position = UDim2.new(0.0733024701, 0, 0.671036899, 0)
+main.Size = UDim2.new(0, 449, 0, 240)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 0.89999997615814
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 449, 0, 50)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "KillHax By Hackmaster12"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 25
+
+Playr.Name = "Playr"
+Playr.Parent = main
+Playr.BackgroundColor3 = Color3.new(0.192157, 0.745098, 1)
+Playr.BorderColor3 = Color3.new(0.109804, 0.443137, 0.584314)
+Playr.BorderSizePixel = 4
+Playr.Position = UDim2.new(0.25167039, 0, 0.25, 0)
+Playr.Size = UDim2.new(0, 223, 0, 50)
+Playr.Font = Enum.Font.GothamBlack
+Playr.FontSize = Enum.FontSize.Size14
+Playr.Text = "Player"
+Playr.TextColor3 = Color3.new(0, 0, 0)
+Playr.TextSize = 14
+Playr.TextWrapped = true
+
+KL.Name = "KL"
+KL.Parent = main
+KL.BackgroundColor3 = Color3.new(0.192157, 0.745098, 1)
+KL.BorderColor3 = Color3.new(0.101961, 0.407843, 0.541176)
+KL.BorderSizePixel = 5
+KL.Position = UDim2.new(0.27616927, 0, 0.583333373, 0)
+KL.Size = UDim2.new(0, 200, 0, 50)
+KL.Font = Enum.Font.GothamBold
+KL.FontSize = Enum.FontSize.Size14
+KL.Text = "Kill"
+KL.TextColor3 = Color3.new(0, 0, 0)
+KL.TextSize = 14
+KL.MouseButton1Click:Connect(function()
+local target = unpack(GetPlayer(Playr.Text)).Character
+
+game:GetService'Players'.LocalPlayer.Character.Humanoid.PlatformStand = true
+killing = true
+local coin = Instance.new('BodyThrust',game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart)
+coin.Force = Vector3.new(9999,9999,9999)
+coin.Name = "killforce"
+repeat game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait() until not target.Head or killing == false
+end)
+end)
+
+God.Name = "God"
+God.Parent = main
+God.BackgroundColor3 = Color3.new(0.258824, 0.482353, 1)
+God.BorderColor3 = Color3.new(0.14902, 0.286275, 0.584314)
+God.BorderSizePixel = 4
+God.Position = UDim2.new(0.126555771, 0, 0.746012092, 0)
+God.Size = UDim2.new(0, 77, 0, 24)
+God.Font = Enum.Font.SourceSans
+God.FontSize = Enum.FontSize.Size24
+God.Text = "God"
+God.TextColor3 = Color3.new(1, 1, 1)
+God.TextSize = 20
+God.TextStrokeTransparency = 0
+God.MouseButton1Down:connect(function()
+button              = workspace.Button
+button.CanCollide   = false
+button.Transparency = 1
+
+game:GetService("RunService").Heartbeat:connect(function(step)
+button.CFrame = CFrame.new(game.Players.LocalPlayer.Character.Head.Position)
+button.Size   = Vector3.new(math.random(0,0), math.random(0,0), math.random(1,5))
+wait()
+button.CFrame=CFrame.new(game.Players.LocalPlayer.Character["Right Arm"].Position)
+button.Size=Vector3.new(math.random(0,0), math.random(0,0), math.random(0,0))
+wait()
+button.CFrame=CFrame.new(game.Players.LocalPlayer.Character.Torso.Position)
+button.Size=Vector3.new(math.random(0,0), math.random(0,0), math.random(0,0))
+wait()
+button.CFrame=CFrame.new(game.Players.LocalPlayer.Character["Left Arm"].Position)
+button.Size=Vector3.new(math.random(0,0), math.random(0,0), math.random(0,0))
+wait()
+button.Size=Vector3.new(math.random(0,0), math.random(0,0), math.random(0,0))
+button.CFrame=CFrame.new(game.Players.LocalPlayer.Character["Left Leg"].Position)
+wait()
+button.Size   = Vector3.new(math.random(0,0), math.random(0,0), math.random(0,0))
+button.CFrame = CFrame.new(game.Players.LocalPlayer.Character["Right Leg"].Position)
+end)
+end)
+
+Punch.Name = "Punch"
+Punch.Parent = main
+Punch.BackgroundColor3 = Color3.new(0.258824, 0.482353, 1)
+Punch.BorderColor3 = Color3.new(0.14902, 0.286275, 0.584314)
+Punch.BorderSizePixel = 4
+Punch.Position = UDim2.new(0.126555771, 0, 0.471818537, 0)
+Punch.Size = UDim2.new(0, 77, 0, 24)
+Punch.Font = Enum.Font.SourceSans
+Punch.FontSize = Enum.FontSize.Size24
+Punch.Text = "Punch q"
+Punch.TextColor3 = Color3.new(1, 1, 1)
+Punch.TextSize = 20
+Punch.TextStrokeTransparency = 0
+Punch.MouseButton1Down:connect(function()
+--[[
+     this was made by
+     DebugRBX (@v3rm) / Debug#0001 (@discord)
+     jacob (@v3rm) / jacob#9999 (@discord)
+     execute the script and wait until tools load, press q to punch.
+     enjoy
+--]]
+
+--// VARIABLES //--
+
+Punch_Key = 'q'
+
+Spray_Cans = 15
+
+Strength = 9e9
+
+--// MAIN //--
+
+loadstring(game:HttpGet("https://pastebin.com/raw/HQ9KUnJ5", true))()
+end)
+
+Speed.Name = "Speed"
+Speed.Parent = main
+Speed.BackgroundColor3 = Color3.new(0.258824, 0.482353, 1)
+Speed.BorderColor3 = Color3.new(0.14902, 0.286275, 0.584314)
+Speed.BorderSizePixel = 4
+Speed.Position = UDim2.new(0.525658906, 0, 0.471818537, 0)
+Speed.Size = UDim2.new(0, 77, 0, 24)
+Speed.Font = Enum.Font.SourceSans
+Speed.FontSize = Enum.FontSize.Size24
+Speed.Text = "Loop Speed"
+Speed.TextColor3 = Color3.new(1, 1, 1)
+Speed.TextSize = 20
+Speed.TextStrokeTransparency = 0
+Speed.MouseButton1Down:connect(function()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+wait()
+end
+end)
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.new(0.258824, 0.482353, 1)
+Close.BorderColor3 = Color3.new(0.14902, 0.286275, 0.584314)
+Close.BorderSizePixel = 4
+Close.Position = UDim2.new(0.870950341, 0, -0.189471841, 0)
+Close.Size = UDim2.new(0, 31, 0, 14)
+Close.Font = Enum.Font.SourceSans
+Close.FontSize = Enum.FontSize.Size24
+Close.Text = "X"
+Close.TextColor3 = Color3.new(1, 1, 1)
+Close.TextSize = 20
+Close.TextStrokeTransparency = 0
+Close.MouseButton1Down:connect(function()
+main.Visible = false
+end)

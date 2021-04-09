@@ -1,0 +1,187 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- GUI made by Ziegel#8171 Scripts by oOwlz
+-- Instances:
+local GUI = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Beauty1 = Instance.new("Frame")
+local LabelOben = Instance.new("TextLabel")
+local Beauty2 = Instance.new("Frame")
+local LabelUnten = Instance.new("TextLabel")
+local Security = Instance.new("TextButton")
+local SCP = Instance.new("TextButton")
+local Researcher = Instance.new("TextButton")
+local Admin = Instance.new("TextButton")
+local Alpha = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+--Properties:
+GUI.Name = "GUI"
+GUI.Parent = game.CoreGui
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = GUI
+OpenFrame.Active = true
+OpenFrame.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0, 0, 0.511952162, 0)
+OpenFrame.Size = UDim2.new(0, 113, 0, 28)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.new(0, 1, 1)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.027033478, 0, 0.157497957, 0)
+Open.Size = UDim2.new(0, 106, 0, 19)
+Open.Font = Enum.Font.Cartoon
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(1, 1, 1)
+Open.TextSize = 30
+Open.MouseButton1Down:connect(function()
+Main.Visible = true
+OpenFrame.Visible = false
+end)
+
+Main.Name = "Main"
+Main.Parent = GUI
+Main.Active = true
+Main.BackgroundColor3 = Color3.new(0.0705882, 0.0705882, 0.0705882)
+Main.BackgroundTransparency = 0.20000000298023
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.333333343, 0, 0.241035864, 0)
+Main.Size = UDim2.new(0, 263, 0, 260)
+Main.Draggable = true
+
+Beauty1.Name = "Beauty1"
+Beauty1.Parent = Main
+Beauty1.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+Beauty1.BorderSizePixel = 0
+Beauty1.Position = UDim2.new(-0.0646387786, 0, -0.0307692308, 0)
+Beauty1.Size = UDim2.new(0, 298, 0, 32)
+
+LabelOben.Name = "LabelOben"
+LabelOben.Parent = Beauty1
+LabelOben.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+LabelOben.BorderSizePixel = 0
+LabelOben.Position = UDim2.new(0.0539081842, 0, 0.109615386, 0)
+LabelOben.Size = UDim2.new(0, 255, 0, 24)
+LabelOben.Font = Enum.Font.Cartoon
+LabelOben.Text = "SCR Team Change"
+LabelOben.TextColor3 = Color3.new(0, 0, 0.498039)
+LabelOben.TextSize = 30
+
+Beauty2.Name = "Beauty2"
+Beauty2.Parent = Main
+Beauty2.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+Beauty2.BorderSizePixel = 0
+Beauty2.Position = UDim2.new(-0.0646387786, 0, 0.907692313, 0)
+Beauty2.Size = UDim2.new(0, 298, 0, 32)
+
+LabelUnten.Name = "LabelUnten"
+LabelUnten.Parent = Beauty2
+LabelUnten.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+LabelUnten.BorderSizePixel = 0
+LabelUnten.Position = UDim2.new(0.0689003989, 0, 0.110576928, 0)
+LabelUnten.Size = UDim2.new(0, 255, 0, 24)
+LabelUnten.Font = Enum.Font.Cartoon
+LabelUnten.Text = "GUI by Ziegel#8171 , SCRIPT by oOwlz"
+LabelUnten.TextColor3 = Color3.new(0, 0, 0)
+LabelUnten.TextSize = 18
+
+Security.Name = "Security"
+Security.Parent = Main
+Security.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Security.BorderSizePixel = 0
+Security.Position = UDim2.new(0.515936375, 0, 0.17461358, 0)
+Security.Size = UDim2.new(0, 123, 0, 35)
+Security.Font = Enum.Font.Cartoon
+Security.Text = "Security Dep"
+Security.TextColor3 = Color3.new(0, 0, 0)
+Security.TextSize = 20
+Security.MouseButton1Down:connect(function()
+local A_1 = game:GetService("Teams")["Security Department"]
+local Event = game:GetService("ReplicatedStorage").TeamChangeRemote
+Event:FireServer(A_1)
+end)
+
+SCP.Name = "SCP"
+SCP.Parent = Main
+SCP.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+SCP.BorderSizePixel = 0
+SCP.Position = UDim2.new(0.0151899476, 0, 0.406297892, 0)
+SCP.Size = UDim2.new(0, 123, 0, 35)
+SCP.Font = Enum.Font.Cartoon
+SCP.Text = "SCP-008-2"
+SCP.TextColor3 = Color3.new(0, 0, 0)
+SCP.TextSize = 20
+SCP.MouseButton1Down:connect(function()
+local A_1 = game:GetService("Teams")["SCP-008-2"]
+local Event = game:GetService("ReplicatedStorage").TeamChangeRemote
+Event:FireServer(A_1)
+end)
+
+Researcher.Name = "Researcher"
+Researcher.Parent = Main
+Researcher.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Researcher.BorderSizePixel = 0
+Researcher.Position = UDim2.new(0.512555599, 0, 0.407446861, 0)
+Researcher.Size = UDim2.new(0, 123, 0, 35)
+Researcher.Font = Enum.Font.Cartoon
+Researcher.Text = "Researcher"
+Researcher.TextColor3 = Color3.new(0, 0, 0)
+Researcher.TextSize = 20
+Researcher.MouseButton1Down:connect(function()
+local A_1 = game:GetService("Teams")["Researcher"]
+local Event = game:GetService("ReplicatedStorage").TeamChangeRemote
+Event:FireServer(A_1)
+end)
+
+Admin.Name = "Admin"
+Admin.Parent = Main
+Admin.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Admin.BorderSizePixel = 0
+Admin.Position = UDim2.new(0.0151899457, 0, 0.172831476, 0)
+Admin.Size = UDim2.new(0, 123, 0, 35)
+Admin.Font = Enum.Font.Cartoon
+Admin.Text = "Administrative Dep"
+Admin.TextColor3 = Color3.new(0, 0, 0)
+Admin.TextSize = 16
+Admin.MouseButton1Down:connect(function()
+local A_1 = game:GetService("Teams")["Administrative Department"]
+local Event = game:GetService("ReplicatedStorage").TeamChangeRemote
+Event:FireServer(A_1)
+end)
+
+Alpha.Name = "Alpha"
+Alpha.Parent = Main
+Alpha.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Alpha.BorderSizePixel = 0
+Alpha.Position = UDim2.new(0.246395856, 0, 0.679374814, 0)
+Alpha.Size = UDim2.new(0, 123, 0, 35)
+Alpha.Font = Enum.Font.Cartoon
+Alpha.Text = "Alpha-1"
+Alpha.TextColor3 = Color3.new(0, 0, 0)
+Alpha.TextSize = 20
+Alpha.MouseButton1Down:connect(function()
+local A_1 = game:GetService("Teams")["Alpha-1"]
+local Event = game:GetService("ReplicatedStorage").TeamChangeRemote
+Event:FireServer(A_1)
+end)
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.new(1, 1, 1)
+Close.BackgroundTransparency = 1
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.965827465, 0, -0.0209163278, 0)
+Close.Size = UDim2.new(0, 24, 0, 28)
+Close.Font = Enum.Font.SciFi
+Close.Text = "X"
+Close.TextColor3 = Color3.new(0, 0, 0.498039)
+Close.TextSize = 20
+Close.MouseButton1Down:connect(function()
+OpenFrame.Visible = true
+Main.Visible = false
+end)
+-- GUI made by Ziegel#8171 Scripts made by oOwolz

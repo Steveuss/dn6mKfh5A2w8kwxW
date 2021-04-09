@@ -1,0 +1,2 @@
+game.ReplicatedStorage.WearItem:FireServer("Shirt", 88885539, false)
+--game.ReplicatedStorage.WearItem:FireServer("Shirt", id here, false)

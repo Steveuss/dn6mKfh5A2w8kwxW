@@ -1,0 +1,85 @@
+----/ Made by OreoSquadron \---
+
+--/ Credits to firefox124215 for the GUI template
+
+
+wait()-- Objects
+local bv1 = workspace.WorldItems:FindFirstChild("BulletVest1",true)
+local bv2 = workspace.WorldItems:FindFirstChild("BulletVest2",true)
+local bv3 = workspace.WorldItems:FindFirstChild("BulletVest3",true)
+local bv4 = workspace.WorldItems:FindFirstChild("BulletVest4",true)
+local ScreenGui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+local Frame = Instance.new("Frame",ScreenGui)
+local TextButton = Instance.new("TextButton",Frame)
+local TextButton_2 = Instance.new("TextButton",Frame)
+local TextButton_3 = Instance.new("TextButton",Frame)
+local TextButton_4 = Instance.new("TextButton",Frame)
+local TextButton_5 = Instance.new("TextButton",Frame)
+
+-- Properties
+
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.Position = UDim2.new(0.0826971978, 0, 0.0383650064, 0)
+Frame.Size = UDim2.new(0, 213, 0, 230)
+Frame.Active = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.Position = UDim2.new(0, 0, 0.25, 0)
+TextButton.Size = UDim2.new(0, 213, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "BulletVest1"
+TextButton.TextSize = 14
+TextButton.Active = true
+
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.Position = UDim2.new(0, 0, 0.47, 0)
+TextButton_2.Size = UDim2.new(0, 213, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "BulletVest2"
+TextButton_2.TextSize = 14
+TextButton_2.Active = true
+
+TextButton_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_3.Position = UDim2.new(0, 0, 0.69, 0)
+TextButton_3.Size = UDim2.new(0, 213, 0, 50)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "BulletVest3"
+TextButton_3.TextSize = 14
+TextButton_3.Active = true
+
+TextButton_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_4.Position = UDim2.new(0, 0, 0.91, 0)
+TextButton_4.Size = UDim2.new(0, 213, 0, 50)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "BulletVest4"
+TextButton_4.TextSize = 14
+TextButton_4.Active = true
+
+TextButton_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_5.Position = UDim2.new(0, 0, 0.01, 0)
+TextButton_5.Size = UDim2.new(0, 213, 0, 50)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "TP to Shop"
+TextButton_5.TextSize = 14
+TextButton_5.Active = true
+
+TextButton.MouseButton1Click:connect(function()
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = bv1["MainPart"].CFrame
+end)
+
+TextButton_2.MouseButton1Click:connect(function()
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = bv2["MainPart"].CFrame
+end)
+
+TextButton_3.MouseButton1Click:connect(function()
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = bv3["MainPart"].CFrame
+end)
+
+TextButton_4.MouseButton1Click:connect(function()
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = bv4["MainPart"].CFrame
+end)
+
+TextButton_5.MouseButton1Click:connect(function()
+game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(31.044, 6.1287, 66.29901)
+end)

@@ -1,0 +1,118 @@
+--[[
+	RipBakiez by kitty221/tostring
+	Take credit and I rape you >:(
+--]]
+local thing = [[RipBakiez by kitty221/tostring
+Take credit and I rape you >:(]]
+print(thing)
+
+-- Objects
+
+local RipBakiez = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Input = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local plr = game:GetService("Players").LocalPlayer
+local cmds = {
+	"GiveCup ",
+	"DropItems ",
+	"RemoveAnti ",
+	"SpamCups ",
+	"HideName "
+}
+
+-- Properties
+
+RipBakiez.Name = "RipBakiez"
+RipBakiez.Parent = game:GetService("CoreGui")
+
+Main.Name = "Main"
+Main.Parent = RipBakiez
+Main.Active = true
+Main.BackgroundColor3 = Color3.new(0.0705882, 0.623529, 0.2)
+Main.Draggable = true
+Main.Position = UDim2.new(0.675918996, 0, 0.6587888, 0)
+Main.Size = UDim2.new(0, 171, 0, 53)
+
+Input.Name = "Input"
+Input.Parent = Main
+Input.BackgroundColor3 = Color3.new(0, 0, 0)
+Input.BorderColor3 = Color3.new(1, 1, 1)
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.0526315793, 0, 0.226415098, 0)
+Input.Size = UDim2.new(0, 93, 0, 28)
+Input.Font = Enum.Font.SourceSans
+Input.FontSize = Enum.FontSize.Size14
+Input.Text = "Command Here"
+Input.TextColor3 = Color3.new(1, 1, 1)
+Input.TextScaled = true
+Input.TextSize = 14
+Input.TextWrapped = true
+
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.BackgroundColor3 = Color3.new(0, 1, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.701754391, 0, 0.169811323, 0)
+Execute.Size = UDim2.new(0, 40, 0, 34)
+Execute.Font = Enum.Font.SourceSans
+Execute.FontSize = Enum.FontSize.Size14
+Execute.Text = "Execute"
+Execute.TextSize = 14
+Execute.TextWrapped = true
+
+--functions
+function givecup(cup)
+	local A_1 = "GiveCup"
+	local A_2 = 
+	{
+		[1] = cup
+	}
+	local Event = game:GetService("ReplicatedStorage").Remote.Events.Action
+	Event:FireServer(A_1, A_2)
+end
+
+function drop()
+	for _,v in next, plr.Backpack:GetChildren() do
+		v.Parent = plr.Character
+		wait()
+		v.Parent = workspace
+	end
+end
+
+function remove()
+	workspace.SpecialDoors:Destroy()
+end
+
+function printcmds()
+	for _,v in next, cmds do
+		print(v)
+	end
+end
+
+function spam()
+	for i = 1,100 do
+		givecup("Iced Cup1")
+	end
+end
+
+function hide()
+	plr.Character.Head.Rank:Destroy()
+end
+
+
+Execute.MouseButton1Click:Connect(function()
+	if Input.Text == "GiveCup" then
+		givecup("Iced Cup1")
+	elseif Input.Text == "DropItems" then
+		 drop()
+	elseif Input.Text == "RemoveAnti" then
+		remove()
+	elseif Input.Text == "cmds" then
+		printcmds()
+	elseif Input.Text == "HideName" then
+		hide()
+	elseif Input.Text == "SpamCups" then
+		spam()
+	end
+end)

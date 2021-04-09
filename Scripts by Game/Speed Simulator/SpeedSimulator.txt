@@ -1,0 +1,469 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local SonicV1 = Instance.new("ScreenGui")
+local Body = Instance.new("Frame")
+local _1000 = Instance.new("TextButton")
+local _1500 = Instance.new("TextButton")
+local _1Million = Instance.new("TextButton")
+local _300 = Instance.new("TextButton")
+local _600 = Instance.new("TextButton")
+local _800 = Instance.new("TextButton")
+local Blue = Instance.new("TextButton")
+local Dred = Instance.new("TextButton")
+local Green = Instance.new("TextButton")
+local Orange = Instance.new("TextButton")
+local Pet1 = Instance.new("TextButton")
+local Pet2 = Instance.new("TextButton")
+local Pet3 = Instance.new("TextButton")
+local Pet4 = Instance.new("TextButton")
+local Pink = Instance.new("TextButton")
+local Rainbow = Instance.new("TextButton")
+local Red = Instance.new("TextButton")
+local Hypcros = Instance.new("TextLabel")
+local PetsLabel = Instance.new("TextLabel")
+local SpeedLabel = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TrailsLabel = Instance.new("TextLabel")
+--Properties:
+SonicV1.Name = "Sonic V1"
+SonicV1.Parent = game.CoreGui
+SonicV1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Body.Name = "Body"
+Body.Parent = SonicV1
+Body.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Body.BorderColor3 = Color3.new(0, 0, 0)
+Body.Position = UDim2.new(0.329164118, 0, 0.126039982, 0)
+Body.Size = UDim2.new(0, 336, 0, 348)
+Body.Active = true
+Body.Visible = true
+Body.Draggable = true
+
+_1000.Name = "1000"
+_1000.Parent = Body
+_1000.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_1000.BorderColor3 = Color3.new(0.333333, 1, 0)
+_1000.Position = UDim2.new(0.363461554, 0, 0.439557731, 0)
+_1000.Size = UDim2.new(0, 90, 0, 23)
+_1000.Font = Enum.Font.SciFi
+_1000.Text = "1000"
+_1000.TextColor3 = Color3.new(1, 1, 1)
+_1000.TextSize = 20
+_1000.TextStrokeTransparency = 0
+local Remote = game.ReplicatedStorage.Events['Msg']
+_1000.MouseButton1Down:connect(function()
+	local Arguments = {
+        [1] = "Speed",
+        [2] = 1000
+}
+
+Remote:FireServer(unpack(Arguments))
+
+end)
+
+_1500.Name = "1500"
+_1500.Parent = Body
+_1500.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_1500.BorderColor3 = Color3.new(0.333333, 1, 0)
+_1500.Position = UDim2.new(0.363461524, 0, 0.52464819, 0)
+_1500.Size = UDim2.new(0, 90, 0, 23)
+_1500.Font = Enum.Font.SciFi
+_1500.Text = "1500"
+_1500.TextColor3 = Color3.new(1, 1, 1)
+_1500.TextSize = 20
+_1500.TextStrokeTransparency = 0
+_1500.MouseButton1Down:connect (function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Speed",
+        [2] = 1500
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+_1Million.Name = "1Million"
+_1Million.Parent = Body
+_1Million.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_1Million.BorderColor3 = Color3.new(0.333333, 1, 0)
+_1Million.Position = UDim2.new(0.363461554, 0, 0.60816884, 0)
+_1Million.Size = UDim2.new(0, 90, 0, 23)
+_1Million.Font = Enum.Font.SciFi
+_1Million.Text = "1 Million"
+_1Million.TextColor3 = Color3.new(1, 1, 1)
+_1Million.TextSize = 20
+_1Million.TextStrokeTransparency = 0
+_1Million.MouseButton1Down:connect (function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Speed",
+        [2] = 1000000
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+_300.Name = "300"
+_300.Parent = Body
+_300.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_300.BorderColor3 = Color3.new(0.333333, 1, 0)
+_300.Position = UDim2.new(0.363461554, 0, 0.191869318, 0)
+_300.Size = UDim2.new(0, 90, 0, 23)
+_300.Font = Enum.Font.SciFi
+_300.Text = "300"
+_300.TextColor3 = Color3.new(1, 1, 1)
+_300.TextSize = 20
+_300.TextStrokeTransparency = 0
+_300.MouseButton1Down:connect (function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Speed",
+        [2] = 300
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+_600.Name = "600"
+_600.Parent = Body
+_600.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_600.BorderColor3 = Color3.new(0.333333, 1, 0)
+_600.Position = UDim2.new(0.363461554, 0, 0.272516429, 0)
+_600.Size = UDim2.new(0, 90, 0, 23)
+_600.Font = Enum.Font.SciFi
+_600.Text = "600"
+_600.TextColor3 = Color3.new(1, 1, 1)
+_600.TextSize = 20
+_600.TextStrokeTransparency = 0
+_600.MouseButton1Down:connect (function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Speed",
+        [2] = 600
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+_800.Name = "800"
+_800.Parent = Body
+_800.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+_800.BorderColor3 = Color3.new(0.333333, 1, 0)
+_800.Position = UDim2.new(0.363461494, 0, 0.35603708, 0)
+_800.Size = UDim2.new(0, 90, 0, 23)
+_800.Font = Enum.Font.SciFi
+_800.Text = "800"
+_800.TextColor3 = Color3.new(1, 1, 1)
+_800.TextSize = 20
+_800.TextStrokeTransparency = 0
+_800.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Speed",
+        [2] = 800
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Blue.Name = "Blue"
+Blue.Parent = Body
+Blue.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Blue.BorderColor3 = Color3.new(0, 1, 1)
+Blue.Position = UDim2.new(0.677976191, 0, 0.438253999, 0)
+Blue.Size = UDim2.new(0, 90, 0, 23)
+Blue.Font = Enum.Font.SciFi
+Blue.Text = "Blue"
+Blue.TextColor3 = Color3.new(1, 1, 1)
+Blue.TextSize = 20
+Blue.TextStrokeTransparency = 0
+Blue.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Blue"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Dred.Name = "Dred"
+Dred.Parent = Body
+Dred.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Dred.BorderColor3 = Color3.new(0, 1, 1)
+Dred.Position = UDim2.new(0.677976251, 0, 0.354733288, 0)
+Dred.Size = UDim2.new(0, 90, 0, 23)
+Dred.Font = Enum.Font.SciFi
+Dred.Text = "Dark Red"
+Dred.TextColor3 = Color3.new(1, 1, 1)
+Dred.TextSize = 20
+Dred.TextStrokeTransparency = 0
+Dred.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "DRed"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Green.Name = "Green"
+Green.Parent = Body
+Green.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Green.BorderColor3 = Color3.new(0, 1, 1)
+Green.Position = UDim2.new(0.677976191, 0, 0.606865048, 0)
+Green.Size = UDim2.new(0, 90, 0, 23)
+Green.Font = Enum.Font.SciFi
+Green.Text = "Green"
+Green.TextColor3 = Color3.new(1, 1, 1)
+Green.TextSize = 20
+Green.TextStrokeTransparency = 0
+Green.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Green"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+
+
+Orange.Name = "Orange"
+Orange.Parent = Body
+Orange.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Orange.BorderColor3 = Color3.new(0, 1, 1)
+Orange.Position = UDim2.new(0.677976191, 0, 0.191869333, 0)
+Orange.Size = UDim2.new(0, 90, 0, 23)
+Orange.Font = Enum.Font.SciFi
+Orange.Text = "Orange"
+Orange.TextColor3 = Color3.new(1, 1, 1)
+Orange.TextSize = 20
+Orange.TextStrokeTransparency = 0
+Orange.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Orange"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Pet1.Name = "Pet1"
+Pet1.Parent = Body
+Pet1.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Pet1.BorderColor3 = Color3.new(1, 0, 0)
+Pet1.Position = UDim2.new(0.0512820482, 0, 0.191869318, 0)
+Pet1.Size = UDim2.new(0, 90, 0, 23)
+Pet1.Font = Enum.Font.SciFi
+Pet1.Text = "Pet1"
+Pet1.TextColor3 = Color3.new(1, 1, 1)
+Pet1.TextSize = 20
+Pet1.TextStrokeTransparency = 0
+Pet1.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage['EquippedE']
+
+local Arguments = {
+        [1] = 1
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Pet2.Name = "Pet2"
+Pet2.Parent = Body
+Pet2.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Pet2.BorderColor3 = Color3.new(1, 0, 0)
+Pet2.Position = UDim2.new(0.0512820482, 0, 0.272516429, 0)
+Pet2.Size = UDim2.new(0, 90, 0, 23)
+Pet2.Font = Enum.Font.SciFi
+Pet2.Text = "Pet2"
+Pet2.TextColor3 = Color3.new(1, 1, 1)
+Pet2.TextSize = 20
+Pet2.TextStrokeTransparency = 0
+Pet2.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage['EquippedE']
+
+local Arguments = {
+        [1] = 2}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Pet3.Name = "Pet3"
+Pet3.Parent = Body
+Pet3.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Pet3.BorderColor3 = Color3.new(1, 0, 0)
+Pet3.Position = UDim2.new(0.0512820482, 0, 0.35603705, 0)
+Pet3.Size = UDim2.new(0, 90, 0, 23)
+Pet3.Font = Enum.Font.SciFi
+Pet3.Text = "Pet3"
+Pet3.TextColor3 = Color3.new(1, 1, 1)
+Pet3.TextSize = 20
+Pet3.TextStrokeTransparency = 0
+Pet3.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage['EquippedE']
+
+local Arguments = {
+        [1] = 3}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Pet4.Name = "Pet4"
+Pet4.Parent = Body
+Pet4.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Pet4.BorderColor3 = Color3.new(1, 0, 0)
+Pet4.Position = UDim2.new(0.0512820557, 0, 0.441127479, 0)
+Pet4.Size = UDim2.new(0, 90, 0, 23)
+Pet4.Font = Enum.Font.SciFi
+Pet4.Text = "Pet4"
+Pet4.TextColor3 = Color3.new(1, 1, 1)
+Pet4.TextSize = 20
+Pet4.TextStrokeTransparency = 0
+Pet4.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage['EquippedE']
+
+local Arguments = {
+        [1] = 4
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Pink.Name = "Pink"
+Pink.Parent = Body
+Pink.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Pink.BorderColor3 = Color3.new(0, 1, 1)
+Pink.Position = UDim2.new(0.677976131, 0, 0.52464819, 0)
+Pink.Size = UDim2.new(0, 90, 0, 23)
+Pink.Font = Enum.Font.SciFi
+Pink.Text = "Pink"
+Pink.TextColor3 = Color3.new(1, 1, 1)
+Pink.TextSize = 20
+Pink.TextStrokeTransparency = 0
+Pink.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Pink"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Rainbow.Name = "Rainbow"
+Rainbow.Parent = Body
+Rainbow.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Rainbow.BorderColor3 = Color3.new(0, 1, 1)
+Rainbow.Position = UDim2.new(0.677976191, 0, 0.690385759, 0)
+Rainbow.Size = UDim2.new(0, 90, 0, 23)
+Rainbow.Font = Enum.Font.SciFi
+Rainbow.Text = "Rainbow"
+Rainbow.TextColor3 = Color3.new(1, 1, 1)
+Rainbow.TextSize = 20
+Rainbow.TextStrokeTransparency = 0
+Rainbow.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Rainbow"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Red.Name = "Red"
+Red.Parent = Body
+Red.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+Red.BorderColor3 = Color3.new(0, 1, 1)
+Red.Position = UDim2.new(0.677976191, 0, 0.272516429, 0)
+Red.Size = UDim2.new(0, 90, 0, 23)
+Red.Font = Enum.Font.SciFi
+Red.Text = "Red"
+Red.TextColor3 = Color3.new(1, 1, 1)
+Red.TextSize = 20
+Red.TextStrokeTransparency = 0
+Red.MouseButton1Down:connect(function()
+	local Remote = game.ReplicatedStorage.Events['Msg']
+
+local Arguments = {
+        [1] = "Trail",
+        [2] = "Red"
+}
+
+Remote:FireServer(unpack(Arguments))
+end)
+
+Hypcros.Name = "Hypcros"
+Hypcros.Parent = Body
+Hypcros.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Hypcros.BorderSizePixel = 0
+Hypcros.Position = UDim2.new(-0.00141939521, 0, 0.901939571, 0)
+Hypcros.Size = UDim2.new(0, 336, 0, 34)
+Hypcros.Font = Enum.Font.SourceSans
+Hypcros.Text = "Created By Hypcros#1020"
+Hypcros.TextColor3 = Color3.new(1, 1, 1)
+Hypcros.TextSize = 14
+
+PetsLabel.Name = "PetsLabel"
+PetsLabel.Parent = Body
+PetsLabel.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+PetsLabel.BorderColor3 = Color3.new(1, 0, 0)
+PetsLabel.Position = UDim2.new(0.0386904776, 0, 0.119434692, 0)
+PetsLabel.Size = UDim2.new(0, 100, 0, 21)
+PetsLabel.Font = Enum.Font.SciFi
+PetsLabel.Text = "Pets"
+PetsLabel.TextColor3 = Color3.new(1, 1, 1)
+PetsLabel.TextSize = 14
+PetsLabel.TextStrokeTransparency = 0
+
+SpeedLabel.Name = "SpeedLabel"
+SpeedLabel.Parent = Body
+SpeedLabel.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+SpeedLabel.BorderColor3 = Color3.new(0.333333, 1, 0)
+SpeedLabel.Position = UDim2.new(0.350870013, 0, 0.119434692, 0)
+SpeedLabel.Size = UDim2.new(0, 100, 0, 21)
+SpeedLabel.Font = Enum.Font.SciFi
+SpeedLabel.Text = "Speed"
+SpeedLabel.TextColor3 = Color3.new(1, 1, 1)
+SpeedLabel.TextSize = 14
+SpeedLabel.TextStrokeTransparency = 0
+
+TextLabel.Parent = Body
+TextLabel.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.00141939521, 0, -0.00127384067, 0)
+TextLabel.Size = UDim2.new(0, 336, 0, 34)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Sonic V1"
+TextLabel.TextColor3 = Color3.new(0, 1, 1)
+TextLabel.TextSize = 14
+
+TrailsLabel.Name = "TrailsLabel"
+TrailsLabel.Parent = Body
+TrailsLabel.BackgroundColor3 = Color3.new(0.141176, 0.141176, 0.141176)
+TrailsLabel.BorderColor3 = Color3.new(0, 1, 1)
+TrailsLabel.Position = UDim2.new(0.66538465, 0, 0.119434685, 0)
+TrailsLabel.Size = UDim2.new(0, 100, 0, 21)
+TrailsLabel.Font = Enum.Font.SciFi
+TrailsLabel.Text = "Trails"
+TrailsLabel.TextColor3 = Color3.new(1, 1, 1)
+TrailsLabel.TextSize = 14
+TrailsLabel.TextStrokeTransparency = 0
+-- Made by Hypcros#1020 Have a good day!

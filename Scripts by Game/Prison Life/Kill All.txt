@@ -1,0 +1,31 @@
+--Equip a gun first!	
+
+local lplr = game.Players.LocalPlayer
+
+_G.killing = true
+
+
+while _G.killing == true do
+    local muzzle = nil
+    pcall(function()
+        muzzle = lplr.Character:FindFirstChildOfClass("Tool").Muzzle
+    end)
+    wait(.1)
+    
+    for i, plr in pairs(game.Players:GetPlayers()) do
+        pcall(function()
+        if muzzle and lplr.Character and lplr.Character.Head and plr.Name ~= lplr.Name and plr.Team ~= lplr.Team and plr.Character and plr.Character.Humanoid and plr.Character.Humanoid.Health >0 then
+            local btable = {}
+            local distance = (lplr.Character.Head.CFrame.p - plr.Character.Head.CFrame.p).magnitude 
+            
+            table.insert(btable, {
+                Hit = plr.Character.Head,
+                Distance = distance,
+                Cframe = CFrame.new(plr.Character.Head.CFrame.p, muzzle.Position) * CFrame.new(0, 0, -distance / 2),
+                RayObject = Ray
+            })
+            game:GetService("ReplicatedStorage").ShootEvent:FireServer(btable, muzzle.Parent)
+        end
+        end)
+    end
+end

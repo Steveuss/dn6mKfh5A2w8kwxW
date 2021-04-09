@@ -1,0 +1,494 @@
+
+-- Edit Script On Line 281 And 282 To your Magic Name
+-- Edit Script On Line 490 And 491 To your Magic Name
+
+local ebgui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local little = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local bgcolor = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local normod = Instance.new("TextButton")
+local surmod = Instance.new("TextButton")
+local nor = Instance.new("Frame")
+local little2 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local attk = Instance.new("TextButton")
+local name = Instance.new("TextBox")
+local stp = Instance.new("TextButton")
+local attkall = Instance.new("TextButton")
+local stopall = Instance.new("TextButton")
+local autoattttk = Instance.new("TextButton")
+local sur = Instance.new("Frame")
+local little3 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local sfarm = Instance.new("TextButton")
+local sstop = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local bfarm = Instance.new("TextButton")
+local bstop = Instance.new("TextButton")
+local gfarm = Instance.new("TextButton")
+local gstop = Instance.new("TextButton")
+local autoattk = Instance.new("TextButton")
+
+-- Properties
+
+ebgui.Name = "ebgui"
+ebgui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ebgui
+main.Active = true
+main.BackgroundColor3 = Color3.new(0.45098, 0.392157, 0.560784)
+main.Position = UDim2.new(0.369154215, 0, 0.312734097, 0)
+main.Size = UDim2.new(0, 235, 0, 130)
+main.Draggable = true
+
+little.Name = "little"
+little.Parent = main
+little.BackgroundColor3 = Color3.new(0, 0, 0)
+little.Position = UDim2.new(0, 0, -0.0384615399, 0)
+little.Size = UDim2.new(0, 233, 0, 19)
+
+TextLabel.Parent = little
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 233, 0, 19)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Elemental BattleGrounds GUI"
+TextLabel.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel.TextSize = 14
+
+bgcolor.Name = "bgcolor"
+bgcolor.Parent = little
+bgcolor.BackgroundColor3 = Color3.new(1, 1, 1)
+bgcolor.BackgroundTransparency = 1
+bgcolor.Position = UDim2.new(0, 0, 1, 0)
+bgcolor.Size = UDim2.new(0, 233, 0, 113)
+bgcolor.Image = "rbxassetid://2247431355"
+
+TextLabel_2.Parent = little
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(-0.30901286, 0, 6.10526323, 0)
+TextLabel_2.Size = UDim2.new(0, 233, 0, 19)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = "PRESENTED BY"
+TextLabel_2.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel_2.TextSize = 12
+
+TextLabel_3.Parent = little
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.339055777, 0, 6.10526323, 0)
+TextLabel_3.Size = UDim2.new(0, 233, 0, 19)
+TextLabel_3.Font = Enum.Font.SciFi
+TextLabel_3.Text = "DARKDEVS.GA"
+TextLabel_3.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel_3.TextSize = 12
+
+normod.Name = "normod"
+normod.Parent = main
+normod.BackgroundColor3 = Color3.new(0.439216, 0.384314, 0.54902)
+normod.BorderColor3 = Color3.new(0.792157, 0.45098, 1)
+normod.Position = UDim2.new(0.170212761, 0, 0.20769231, 0)
+normod.Size = UDim2.new(0, 152, 0, 32)
+normod.Font = Enum.Font.SciFi
+normod.Text = "NORMAL MODE"
+normod.TextColor3 = Color3.new(1, 1, 1)
+normod.TextSize = 14
+normod.MouseButton1Down:connect(function()
+		nor.Visible = true
+main.Visible = false
+		nor:TweenPosition(UDim2.new(0.707, 0,0.303, 0), "InOut", "Quad", 0.5, true, nil)
+
+end)
+
+surmod.Name = "surmod"
+surmod.Parent = main
+surmod.BackgroundColor3 = Color3.new(0.439216, 0.384314, 0.54902)
+surmod.BorderColor3 = Color3.new(0.792157, 0.45098, 1)
+surmod.Position = UDim2.new(0.170212761, 0, 0.546153843, 0)
+surmod.Size = UDim2.new(0, 152, 0, 32)
+surmod.Font = Enum.Font.SciFi
+surmod.Text = "SURVIVAL MODE"
+surmod.TextColor3 = Color3.new(1, 1, 1)
+surmod.TextSize = 14
+surmod.MouseButton1Down:connect(function()
+		sur.Visible = true
+main.Visible = false
+		sur:TweenPosition(UDim2.new(0.707, 0,0.303, 0), "InOut", "Quad", 0.5, true, nil)
+end)
+
+nor.Name = "nor"
+nor.Parent = ebgui
+nor.Active = true
+nor.BackgroundColor3 = Color3.new(0.690196, 0.690196, 0.690196)
+nor.Position = UDim2.new(0.389054716, 0, 0.327715337, 0)
+nor.Size = UDim2.new(0, 222, 0, 183)
+nor.Visible = false
+nor.Draggable = true
+
+little2.Name = "little2"
+little2.Parent = nor
+little2.BackgroundColor3 = Color3.new(0, 0, 0)
+little2.Position = UDim2.new(0, 0, -0.0710382536, 0)
+little2.Size = UDim2.new(0, 222, 0, 22)
+
+TextLabel_4.Parent = little2
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Size = UDim2.new(0, 222, 0, 22)
+TextLabel_4.Font = Enum.Font.SciFi
+TextLabel_4.Text = "KILLER GUI"
+TextLabel_4.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel_4.TextSize = 14
+
+TextLabel_5.Parent = little2
+TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.Position = UDim2.new(0.0720720738, 0, 1, 0)
+TextLabel_5.Size = UDim2.new(0, 195, 0, 22)
+TextLabel_5.Font = Enum.Font.SciFi
+TextLabel_5.Text = "Aimbot / Kill One Player"
+TextLabel_5.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_5.TextSize = 12
+
+TextLabel_6.Parent = little2
+TextLabel_6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.Position = UDim2.new(0.0585585609, 0, 4.72727299, 0)
+TextLabel_6.Size = UDim2.new(0, 195, 0, 22)
+TextLabel_6.Font = Enum.Font.SciFi
+TextLabel_6.Text = "Attack All And Auto Attack"
+TextLabel_6.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_6.TextSize = 12
+
+attk.Name = "attk"
+attk.Parent = nor
+attk.BackgroundColor3 = Color3.new(0, 0, 0)
+attk.BorderColor3 = Color3.new(0.992157, 1, 1)
+attk.Position = UDim2.new(0.153153151, 0, 0.366120219, 0)
+attk.Size = UDim2.new(0, 67, 0, 24)
+attk.Font = Enum.Font.SciFi
+attk.Text = "Attack"
+attk.TextColor3 = Color3.new(1, 1, 1)
+attk.TextSize = 14
+attk.MouseButton1Down:connect(function()
+	_G.attk = true
+	while _G.attk do
+		wait()
+	local d = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.Workspace:GetChildren()) do
+    if v.name == name.Text then
+        for _, b in pairs(v:GetChildren()) do
+            if b.name == "HumanoidRootPart" then
+                d.CFrame = b.CFrame
+end
+end
+end
+end
+end
+end)
+
+name.Name = "name"
+name.Parent = nor
+name.BackgroundColor3 = Color3.new(0, 0, 0)
+name.BorderColor3 = Color3.new(1, 1, 1)
+name.Position = UDim2.new(0.265765756, 0, 0.202185795, 0)
+name.Size = UDim2.new(0, 107, 0, 23)
+name.Font = Enum.Font.SciFi
+name.Text = "NAME"
+name.TextColor3 = Color3.new(1, 1, 1)
+name.TextSize = 14
+
+stp.Name = "stp"
+stp.Parent = nor
+stp.BackgroundColor3 = Color3.new(0, 0, 0)
+stp.BorderColor3 = Color3.new(0.992157, 1, 1)
+stp.Position = UDim2.new(0.567567527, 0, 0.366120219, 0)
+stp.Size = UDim2.new(0, 67, 0, 24)
+stp.Font = Enum.Font.SciFi
+stp.Text = "STOP"
+stp.TextColor3 = Color3.new(1, 1, 1)
+stp.TextSize = 14
+stp.MouseButton1Down:connect(function()
+	_G.attk = false
+end)
+
+attkall.Name = "attkall"
+attkall.Parent = nor
+attkall.BackgroundColor3 = Color3.new(0, 0, 0)
+attkall.BorderColor3 = Color3.new(0.992157, 1, 1)
+attkall.Position = UDim2.new(0.283783764, 0, 0.655737638, 0)
+attkall.Size = UDim2.new(0, 103, 0, 24)
+attkall.Font = Enum.Font.SciFi
+attkall.Text = "Attack All "
+attkall.TextColor3 = Color3.new(1, 1, 1)
+attkall.TextSize = 14
+attkall.MouseButton1Down:connect(function()
+_G.all = true
+while _G.all do
+wait()
+	local me = game.Players.LocalPlayer.Character
+local Players = game:GetService("Players")
+for i = 1, 50 do 
+for _,v in pairs(Players:GetPlayers()) do
+   me:SetPrimaryPartCFrame(v.Character:GetPrimaryPartCFrame())
+    wait(1)
+end
+end
+end
+end)
+
+stopall.Name = "stopall"
+stopall.Parent = nor
+stopall.BackgroundColor3 = Color3.new(0, 0, 0)
+stopall.BorderColor3 = Color3.new(0.992157, 1, 1)
+stopall.Position = UDim2.new(0.0720720738, 0, 0.841530025, 0)
+stopall.Size = UDim2.new(0, 94, 0, 17)
+stopall.Font = Enum.Font.SciFi
+stopall.Text = "STOP"
+stopall.TextColor3 = Color3.new(1, 1, 1)
+stopall.TextSize = 14
+stopall.MouseButton1Down:connect(function()
+	_G.all = true
+end)
+
+autoattttk.Name = "autoattttk"
+autoattttk.Parent = nor
+autoattttk.BackgroundColor3 = Color3.new(0, 0, 0)
+autoattttk.BorderColor3 = Color3.new(0.992157, 1, 1)
+autoattttk.Position = UDim2.new(0.531531513, 0, 0.841530025, 0)
+autoattttk.Size = UDim2.new(0, 93, 0, 17)
+autoattttk.Font = Enum.Font.SciFi
+autoattttk.Text = "Use Auto Attk"
+autoattttk.TextColor3 = Color3.new(1, 1, 1)
+autoattttk.TextSize = 14
+autoattttk.MouseButton1Down:connect(function()
+	while true do
+wait()
+game["Run Service"].RenderStepped:wait(2)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+TrueMagic = game.ReplicatedStorage.Remotes.DoMagic
+game.ReplicatedStorage.Remotes.DoClientMagic:FireServer("Fire", "Consecutive Fire Bullets")
+TrueMagic:InvokeServer("Fire", "Consecutive Fire Bullets", mouse.Target, mouse.Hit)
+end
+end)
+
+sur.Name = "sur"
+sur.Parent = ebgui
+sur.BackgroundColor3 = Color3.new(0.588235, 0, 0.00784314)
+sur.Position = UDim2.new(0.382089555, 0, 0.310861409, 0)
+sur.Size = UDim2.new(0, 237, 0, 238)
+sur.Visible = false
+sur.Draggable = true
+sur.Active = true
+
+little3.Name = "little3"
+little3.Parent = sur
+little3.BackgroundColor3 = Color3.new(0, 0, 0)
+little3.Position = UDim2.new(0, 0, -0.0398009941, 0)
+little3.Size = UDim2.new(0, 237, 0, 19)
+
+ImageLabel.Parent = little3
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(0, 0, 1, 0)
+ImageLabel.Size = UDim2.new(0, 237, 0, 228)
+ImageLabel.Image = "rbxassetid://2247431355"
+
+TextLabel_7.Parent = little3
+TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_7.BackgroundTransparency = 1
+TextLabel_7.BorderColor3 = Color3.new(0.988235, 0.988235, 0.988235)
+TextLabel_7.Position = UDim2.new(0.0759493634, 0, 1, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 19)
+TextLabel_7.Font = Enum.Font.SciFi
+TextLabel_7.Text = "SPECIFIC ZOMBIE FARM"
+TextLabel_7.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+TextLabel_7.TextSize = 12
+
+TextLabel_8.Parent = little3
+TextLabel_8.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_8.BackgroundTransparency = 1
+TextLabel_8.BorderColor3 = Color3.new(0.988235, 0.988235, 0.988235)
+TextLabel_8.Position = UDim2.new(0.0759999976, 0, 5.55299997, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 19)
+TextLabel_8.Font = Enum.Font.SciFi
+TextLabel_8.Text = "FARM ALL ZOMBIES"
+TextLabel_8.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+TextLabel_8.TextSize = 12
+
+TextLabel_9.Parent = little3
+TextLabel_9.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_9.BackgroundTransparency = 1
+TextLabel_9.Size = UDim2.new(0, 237, 0, 19)
+TextLabel_9.Font = Enum.Font.SciFi
+TextLabel_9.Text = "SURVIVAL FARMING GUI"
+TextLabel_9.TextColor3 = Color3.new(1, 0, 0.0156863)
+TextLabel_9.TextSize = 14
+sfarm.Name = "sfarm"
+sfarm.Parent = sur
+sfarm.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+sfarm.BorderColor3 = Color3.new(1, 1, 1)
+sfarm.Position = UDim2.new(0.0464135036, 0, 0.270308107, 0)
+sfarm.Size = UDim2.new(0, 95, 0, 26)
+sfarm.Font = Enum.Font.SciFi
+sfarm.Text = "FARM"
+sfarm.TextColor3 = Color3.new(1, 1, 1)
+sfarm.TextSize = 14
+sfarm.MouseButton1Down:connect(function()
+_G.sin = true
+while _G.sin do
+	wait()
+	local d = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.Workspace.enemies:GetChildren()) do
+    if v.name == TextBox.Text then
+        for _, b in pairs(v:GetChildren()) do
+            if b.name == "HumanoidRootPart" then
+                b.CFrame = d.CFrame
+end
+end
+end
+end
+end
+end)
+
+sstop.Name = "sstop"
+sstop.Parent = sur
+sstop.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+sstop.BorderColor3 = Color3.new(1, 1, 1)
+sstop.Position = UDim2.new(0.497890294, 0, 0.270308107, 0)
+sstop.Size = UDim2.new(0, 100, 0, 26)
+sstop.Font = Enum.Font.SciFi
+sstop.Text = "STOP"
+sstop.TextColor3 = Color3.new(1, 1, 1)
+sstop.TextSize = 14
+sstop.MouseButton1Down:connect(function()
+	_G.sin = false
+end)
+
+TextBox.Parent = sur
+TextBox.BackgroundColor3 = Color3.new(0.603922, 0.00392157, 0.0823529)
+TextBox.BorderColor3 = Color3.new(1, 0.988235, 1)
+TextBox.Position = UDim2.new(0.248945147, 0, 0.122162297, 0)
+TextBox.Size = UDim2.new(0, 118, 0, 26)
+TextBox.Font = Enum.Font.SciFi
+TextBox.Text = "NAME"
+TextBox.TextColor3 = Color3.new(1, 1, 1)
+TextBox.TextSize = 14
+
+bfarm.Name = "bfarm"
+bfarm.Parent = sur
+bfarm.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+bfarm.BorderColor3 = Color3.new(1, 1, 1)
+bfarm.Position = UDim2.new(0.0464135036, 0, 0.517621934, 0)
+bfarm.Size = UDim2.new(0, 95, 0, 26)
+bfarm.Font = Enum.Font.SciFi
+bfarm.Text = "BRING FARM"
+bfarm.TextColor3 = Color3.new(1, 1, 1)
+bfarm.TextSize = 14
+bfarm.MouseButton1Down:connect(function()
+_G.br = true
+	while _G.br do
+		wait()
+	local d = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.Workspace.enemies:GetChildren()) do
+    if v.name == "Zombie" then
+        for _, b in pairs(v:GetChildren()) do
+            if b.name == "HumanoidRootPart" then
+                b.CFrame = d.CFrame
+end
+end
+end
+end
+end
+end)
+
+bstop.Name = "bstop"
+bstop.Parent = sur
+bstop.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+bstop.BorderColor3 = Color3.new(1, 1, 1)
+bstop.Position = UDim2.new(0.497890294, 0, 0.517621934, 0)
+bstop.Size = UDim2.new(0, 100, 0, 26)
+bstop.Font = Enum.Font.SciFi
+bstop.Text = "STOP"
+bstop.TextColor3 = Color3.new(1, 1, 1)
+bstop.TextSize = 14
+bstop.MouseButton1Down:connect(function()
+	_G.br = false
+end)
+
+gfarm.Name = "gfarm"
+gfarm.Parent = sur
+gfarm.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+gfarm.BorderColor3 = Color3.new(1, 1, 1)
+gfarm.Position = UDim2.new(0.0464135036, 0, 0.68644172, 0)
+gfarm.Size = UDim2.new(0, 95, 0, 26)
+gfarm.Font = Enum.Font.SciFi
+gfarm.Text = "GOTO FARM"
+gfarm.TextColor3 = Color3.new(1, 1, 1)
+gfarm.TextSize = 14
+gfarm.MouseButton1Down:connect(function()
+_G.got = true
+	while _G.got do
+		wait()
+	local d = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.Workspace.enemies:GetChildren()) do
+    if v.name == "Zombie" then
+        for _, b in pairs(v:GetChildren()) do
+            if b.name == "HumanoidRootPart" then
+                d.CFrame = b.CFrame
+end
+end
+end
+end
+end
+end)
+
+gstop.Name = "gstop"
+gstop.Parent = sur
+gstop.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+gstop.BorderColor3 = Color3.new(1, 1, 1)
+gstop.Position = UDim2.new(0.497890294, 0, 0.68644172, 0)
+gstop.Size = UDim2.new(0, 100, 0, 26)
+gstop.Font = Enum.Font.SciFi
+gstop.Text = "STOP"
+gstop.TextColor3 = Color3.new(1, 1, 1)
+gstop.TextSize = 14
+gstop.MouseButton1Down:connect(function()
+	_G.got = false
+end)
+
+autoattk.Name = "autoattk"
+autoattk.Parent = sur
+autoattk.BackgroundColor3 = Color3.new(0.670588, 0, 0.00784314)
+autoattk.BorderColor3 = Color3.new(1, 1, 1)
+autoattk.Position = UDim2.new(0.286919832, 0, 0.846105576, 0)
+autoattk.Size = UDim2.new(0, 100, 0, 26)
+autoattk.Font = Enum.Font.SciFi
+autoattk.Text = "AUTO ATTACK"
+autoattk.TextColor3 = Color3.new(1, 1, 1)
+autoattk.TextSize = 14
+autoattk.MouseButton1Down:connect(function()
+	while true do
+game["Run Service"].RenderStepped:wait(2)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+TrueMagic = game.ReplicatedStorage.Remotes.DoMagic
+game.ReplicatedStorage.Remotes.DoClientMagic:FireServer("Fire", "Consecutive Fire Bullets")
+TrueMagic:InvokeServer("Fire", "Consecutive Fire Bullets", mouse.Target, mouse.Hit)
+end
+end)
+print("Edit Script On Line 281 And 282 To your Magic Name")
+print("Edit Script On Line 490 And 491 To your Magic Name")
+warn("Created By FunTrat0r#0020")
+warn("DarkDevs.Ga")

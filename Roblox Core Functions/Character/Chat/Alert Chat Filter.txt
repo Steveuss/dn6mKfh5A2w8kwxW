@@ -1,0 +1,1 @@
+for i = 1,3 do game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(' ','All') end

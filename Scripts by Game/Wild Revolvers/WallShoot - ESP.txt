@@ -1,0 +1,70 @@
+local RunService = game:GetService("RunService")
+
+local ChamsFolder = Instance.new("Folder", game.CoreGui)
+
+function transformToColor3(col) --Function to convert, just cuz c;
+    local r = col.r --Red value
+    local g = col.g --Green value
+    local b = col.b --Blue value
+    return Color3.new(r,g,b); --Color3 datatype, made of the RGB inputs
+end
+
+RunService.RenderStepped:Connect(function()
+    ChamsFolder:ClearAllChildren()
+    for _, player in pairs(game.Players:GetPlayers()) do
+        local character = player.Character or player.CharacterAdded:Wait()
+        if not character then
+            return
+        end
+        for _, part in pairs(character:GetChildren()) do
+            if not character:FindFirstChildOfClass("Shirt") then
+                return
+            end
+            if part:IsA("BasePart") then
+                if character:FindFirstChildOfClass("Shirt").ShirtTemplate ~= game.Players.LocalPlayer.Character:FindFirstChildOfClass("Shirt").ShirtTemplate then
+                    local Box = Instance.new("BoxHandleAdornment")
+                    Box.Size = part.Size
+                    Box.Name = "Cham"
+                    Box.Adornee = part
+                    Box.AlwaysOnTop = true
+                    Box.ZIndex = 5
+                    Box.Transparency = 0.5
+                    Box.Color3 = transformToColor3(BrickColor.new("Bright red"))
+                    Box.Parent = ChamsFolder
+                end
+            end
+        end
+    end
+end)
+
+local function getMap()
+    local map
+
+    for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+        if v:IsA("Folder") and v.Name ~= "PlayerData" and v.Name ~= "Lobbies" then
+            map = v
+        end
+    end
+
+    return map
+end
+
+local mt = getrawmetatable(game)
+local oldNamecall = mt.__namecall
+if setreadonly then setreadonly(mt, false) else make_writeable(mt, true) end
+local namecallMethod = getnamecallmethod or get_namecall_method
+local newClose = newcclosure or function(f) return f end
+
+mt.__namecall = newClose(function(...)
+    local method = namecallMethod()
+    local args = {...}
+
+    if tostring(method) == "FindPartOnRayWithIgnoreList" then
+        table.insert(args[3], getMap())
+        return oldNamecall(unpack(args))
+    end
+
+    return oldNamecall(...)
+end)
+
+if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end

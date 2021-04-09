@@ -1,0 +1,1391 @@
+--Original script quuisiYT or quu
+local moving_anthro_npc = Instance.new("Model")
+local body_colors = Instance.new("BodyColors", moving_anthro_npc)
+local humanoidrootpart = Instance.new("Part")
+local rootrigattachment = Instance.new("Attachment")
+local humanoid = Instance.new("Humanoid")
+local animator = Instance.new("Animator", humanoid)
+local head = Instance.new("Part")
+local neckrigattachment = Instance.new("Attachment")
+local originalpivot = Instance.new("Vector3Value")
+local hatattachment = Instance.new("Attachment")
+local originalpivot_2 = Instance.new("Vector3Value")
+local hairattachment = Instance.new("Attachment")
+local originalpivot_3 = Instance.new("Vector3Value")
+local facefrontattachment = Instance.new("Attachment")
+local originalpivot_4 = Instance.new("Vector3Value")
+local facecenterattachment = Instance.new("Attachment")
+local originalpivot_5 = Instance.new("Vector3Value")
+local originalsize = Instance.new("Vector3Value")
+local neck = Instance.new("Motor6D")
+local mesh = Instance.new("SpecialMesh")
+local lefthand = Instance.new("Part")
+local leftwristrigattachment = Instance.new("Attachment")
+local originalpivot_6 = Instance.new("Vector3Value")
+local leftgripattachment = Instance.new("Attachment")
+local originalpivot_7 = Instance.new("Vector3Value")
+local originalsize_2 = Instance.new("Vector3Value")
+local leftwrist = Instance.new("Motor6D")
+local mesh_2 = Instance.new("SpecialMesh")
+local leftlowerarm = Instance.new("Part")
+local leftelbowrigattachment = Instance.new("Attachment")
+local originalpivot_8 = Instance.new("Vector3Value")
+local leftwristrigattachment_2 = Instance.new("Attachment")
+local originalpivot_9 = Instance.new("Vector3Value")
+local originalsize_3 = Instance.new("Vector3Value")
+local leftelbow = Instance.new("Motor6D")
+local mesh_3 = Instance.new("SpecialMesh")
+local leftupperarm = Instance.new("Part")
+local leftshoulderrigattachment = Instance.new("Attachment")
+local originalpivot_10 = Instance.new("Vector3Value")
+local leftelbowrigattachment_2 = Instance.new("Attachment")
+local originalpivot_11 = Instance.new("Vector3Value")
+local leftshoulderattachment = Instance.new("Attachment")
+local originalpivot_12 = Instance.new("Vector3Value")
+local originalsize_4 = Instance.new("Vector3Value")
+local leftshoulder = Instance.new("Motor6D")
+local mesh_4 = Instance.new("SpecialMesh")
+local righthand = Instance.new("Part")
+local rightwristrigattachment = Instance.new("Attachment")
+local originalpivot_13 = Instance.new("Vector3Value")
+local rightgripattachment = Instance.new("Attachment")
+local originalpivot_14 = Instance.new("Vector3Value")
+local originalsize_5 = Instance.new("Vector3Value")
+local rightwrist = Instance.new("Motor6D")
+local mesh_5 = Instance.new("SpecialMesh")
+local rightlowerarm = Instance.new("Part")
+local rightelbowrigattachment = Instance.new("Attachment")
+local originalpivot_15 = Instance.new("Vector3Value")
+local rightwristrigattachment_2 = Instance.new("Attachment")
+local originalpivot_16 = Instance.new("Vector3Value")
+local originalsize_6 = Instance.new("Vector3Value")
+local rightelbow = Instance.new("Motor6D")
+local mesh_6 = Instance.new("SpecialMesh")
+local rightupperarm = Instance.new("Part")
+local rightshoulderrigattachment = Instance.new("Attachment")
+local originalpivot_17 = Instance.new("Vector3Value")
+local rightelbowrigattachment_2 = Instance.new("Attachment")
+local originalpivot_18 = Instance.new("Vector3Value")
+local rightshoulderattachment = Instance.new("Attachment")
+local originalpivot_19 = Instance.new("Vector3Value")
+local originalsize_7 = Instance.new("Vector3Value")
+local rightshoulder = Instance.new("Motor6D")
+local mesh_7 = Instance.new("SpecialMesh")
+local uppertorso = Instance.new("Part")
+local waistrigattachment = Instance.new("Attachment")
+local originalpivot_20 = Instance.new("Vector3Value")
+local neckrigattachment_2 = Instance.new("Attachment")
+local originalpivot_21 = Instance.new("Vector3Value")
+local leftshoulderrigattachment_2 = Instance.new("Attachment")
+local originalpivot_22 = Instance.new("Vector3Value")
+local rightshoulderrigattachment_2 = Instance.new("Attachment")
+local originalpivot_23 = Instance.new("Vector3Value")
+local bodyfrontattachment = Instance.new("Attachment")
+local originalpivot_24 = Instance.new("Vector3Value")
+local bodybackattachment = Instance.new("Attachment")
+local originalpivot_25 = Instance.new("Vector3Value")
+local neckattachment = Instance.new("Attachment")
+local originalpivot_26 = Instance.new("Vector3Value")
+local rightcollarattachment = Instance.new("Attachment")
+local originalpivot_27 = Instance.new("Vector3Value")
+local leftcollarattachment = Instance.new("Attachment")
+local originalpivot_28 = Instance.new("Vector3Value")
+local originalsize_8 = Instance.new("Vector3Value")
+local waist = Instance.new("Motor6D")
+local mesh_8 = Instance.new("SpecialMesh")
+local leftfoot = Instance.new("Part")
+local leftanklerigattachment = Instance.new("Attachment")
+local originalpivot_29 = Instance.new("Vector3Value")
+local originalsize_9 = Instance.new("Vector3Value")
+local leftankle = Instance.new("Motor6D")
+local mesh_9 = Instance.new("SpecialMesh")
+local leftlowerleg = Instance.new("Part")
+local leftkneerigattachment = Instance.new("Attachment")
+local originalpivot_30 = Instance.new("Vector3Value")
+local leftanklerigattachment_2 = Instance.new("Attachment")
+local originalpivot_31 = Instance.new("Vector3Value")
+local originalsize_10 = Instance.new("Vector3Value")
+local leftknee = Instance.new("Motor6D")
+local mesh_10 = Instance.new("SpecialMesh")
+local leftupperleg = Instance.new("Part")
+local lefthiprigattachment = Instance.new("Attachment")
+local originalpivot_32 = Instance.new("Vector3Value")
+local leftkneerigattachment_2 = Instance.new("Attachment")
+local originalpivot_33 = Instance.new("Vector3Value")
+local originalsize_11 = Instance.new("Vector3Value")
+local lefthip = Instance.new("Motor6D")
+local mesh_11 = Instance.new("SpecialMesh")
+local rightfoot = Instance.new("Part")
+local rightanklerigattachment = Instance.new("Attachment")
+local originalpivot_34 = Instance.new("Vector3Value")
+local originalsize_12 = Instance.new("Vector3Value")
+local rightankle = Instance.new("Motor6D")
+local mesh_12 = Instance.new("SpecialMesh")
+local rightlowerleg = Instance.new("Part")
+local rightkneerigattachment = Instance.new("Attachment")
+local originalpivot_35 = Instance.new("Vector3Value")
+local rightanklerigattachment_2 = Instance.new("Attachment")
+local originalpivot_36 = Instance.new("Vector3Value")
+local originalsize_13 = Instance.new("Vector3Value")
+local rightknee = Instance.new("Motor6D")
+local mesh_13 = Instance.new("SpecialMesh")
+local rightupperleg = Instance.new("Part")
+local righthiprigattachment = Instance.new("Attachment")
+local originalpivot_37 = Instance.new("Vector3Value")
+local rightkneerigattachment_2 = Instance.new("Attachment")
+local originalpivot_38 = Instance.new("Vector3Value")
+local originalsize_14 = Instance.new("Vector3Value")
+local righthip = Instance.new("Motor6D")
+local mesh_14 = Instance.new("SpecialMesh")
+local lowertorso = Instance.new("Part")
+local rootrigattachment_2 = Instance.new("Attachment")
+local originalpivot_39 = Instance.new("Vector3Value")
+local waistrigattachment_2 = Instance.new("Attachment")
+local originalpivot_40 = Instance.new("Vector3Value")
+local lefthiprigattachment_2 = Instance.new("Attachment")
+local originalpivot_41 = Instance.new("Vector3Value")
+local righthiprigattachment_2 = Instance.new("Attachment")
+local originalpivot_42 = Instance.new("Vector3Value")
+local waistcenterattachment = Instance.new("Attachment")
+local originalpivot_43 = Instance.new("Vector3Value")
+local waistfrontattachment = Instance.new("Attachment")
+local originalpivot_44 = Instance.new("Vector3Value")
+local waistbackattachment = Instance.new("Attachment")
+local originalpivot_45 = Instance.new("Vector3Value")
+local originalsize_15 = Instance.new("Vector3Value")
+local root = Instance.new("Motor6D")
+local mesh_15 = Instance.new("SpecialMesh")
+
+moving_anthro_npc.Name = "Moving Anthro [NPC]"
+moving_anthro_npc.Parent = workspace
+humanoidrootpart.Size = Vector3.new(2, 2, 1)
+humanoidrootpart.Material = Enum.Material.SmoothPlastic
+humanoidrootpart.Orientation = Vector3.new(0, -166.02, 0)
+humanoidrootpart.Name = "HumanoidRootPart"
+humanoidrootpart.Transparency = 1
+humanoidrootpart.Parent = moving_anthro_npc
+humanoidrootpart.CFrame = CFrame.new(-8.268, 3.443, -57.903) * CFrame.Angles(3.142, -0.244, 3.142)
+rootrigattachment.Name = "RootRigAttachment"
+rootrigattachment.Parent = humanoidrootpart
+humanoid.HipHeight = 2.5
+humanoid.RigType = Enum.HumanoidRigType.R15
+humanoid.Parent = moving_anthro_npc
+head.Size = Vector3.new(0.693, 1.001, 0.93)
+head.Color = Color3.new(0.992157, 0.917647, 0.552941)
+head.Name = "Head"
+head.Material = Enum.Material.SmoothPlastic
+head.BrickColor = BrickColor.new("Cool yellow")
+head.Orientation = Vector3.new(0, -166.02, 0)
+head.Parent = moving_anthro_npc
+head.CFrame = CFrame.new(-8.26, 6.045, -57.87) * CFrame.Angles(3.142, -0.244, 3.142)
+neckrigattachment.Position = Vector3.new(0, -0.384, -0.057)
+neckrigattachment.Name = "NeckRigAttachment"
+neckrigattachment.CFrame = CFrame.new(0, -0.384, -0.057)
+neckrigattachment.Parent = head
+originalpivot.Value = Vector3.new(0, -0.307, -0.045)
+originalpivot.Name = "OriginalPivot"
+originalpivot.Parent = neckrigattachment
+hatattachment.Position = Vector3.new(0, 0.25, 0.034)
+hatattachment.Name = "HatAttachment"
+hatattachment.CFrame = CFrame.new(0, 0.25, 0.034)
+hatattachment.Parent = head
+originalpivot_2.Value = Vector3.new(0, 0.2, 0.027)
+originalpivot_2.Name = "OriginalPivot"
+originalpivot_2.Parent = hatattachment
+hairattachment.Position = Vector3.new(0, 0.25, 0.034)
+hairattachment.Name = "HairAttachment"
+hairattachment.CFrame = CFrame.new(0, 0.25, 0.034)
+hairattachment.Parent = head
+originalpivot_3.Value = Vector3.new(0, 0.2, 0.027)
+originalpivot_3.Name = "OriginalPivot"
+originalpivot_3.Parent = hairattachment
+facefrontattachment.Position = Vector3.new(0, -0.239, -0.36)
+facefrontattachment.Name = "FaceFrontAttachment"
+facefrontattachment.CFrame = CFrame.new(0, -0.239, -0.36)
+facefrontattachment.Parent = head
+originalpivot_4.Value = Vector3.new(0, -0.191, -0.288)
+originalpivot_4.Name = "OriginalPivot"
+originalpivot_4.Parent = facefrontattachment
+facecenterattachment.Position = Vector3.new(0, -0.103, 0.034)
+facecenterattachment.Name = "FaceCenterAttachment"
+facecenterattachment.CFrame = CFrame.new(0, -0.103, 0.034)
+facecenterattachment.Parent = head
+originalpivot_5.Value = Vector3.new(0, -0.082, 0.027)
+originalpivot_5.Name = "OriginalPivot"
+originalpivot_5.Parent = facecenterattachment
+originalsize.Value = Vector3.new(0.554, 0.801, 0.744)
+originalsize.Name = "OriginalSize"
+originalsize.Parent = head
+neck.Part1 = head
+neck.C0 = CFrame.new(0, 0.981, -0.046)
+neck.Part0 = uppertorso
+neck.C1 = CFrame.new(0, -0.384, -0.057)
+neck.Name = "Neck"
+neck.Parent = head
+mesh.MeshType = Enum.MeshType.FileMesh
+mesh.Scale = Vector3.new(1.2, 1.2, 1.2)
+mesh.MeshId = "rbxassetid://875229544"
+mesh.TextureId = "rbxassetid://853067666"
+mesh.Parent = head
+lefthand.CanCollide = false
+lefthand.Size = Vector3.new(0.369, 0.777, 0.423)
+lefthand.BrickColor = BrickColor.new("Cool yellow")
+lefthand.Material = Enum.Material.SmoothPlastic
+lefthand.Color = Color3.new(0.992157, 0.917647, 0.552941)
+lefthand.Orientation = Vector3.new(0, -166.02, 0)
+lefthand.Name = "LeftHand"
+lefthand.Parent = moving_anthro_npc
+lefthand.CFrame = CFrame.new(-7.428, 2.811, -57.824) * CFrame.Angles(3.142, -0.244, 3.142)
+leftwristrigattachment.Position = Vector3.new(-0.104, 0.272, 0.043)
+leftwristrigattachment.Name = "LeftWristRigAttachment"
+leftwristrigattachment.CFrame = CFrame.new(-0.104, 0.272, 0.043)
+leftwristrigattachment.Parent = lefthand
+originalpivot_6.Value = Vector3.new(-0.083, 0.218, 0.034)
+originalpivot_6.Name = "OriginalPivot"
+originalpivot_6.Parent = leftwristrigattachment
+leftgripattachment.Rotation = Vector3.new(-90, 0, 0)
+leftgripattachment.CFrame = CFrame.new(0.033, 0.006, 0.279) * CFrame.Angles(-1.571, 0, 0)
+leftgripattachment.Orientation = Vector3.new(-90, 0, 0)
+leftgripattachment.Name = "LeftGripAttachment"
+leftgripattachment.SecondaryAxis = Vector3.new(0, 0, -1)
+leftgripattachment.Position = Vector3.new(0.033, 0.006, 0.279)
+leftgripattachment.Parent = lefthand
+originalpivot_7.Value = Vector3.new(0.027, 0.005, 0.224)
+originalpivot_7.Name = "OriginalPivot"
+originalpivot_7.Parent = leftgripattachment
+originalsize_2.Value = Vector3.new(0.295, 0.621, 0.339)
+originalsize_2.Name = "OriginalSize"
+originalsize_2.Parent = lefthand
+leftwrist.Part1 = lefthand
+leftwrist.C0 = CFrame.new(-0.019, -0.508, -0.166)
+leftwrist.Part0 = leftlowerarm
+leftwrist.C1 = CFrame.new(-0.104, 0.272, 0.043)
+leftwrist.Name = "LeftWrist"
+leftwrist.Parent = lefthand
+mesh_2.MeshType = Enum.MeshType.FileMesh
+mesh_2.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_2.MeshId = "rbxassetid://875229553"
+mesh_2.TextureId = "rbxassetid://853067666"
+mesh_2.Parent = lefthand
+leftlowerarm.CanCollide = false
+leftlowerarm.Size = Vector3.new(0.353, 1.149, 0.587)
+leftlowerarm.BrickColor = BrickColor.new("Cool yellow")
+leftlowerarm.Material = Enum.Material.SmoothPlastic
+leftlowerarm.Color = Color3.new(0.992157, 0.917647, 0.552941)
+leftlowerarm.Orientation = Vector3.new(0, -166.02, 0)
+leftlowerarm.Name = "LeftLowerArm"
+leftlowerarm.Parent = moving_anthro_npc
+leftlowerarm.CFrame = CFrame.new(-7.396, 3.591, -58.047) * CFrame.Angles(3.142, -0.244, 3.142)
+leftelbowrigattachment.Position = Vector3.new(-0.019, 0.498, 0.169)
+leftelbowrigattachment.Name = "LeftElbowRigAttachment"
+leftelbowrigattachment.CFrame = CFrame.new(-0.019, 0.498, 0.169)
+leftelbowrigattachment.Parent = leftlowerarm
+originalpivot_8.Value = Vector3.new(-0.015, 0.398, 0.135)
+originalpivot_8.Name = "OriginalPivot"
+originalpivot_8.Parent = leftelbowrigattachment
+leftwristrigattachment_2.Position = Vector3.new(-0.019, -0.508, -0.166)
+leftwristrigattachment_2.Name = "LeftWristRigAttachment"
+leftwristrigattachment_2.CFrame = CFrame.new(-0.019, -0.508, -0.166)
+leftwristrigattachment_2.Parent = leftlowerarm
+originalpivot_9.Value = Vector3.new(-0.015, -0.406, -0.133)
+originalpivot_9.Name = "OriginalPivot"
+originalpivot_9.Parent = leftwristrigattachment_2
+originalsize_3.Value = Vector3.new(0.282, 0.919, 0.469)
+originalsize_3.Name = "OriginalSize"
+originalsize_3.Parent = leftlowerarm
+leftelbow.Part1 = leftlowerarm
+leftelbow.C0 = CFrame.new(-0.116, -0.543, 0.05)
+leftelbow.Part0 = leftupperarm
+leftelbow.C1 = CFrame.new(-0.019, 0.498, 0.169)
+leftelbow.Name = "LeftElbow"
+leftelbow.Parent = leftlowerarm
+mesh_3.MeshType = Enum.MeshType.FileMesh
+mesh_3.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_3.MeshId = "rbxassetid://875229562"
+mesh_3.TextureId = "rbxassetid://853067666"
+mesh_3.Parent = leftlowerarm
+leftupperarm.CanCollide = false
+leftupperarm.Size = Vector3.new(0.494, 1.347, 0.643)
+leftupperarm.BrickColor = BrickColor.new("Cool yellow")
+leftupperarm.Material = Enum.Material.SmoothPlastic
+leftupperarm.Color = Color3.new(0.992157, 0.917647, 0.552941)
+leftupperarm.Orientation = Vector3.new(0, -166.02, 0)
+leftupperarm.Name = "LeftUpperArm"
+leftupperarm.Parent = moving_anthro_npc
+leftupperarm.CFrame = CFrame.new(-7.519, 4.632, -58.139) * CFrame.Angles(3.142, -0.244, 3.142)
+leftshoulderrigattachment.Position = Vector3.new(0.165, 0.367, 0.036)
+leftshoulderrigattachment.Name = "LeftShoulderRigAttachment"
+leftshoulderrigattachment.CFrame = CFrame.new(0.165, 0.367, 0.036)
+leftshoulderrigattachment.Parent = leftupperarm
+originalpivot_10.Value = Vector3.new(0.132, 0.294, 0.029)
+originalpivot_10.Name = "OriginalPivot"
+originalpivot_10.Parent = leftshoulderrigattachment
+leftelbowrigattachment_2.Position = Vector3.new(-0.116, -0.543, 0.05)
+leftelbowrigattachment_2.Name = "LeftElbowRigAttachment"
+leftelbowrigattachment_2.CFrame = CFrame.new(-0.116, -0.543, 0.05)
+leftelbowrigattachment_2.Parent = leftupperarm
+originalpivot_11.Value = Vector3.new(-0.093, -0.434, 0.04)
+originalpivot_11.Name = "OriginalPivot"
+originalpivot_11.Parent = leftelbowrigattachment_2
+leftshoulderattachment.Position = Vector3.new(0.109, 0.698, -0.048)
+leftshoulderattachment.Name = "LeftShoulderAttachment"
+leftshoulderattachment.CFrame = CFrame.new(0.109, 0.698, -0.048)
+leftshoulderattachment.Parent = leftupperarm
+originalpivot_12.Value = Vector3.new(0.087, 0.559, -0.039)
+originalpivot_12.Name = "OriginalPivot"
+originalpivot_12.Parent = leftshoulderattachment
+originalsize_4.Value = Vector3.new(0.395, 1.078, 0.514)
+originalsize_4.Name = "OriginalSize"
+originalsize_4.Parent = leftupperarm
+leftshoulder.Part1 = leftupperarm
+leftshoulder.C0 = CFrame.new(-0.619, 0.319, 0.129)
+leftshoulder.Part0 = uppertorso
+leftshoulder.C1 = CFrame.new(0.165, 0.367, 0.036)
+leftshoulder.Name = "LeftShoulder"
+leftshoulder.Parent = leftupperarm
+mesh_4.MeshType = Enum.MeshType.FileMesh
+mesh_4.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_4.MeshId = "rbxassetid://875229564"
+mesh_4.TextureId = "rbxassetid://853067666"
+mesh_4.Parent = leftupperarm
+righthand.CanCollide = false
+righthand.Size = Vector3.new(0.369, 0.777, 0.423)
+righthand.BrickColor = BrickColor.new("Cool yellow")
+righthand.Material = Enum.Material.SmoothPlastic
+righthand.Color = Color3.new(0.992157, 0.917647, 0.552941)
+righthand.Orientation = Vector3.new(0, -166.02, 0)
+righthand.Name = "RightHand"
+righthand.Parent = moving_anthro_npc
+righthand.CFrame = CFrame.new(-8.973, 2.811, -57.439) * CFrame.Angles(3.142, -0.244, 3.142)
+rightwristrigattachment.Position = Vector3.new(0.104, 0.272, 0.043)
+rightwristrigattachment.Name = "RightWristRigAttachment"
+rightwristrigattachment.CFrame = CFrame.new(0.104, 0.272, 0.043)
+rightwristrigattachment.Parent = righthand
+originalpivot_13.Value = Vector3.new(0.083, 0.218, 0.034)
+originalpivot_13.Name = "OriginalPivot"
+originalpivot_13.Parent = rightwristrigattachment
+rightgripattachment.Rotation = Vector3.new(-90, 0, 0)
+rightgripattachment.CFrame = CFrame.new(-0.033, 0.006, 0.279) * CFrame.Angles(-1.571, 0, 0)
+rightgripattachment.Orientation = Vector3.new(-90, 0, 0)
+rightgripattachment.Name = "RightGripAttachment"
+rightgripattachment.SecondaryAxis = Vector3.new(0, 0, -1)
+rightgripattachment.Position = Vector3.new(-0.033, 0.006, 0.279)
+rightgripattachment.Parent = righthand
+originalpivot_14.Value = Vector3.new(-0.027, 0.005, 0.224)
+originalpivot_14.Name = "OriginalPivot"
+originalpivot_14.Parent = rightgripattachment
+originalsize_5.Value = Vector3.new(0.295, 0.621, 0.339)
+originalsize_5.Name = "OriginalSize"
+originalsize_5.Parent = righthand
+rightwrist.Part1 = righthand
+rightwrist.C0 = CFrame.new(0.019, -0.508, -0.166)
+rightwrist.Part0 = rightlowerarm
+rightwrist.C1 = CFrame.new(0.104, 0.272, 0.043)
+rightwrist.Name = "RightWrist"
+rightwrist.Parent = righthand
+mesh_5.MeshType = Enum.MeshType.FileMesh
+mesh_5.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_5.MeshId = "rbxassetid://875229570"
+mesh_5.TextureId = "rbxassetid://853067666"
+mesh_5.Parent = righthand
+rightlowerarm.CanCollide = false
+rightlowerarm.Size = Vector3.new(0.353, 1.149, 0.587)
+rightlowerarm.BrickColor = BrickColor.new("Cool yellow")
+rightlowerarm.Material = Enum.Material.SmoothPlastic
+rightlowerarm.Color = Color3.new(0.992157, 0.917647, 0.552941)
+rightlowerarm.Orientation = Vector3.new(0, -166.02, 0)
+rightlowerarm.Name = "RightLowerArm"
+rightlowerarm.Parent = moving_anthro_npc
+rightlowerarm.CFrame = CFrame.new(-9.106, 3.591, -57.621) * CFrame.Angles(3.142, -0.244, 3.142)
+rightelbowrigattachment.Position = Vector3.new(0.019, 0.498, 0.169)
+rightelbowrigattachment.Name = "RightElbowRigAttachment"
+rightelbowrigattachment.CFrame = CFrame.new(0.019, 0.498, 0.169)
+rightelbowrigattachment.Parent = rightlowerarm
+originalpivot_15.Value = Vector3.new(0.015, 0.398, 0.135)
+originalpivot_15.Name = "OriginalPivot"
+originalpivot_15.Parent = rightelbowrigattachment
+rightwristrigattachment_2.Position = Vector3.new(0.019, -0.508, -0.166)
+rightwristrigattachment_2.Name = "RightWristRigAttachment"
+rightwristrigattachment_2.CFrame = CFrame.new(0.019, -0.508, -0.166)
+rightwristrigattachment_2.Parent = rightlowerarm
+originalpivot_16.Value = Vector3.new(0.015, -0.406, -0.133)
+originalpivot_16.Name = "OriginalPivot"
+originalpivot_16.Parent = rightwristrigattachment_2
+originalsize_6.Value = Vector3.new(0.282, 0.919, 0.469)
+originalsize_6.Name = "OriginalSize"
+originalsize_6.Parent = rightlowerarm
+rightelbow.Part1 = rightlowerarm
+rightelbow.C0 = CFrame.new(0.116, -0.543, 0.05)
+rightelbow.Part0 = rightupperarm
+rightelbow.C1 = CFrame.new(0.019, 0.498, 0.169)
+rightelbow.Name = "RightElbow"
+rightelbow.Parent = rightlowerarm
+mesh_6.MeshType = Enum.MeshType.FileMesh
+mesh_6.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_6.MeshId = "rbxassetid://875229578"
+mesh_6.TextureId = "rbxassetid://853067666"
+mesh_6.Parent = rightlowerarm
+rightupperarm.CanCollide = false
+rightupperarm.Size = Vector3.new(0.494, 1.347, 0.643)
+rightupperarm.BrickColor = BrickColor.new("Cool yellow")
+rightupperarm.Material = Enum.Material.SmoothPlastic
+rightupperarm.Color = Color3.new(0.992157, 0.917647, 0.552941)
+rightupperarm.Orientation = Vector3.new(0, -166.02, 0)
+rightupperarm.Name = "RightUpperArm"
+rightupperarm.Parent = moving_anthro_npc
+rightupperarm.CFrame = CFrame.new(-9.04, 4.632, -57.76) * CFrame.Angles(3.142, -0.244, 3.142)
+rightshoulderrigattachment.Position = Vector3.new(-0.165, 0.367, 0.036)
+rightshoulderrigattachment.Name = "RightShoulderRigAttachment"
+rightshoulderrigattachment.CFrame = CFrame.new(-0.165, 0.367, 0.036)
+rightshoulderrigattachment.Parent = rightupperarm
+originalpivot_17.Value = Vector3.new(-0.132, 0.294, 0.029)
+originalpivot_17.Name = "OriginalPivot"
+originalpivot_17.Parent = rightshoulderrigattachment
+rightelbowrigattachment_2.Position = Vector3.new(0.116, -0.543, 0.05)
+rightelbowrigattachment_2.Name = "RightElbowRigAttachment"
+rightelbowrigattachment_2.CFrame = CFrame.new(0.116, -0.543, 0.05)
+rightelbowrigattachment_2.Parent = rightupperarm
+originalpivot_18.Value = Vector3.new(0.093, -0.434, 0.04)
+originalpivot_18.Name = "OriginalPivot"
+originalpivot_18.Parent = rightelbowrigattachment_2
+rightshoulderattachment.Position = Vector3.new(-0.109, 0.669, -0.048)
+rightshoulderattachment.Name = "RightShoulderAttachment"
+rightshoulderattachment.CFrame = CFrame.new(-0.109, 0.669, -0.048)
+rightshoulderattachment.Parent = rightupperarm
+originalpivot_19.Value = Vector3.new(-0.087, 0.535, -0.039)
+originalpivot_19.Name = "OriginalPivot"
+originalpivot_19.Parent = rightshoulderattachment
+originalsize_7.Value = Vector3.new(0.395, 1.078, 0.514)
+originalsize_7.Name = "OriginalSize"
+originalsize_7.Parent = rightupperarm
+rightshoulder.Part1 = rightupperarm
+rightshoulder.C0 = CFrame.new(0.619, 0.319, 0.129)
+rightshoulder.Part0 = uppertorso
+rightshoulder.C1 = CFrame.new(-0.165, 0.367, 0.036)
+rightshoulder.Name = "RightShoulder"
+rightshoulder.Parent = rightupperarm
+mesh_7.MeshType = Enum.MeshType.FileMesh
+mesh_7.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_7.MeshId = "rbxassetid://875229582"
+mesh_7.TextureId = "rbxassetid://853067666"
+mesh_7.Parent = rightupperarm
+uppertorso.Size = Vector3.new(1.488, 2.231, 1.006)
+uppertorso.Color = Color3.new(0.156863, 0.498039, 0.278431)
+uppertorso.Name = "UpperTorso"
+uppertorso.Material = Enum.Material.SmoothPlastic
+uppertorso.BrickColor = BrickColor.new("Dark green")
+uppertorso.Orientation = Vector3.new(0, -166.02, 0)
+uppertorso.Parent = moving_anthro_npc
+uppertorso.CFrame = CFrame.new(-8.257, 4.68, -57.859) * CFrame.Angles(3.142, -0.244, 3.142)
+waistrigattachment.Position = Vector3.new(0, -0.843, 0.045)
+waistrigattachment.Name = "WaistRigAttachment"
+waistrigattachment.CFrame = CFrame.new(0, -0.843, 0.045)
+waistrigattachment.Parent = uppertorso
+originalpivot_20.Value = Vector3.new(0, -0.674, 0.036)
+originalpivot_20.Name = "OriginalPivot"
+originalpivot_20.Parent = waistrigattachment
+neckrigattachment_2.Position = Vector3.new(0, 0.981, -0.046)
+neckrigattachment_2.Name = "NeckRigAttachment"
+neckrigattachment_2.CFrame = CFrame.new(0, 0.981, -0.046)
+neckrigattachment_2.Parent = uppertorso
+originalpivot_21.Value = Vector3.new(0, 0.785, -0.037)
+originalpivot_21.Name = "OriginalPivot"
+originalpivot_21.Parent = neckrigattachment_2
+leftshoulderrigattachment_2.Position = Vector3.new(-0.619, 0.319, 0.129)
+leftshoulderrigattachment_2.Name = "LeftShoulderRigAttachment"
+leftshoulderrigattachment_2.CFrame = CFrame.new(-0.619, 0.319, 0.129)
+leftshoulderrigattachment_2.Parent = uppertorso
+originalpivot_22.Value = Vector3.new(-0.495, 0.255, 0.103)
+originalpivot_22.Name = "OriginalPivot"
+originalpivot_22.Parent = leftshoulderrigattachment_2
+rightshoulderrigattachment_2.Position = Vector3.new(0.619, 0.319, 0.129)
+rightshoulderrigattachment_2.Name = "RightShoulderRigAttachment"
+rightshoulderrigattachment_2.CFrame = CFrame.new(0.619, 0.319, 0.129)
+rightshoulderrigattachment_2.Parent = uppertorso
+originalpivot_23.Value = Vector3.new(0.495, 0.255, 0.103)
+originalpivot_23.Name = "OriginalPivot"
+originalpivot_23.Parent = rightshoulderrigattachment_2
+bodyfrontattachment.Position = Vector3.new(0, -0.425, -0.48)
+bodyfrontattachment.Name = "BodyFrontAttachment"
+bodyfrontattachment.CFrame = CFrame.new(0, -0.425, -0.48)
+bodyfrontattachment.Parent = uppertorso
+originalpivot_24.Value = Vector3.new(0, -0.34, -0.384)
+originalpivot_24.Name = "OriginalPivot"
+originalpivot_24.Parent = bodyfrontattachment
+bodybackattachment.Position = Vector3.new(0, -0.425, 0.32)
+bodybackattachment.Name = "BodyBackAttachment"
+bodybackattachment.CFrame = CFrame.new(0, -0.425, 0.32)
+bodybackattachment.Parent = uppertorso
+originalpivot_25.Value = Vector3.new(0, -0.34, 0.256)
+originalpivot_25.Name = "OriginalPivot"
+originalpivot_25.Parent = bodybackattachment
+neckattachment.Position = Vector3.new(0, 0.825, 0.045)
+neckattachment.Name = "NeckAttachment"
+neckattachment.CFrame = CFrame.new(0, 0.825, 0.045)
+neckattachment.Parent = uppertorso
+originalpivot_26.Value = Vector3.new(0, 0.66, 0.036)
+originalpivot_26.Name = "OriginalPivot"
+originalpivot_26.Parent = neckattachment
+rightcollarattachment.Position = Vector3.new(0.438, 0.688, 0.045)
+rightcollarattachment.Name = "RightCollarAttachment"
+rightcollarattachment.CFrame = CFrame.new(0.438, 0.688, 0.045)
+rightcollarattachment.Parent = uppertorso
+originalpivot_27.Value = Vector3.new(0.35, 0.55, 0.036)
+originalpivot_27.Name = "OriginalPivot"
+originalpivot_27.Parent = rightcollarattachment
+leftcollarattachment.Position = Vector3.new(-0.437, 0.688, 0.045)
+leftcollarattachment.Name = "LeftCollarAttachment"
+leftcollarattachment.CFrame = CFrame.new(-0.437, 0.688, 0.045)
+leftcollarattachment.Parent = uppertorso
+originalpivot_28.Value = Vector3.new(-0.35, 0.55, 0.036)
+originalpivot_28.Name = "OriginalPivot"
+originalpivot_28.Parent = leftcollarattachment
+originalsize_8.Value = Vector3.new(1.19, 1.785, 0.805)
+originalsize_8.Name = "OriginalSize"
+originalsize_8.Parent = uppertorso
+waist.Part1 = uppertorso
+waist.C0 = CFrame.new(0, 0.45, 0.091)
+waist.Part0 = lowertorso
+waist.C1 = CFrame.new(0, -0.843, 0.045)
+waist.Name = "Waist"
+waist.Parent = uppertorso
+mesh_8.Offset = Vector3.new(0, 0.09, 0)
+mesh_8.MeshId = "rbxassetid://875229590"
+mesh_8.Scale = Vector3.new(1.4, 1.4, 1.4)
+mesh_8.TextureId = "rbxassetid://853067666"
+mesh_8.MeshType = Enum.MeshType.FileMesh
+mesh_8.Parent = uppertorso
+leftfoot.CanCollide = false
+leftfoot.Size = Vector3.new(0.433, 0.504, 1.064)
+leftfoot.BrickColor = BrickColor.new("Bright blue")
+leftfoot.Material = Enum.Material.SmoothPlastic
+leftfoot.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+leftfoot.Orientation = Vector3.new(0, -166.02, 0)
+leftfoot.Name = "LeftFoot"
+leftfoot.Parent = moving_anthro_npc
+leftfoot.CFrame = CFrame.new(-7.941, 0.253, -57.772) * CFrame.Angles(3.142, -0.244, 3.142)
+leftanklerigattachment.Position = Vector3.new(-0.033, 0.003, 0.225)
+leftanklerigattachment.Name = "LeftAnkleRigAttachment"
+leftanklerigattachment.CFrame = CFrame.new(-0.033, 0.003, 0.225)
+leftanklerigattachment.Parent = leftfoot
+originalpivot_29.Value = Vector3.new(-0.027, 0.002, 0.18)
+originalpivot_29.Name = "OriginalPivot"
+originalpivot_29.Parent = leftanklerigattachment
+originalsize_9.Value = Vector3.new(0.346, 0.403, 0.851)
+originalsize_9.Name = "OriginalSize"
+originalsize_9.Parent = leftfoot
+leftankle.Part1 = leftfoot
+leftankle.C0 = CFrame.new(-0.021, -0.907, -0.018)
+leftankle.Part0 = leftlowerleg
+leftankle.C1 = CFrame.new(-0.033, 0.003, 0.225)
+leftankle.Name = "LeftAnkle"
+leftankle.Parent = leftfoot
+mesh_9.MeshType = Enum.MeshType.FileMesh
+mesh_9.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_9.MeshId = "rbxassetid://875229596"
+mesh_9.TextureId = "rbxassetid://853067666"
+mesh_9.Parent = leftfoot
+leftlowerleg.CanCollide = false
+leftlowerleg.Size = Vector3.new(0.567, 1.823, 0.723)
+leftlowerleg.BrickColor = BrickColor.new("Bright blue")
+leftlowerleg.Material = Enum.Material.SmoothPlastic
+leftlowerleg.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+leftlowerleg.Orientation = Vector3.new(0, -166.02, 0)
+leftlowerleg.Name = "LeftLowerLeg"
+leftlowerleg.Parent = moving_anthro_npc
+leftlowerleg.CFrame = CFrame.new(-7.988, 1.163, -58.011) * CFrame.Angles(3.142, -0.244, 3.142)
+leftkneerigattachment.Position = Vector3.new(-0.021, 0.825, -0.037)
+leftkneerigattachment.Name = "LeftKneeRigAttachment"
+leftkneerigattachment.CFrame = CFrame.new(-0.021, 0.825, -0.037)
+leftkneerigattachment.Parent = leftlowerleg
+originalpivot_30.Value = Vector3.new(-0.017, 0.66, -0.029)
+originalpivot_30.Name = "OriginalPivot"
+originalpivot_30.Parent = leftkneerigattachment
+leftanklerigattachment_2.Position = Vector3.new(-0.021, -0.907, -0.018)
+leftanklerigattachment_2.Name = "LeftAnkleRigAttachment"
+leftanklerigattachment_2.CFrame = CFrame.new(-0.021, -0.907, -0.018)
+leftanklerigattachment_2.Parent = leftlowerleg
+originalpivot_31.Value = Vector3.new(-0.017, -0.726, -0.014)
+originalpivot_31.Name = "OriginalPivot"
+originalpivot_31.Parent = leftanklerigattachment_2
+originalsize_10.Value = Vector3.new(0.454, 1.459, 0.578)
+originalsize_10.Name = "OriginalSize"
+originalsize_10.Parent = leftlowerleg
+leftknee.Part1 = leftlowerleg
+leftknee.C0 = CFrame.new(0.008, -0.594, 0.093)
+leftknee.Part0 = leftupperleg
+leftknee.C1 = CFrame.new(-0.021, 0.825, -0.037)
+leftknee.Name = "LeftKnee"
+leftknee.Parent = leftlowerleg
+mesh_10.Offset = Vector3.new(0, 0.2, 0)
+mesh_10.MeshId = "rbxassetid://875229599"
+mesh_10.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_10.TextureId = "rbxassetid://853067666"
+mesh_10.MeshType = Enum.MeshType.FileMesh
+mesh_10.Parent = leftlowerleg
+leftupperleg.CanCollide = false
+leftupperleg.Size = Vector3.new(0.617, 1.891, 0.802)
+leftupperleg.BrickColor = BrickColor.new("Bright blue")
+leftupperleg.Material = Enum.Material.SmoothPlastic
+leftupperleg.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+leftupperleg.Orientation = Vector3.new(0, -166.02, 0)
+leftupperleg.Name = "LeftUpperLeg"
+leftupperleg.Parent = moving_anthro_npc
+leftupperleg.CFrame = CFrame.new(-7.928, 2.582, -57.892) * CFrame.Angles(3.142, -0.244, 3.142)
+lefthiprigattachment.Position = Vector3.new(0.008, 0.846, -0.019)
+lefthiprigattachment.Name = "LeftHipRigAttachment"
+lefthiprigattachment.CFrame = CFrame.new(0.008, 0.846, -0.019)
+lefthiprigattachment.Parent = leftupperleg
+originalpivot_32.Value = Vector3.new(0.006, 0.677, -0.015)
+originalpivot_32.Name = "OriginalPivot"
+originalpivot_32.Parent = lefthiprigattachment
+leftkneerigattachment_2.Position = Vector3.new(0.008, -0.594, 0.093)
+leftkneerigattachment_2.Name = "LeftKneeRigAttachment"
+leftkneerigattachment_2.CFrame = CFrame.new(0.008, -0.594, 0.093)
+leftkneerigattachment_2.Parent = leftupperleg
+originalpivot_33.Value = Vector3.new(0.006, -0.476, 0.075)
+originalpivot_33.Name = "OriginalPivot"
+originalpivot_33.Parent = leftkneerigattachment_2
+originalsize_11.Value = Vector3.new(0.494, 1.513, 0.642)
+originalsize_11.Name = "OriginalSize"
+originalsize_11.Parent = leftupperleg
+lefthip.Part1 = leftupperleg
+lefthip.C0 = CFrame.new(-0.319, 0.041, -0.021)
+lefthip.Part0 = lowertorso
+lefthip.C1 = CFrame.new(0.008, 0.846, -0.019)
+lefthip.Name = "LeftHip"
+lefthip.Parent = leftupperleg
+mesh_11.Offset = Vector3.new(0, 0.1, 0)
+mesh_11.MeshId = "rbxassetid://875229605"
+mesh_11.Scale = Vector3.new(1.5, 1, 1.5)
+mesh_11.TextureId = "rbxassetid://853067666"
+mesh_11.MeshType = Enum.MeshType.FileMesh
+mesh_11.Parent = leftupperleg
+rightfoot.CanCollide = false
+rightfoot.Size = Vector3.new(0.433, 0.504, 1.064)
+rightfoot.BrickColor = BrickColor.new("Bright blue")
+rightfoot.Material = Enum.Material.SmoothPlastic
+rightfoot.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+rightfoot.Orientation = Vector3.new(0, -166.02, 0)
+rightfoot.Name = "RightFoot"
+rightfoot.Parent = moving_anthro_npc
+rightfoot.CFrame = CFrame.new(-8.496, 0.252, -57.633) * CFrame.Angles(3.142, -0.244, 3.142)
+rightanklerigattachment.Position = Vector3.new(0.034, 0.002, 0.225)
+rightanklerigattachment.Name = "RightAnkleRigAttachment"
+rightanklerigattachment.CFrame = CFrame.new(0.034, 0.002, 0.225)
+rightanklerigattachment.Parent = rightfoot
+originalpivot_34.Value = Vector3.new(0.027, 0.002, 0.18)
+originalpivot_34.Name = "OriginalPivot"
+originalpivot_34.Parent = rightanklerigattachment
+originalsize_12.Value = Vector3.new(0.346, 0.403, 0.851)
+originalsize_12.Name = "OriginalSize"
+originalsize_12.Parent = rightfoot
+rightankle.Part1 = rightfoot
+rightankle.C0 = CFrame.new(0.021, -0.908, -0.018)
+rightankle.Part0 = rightlowerleg
+rightankle.C1 = CFrame.new(0.034, 0.002, 0.225)
+rightankle.Name = "RightAnkle"
+rightankle.Parent = rightfoot
+mesh_12.MeshType = Enum.MeshType.FileMesh
+mesh_12.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_12.MeshId = "rbxassetid://875229610"
+mesh_12.TextureId = "rbxassetid://853067666"
+mesh_12.Parent = rightfoot
+rightlowerleg.CanCollide = false
+rightlowerleg.Size = Vector3.new(0.567, 1.823, 0.723)
+rightlowerleg.BrickColor = BrickColor.new("Bright blue")
+rightlowerleg.Material = Enum.Material.SmoothPlastic
+rightlowerleg.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+rightlowerleg.Orientation = Vector3.new(0, -166.02, 0)
+rightlowerleg.Name = "RightLowerLeg"
+rightlowerleg.Parent = moving_anthro_npc
+rightlowerleg.CFrame = CFrame.new(-8.567, 1.162, -57.866) * CFrame.Angles(3.142, -0.244, 3.142)
+rightkneerigattachment.Position = Vector3.new(0.021, 0.825, -0.036)
+rightkneerigattachment.Name = "RightKneeRigAttachment"
+rightkneerigattachment.CFrame = CFrame.new(0.021, 0.825, -0.036)
+rightkneerigattachment.Parent = rightlowerleg
+originalpivot_35.Value = Vector3.new(0.017, 0.66, -0.029)
+originalpivot_35.Name = "OriginalPivot"
+originalpivot_35.Parent = rightkneerigattachment
+rightanklerigattachment_2.Position = Vector3.new(0.021, -0.908, -0.018)
+rightanklerigattachment_2.Name = "RightAnkleRigAttachment"
+rightanklerigattachment_2.CFrame = CFrame.new(0.021, -0.908, -0.018)
+rightanklerigattachment_2.Parent = rightlowerleg
+originalpivot_36.Value = Vector3.new(0.017, -0.726, -0.014)
+originalpivot_36.Name = "OriginalPivot"
+originalpivot_36.Parent = rightanklerigattachment_2
+originalsize_13.Value = Vector3.new(0.454, 1.459, 0.578)
+originalsize_13.Name = "OriginalSize"
+originalsize_13.Parent = rightlowerleg
+rightknee.Part1 = rightlowerleg
+rightknee.C0 = CFrame.new(-0.007, -0.595, 0.093)
+rightknee.Part0 = rightupperleg
+rightknee.C1 = CFrame.new(0.021, 0.825, -0.036)
+rightknee.Name = "RightKnee"
+rightknee.Parent = rightlowerleg
+mesh_13.Offset = Vector3.new(0, 0.2, 0)
+mesh_13.MeshId = "rbxassetid://875229614"
+mesh_13.Scale = Vector3.new(1.6, 1.6, 1.6)
+mesh_13.TextureId = "rbxassetid://853067666"
+mesh_13.MeshType = Enum.MeshType.FileMesh
+mesh_13.Parent = rightlowerleg
+rightupperleg.CanCollide = false
+rightupperleg.Size = Vector3.new(0.617, 1.891, 0.802)
+rightupperleg.BrickColor = BrickColor.new("Bright blue")
+rightupperleg.Material = Enum.Material.SmoothPlastic
+rightupperleg.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+rightupperleg.Orientation = Vector3.new(0, -166.02, 0)
+rightupperleg.Name = "RightUpperLeg"
+rightupperleg.Parent = moving_anthro_npc
+rightupperleg.CFrame = CFrame.new(-8.563, 2.582, -57.734) * CFrame.Angles(3.142, -0.244, 3.142)
+righthiprigattachment.Position = Vector3.new(-0.007, 0.846, -0.019)
+righthiprigattachment.Name = "RightHipRigAttachment"
+righthiprigattachment.CFrame = CFrame.new(-0.007, 0.846, -0.019)
+righthiprigattachment.Parent = rightupperleg
+originalpivot_37.Value = Vector3.new(-0.006, 0.677, -0.015)
+originalpivot_37.Name = "OriginalPivot"
+originalpivot_37.Parent = righthiprigattachment
+rightkneerigattachment_2.Position = Vector3.new(-0.007, -0.595, 0.093)
+rightkneerigattachment_2.Name = "RightKneeRigAttachment"
+rightkneerigattachment_2.CFrame = CFrame.new(-0.007, -0.595, 0.093)
+rightkneerigattachment_2.Parent = rightupperleg
+originalpivot_38.Value = Vector3.new(-0.006, -0.476, 0.075)
+originalpivot_38.Name = "OriginalPivot"
+originalpivot_38.Parent = rightkneerigattachment_2
+originalsize_14.Value = Vector3.new(0.494, 1.513, 0.642)
+originalsize_14.Name = "OriginalSize"
+originalsize_14.Parent = rightupperleg
+righthip.Part1 = rightupperleg
+righthip.C0 = CFrame.new(0.32, 0.041, -0.021)
+righthip.Part0 = lowertorso
+righthip.C1 = CFrame.new(-0.007, 0.846, -0.019)
+righthip.Name = "RightHip"
+righthip.Parent = rightupperleg
+mesh_14.Offset = Vector3.new(0, 0.1, 0)
+mesh_14.MeshId = "rbxassetid://875229618"
+mesh_14.Scale = Vector3.new(1.5, 1, 1.5)
+mesh_14.TextureId = "rbxassetid://853067666"
+mesh_14.MeshType = Enum.MeshType.FileMesh
+mesh_14.Parent = rightupperleg
+lowertorso.Size = Vector3.new(1.198, 0.868, 0.902)
+lowertorso.Color = Color3.new(0.156863, 0.498039, 0.278431)
+lowertorso.Name = "LowerTorso"
+lowertorso.Material = Enum.Material.SmoothPlastic
+lowertorso.BrickColor = BrickColor.new("Dark green")
+lowertorso.Orientation = Vector3.new(0, -166.02, 0)
+lowertorso.Parent = moving_anthro_npc
+lowertorso.CFrame = CFrame.new(-8.246, 3.387, -57.815) * CFrame.Angles(3.142, -0.244, 3.142)
+rootrigattachment_2.Position = Vector3.new(0, 0.056, 0.091)
+rootrigattachment_2.Name = "RootRigAttachment"
+rootrigattachment_2.CFrame = CFrame.new(0, 0.056, 0.091)
+rootrigattachment_2.Parent = lowertorso
+originalpivot_39.Value = Vector3.new(0, 0.045, 0.073)
+originalpivot_39.Name = "OriginalPivot"
+originalpivot_39.Parent = rootrigattachment_2
+waistrigattachment_2.Position = Vector3.new(0, 0.45, 0.091)
+waistrigattachment_2.Name = "WaistRigAttachment"
+waistrigattachment_2.CFrame = CFrame.new(0, 0.45, 0.091)
+waistrigattachment_2.Parent = lowertorso
+originalpivot_40.Value = Vector3.new(0, 0.36, 0.073)
+originalpivot_40.Name = "OriginalPivot"
+originalpivot_40.Parent = waistrigattachment_2
+lefthiprigattachment_2.Position = Vector3.new(-0.319, 0.041, -0.021)
+lefthiprigattachment_2.Name = "LeftHipRigAttachment"
+lefthiprigattachment_2.CFrame = CFrame.new(-0.319, 0.041, -0.021)
+lefthiprigattachment_2.Parent = lowertorso
+originalpivot_41.Value = Vector3.new(-0.256, 0.033, -0.017)
+originalpivot_41.Name = "OriginalPivot"
+originalpivot_41.Parent = lefthiprigattachment_2
+righthiprigattachment_2.Position = Vector3.new(0.32, 0.041, -0.021)
+righthiprigattachment_2.Name = "RightHipRigAttachment"
+righthiprigattachment_2.CFrame = CFrame.new(0.32, 0.041, -0.021)
+righthiprigattachment_2.Parent = lowertorso
+originalpivot_42.Value = Vector3.new(0.256, 0.033, -0.017)
+originalpivot_42.Name = "OriginalPivot"
+originalpivot_42.Parent = righthiprigattachment_2
+waistcenterattachment.Position = Vector3.new(0, -0.102, 0.091)
+waistcenterattachment.Name = "WaistCenterAttachment"
+waistcenterattachment.CFrame = CFrame.new(0, -0.102, 0.091)
+waistcenterattachment.Parent = lowertorso
+originalpivot_43.Value = Vector3.new(0, -0.081, 0.073)
+originalpivot_43.Name = "OriginalPivot"
+originalpivot_43.Parent = waistcenterattachment
+waistfrontattachment.Position = Vector3.new(0, -0.102, -0.221)
+waistfrontattachment.Name = "WaistFrontAttachment"
+waistfrontattachment.CFrame = CFrame.new(0, -0.102, -0.221)
+waistfrontattachment.Parent = lowertorso
+originalpivot_44.Value = Vector3.new(0, -0.081, -0.177)
+originalpivot_44.Name = "OriginalPivot"
+originalpivot_44.Parent = waistfrontattachment
+waistbackattachment.Position = Vector3.new(0, -0.102, 0.448)
+waistbackattachment.Name = "WaistBackAttachment"
+waistbackattachment.CFrame = CFrame.new(0, -0.102, 0.448)
+waistbackattachment.Parent = lowertorso
+originalpivot_45.Value = Vector3.new(0, -0.081, 0.358)
+originalpivot_45.Name = "OriginalPivot"
+originalpivot_45.Parent = waistbackattachment
+originalsize_15.Value = Vector3.new(0.958, 0.694, 0.722)
+originalsize_15.Name = "OriginalSize"
+originalsize_15.Parent = lowertorso
+root.Part1 = lowertorso
+root.Part0 = humanoidrootpart
+root.C1 = CFrame.new(0, 0.056, 0.091)
+root.Name = "Root"
+root.Parent = lowertorso
+mesh_15.MeshType = Enum.MeshType.FileMesh
+mesh_15.Scale = Vector3.new(1.4, 1.4, 1.4)
+mesh_15.MeshId = "rbxassetid://875229629"
+mesh_15.TextureId = "rbxassetid://853067666"
+mesh_15.Parent = lowertorso
+moving_anthro_npc.PrimaryPart = humanoidrootpart
+moving_anthro_npc.Name = game.Players.LocalPlayer.Name
+local plr = game.Players.LocalPlayer
+repeat wait(.2) until plr.Character
+plr.Character = moving_anthro_npc
+workspace.CurrentCamera.CameraSubject = humanoid
+workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+
+game:GetService("RunService").RenderStepped:Connect(function()
+
+	humanoid:RemoveAccessories()
+	humanoid.MaxHealth = 1e4556464
+		humanoid.Health = 1e4556464
+		
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local Figure = plr.Character
+local pose = "Standing"
+
+local currentAnim = ""
+local currentAnimInstance = nil
+local currentAnimTrack = nil
+local currentAnimKeyframeHandler = nil
+local currentAnimSpeed = 1.0
+local animTable = {}
+local animNames = { 
+	idle = 	{	
+				{ id = "http://www.roblox.com/asset/?id=507766666", weight = 1 },
+				{ id = "http://www.roblox.com/asset/?id=507766951", weight = 1 },
+				{ id = "http://www.roblox.com/asset/?id=507766388", weight = 9 }
+			},
+	walk = 	{ 	
+				{ id = "http://www.roblox.com/asset/?id=507777826", weight = 10 } 
+			}, 
+	run = 	{
+				{ id = "http://www.roblox.com/asset/?id=507767714", weight = 10 } 
+			}, 
+	swim = 	{
+				{ id = "http://www.roblox.com/asset/?id=507784897", weight = 10 } 
+			}, 
+	swimidle = 	{
+				{ id = "http://www.roblox.com/asset/?id=507785072", weight = 10 } 
+			}, 
+	jump = 	{
+				{ id = "http://www.roblox.com/asset/?id=507765000", weight = 10 } 
+			}, 
+	fall = 	{
+				{ id = "http://www.roblox.com/asset/?id=507767968", weight = 10 } 
+			}, 
+	climb = {
+				{ id = "http://www.roblox.com/asset/?id=507765644", weight = 10 } 
+			}, 
+	sit = 	{
+				{ id = "http://www.roblox.com/asset/?id=507768133", weight = 10 } 
+			},	
+	toolnone = {
+				{ id = "http://www.roblox.com/asset/?id=507768375", weight = 10 } 
+			},
+	toolslash = {
+				{ id = "http://www.roblox.com/asset/?id=507768375", weight = 10 } 
+--				{ id = "slash.xml", weight = 10 } 
+			},
+	toollunge = {
+				{ id = "http://www.roblox.com/asset/?id=507768375", weight = 10 } 
+			},
+	wave = {
+				{ id = "http://www.roblox.com/asset/?id=507770239", weight = 10 } 
+			},
+	point = {
+				{ id = "http://www.roblox.com/asset/?id=507770453", weight = 10 } 
+			},
+	dance = {
+				{ id = "http://www.roblox.com/asset/?id=507771019", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507771955", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507772104", weight = 10 } 
+			},
+	dance2 = {
+				{ id = "http://www.roblox.com/asset/?id=507776043", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507776720", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507776879", weight = 10 } 
+			},
+	dance3 = {
+				{ id = "http://www.roblox.com/asset/?id=507777268", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507777451", weight = 10 }, 
+				{ id = "http://www.roblox.com/asset/?id=507777623", weight = 10 } 
+			},
+	laugh = {
+				{ id = "http://www.roblox.com/asset/?id=507770818", weight = 10 } 
+			},
+	cheer = {
+				{ id = "http://www.roblox.com/asset/?id=507770677", weight = 10 } 
+			},
+}
+
+-- Existance in this list signifies that it is an emote, the value indicates if it is a looping emote
+local emoteNames = { wave = false, point = false, dance = true, dance2 = true, dance3 = true, laugh = false, cheer = false}
+
+math.randomseed(tick())
+
+function configureAnimationSet(name, fileList)
+	if (animTable[name] ~= nil) then
+		for _, connection in pairs(animTable[name].connections) do
+			connection:disconnect()
+		end
+	end
+	animTable[name] = {}
+	animTable[name].count = 0
+	animTable[name].totalWeight = 0	
+	animTable[name].connections = {}
+
+	-- check for config values
+	local config = script:FindFirstChild(name)
+	if (config ~= nil) then
+--		print("Loading anims " .. name)
+		table.insert(animTable[name].connections, config.ChildAdded:connect(function(child) configureAnimationSet(name, fileList) end))
+		table.insert(animTable[name].connections, config.ChildRemoved:connect(function(child) configureAnimationSet(name, fileList) end))
+		local idx = 1
+		for _, childPart in pairs(config:GetChildren()) do
+			if (childPart:IsA("Animation")) then
+				table.insert(animTable[name].connections, childPart.Changed:connect(function(property) configureAnimationSet(name, fileList) end))
+				animTable[name][idx] = {}
+				animTable[name][idx].anim = childPart
+				local weightObject = childPart:FindFirstChild("Weight")
+				if (weightObject == nil) then
+					animTable[name][idx].weight = 1
+				else
+					animTable[name][idx].weight = weightObject.Value
+				end
+				animTable[name].count = animTable[name].count + 1
+				animTable[name].totalWeight = animTable[name].totalWeight + animTable[name][idx].weight
+--				print(name .. " [" .. idx .. "] " .. animTable[name][idx].anim.AnimationId .. " (" .. animTable[name][idx].weight .. ")")
+				idx = idx + 1
+			end
+		end
+	end
+
+	-- fallback to defaults
+	if (animTable[name].count <= 0) then
+		for idx, anim in pairs(fileList) do
+			animTable[name][idx] = {}
+			animTable[name][idx].anim = Instance.new("Animation")
+			animTable[name][idx].anim.Name = name
+			animTable[name][idx].anim.AnimationId = anim.id
+			animTable[name][idx].weight = anim.weight
+			animTable[name].count = animTable[name].count + 1
+			animTable[name].totalWeight = animTable[name].totalWeight + anim.weight
+--			print(name .. " [" .. idx .. "] " .. anim.id .. " (" .. anim.weight .. ")")
+		end
+	end
+end
+
+-- Setup animation objects
+function scriptChildModified(child)
+	local fileList = animNames[child.Name]
+	if (fileList ~= nil) then
+		configureAnimationSet(child.Name, fileList)
+	end	
+end
+
+script.ChildAdded:connect(scriptChildModified)
+script.ChildRemoved:connect(scriptChildModified)
+
+
+for name, fileList in pairs(animNames) do 
+	configureAnimationSet(name, fileList)
+end	
+
+-- ANIMATION
+
+-- declarations
+local toolAnim = "None"
+local toolAnimTime = 0
+
+local jumpAnimTime = 0
+local jumpAnimDuration = 0.31
+
+local toolTransitionTime = 0.1
+local fallTransitionTime = 0.2
+
+-- functions
+
+function stopAllAnimations()
+	local oldAnim = currentAnim
+
+	-- return to idle if finishing an emote
+	if (emoteNames[oldAnim] ~= nil and emoteNames[oldAnim] == false) then
+		oldAnim = "idle"
+	end
+
+	currentAnim = ""
+	currentAnimInstance = nil
+	if (currentAnimKeyframeHandler ~= nil) then
+		currentAnimKeyframeHandler:disconnect()
+	end
+
+	if (currentAnimTrack ~= nil) then
+		currentAnimTrack:Stop()
+		currentAnimTrack:Destroy()
+		currentAnimTrack = nil
+	end
+	return oldAnim
+end
+
+function setAnimationSpeed(speed)
+	if speed ~= currentAnimSpeed then
+		currentAnimSpeed = speed
+		currentAnimTrack:AdjustSpeed(currentAnimSpeed)
+	end
+end
+
+function keyFrameReachedFunc(frameName)
+	if (frameName == "End") then
+--		print("Keyframe : ".. frameName)
+
+		local repeatAnim = currentAnim
+		-- return to idle if finishing an emote
+		if (emoteNames[repeatAnim] ~= nil and emoteNames[repeatAnim] == false) then
+			repeatAnim = "idle"
+		end
+		
+		local animSpeed = currentAnimSpeed
+		playAnimation(repeatAnim, 0.15, humanoid)
+		setAnimationSpeed(animSpeed)
+	end
+end
+
+-- Preload animations
+function playAnimation(animName, transitionTime, humanoid) 
+		
+	local roll = math.random(1, animTable[animName].totalWeight) 
+	local origRoll = roll
+	local idx = 1
+	while (roll > animTable[animName][idx].weight) do
+		roll = roll - animTable[animName][idx].weight
+		idx = idx + 1
+	end
+	
+--	print(animName .. " " .. idx .. " [" .. origRoll .. "]")
+	
+	local anim = animTable[animName][idx].anim
+
+	-- switch animation		
+	if (anim ~= currentAnimInstance) then
+		
+		if (currentAnimTrack ~= nil) then
+			currentAnimTrack:Stop(transitionTime)
+			currentAnimTrack:Destroy()
+		end
+
+		currentAnimSpeed = 1.0
+	
+		-- load it to the humanoid; get AnimationTrack
+		currentAnimTrack = humanoid:LoadAnimation(anim)
+		 
+		-- play the animation
+		currentAnimTrack:Play(transitionTime)
+		currentAnim = animName
+		currentAnimInstance = anim
+
+		-- set up keyframe name triggers
+		if (currentAnimKeyframeHandler ~= nil) then
+			currentAnimKeyframeHandler:disconnect()
+		end
+		currentAnimKeyframeHandler = currentAnimTrack.KeyframeReached:connect(keyFrameReachedFunc)
+		
+	end
+
+end
+
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+local toolAnimName = ""
+local toolAnimTrack = nil
+local toolAnimInstance = nil
+local currentToolAnimKeyframeHandler = nil
+
+function toolKeyFrameReachedFunc(frameName)
+	if (frameName == "End") then
+--		print("Keyframe : ".. frameName)	
+		playToolAnimation(toolAnimName, 0.0, humanoid)
+	end
+end
+
+
+function playToolAnimation(animName, transitionTime, humanoid)	 
+		
+		local roll = math.random(1, animTable[animName].totalWeight) 
+		local origRoll = roll
+		local idx = 1
+		while (roll > animTable[animName][idx].weight) do
+			roll = roll - animTable[animName][idx].weight
+			idx = idx + 1
+		end
+--		print(animName .. " * " .. idx .. " [" .. origRoll .. "]")
+		local anim = animTable[animName][idx].anim
+
+		if (toolAnimInstance ~= anim) then
+			
+			if (toolAnimTrack ~= nil) then
+				toolAnimTrack:Stop()
+				toolAnimTrack:Destroy()
+				transitionTime = 0
+			end
+					
+			-- load it to the humanoid; get AnimationTrack
+			toolAnimTrack = humanoid:LoadAnimation(anim)
+			 
+			-- play the animation
+			toolAnimTrack:Play(transitionTime)
+			toolAnimName = animName
+			toolAnimInstance = anim
+
+			currentToolAnimKeyframeHandler = toolAnimTrack.KeyframeReached:connect(toolKeyFrameReachedFunc)
+		end
+end
+
+function stopToolAnimations()
+	local oldAnim = toolAnimName
+
+	if (currentToolAnimKeyframeHandler ~= nil) then
+		currentToolAnimKeyframeHandler:disconnect()
+	end
+
+	toolAnimName = ""
+	toolAnimInstance = nil
+	if (toolAnimTrack ~= nil) then
+		toolAnimTrack:Stop()
+		toolAnimTrack:Destroy()
+		toolAnimTrack = nil
+	end
+
+
+	return oldAnim
+end
+
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+
+function onRunning(speed)
+	if speed > 0.01 then
+		local scale = 15.0
+		playAnimation("walk", 0.1, humanoid)
+		setAnimationSpeed(speed / scale)
+		pose = "Running"
+	else
+		playAnimation("idle", 0.1, humanoid)
+		pose = "Standing"
+	end
+end
+
+function onDied()
+	pose = "Dead"
+end
+
+function onJumping()
+	playAnimation("jump", 0.1, humanoid)
+	jumpAnimTime = jumpAnimDuration
+	pose = "Jumping"
+end
+
+function onClimbing(speed)
+	local scale = 5.0
+	playAnimation("climb", 0.1, humanoid)
+	setAnimationSpeed(speed / scale)
+	pose = "Climbing"
+end
+
+function onGettingUp()
+	pose = "GettingUp"
+end
+
+function onFreeFall()
+	if (jumpAnimTime <= 0) then
+		playAnimation("fall", fallTransitionTime, humanoid)
+	end
+	pose = "FreeFall"
+end
+
+function onFallingDown()
+	pose = "FallingDown"
+end
+
+function onSeated()
+	pose = "Seated"
+end
+
+function onPlatformStanding()
+	pose = "PlatformStanding"
+end
+
+function onSwimming(speed)
+	if speed > 1.00 then
+		local scale = 10.0
+		playAnimation("swim", 0.4, humanoid)
+		setAnimationSpeed(speed / scale)
+		pose = "Swimming"
+	else
+		playAnimation("swimidle", 0.4, humanoid)
+		pose = "Standing"
+	end
+end
+
+function getTool()	
+	for _, kid in ipairs(Figure:GetChildren()) do
+		if kid.className == "Tool" then return kid end
+	end
+	return nil
+end
+
+function getToolAnim(tool)
+	for _, c in ipairs(tool:GetChildren()) do
+		if c.Name == "toolanim" and c.className == "StringValue" then
+			return c
+		end
+	end
+	return nil
+end
+
+function animateTool()
+	
+	if (toolAnim == "None") then
+		playToolAnimation("toolnone", toolTransitionTime, humanoid)
+		return
+	end
+
+	if (toolAnim == "Slash") then
+		playToolAnimation("toolslash", 0, humanoid)
+		return
+	end
+
+	if (toolAnim == "Lunge") then
+		playToolAnimation("toollunge", 0, humanoid)
+		return
+	end
+end
+
+function moveSit()
+end
+
+local lastTick = 0
+
+function move(time)
+	local amplitude = 1
+	local frequency = 1
+  	local deltaTime = time - lastTick
+  	lastTick = time
+
+	local climbFudge = 0
+	local setAngles = false
+
+  	if (jumpAnimTime > 0) then
+  		jumpAnimTime = jumpAnimTime - deltaTime
+  	end
+
+	if (pose == "FreeFall" and jumpAnimTime <= 0) then
+		playAnimation("fall", fallTransitionTime, humanoid)
+	elseif (pose == "Seated") then
+		playAnimation("sit", 0.5, humanoid)
+		return
+	elseif (pose == "Running") then
+		playAnimation("walk", 0.1, humanoid)
+	elseif (pose == "Dead" or pose == "GettingUp" or pose == "FallingDown" or pose == "Seated" or pose == "PlatformStanding") then
+		stopAllAnimations()
+		amplitude = 0.1
+		frequency = 1
+		setAngles = true
+	end
+
+	-- Tool Animation handling
+	local tool = getTool()
+	if tool then
+	
+		animStringValueObject = getToolAnim(tool)
+
+		if animStringValueObject then
+			toolAnim = animStringValueObject.Value
+			-- message recieved, delete StringValue
+			animStringValueObject.Parent = nil
+			toolAnimTime = time + .3
+		end
+
+		if time > toolAnimTime then
+			toolAnimTime = 0
+			toolAnim = "None"
+		end
+
+		animateTool()		
+	else
+		stopToolAnimations()
+		toolAnim = "None"
+		toolAnimInstance = nil
+		toolAnimTime = 0
+	end
+end
+
+-- connect events
+humanoid.Died:connect(onDied)
+humanoid.Running:connect(onRunning)
+humanoid.Jumping:connect(onJumping)
+humanoid.Climbing:connect(onClimbing)
+humanoid.GettingUp:connect(onGettingUp)
+humanoid.FreeFalling:connect(onFreeFall)
+humanoid.FallingDown:connect(onFallingDown)
+humanoid.Seated:connect(onSeated)
+humanoid.PlatformStanding:connect(onPlatformStanding)
+humanoid.Swimming:connect(onSwimming)
+
+Game.Players.LocalPlayer.Chatted:connect(function(msg)
+	local emote = ""
+	if (string.sub(msg, 1, 3) == "/e ") then
+		emote = string.sub(msg, 4)
+	elseif (string.sub(msg, 1, 7) == "/emote ") then
+		emote = string.sub(msg, 8)
+	end
+	
+	if (pose == "Standing" and emoteNames[emote] ~= nil) then
+		playAnimation(emote, 0.1, humanoid)
+	end
+	print("===> " .. string.sub(msg, 1, 3) .. "(" .. emote .. ")")
+end)
+
+
+-- main program
+
+local runService = game:service("RunService");
+
+-- print("bottom")
+
+-- initialize to idle
+playAnimation("idle", 0.1, humanoid)
+pose = "Standing"
+game:GetService("RunService").RenderStepped:Connect(function(step)
+	move(step)
+end)

@@ -1,0 +1,1 @@
+game.Workspace.aimignore.dungeonchest.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)

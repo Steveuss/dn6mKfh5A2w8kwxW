@@ -1,0 +1,14 @@
+local message = "Welcome to the plague." -- Your main spam text
+local factionChat = false-- In faction or global
+local repeatAmount = 1200 -- How many times to repeat
+
+for i = 1, repeatAmount, 1 do
+    cunt = "" -- Extra stuff maybe? More spam = more fun.
+    local A_1 = message..cunt
+    local A_2 = 1
+    local A_3 = factionChat
+    local Event = game:GetService("ReplicatedStorage").Remotes.ChatIn
+    Event:FireServer(A_1, A_2, A_3)
+
+    wait(1)
+end

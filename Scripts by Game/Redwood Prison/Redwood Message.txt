@@ -1,0 +1,14 @@
+text = "fuck her right in the pussy"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "ima shove my dick in her ass"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "Suck my cock"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "assholes"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)
+wait(3)
+text = "Fuck niggers"
+workspace.resources:FindFirstChild("RemoteEvent"):FireServer("FireAllClients", "smallNotice", text, true)

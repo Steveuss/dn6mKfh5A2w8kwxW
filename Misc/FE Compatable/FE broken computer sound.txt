@@ -1,0 +1,6 @@
+repeat game:GetService("RunService").Stepped:wait()
+for i,v in pairs(game.Players:GetChildren()) do
+v.Character.Head.Died.TimePosition = .15
+v.Character.Head.Died:Play()
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0

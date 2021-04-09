@@ -1,0 +1,7 @@
+--Go into avatar editor and execute
+
+
+local A1 = "212296936"
+local A2 = "Hats"
+Event = game:GetService("ReplicatedStorage").Avatar
+Event:FireServer(A1, A2)

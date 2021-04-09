@@ -1,0 +1,17 @@
+--By Bloomingzy32 (https://v3rmillion.net/showthread.php?tid=980219)
+
+while wait(0.001) do
+spawn(function()
+fireclickdetector(game:GetService("Workspace")["Cup Grabber"].Handle.ClickDetector)
+for i,v in next, game.Players:GetChildren() do
+local A_1 = "HandTo"
+local A_2 = v.Name
+local A_3 = "Cup"
+local Event = game:GetService("ReplicatedStorage")["HandTo_Sys"]
+Event:InvokeServer(A_1, A_2, A_3)
+for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+end)
+end

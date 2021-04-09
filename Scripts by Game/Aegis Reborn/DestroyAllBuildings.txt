@@ -1,0 +1,12 @@
+for i, buildig in pairs(workspace.Assets:GetChildren()) do
+    local tbl_main = 
+    {
+          buildig:FindFirstChildOfClass("Model")
+          ,math.huge
+    }
+    game:GetService("ReplicatedStorage").Remotes.DamageBuilding:FireServer(unpack(tbl_main))
+    if i%100 == 0 then
+        wait(.1)
+    end
+end
+warn("done")

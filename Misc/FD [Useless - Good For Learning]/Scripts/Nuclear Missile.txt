@@ -1,0 +1,406 @@
+print("Made by imtellingmommy/Narutozo on roblox.")
+print("Please, do not remove this from the script.")
+print("If you are showcasing make sure to give credit.")
+print("If there are any problems, dm mommy#4890.")
+print("Go to line 133 to edit the size of the nuke.")
+print("Controls are c to enable and c again to disable, p to enable dropping off from sky, and o to enable rocketing into the air and back down into the ground.")
+warn("This script is very early, glitches/lag may occur.")
+print("Nuke Em' All")
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+local allowed = false
+local count = 1
+
+local drop = false
+
+mouse.KeyDown:connect(function(key)
+if key == "p" then
+drop = true
+print("Rocket will spawn high")
+elseif key == "o" then
+drop = false
+print("Rocket will spawn low")
+end
+end)
+
+mouse.KeyDown:connect(function(key)
+if key == "c" and count == 1 then
+allowed = true
+print("Enabled")
+count=count+1
+elseif key == "c" and count == 2 then
+print("Disabled")
+count = 1
+allowed = false
+end
+end)
+
+local touched = false
+
+mouse.Button1Down:connect(function()
+if allowed == true then
+
+local anchored = true
+local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://146971619"
+sound:Play()
+sound.TimePosition = 8
+local rocket = Instance.new("Part", workspace)
+workspace.Camera.CameraSubject = rocket
+rocket.CanCollide = true
+--rocket.Anchored = true
+spawn(function()
+while wait() do
+--print(sound.TimePosition)
+end
+end)
+
+
+spawn(function()
+while anchored == true do
+if sound.TimePosition > 5.3 then
+--rocket.Anchored = false
+anchored = false
+end
+wait()
+end
+end)
+
+for i = 1,20 do
+local fire = Instance.new("Fire", rocket)
+fire.Size = 10
+end
+
+if drop == true then
+rocket.Position = Vector3.new(mouse.Hit.X,mouse.Hit.Y+900,mouse.Hit.Z)
+elseif drop == false then
+rocket.Position = Vector3.new(mouse.Hit.X,mouse.Hit.Y+9,mouse.Hit.Z)
+end
+
+rocket.Size = Vector3.new(6,6,8)
+
+spawn(function()
+rocket.CFrame = rocket.CFrame*CFrame.Angles(math.rad(90),0,math.rad(90))
+if drop == false then
+wait(4)
+elseif drop == true then
+wait()
+end
+
+local bodyg = Instance.new("BodyGyro", rocket)
+bodyg.maxTorque = Vector3.new(100,100,100)
+bodyg.P = 500
+while wait() do
+local target = mouse.Hit.p
+bodyg.CFrame = CFrame.new(rocket.CFrame.p, target)
+end
+end)
+
+--rocket.CustomPhysicalProperties = PhysicalProperties.new(500,500,500,5000,500)
+--rocket.
+
+local bodyvel = Instance.new("BodyVelocity", rocket)
+bodyvel.maxForce = Vector3.new(math.huge,math.huge,math.huge)
+
+spawn(function()
+while wait() do
+bodyvel.Velocity = rocket.CFrame.lookVector*900
+end
+end)
+
+
+local mesh = Instance.new("SpecialMesh", rocket)
+mesh.MeshId = "http://www.roblox.com/asset/?id=2251534"
+mesh.TextureId = "http://www.roblox.com/asset/?id=2758175"
+mesh.Scale = Vector3.new(2,2,3.5)
+
+rocket.Touched:connect(function()
+local BasePosition = rocket.CFrame.p
+
+touched = true
+
+if touched == true then
+workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Torso
+rocket:Destroy()
+touched = false
+local CloudID= "http://www.roblox.com/asset/?id=1095708"
+local ColorTexture = "http://www.roblox.com/asset/?ID=1361097"
+local RingID = "http://www.roblox.com/asset/?id=3270017"
+local SphereID = "http://www.roblox.com/asset/?id=1185246"
+
+
+local Size = 450 --Change the size if you want.
+
+local Exp = Instance.new("Model")
+Exp.Name = "Tsar"
+Exp.Parent = game.Workspace
+
+local BasePart = Instance.new("Part")
+BasePart.formFactor = 0
+BasePart.TopSurface = 0
+BasePart.BottomSurface = 0
+BasePart.Anchored = true
+BasePart.Locked = true
+BasePart.CanCollide = false
+
+local BaseMesh = Instance.new("SpecialMesh")
+BaseMesh.MeshType = "FileMesh"
+
+local CloudMesh = BaseMesh:clone()
+CloudMesh.MeshId = CloudID
+CloudMesh.TextureId = ColorTexture
+CloudMesh.VertexColor = Vector3.new(0.9,0.6,0)
+
+local RingMesh = BaseMesh:clone()
+RingMesh.MeshId = RingID
+
+local SphereMesh = BaseMesh:clone()
+SphereMesh.MeshId = SphereID
+
+local Clouds = {}
+local ShockWave = {}
+
+
+function Effects()
+	delay(0,function() 
+		for i = 10, 1,-0.5 do
+			wait()
+			game.Lighting.Brightness = i
+		end
+		game.Lighting.Ambient = Color3.new(152,159,36)
+		for i = 0,1,0.01 do
+		game.Lighting.Ambient = game.Lighting.Ambient:Lerp(Color3.new(0,0,0),i)
+		wait()
+		end
+	end)
+end
+
+function Destruction(Pos,Radius)
+	local function Destroy(Model)
+		for i ,v in ipairs(Model:getChildren()) do
+			if v:isA("BasePart") then
+				if (v.Position-Pos).magnitude < Radius then
+					if v.Anchored == false then
+						v:BreakJoints()
+						v.Velocity = CFrame.new(v.Position,Pos):vectorToWorldSpace(Vector3.new(math.random(-5,5),5,1000))
+						v.Material = "CorrodedMetal"
+					end	
+				end
+			end
+			if #v:getChildren() > 0 then
+				Destroy(v)
+			end
+		end
+	end
+	Destroy(game.Workspace)
+end
+function Explode(Pos)
+
+local Base = BasePart:clone()
+Base.Position = Pos
+	
+local Mesh = CloudMesh:clone()
+Mesh.Parent = Base 
+Mesh.Scale = Vector3.new(2.5,1,4.5)
+
+local PoleBase = BasePart:clone()
+PoleBase.Position = Pos+Vector3.new(0,0.1,0)
+
+local PoleBaseMesh = CloudMesh:clone()
+PoleBaseMesh.Scale = Vector3.new(1.25,2,2.5)
+PoleBaseMesh.Parent = PoleBase
+
+local Cloud1 = BasePart:clone()
+Cloud1.Position = Pos+Vector3.new(0,0.75,0)
+
+local Cloud1Mesh = CloudMesh:clone()
+Cloud1Mesh.Scale = Vector3.new(0.5,3,1)
+Cloud1Mesh.Parent = Cloud1
+	
+local Cloud2 = BasePart:clone()
+Cloud2.Position = Pos+Vector3.new(0,1.25,0)
+	
+local Cloud2Mesh = CloudMesh:clone()
+Cloud2Mesh.Scale = Vector3.new(0.5,1.5,1)
+Cloud2Mesh.Parent = Cloud2
+
+local Cloud3 = BasePart:clone()
+Cloud3.Position = Pos+Vector3.new(0,1.7,0)
+	
+local Cloud3Mesh = CloudMesh:clone()
+Cloud3Mesh.Scale = Vector3.new(0.5,1.5,1)
+Cloud3Mesh.Parent = Cloud3
+
+local PoleRing = BasePart:clone()
+PoleRing.Position = Pos+Vector3.new(0,1.3,0)
+PoleRing.Transparency = 0.2
+PoleRing.BrickColor = BrickColor.new("Dark stone grey")
+PoleRing.CFrame = PoleRing.CFrame*CFrame.Angles(math.rad(90),0,0)
+
+local Mesh = RingMesh:clone()
+Mesh.Scale = Vector3.new(1.2,1.2,1.2)
+Mesh.Parent = PoleRing
+
+local MushCloud = BasePart:clone()
+MushCloud.Position = Pos+Vector3.new(0,2.3,0)
+	
+local MushMesh = CloudMesh:clone() -- lol
+MushMesh.Scale = Vector3.new(2.5,1.75,3.5)
+MushMesh.Parent = MushCloud
+
+local TopCloud = BasePart:clone()
+TopCloud.Position = Pos+Vector3.new(0,2.7,0)
+	
+local TopMesh = CloudMesh:clone()
+TopMesh.Scale = Vector3.new(7.5,1.5,1.5)
+TopMesh.Parent = TopCloud
+
+table.insert(Clouds,Base)
+table.insert(Clouds,TopCloud)
+table.insert(Clouds,MushCloud)
+table.insert(Clouds,Cloud1)
+table.insert(Clouds,Cloud2)
+table.insert(Clouds,Cloud3)
+table.insert(Clouds,PoleBase)
+table.insert(Clouds,PoleRing)
+
+
+local BigRing = BasePart:clone()
+BigRing.Position = Pos
+BigRing.CFrame = BigRing.CFrame*CFrame.Angles(math.rad(90),0,0)
+	
+local BigMesh = RingMesh:clone()
+BigMesh.Scale = Vector3.new(5,5,1)
+BigMesh.Parent = BigRing
+	
+local SmallRing = BasePart:clone()
+SmallRing.Position = Pos
+SmallRing.BrickColor = BrickColor.new("Dark stone grey")
+SmallRing.CFrame = SmallRing.CFrame*CFrame.Angles(math.rad(90),0,0)
+
+local SmallMesh = RingMesh:clone()
+SmallMesh.Scale = Vector3.new(4.6,4.6,1.5)
+SmallMesh.Parent = SmallRing
+
+local InnerSphere = BasePart:clone()
+InnerSphere.Position = Pos
+InnerSphere.BrickColor = BrickColor.new("Bright orange")
+InnerSphere.Transparency = 0.5
+
+local InnerSphereMesh = SphereMesh:clone()	
+InnerSphereMesh.Scale = Vector3.new(-6.5,-6.5,-6.5)
+InnerSphereMesh.Parent = InnerSphere
+	
+local OutterSphere = BasePart:clone()
+OutterSphere.Position = Pos
+OutterSphere.BrickColor = BrickColor.new("Bright orange")
+OutterSphere.Transparency = 0.5
+
+local OutterSphereMesh = SphereMesh:clone()
+OutterSphereMesh.Scale = Vector3.new(6.5,6.5,6.5)
+OutterSphereMesh.Parent = OutterSphere
+
+table.insert(ShockWave,BigRing)	
+table.insert(ShockWave,SmallRing)
+table.insert(ShockWave,OutterSphere)
+table.insert(ShockWave,InnerSphere)
+	for i , v in ipairs(ShockWave) do
+		v.Parent = Exp
+	end
+	for i , v in ipairs(Clouds) do
+		v.Parent = Exp
+	end
+	Effects()
+	delay(0,function()
+	spawn(function()
+		for resize = Size/1.5, Size*3, 0.2 do
+			wait()
+			BigRing.Mesh.Scale = Vector3.new(7*resize,7*resize,1*resize)
+			SmallRing.Mesh.Scale = Vector3.new(5.6*resize,5.6*resize,1.5*resize)
+			InnerSphere.Mesh.Scale = Vector3.new(-6.5*resize,-6.5*resize,-6.5*resize)
+			OutterSphere.Mesh.Scale = Vector3.new(6.5*resize,6.5*resize,6.5*resize)
+			Destruction(Pos,3*resize)
+		end
+		end)
+		for fade = 0, 1, 0.005 do
+			wait()
+			pcall(function()
+				for i ,v in ipairs(ShockWave) do
+					v.Transparency = fade
+				end
+			end)
+		end
+		for i ,v in ipairs(ShockWave) do
+			v:Remove()
+		end
+		done1 = true
+	end)
+	delay(0,function()
+		for resize = Size/5, Size, 0.1 do
+			wait()
+			pcall(function()
+				Base.Mesh.Scale = Vector3.new(2.5*resize,1*resize,4.5*resize)
+				TopCloud.Mesh.Scale = Vector3.new(2*resize,1.5*resize,3*resize)
+				MushCloud.Mesh.Scale = Vector3.new(2.5*resize,1.75*resize,3.5*resize)
+				Cloud1.Mesh.Scale = Vector3.new(0.5*resize,3*resize,1*resize)
+				Cloud2.Mesh.Scale = Vector3.new(0.5*resize,5*resize,1*resize)
+				Cloud3.Mesh.Scale = Vector3.new(0.5*resize,5*resize,1*resize)
+				PoleBase.Mesh.Scale = Vector3.new(1*resize,3*resize,2.5*resize)
+				PoleRing.Mesh.Scale = Vector3.new(1.2*resize,1.2*resize,1.2*resize)
+
+				Base.Position = Pos+Vector3.new(0,0.05*resize,0)
+				TopCloud.Position = Pos+Vector3.new(0,2.7*resize,0)*2
+				MushCloud.Position = Pos+Vector3.new(0,2.3*resize,0)*2
+				Cloud1.Position = Pos+Vector3.new(0,0.75*resize,0)*2
+				Cloud2.Position = Pos+Vector3.new(0,1.25*resize,0)*2
+				Cloud3.Position = Pos+Vector3.new(0,1.7*resize,0)*2
+				PoleBase.Position = Pos+Vector3.new(0,0.1*resize,0)*2
+				PoleRing.Position = Pos+Vector3.new(0,1.3*resize,0)*2
+			end)
+		end
+		done2 = true
+	end)
+	wait(2)
+	for y = 0.6,0,-0.0025 do
+		wait()
+		for i , v in ipairs(Clouds) do
+			v.Mesh.VertexColor = Vector3.new(0.9,y,0)
+		end
+	end
+	for r = 0.9,0.5,-0.01 do
+		wait()
+		for i , v in ipairs(Clouds) do
+			v.Mesh.VertexColor = Vector3.new(r,0,0)
+		end
+	end
+	for by = 0,0.5,0.005 do
+		wait()
+		for i , v in ipairs(Clouds) do
+			v.Mesh.VertexColor = Vector3.new(0.5,by,by)
+			v.Transparency = by*2.1
+		end
+		Base.Mesh.Scale = Base.Mesh.Scale+Vector3.new(0.1,0.1,0.1)
+		TopCloud.Mesh.Scale = TopCloud.Mesh.Scale+Vector3.new(0.5,0.4,0.5)*2
+		MushCloud.Mesh.Scale = MushCloud.Mesh.Scale+Vector3.new(0.3,0.3,0.3)*2
+		Cloud1.Mesh.Scale = Cloud1.Mesh.Scale+Vector3.new(0.1,0.1,0.1)*2
+		Cloud2.Mesh.Scale = Cloud2.Mesh.Scale+Vector3.new(0.1,0.4,0.1)*2
+		Cloud3.Mesh.Scale = Cloud3.Mesh.Scale+Vector3.new(0.1,0.1,0.1)*2
+		PoleBase.Mesh.Scale = PoleBase.Mesh.Scale+Vector3.new(0.1,0.1,0.1)*2
+		PoleRing.Mesh.Scale = PoleRing.Mesh.Scale+Vector3.new(0.8,0.8,0.8)*2
+	end
+	done3 = true
+	while true do wait(1) if done1 and done2 and done3 then break end end
+	Exp:remove()
+	wait(20)
+end
+
+
+	
+
+Explode(BasePosition)
+
+end
+end)
+end
+end)

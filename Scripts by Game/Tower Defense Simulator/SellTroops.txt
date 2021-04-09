@@ -1,0 +1,12 @@
+local Remote = game.ReplicatedStorage.Remotes['SellTroop']
+
+
+local Arguments = {
+        
+	[1] = Workspace.Units.Scout
+
+}
+
+
+
+Remote:InvokeServer(unpack(Arguments))

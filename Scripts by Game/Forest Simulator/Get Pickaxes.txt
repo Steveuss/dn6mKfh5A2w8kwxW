@@ -1,0 +1,4 @@
+--Best Pickaxe
+local A_1 = "Holy Pickaxe"
+local A_2 = "Pickaxe"
+game:GetService("ReplicatedStorage").Remotes.EquipToolF:InvokeServer(A_1, A_2)

@@ -1,0 +1,14 @@
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character:findFirstChildOfClass("Humanoid"):ChangeState(11)
+end)
+
+while wait() do
+   for i , v in pairs(game.Players:GetChildren()) do
+       if v ~= game.Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v.Team ~= game.Players.LocalPlayer.Team and v.Character.Humanoid.FloorMaterial ~= "Air" then
+repeat
+wait()
+           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Character.HumanoidRootPart.Position + Vector3.new(-5, 20, 0), v.Character.HumanoidRootPart.Position)
+until v.Character.Humanoid.Health < 1
+   end
+end
+end

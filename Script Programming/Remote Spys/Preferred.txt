@@ -1,0 +1,2 @@
+--loadstringed by chickenz
+loadstring(game:HttpGet(("https://pastebin.com/raw/XVqQEiuB"),true))()

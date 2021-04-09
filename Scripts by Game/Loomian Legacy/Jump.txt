@@ -1,0 +1,17 @@
+--made by pomegranate on v3rmillion
+local UIS = game:GetService("UserInputService")
+local rs = game:GetService("RunService").RenderStepped
+local lp = game.Players.LocalPlayer
+local c = lp.Character
+
+UIS.InputBegan:connect(function(input, processed)
+if processed then return end
+c.Humanoid.JumpPower = 50 -- sets the JumpPower from 0 to 50 (default JumpPower)
+if UIS:IsKeyDown(Enum.KeyCode.Space) then -- if the space key is pressed
+   repeat rs:Wait() --wait 1 frame, and jump if you aren't in air every frame
+       if c.Humanoid.FloorMaterial ~= Enum.Material.Air then -- checks if the player isn't in air
+           c.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping) -- Humanoid.Jump = true does not work, so I used changestate
+       end
+   until UIS:IsKeyDown(Enum.KeyCode.Space) == false
+   end
+end)

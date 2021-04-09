@@ -1,0 +1,14 @@
+--On Gunfire
+YOUR_SONG = 1650902741
+
+
+local m = require(game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").NoCol)
+m.Ammo = 5000
+m.power = 60
+m.spread = 0
+m.rpm = 999
+m.firemode = "auto"
+m.damage.bodyshot = 1000
+m.damage.headshot = 100000
+m.audio.Volume = 100
+m.audio.fire = "rbxassetid://"..tostring(YOUR_SONG)

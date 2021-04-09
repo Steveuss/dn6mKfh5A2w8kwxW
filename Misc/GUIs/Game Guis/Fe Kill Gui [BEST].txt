@@ -1,0 +1,120 @@
+local lplayer = game:GetService('Players').LocalPlayer
+
+local killing = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "others" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'kill','gui','kill gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+Player = Instance.new("TextBox")
+kill = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+main.Position = UDim2.new(0.780606031, 0, 0.548271775, 0)
+main.Size = UDim2.new(0, 326, 0, 212)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 326, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansItalic
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "FEKILL BY HACKMASTER12"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 25
+TextLabel.TextStrokeTransparency = 0
+
+Player.Name = "Player"
+Player.Parent = main
+Player.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+Player.BorderColor3 = Color3.new(0.509804, 0.509804, 0.509804)
+Player.BorderSizePixel = 3
+Player.Position = UDim2.new(0.193251535, 0, 0.316037744, 0)
+Player.Size = UDim2.new(0, 200, 0, 50)
+Player.Font = Enum.Font.SourceSans
+Player.FontSize = Enum.FontSize.Size14
+Player.Text = ""
+Player.TextColor3 = Color3.new(0, 0, 0)
+Player.TextSize = 14
+
+kill.Name = "kill"
+kill.Parent = main
+kill.BackgroundColor3 = Color3.new(0.52549, 0.52549, 0.52549)
+kill.Position = UDim2.new(0.193251535, 0, 0.613207519, 0)
+kill.Size = UDim2.new(0, 200, 0, 50)
+kill.FontSize = Enum.FontSize.Size14
+kill.Text = "Kill"
+kill.TextColor3 = Color3.new(0, 0, 0)
+kill.TextSize = 14
+kill.MouseButton1Down:connect(function()
+for i,v in pairs(GetPlayer(Player.Text)) do
+
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local target = game:GetService("Players")[v.Name]
+local torsoname = "Torso"
+if LocalPlayer.Character:FindFirstChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+    torsoname = "UpperTorso"
+end
+if target.Character ~= nil then
+    local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+    LocalPlayer.Character:FindFirstChild(torsoname).Anchored = true
+    local tool = Instance.new("Tool", LocalPlayer.Backpack)
+    local hat = LocalPlayer.Character:FindFirstChildOfClass("Accessory")
+    local hathandle = hat.Handle
+    hathandle.Parent = tool
+    hathandle.Massless = true
+    tool.GripPos = Vector3.new(0, 9e99, 0)
+    tool.Parent = LocalPlayer.Character
+    repeat wait() until LocalPlayer.Character:FindFirstChildOfClass("Tool") ~= nil
+    tool.Grip = CFrame.new(Vector3.new(0, 0, 0))
+    LocalPlayer.Character:FindFirstChild(torsoname).Anchored = false
+    repeat
+        LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = target.Character:FindFirstChild("HumanoidRootPart").CFrame
+        wait()
+    until target.Character == nil or target.Character:FindFirstChild("Humanoid").Health <= 0 or LocalPlayer.Character == nil or LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 0 or (target.Character:FindFirstChild("HumanoidRootPart").Velocity.magnitude - target.Character:FindFirstChild("Humanoid").WalkSpeed) > (target.Character:FindFirstChild("Humanoid").WalkSpeed + 20)
+    LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+    hathandle.Parent = hat
+    hathandle.Massless = false
+    tool:Destroy()
+    LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+end
+end
+end)

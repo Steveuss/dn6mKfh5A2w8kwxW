@@ -1,0 +1,60 @@
+--Created by bruhmod on v3rmillion
+
+ local string_1 = "ReMat";
+            local string_2 = "Primary";
+            local userdata_1 = Enum.Material.Neon;
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+local string_1 = "Recolor";
+            local string_2 = "Primary";
+            local userdata_1 = Color3.fromRGB(255,255,0);
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+local decals = {
+    '194672323';
+    '32963662';
+    '166652117';
+};
+
+spawn(function()
+    while true do
+        for i = 1, 200 do
+            local string_1 = "ReMat";
+            local string_2 = "Primary";
+            local userdata_1 = Enum.Material.Neon;
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+            
+            local string_1 = "ReMat";
+            local string_2 = "Secondary";
+            local userdata_1 = Enum.Material.Neon;
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+
+            local string_1 = "Recolor";
+            local string_2 = "Secondary";
+            local userdata_1 = Color3.fromHSV(i/200,0.99,0.99);
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+            
+            local string_1 = "Recolor";
+            local string_2 = "Primary";
+            local userdata_1 = Color3.fromRGB(255,255,255);
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2, userdata_1);
+            wait()
+        end
+    end
+end)
+
+spawn(function()
+    while wait(3) do
+        for i = 1, #decals do
+            local string_1 = "SetLogo";
+            local string_2 = decals[i];
+            local Target = game:GetService("ReplicatedStorage").Remotes.Booth;
+            Target:FireServer(string_1, string_2);
+            wait(3)
+        end
+    end
+end)

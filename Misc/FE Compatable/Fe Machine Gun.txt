@@ -1,0 +1,7 @@
+Speed = 10 -- Change this to the speed you want
+repeat wait(.3-.02*Speed)
+for i,v in pairs(game.Players:GetChildren()) do
+v.Character.Head.Splash.TimePosition = .5
+v.Character.Head.Splash:Play()
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0

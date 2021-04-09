@@ -1,0 +1,14 @@
+local gun = "Gun name" -- Put your gun name here
+local stats = require(game.ReplicatedStorage.WeaponScripts.WeaponConfigs:FindFirstChild(gun))
+stats['damage'] = math.huge
+stats['customDamage'] = math.huge
+stats['pellets'] = 15
+stats['burst'] = 0
+stats['RPM'] = math.huge
+stats['range'] = 90000
+stats['magSize'] = math.huge
+stats['reloadTime'] = 0.000001
+stats['minSpread'] = 0
+stats['maxSpread'] = 0
+stats['bulletSpeed'] = math.huge
+stats['fireMode'] = 1

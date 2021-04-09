@@ -1,0 +1,9 @@
+message = "Insert your message here."
+
+function Say(chat)
+   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chat, "All")
+end
+
+while wait(10) do
+   Say(message)
+end

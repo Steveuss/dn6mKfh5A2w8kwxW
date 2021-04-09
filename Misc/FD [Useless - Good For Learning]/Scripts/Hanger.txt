@@ -1,0 +1,245 @@
+--By Rufus14 lolol
+--Converted with ttyyuu12345's model to script plugin v4
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+Part0 = Instance.new("Part")
+Sound1 = Instance.new("Sound")
+Attachment2 = Instance.new("Attachment")
+RopeConstraint3 = Instance.new("RopeConstraint")
+Part4 = Instance.new("Part")
+SpecialMesh5 = Instance.new("SpecialMesh")
+Attachment6 = Instance.new("Attachment")
+RopeConstraint7 = Instance.new("RopeConstraint")
+RopeConstraint8 = Instance.new("RopeConstraint")
+Part0.Parent = mas
+Part0.BrickColor = BrickColor.new("Pearl")
+Part0.Anchored = true
+Part0.Size = Vector3.new(9.97000027, 0.720000267, 7.03999949)
+Part0.CFrame = CFrame.new(16.7149887, 13.7606668, 36.7299957, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Part0.BottomSurface = Enum.SurfaceType.Smooth
+Part0.TopSurface = Enum.SurfaceType.Smooth
+Part0.Color = Color3.new(0.905882, 0.905882, 0.92549)
+Part0.Position = Vector3.new(16.7149887, 13.7606668, 36.7299957)
+Part0.Color = Color3.new(0.905882, 0.905882, 0.92549)
+Sound1.Parent = Part0
+Sound1.SoundId = "rbxassetid://1205183071"
+Attachment6.Parent = Part0
+Attachment6.Visible = true
+RopeConstraint8.Parent = Attachment6
+RopeConstraint8.Color = BrickColor.new("Maroon")
+RopeConstraint8.Visible = true
+RopeConstraint8.Attachment0 = nil
+RopeConstraint8.Attachment1 = Attachment6
+RopeConstraint8.Color = BrickColor.new("Maroon")
+RopeConstraint8.Length = 7.5
+RopeConstraint8.Thickness = 0.20000000298023
+RopeConstraint8.Restitution = 0.10000000149012
+Part4.Parent = mas
+Part4.Size = Vector3.new(3.6299994, 2.9199996, 2.94999957)
+Part4.CFrame = CFrame.new(16.4487038, 1.47368073, 36.9643707, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+Part4.BottomSurface = Enum.SurfaceType.Smooth
+Part4.TopSurface = Enum.SurfaceType.Smooth
+Part4.Position = Vector3.new(16.4487038, 1.47368073, 36.9643707)
+SpecialMesh5.Parent = Part4
+SpecialMesh5.MeshId = "http://www.roblox.com/asset/?id=112335925"
+SpecialMesh5.Scale = Vector3.new(3, 3, 3)
+SpecialMesh5.TextureId = "http://www.roblox.com/asset/?id=112335881"
+SpecialMesh5.MeshType = Enum.MeshType.FileMesh
+SpecialMesh5.Scale = Vector3.new(3, 3, 3)
+Attachment6.Parent = Part0
+Attachment6.Visible = true
+RopeConstraint8.Parent = Attachment6
+RopeConstraint8.Color = BrickColor.new("Maroon")
+RopeConstraint8.Visible = true
+RopeConstraint8.Length = 7.5
+RopeConstraint8.Thickness = 0.20000000298023
+RopeConstraint8.Restitution = 0
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.Character
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
+Part0.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,7.5,0)
+game.Players.LocalPlayer.Character.Torso.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * CFrame.new(0,2,0)
+Part4.CFrame = game.Players.LocalPlayer.Character.Torso.CFrame * CFrame.new(0,-3,0)
+RopeConstraint8.Attachment0 = game.Players.LocalPlayer.Character.Torso.NeckAttachment
+RopeConstraint8.Attachment1 = Attachment6
+RopeConstraint8.Visible = true
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+-- Objects
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+
+-- Properties
+
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.Position = UDim2.new(0.318378747, 0, 0.816154361, 0)
+TextButton.Size = UDim2.new(0, 496, 0, 135)
+TextButton.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TextButton.Font = Enum.Font.SourceSans
+TextButton.FontSize = Enum.FontSize.Size14
+TextButton.Text = "Suicide"
+TextButton.TextColor3 = Color3.new(0.454902, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+function kys()
+	ScreenGui:destroy()
+	local bodyvel = Instance.new("BodyVelocity", Part4)
+	bodyvel.Velocity = game.Players.LocalPlayer.Character.Torso.CFrame.lookVector * 45
+	local death = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+	death.Volume = 10
+	death.SoundId = "rbxassetid://12222242"
+	wait(0.2)
+	death:Play()
+	bodyvel:destroy()
+	game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+        if game.Players.LocalPlayer.Character:findFirstChild("Torso") then
+            game.Players.LocalPlayer.Character.Torso.Velocity = game.Players.LocalPlayer.Character.Torso.CFrame.lookVector * 10
+            for i,v in pairs(game.Players.LocalPlayer.Character.Torso:GetChildren()) do
+                if v.ClassName == "Motor6D" then
+                    if v.Name == "Neck" then
+                       
+                    else
+                        v:destroy()
+                    end
+                end
+            end
+        end
+        if game.Players.LocalPlayer.Character:findFirstChild("Right Arm") then
+            local attachment = Instance.new("Attachment", game.Players.LocalPlayer.Character.Torso)
+            attachment.Position = Vector3.new(1, 1, 0)
+            local ball = Instance.new("BallSocketConstraint", game.Players.LocalPlayer.Character)
+            ball.Attachment0 = game.Players.LocalPlayer.Character["Right Arm"].RightShoulderAttachment
+            ball.Attachment1 = attachment
+            local collidepartofleftleg = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+            collidepartofleftleg.Name = "Bone"
+            collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+            collidepartofleftleg.Transparency = 1
+            collidepartofleftleg:BreakJoints()
+            local weeld = Instance.new("Weld", collidepartofleftleg)
+            weeld.Part0 = game.Players.LocalPlayer.Character["Right Arm"]
+            weeld.Part1 = collidepartofleftleg
+            weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+        end
+        if game.Players.LocalPlayer.Character:findFirstChild("Left Arm") then
+            local attachment = Instance.new("Attachment", game.Players.LocalPlayer.Character.Torso)
+            attachment.Position = Vector3.new(-1, 1, 0)
+            local ball = Instance.new("BallSocketConstraint", game.Players.LocalPlayer.Character)
+            ball.Attachment0 = attachment
+            ball.Attachment1 = game.Players.LocalPlayer.Character["Left Arm"].LeftShoulderAttachment
+            local collidepartofleftleg = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+            collidepartofleftleg.Name = "Bone"
+            collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+            collidepartofleftleg.Transparency = 1
+            collidepartofleftleg:BreakJoints()
+            local weeld = Instance.new("Weld", collidepartofleftleg)
+            weeld.Part0 = game.Players.LocalPlayer.Character["Left Arm"]
+            weeld.Part1 = collidepartofleftleg
+            weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+        end
+        if game.Players.LocalPlayer.Character:findFirstChild("Right Leg") then
+            local attachment = Instance.new("Attachment", game.Players.LocalPlayer.Character.Torso)
+            attachment.Position = Vector3.new(0.5, -1, 0)
+            local ball = Instance.new("BallSocketConstraint", game.Players.LocalPlayer.Character)
+            ball.Attachment0 = game.Players.LocalPlayer.Character["Right Leg"].RightFootAttachment
+            ball.Attachment1 = attachment
+            game.Players.LocalPlayer.Character["Right Leg"].RightFootAttachment.Position = Vector3.new(0, 1, 0)
+            local collidepartofleftleg = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+            collidepartofleftleg.Name = "Bone"
+            collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+            collidepartofleftleg.Transparency = 1
+            collidepartofleftleg:BreakJoints()
+            local weeld = Instance.new("Weld", collidepartofleftleg)
+            weeld.Part0 = game.Players.LocalPlayer.Character["Right Leg"]
+            weeld.Part1 = collidepartofleftleg
+            weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+        end
+        if game.Players.LocalPlayer.Character:findFirstChild("Left Leg") then
+            local attachment = Instance.new("Attachment", game.Players.LocalPlayer.Character.Torso)
+            attachment.Position = Vector3.new(-0.5, -1, 0)
+            local ball = Instance.new("BallSocketConstraint", game.Players.LocalPlayer.Character)
+            ball.Attachment0 = game.Players.LocalPlayer.Character["Left Leg"].LeftFootAttachment
+            ball.Attachment1 = attachment
+            game.Players.LocalPlayer.Character["Left Leg"].LeftFootAttachment.Position = Vector3.new(0, 1, 0)
+            local collidepartofleftleg = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+            collidepartofleftleg.Name = "Bone"
+            collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+            collidepartofleftleg.Transparency = 1
+            collidepartofleftleg:BreakJoints()
+            local weeld = Instance.new("Weld", collidepartofleftleg)
+            weeld.Part0 = game.Players.LocalPlayer.Character["Left Leg"]
+            weeld.Part1 = collidepartofleftleg
+            weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+        end
+        if game.Players.LocalPlayer.Character:findFirstChild("Head") then
+            local attachment = Instance.new("Attachment", game.Players.LocalPlayer.Character.Head)
+				attachment.Position = Vector3.new(0, -0.5, 0)
+				attachment.Name = "lol"
+				attachment.Visible = false
+				game.Players.LocalPlayer.Character.Torso.NeckAttachment.Visible = false
+				game.Players.LocalPlayer.Character.Torso.NeckAttachment.Position = game.Players.LocalPlayer.Character.Torso.NeckAttachment.Position + Vector3.new(0,0,0)
+				local ball = Instance.new("BallSocketConstraint", game.Players.LocalPlayer.Character)
+	            ball.Attachment0 = game.Players.LocalPlayer.Character.Torso.NeckAttachment
+	            ball.Attachment1 = attachment
+				ball.LimitsEnabled = true
+				ball.TwistLimitsEnabled = true
+				ball.UpperAngle = 90
+				ball.Restitution = 0.5
+				ball.TwistUpperAngle = 180
+				ball.TwistLowerAngle = -180
+	            local  collidepartofleftleg = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+	            collidepartofleftleg.Name = "Bone"
+	            collidepartofleftleg.Size = Vector3.new(0.7,0.7,0.7)
+	            collidepartofleftleg.Transparency = 1
+	            collidepartofleftleg:BreakJoints()
+	            local weeld = Instance.new("Weld", collidepartofleftleg)
+	            weeld.Part0 = collidepartofleftleg
+	            weeld.Part1 = game.Players.LocalPlayer.Character["Head"]
+				if game.Players.LocalPlayer.Character.Torso:findFirstChild("Neck") then
+					game.Players.LocalPlayer.Character.Torso.Neck:destroy()
+				end
+				if game.Players.LocalPlayer.Character.Head:findFirstChild("face") then
+					game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=810245460"
+				end
+        end
+		game.Players.LocalPlayer.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0.1
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+		local dead = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+		dead.Volume = 10
+		dead.SoundId = "rbxassetid://1248405065"
+		dead:Play()
+		dead.Looped = true
+		while true do
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0.1
+			game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+			wait()
+		end
+end
+TextButton.MouseButton1Click:connect(kys)

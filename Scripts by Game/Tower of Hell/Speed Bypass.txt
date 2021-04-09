@@ -1,0 +1,10 @@
+local backupfolder = game:FindFirstChild("backup")
+local plrname = game.Players.LocalPlayer.Name
+if not backupfolder then
+    local folder = Instance.new("Folder", game)
+    folder.Name = "backup"
+end
+game.Players.LocalPlayer.Character.Parent = game.backup
+game.backup[""..tostring(plrname)].Humanoid.WalkSpeed = 100
+wait(0.1)
+game.backup[""..tostring(plrname)].Parent =  workspace

@@ -1,0 +1,12 @@
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == "Mine" and v:IsA("BasePart") then
+v:Destroy()
+end
+end
+
+workspace.DescendantAdded:Connect(function(obj)
+if obj:IsA("BasePart") and obj.Name == "Mine" then
+wait(.1)
+obj:Destroy()
+end
+end)

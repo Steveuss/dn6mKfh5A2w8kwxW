@@ -1,0 +1,9 @@
+local anim = Instance.new'Animation'
+anim.AnimationId = 'rbxassetid://2176551244'
+
+
+local animtrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim)
+animtrack.Looped = false
+animtrack:Play()
+
+game:GetService'ReplicatedStorage'.ITEM_PURCHASE:InvokeServer("gay", "8", "001527622")

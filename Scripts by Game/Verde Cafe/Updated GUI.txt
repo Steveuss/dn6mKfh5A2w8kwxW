@@ -1,0 +1,57 @@
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/eWKgbdix", true))()
+library.options.underlinecolor = "rainbow"
+local w = library:CreateWindow('Verde Cafe')
+w:Section('Misc')
+local b = w:Button("Remove Name", function()
+   game.Players.LocalPlayer.Character.OverheadRank:remove()
+end)
+local b = w:Button("Change Rank Color", function()
+   local a=game:GetService("ReplicatedStorage").RankFolder.RankColorChange;while wait()do a:FireServer(Color3.fromRGB(196, 40, 28))end
+end)
+w:Section('Bypass')
+local box = w:Box('WalkSpeed', {
+   flag = "ws";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(new)
+end)
+local box = w:Box('JumpPower', {
+   flag = "jp";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(new)
+end)
+w:Bind("Reset Character", {
+   flag = "killbind";
+   kbonly = true;
+   default = Enum.KeyCode.RightAlt;
+}, function()
+   game.Players.LocalPlayer.Character:BreakJoints()
+end)
+w:Section('Trolle')
+local b = w:Button("Facepalm", function()
+   local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://28492456"
+local k = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)
+wait(1.43)
+k:AdjustSpeed(1)
+end)
+local b = w:Button("Chat Troll", function()
+local Action = game.Players:GetPlayers()
+  for i = 1,#Action do
+Action[i].Chatted:connect(function(Message)
+  game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("".."["..Action[i].Name.."]".." "..Message, "All")
+  end)
+end
+end)
+local w = library:CreateWindow('Credits')
+local b = w:Button("wallythebird: Ui Library", function()
+warn("Wally Ui V2")
+end)
+local b = w:Button("Qruil17: Some Scripts", function()
+warn("Qruil17")
+end)

@@ -1,0 +1,47 @@
+--Primary weapons
+--M1 Garand
+--Rifle
+--M4A1
+--AK-47
+--Medkit
+--AUG
+--M1E8
+--PSG1
+--Shotgun
+--Tommy Gun
+
+--Vanisher
+
+--Chaingun (Gamepass)
+
+--Op Chaingun (Owner's mod weapon)
+
+--Secondary weapons
+--M1911
+--Uzi
+--MP5
+--Desert Eagle
+--DM6
+--Mauser
+--P90
+
+--Sten
+--Melee weapons
+--Dagger
+--Sword
+--Katana (Gamepass)
+--Frying Pan (Gamepass)
+--Chainsaw (Gamepass)
+
+--Throwables
+--Molotov
+--Frag
+
+--Pets
+--Telamon Pet
+--Noobling
+
+local userdata_1 = game:GetService("Lighting").Weapons.GUN-OR-PERK-NAME-HERE;
+local Target = game:GetService("ReplicatedStorage").GetWeapon;
+Target:FireServer(userdata_1);
+

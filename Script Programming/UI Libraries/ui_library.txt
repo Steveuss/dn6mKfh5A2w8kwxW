@@ -1,0 +1,652 @@
+local players = game:GetService("Players")
+local player = players.LocalPlayer
+local character = player.Character
+local mouse = player:GetMouse()
+local cam = workspace.CurrentCamera
+local gui
+
+local tween = game:GetService("TweenService")
+local run = game:GetService("RunService")
+local userinput = game:GetService("UserInputService")
+local http = game:GetService("HttpService")
+
+local info = TweenInfo.new
+
+local ui = {}
+local lib = {}
+local client = {}
+
+do -- UI
+	local self = ui
+	
+	self.menus = {}
+	self.index = {}
+	self.rainbow = {}
+	self.sliders = {}
+	
+	self.colorminh = 260
+	self.colormaxh = 290
+	self.colors = 190
+	self.colorv = 255
+	self.animspeed = 3
+	
+	local GuiLib = Instance.new("ScreenGui")
+	GuiLib.Parent = run:IsStudio() and player.PlayerGui or game.CoreGui
+	GuiLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	GuiLib.ResetOnSpawn = false
+	
+	gui = GuiLib
+	
+	self.updateslider = function(self,name,value)
+		local data = self.sliders[name]
+		local inc = 1/data.max
+		
+		local org = ui[name]
+		ui[name] = value
+		
+		tween:Create(data.frame,info(0.2,Enum.EasingStyle.Linear,Enum.EasingDirection.Out),{Size = UDim2.new(inc*self[name],0,1,0)}):Play()
+		
+		local function lerp(a, b, t)
+		    return a + (b - a) * t
+		end
+
+		
+		spawn(function()
+			for i = 0,1,0.1 do
+				data.label.Text = data.text .. " | " .. tostring(math.floor(lerp(org,value,i)))
+				run.RenderStepped:wait()
+			end
+		end)
+	end
+	
+	self.init = function(self,name)
+		local Load = Instance.new("Frame")
+		local Image = Instance.new("ImageLabel")
+		local Zoom = Instance.new("ImageLabel")
+		local blur = Instance.new("BlurEffect")
+		
+		GuiLib.Name = name
+		
+		Load.Name = "Load"
+		Load.Parent = GuiLib
+		Load.BackgroundColor3 = Color3.new(1, 1, 1)
+		Load.BackgroundTransparency = 1
+		Load.ClipsDescendants = true
+		Load.Position = UDim2.new(0.410355449, 0, 0.320638835, 0)
+		Load.Size = UDim2.new(0,230,0,270)
+		
+		print(Load.AbsoluteSize)
+		
+		Image.Name = "Image"
+		Image.Parent = Load
+		Image.AnchorPoint = Vector2.new(0.5, 0.5)
+		Image.BackgroundColor3 = Color3.new(1, 1, 1)
+		Image.BackgroundTransparency = 1
+		Image.Position = UDim2.new(0.5, 0, 0.5, 0)
+		Image.Size = UDim2.new(0, 150, 0, 150)
+		Image.Image = "rbxassetid://4458180707"
+		Image.ImageTransparency = 1
+		Image.ZIndex = 2
+		
+		Zoom.Name = "Zoom"
+		Zoom.Parent = Load
+		Zoom.AnchorPoint = Vector2.new(0.5, 0.5)
+		Zoom.BackgroundColor3 = Color3.new(1, 1, 1)
+		Zoom.BackgroundTransparency = 1
+		Zoom.Position = UDim2.new(0.5, 0, 0.5, 0)
+		Zoom.Size = UDim2.new(0,0,0,0)
+		Zoom.Image = "http://www.roblox.com/asset/?id=631172870"
+		Zoom.ImageColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+		Zoom.ImageTransparency = 1
+		
+		blur.Parent = cam
+		blur.Size = 0
+		
+		tween:Create(blur,info(0.2),{Size = 15}):Play()
+		tween:Create(Zoom,info(0.2),{Size = UDim2.new(0,150,0,150),ImageTransparency = 0}):Play()
+		wait(0.15)
+		tween:Create(Image,info(0.2),{ImageTransparency = 0}):Play()
+		wait(1.5)
+		tween:Create(Image,info(0.2),{ImageTransparency = 1}):Play()
+		wait(0.1)
+		local size = Load.AbsoluteSize.X * 1.6
+		tween:Create(Zoom,info(0.5),{Size = UDim2.new(0,size,0,size),ImageTransparency = 0}):Play()
+		wait(0.1)
+		local LoadTitle = Instance.new("TextLabel")
+		local LoadInfo = Instance.new("TextLabel")
+		local LoadBtn = Instance.new("TextButton")
+		
+		LoadTitle.Name = "LoadTitle"
+		LoadTitle.Parent = Load
+		LoadTitle.BackgroundColor3 = Color3.fromRGB(55,55,55)
+		LoadTitle.BackgroundTransparency = 1
+		LoadTitle.BorderSizePixel = 0
+		LoadTitle.Size = UDim2.new(1, 0, 0.150000006, 0)
+		LoadTitle.Font = Enum.Font.SourceSansBold
+		LoadTitle.Text = name
+		LoadTitle.TextColor3 = Color3.new(1, 1, 1)
+		LoadTitle.TextSize = 32
+		LoadTitle.TextTransparency = 1
+		LoadTitle.ZIndex = 2
+		LoadTitle.TextStrokeTransparency = 1
+		
+		LoadInfo.Name = "LoadInfo"
+		LoadInfo.Parent =Load
+		LoadInfo.AnchorPoint = Vector2.new(0.5, 0)
+		LoadInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+		LoadInfo.BackgroundTransparency = 1
+		LoadInfo.Position = UDim2.new(0.50000006, 0, 0.178906575, 0)
+		LoadInfo.Size = UDim2.new(0.899999976, 0, 0.517445087, 0)
+		LoadInfo.Font = Enum.Font.SourceSansBold
+		LoadInfo.Text = "- This is a line \n- This is also a line\n- And me too"
+		LoadInfo.TextColor3 = Color3.new(1, 1, 1)
+		LoadInfo.TextSize = 24
+		LoadInfo.TextXAlignment = Enum.TextXAlignment.Left
+		LoadInfo.TextYAlignment = Enum.TextYAlignment.Top
+		LoadInfo.TextTransparency = 1
+		LoadInfo.ZIndex = 2
+		LoadInfo.TextStrokeTransparency = 1
+		
+		LoadBtn.Name = "LoadBtn"
+		LoadBtn.Parent = Load
+		LoadBtn.AnchorPoint = Vector2.new(0.5, 0)
+		LoadBtn.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+		LoadBtn.BorderColor3 = Color3.new(1, 0, 0)
+		LoadBtn.BorderSizePixel = 2
+		LoadBtn.Position = UDim2.new(0.5, 0, 0.769379139, 0)
+		LoadBtn.Size = UDim2.new(0.800000012, 0, 0.150000006, 0)
+		LoadBtn.Font = Enum.Font.SourceSansSemibold
+		LoadBtn.Text = "Load"
+		LoadBtn.TextColor3 = Color3.new(1, 1, 1)
+		LoadBtn.TextSize = 32
+		LoadBtn.BackgroundTransparency = 1
+		LoadBtn.TextTransparency = 1
+		LoadBtn.ZIndex = 2
+		
+		tween:Create(LoadTitle,TweenInfo.new(0.5),{BackgroundTransparency = 1,TextTransparency = 0,TextStrokeTransparency = 0.4}):Play()
+		tween:Create(LoadInfo,TweenInfo.new(0.5),{TextTransparency = 0,TextStrokeTransparency = 0.4}):Play()
+		tween:Create(LoadBtn,TweenInfo.new(0.5),{BackgroundTransparency = 0,TextTransparency = 0}):Play()
+		
+		local rs = run.RenderStepped:Connect(function()
+			local x = lib:rainbow(tick()/5)
+			local color = Color3.fromRGB(176 + (math.sin(tick()) * 48),65,255)
+			
+			LoadTitle.TextStrokeColor3 = color
+			LoadInfo.TextStrokeColor3 = color
+			LoadBtn.BorderColor3 = color
+		end)
+		
+		LoadBtn.MouseButton1Click:Connect(function()
+			tween:Create(LoadTitle,TweenInfo.new(0.1),{BackgroundTransparency = 1,TextTransparency = 1,TextStrokeTransparency = 1}):Play()
+			tween:Create(LoadInfo,TweenInfo.new(0.1),{TextTransparency = 1,TextStrokeTransparency = 1}):Play()
+			tween:Create(LoadBtn,TweenInfo.new(0.1),{BackgroundTransparency = 1,TextTransparency = 1}):Play()
+			tween:Create(Zoom,info(0.2),{Size = UDim2.new(0,0,0,0),ImageTransparency = 1}):Play()
+			tween:Create(blur,info(0.2),{Size = 0}):Play()
+			delay(0.2,function()
+				Load:Destroy()
+				blur:Destroy()
+			end)
+			
+			rs:Disconnect()
+			ui:load()
+		end)
+	end
+	
+	ui.load = function()
+		for i,v in pairs(self.menus) do
+			local y = v.yindex
+			local sizex = 200
+			local sizey = 35
+			local gapsize = 5
+			local sy = #v.entries * (sizey + gapsize) - gapsize
+			
+			local frame = Instance.new("Frame",GuiLib)
+			frame.Name = v.name
+			frame.Position = UDim2.new(0,50 + (i-1) * (sizex + 10),0,80)
+			frame.Size = UDim2.new(0,sizex,0,sy)
+			frame.BackgroundColor3 = Color3.fromRGB(55,55,55)
+			frame.BorderSizePixel = 0
+			frame.BackgroundTransparency = 1
+			frame.ClipsDescendants = true
+			
+			local zoom = Instance.new("ImageLabel")
+			zoom.Name = "zoom"
+			zoom.Parent = frame
+			zoom.AnchorPoint = Vector2.new(0.5, 0.5)
+			zoom.BackgroundColor3 = Color3.new(1, 1, 1)
+			zoom.BackgroundTransparency = 1
+			zoom.Position = UDim2.new(0.5, 0, 0.5, 0)
+			zoom.Size = UDim2.new(0,0,0,0)
+			zoom.Image = "http://www.roblox.com/asset/?id=631172870"
+			zoom.ImageColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+			zoom.ImageTransparency = 1
+			zoom.ZIndex = -1
+			
+			local title = Instance.new("TextLabel")
+			title.Name = "title"
+			title.Parent = GuiLib
+			title.Size = UDim2.new(0,sizex,0,40)
+			title.Position = UDim2.new(0,50 + (i-1) * (sizex + 10),0,80)
+			title.BorderSizePixel = 0
+			title.BackgroundColor3 = Color3.fromRGB(173, 16, 255)
+			title.Text = v.name
+			title.TextSize = 25
+			title.Font = Enum.Font.SourceSansBold
+			title.TextColor3 = Color3.new(1,1,1)
+			title.TextTransparency = 1
+			title.BackgroundTransparency = 1
+			title.ZIndex = -2
+			
+			self.rainbow[i] = title
+			
+			tween:Create(zoom,info(0.2),{Size = UDim2.new(0,sy*2,0,sy*2),ImageTransparency = 0}):Play()
+			
+			wait(0.2)
+			
+			frame.BackgroundTransparency = 0
+			zoom:Destroy()
+			--frame.ClipsDescendants = false
+			tween:Create(title,info(0.1),{Position = UDim2.new(0,50 + (i-1) * (sizex + 10),0,40),TextTransparency = 0,BackgroundTransparency = 0}):Play()
+			
+			local shit = {}
+			
+			for n,data in pairs(v.entries) do
+				if data.class == "btn" then
+					local lab
+					local toggled = false
+					
+					local btn = Instance.new("TextButton")
+					btn.Name = data.name
+					btn.Parent = frame
+					btn.Size = UDim2.new(1,0,0,sizey)
+					btn.Position = UDim2.new(0,0,0,y)
+					btn.BorderSizePixel = 0
+					btn.BackgroundColor3 = Color3.fromRGB(85,85,85)
+					btn.Text = data.text
+					btn.TextSize = 18
+					btn.Font = Enum.Font.SourceSansSemibold
+					btn.TextColor3 = Color3.new(1,1,1)
+					btn.BackgroundTransparency = 1
+					btn.TextTransparency = 1
+					
+					if data.toggle then
+						lab = Instance.new("TextLabel")
+						lab.Name = "tog"
+						lab.Parent = btn
+						lab.AnchorPoint = Vector2.new(1,0)
+						lab.Position = UDim2.new(0.95,0,0,0)
+						lab.Size = UDim2.new(0.1,0,1,0)
+						lab.BackgroundTransparency = 1
+						lab.TextSize = 16
+						lab.Font = Enum.Font.SourceSansSemibold
+						lab.Text = "OFF"
+						lab.TextColor3 = Color3.new(1,0,0)
+						lab.TextTransparency = 1
+						
+						tween:Create(lab,info(0.2),{TextTransparency = 0}):Play()
+						
+						if data.bind then
+							client.binds[data.bind] = false
+						end
+					end
+					
+					tween:Create(btn,info(0.2),{BackgroundTransparency = 0,TextTransparency = 0}):Play()
+					
+					y = y + sizey + gapsize
+					
+					btn.MouseButton1Click:Connect(function()
+						if lab then
+							toggled = not toggled
+							local c = toggled and Color3.new(0,1,0) or Color3.new(1,0,0)
+							local t = toggled and "ON" or "OFF"
+							
+							tween:Create(lab,info(0.35),{TextColor3 = c}):Play()
+							lab.Text = t
+							
+							if data.bind then
+								client.binds[data.bind] = toggled
+							end
+						end
+						
+						if data.callback then
+							data.callback(btn)
+						end
+					end)
+				elseif data.class == "sdr" then
+					local dragging = false
+					local range = data.max
+					local inc = 1/range
+					
+					local sframe = Instance.new("Frame")
+					sframe.Name = data.name
+					sframe.Parent = frame
+					sframe.Size = UDim2.new(1,0,0,sizey)
+					sframe.Position = UDim2.new(0,0,0,y)
+					sframe.BorderSizePixel = 0
+					sframe.BackgroundColor3 = Color3.fromRGB(85,85,85)
+					sframe.BackgroundTransparency = 1
+					sframe.ClipsDescendants = true
+					
+					local dframe = Instance.new("Frame")
+					dframe.Name = "slider"
+					dframe.Parent = sframe
+					dframe.Size = UDim2.new(inc * data.default,0,1,0)
+					dframe.Position = UDim2.new(0,0,0,0)
+					dframe.BorderSizePixel = 0
+					dframe.BackgroundColor3 = Color3.new(1,1,1)
+					dframe.BackgroundTransparency = 1
+					
+					local label = Instance.new("TextLabel")
+					label.Name = "text"
+					label.Parent = sframe
+					label.Size = UDim2.new(1,0,1,0)
+					label.BackgroundTransparency = 1
+					label.TextSize = 18
+					label.Font = Enum.Font.SourceSansSemibold
+					label.TextTransparency = 1
+					label.Text = data.text .. " | " .. tostring(data.default)
+					label.TextColor3 = Color3.new(1,1,1)
+					
+					self.sliders[data.name] = {max = data.max,frame = dframe,text = data.text,label = label}
+					
+					tween:Create(sframe,info(0.2),{BackgroundTransparency = 0}):Play()
+					tween:Create(dframe,info(0.2),{BackgroundTransparency = 0.8}):Play()
+					tween:Create(label,info(0.2),{TextTransparency = 0}):Play()
+					
+					y = y + sizey + gapsize
+					
+					local function slide(input)
+						local size = UDim2.new(math.clamp((input.Position.X - sframe.AbsolutePosition.X) / sframe.AbsoluteSize.X, 0, 1), 0, 1, 0);
+						
+						tween:Create(dframe,info(0.2,Enum.EasingStyle.Back,Enum.EasingDirection.Out),{Size = size}):Play()
+						
+						local value = math.floor(((size.X.Scale * data.max) / data.max) * (data.max - data.min) + data.min);
+						label.Text = data.text .. " | " .. tostring(value);
+						data.callback(value);
+				    end
+					
+					sframe.InputBegan:Connect(function(obj)
+						if obj.UserInputType == Enum.UserInputType.MouseButton1 then
+							dragging = true
+							slide(obj)
+						end
+					end)
+					
+					sframe.InputEnded:Connect(function(obj)
+						if obj.UserInputType == Enum.UserInputType.MouseButton1 then
+							dragging = false
+						end
+					end)
+					
+					userinput.InputChanged:Connect(function(obj)
+						if dragging and obj.UserInputType == Enum.UserInputType.MouseMovement then
+							slide(obj)
+						end
+					end)
+				elseif data.class == "ipt" then
+					local sframe = Instance.new("Frame")
+					sframe.Name = data.name
+					sframe.Parent = frame
+					sframe.Size = UDim2.new(1,0,0,sizey)
+					sframe.Position = UDim2.new(0,0,0,y)
+					sframe.BorderSizePixel = 0
+					sframe.BackgroundColor3 = Color3.fromRGB(85,85,85)
+					sframe.BackgroundTransparency = 1
+					sframe.ClipsDescendants = true
+					
+					local title = Instance.new("TextLabel")
+					title.Name = "title"
+					title.Parent = sframe
+					title.Size = UDim2.new(0.5,0,1,0)
+					title.AnchorPoint = Vector2.new(1,0)
+					title.Position = UDim2.new(0.5,0,0,0)
+					title.BackgroundTransparency = 1
+					title.TextSize = 18
+					title.Font = Enum.Font.SourceSansSemibold
+					title.TextColor3 = Color3.new(1,1,1)
+					title.Text = data.text..": "
+					title.TextXAlignment = Enum.TextXAlignment.Right
+					title.TextTransparency = 1
+					
+					local label = Instance.new("TextBox")
+					label.Name = "input"
+					label.Parent = sframe
+					label.Size = UDim2.new(0.4,0,0.75,0)
+					label.AnchorPoint = Vector2.new(0,0.5)
+					label.Position = UDim2.new(0.55,0,0.5,0)
+					label.BackgroundTransparency = 1
+					label.BackgroundColor3 = Color3.fromRGB(70,70,70)
+					label.BorderSizePixel = 0
+					label.TextSize = 18
+					label.Font = Enum.Font.SourceSansSemibold
+					label.TextColor3 = Color3.new(1,1,1)
+					label.Text = tostring(data.default)
+					label.TextTransparency = 1
+					label.PlaceholderText = tostring(data.default)
+					label.PlaceholderColor3 = Color3.fromRGB(65,65,65)
+					label.ClipsDescendants = true
+					
+					tween:Create(sframe,info(0.2),{BackgroundTransparency = 0}):Play()
+					tween:Create(title,info(0.2),{TextTransparency = 0}):Play()
+					tween:Create(label,info(0.2),{BackgroundTransparency = 0,TextTransparency = 0}):Play()
+					
+					y = y + sizey + gapsize
+					
+					label.Focused:Connect(function()
+						tween:Create(label,info(0.2),{BackgroundColor3 = Color3.fromRGB(80,80,80)}):Play()
+					end)
+					
+					label.FocusLost:Connect(function()
+						tween:Create(label,info(0.2),{BackgroundColor3 = Color3.fromRGB(70,70,70)}):Play()
+						label.PlaceholderText = label.Text
+						
+						data.callback(label.Text)
+					end)
+				end
+				wait(0.05)
+				
+				local lastclick = 0
+				local debounce = false
+				local open = true
+				local dragging = false
+				local dragstart
+				local draginput
+				local startpost
+				local startposf
+				
+				local function update(obj)
+					local delta = obj.Position - dragstart
+					title.Position = UDim2.new(startpost.X.Scale, startpost.X.Offset + delta.X, startpost.Y.Scale, startpost.Y.Offset + delta.Y)
+					frame.Position = UDim2.new(startposf.X.Scale, startposf.X.Offset + delta.X, startposf.Y.Scale, startposf.Y.Offset + delta.Y)
+				end
+				
+				title.InputBegan:Connect(function(obj)
+					if obj.UserInputType == Enum.UserInputType.MouseButton1 then
+						dragging = true
+						dragstart = obj.Position
+						startpost = title.Position
+						startposf = frame.Position
+						
+						if tick() - lastclick < 0.3 and not debounce then
+							tween:Create(frame,info(0.2),{Size = open and UDim2.new(0,sizex,0,0) or UDim2.new(0,sizex,0,sy)}):Play()
+							open = not open
+							debounce = true
+							
+							delay(0.1,function()
+								debounce = false
+							end)
+						end
+						
+						lastclick = tick()
+					end
+					
+					obj.Changed:Connect(function()
+						if obj.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end)
+				
+				title.InputChanged:Connect(function(obj)
+					if obj.UserInputType == Enum.UserInputType.MouseMovement then
+						draginput = obj
+					end
+				end)
+				
+				userinput.InputChanged:Connect(function(obj)
+					if obj == draginput and dragging then
+						update(obj)
+					end
+				end)
+			end
+		end
+	end
+	
+	ui.addmenu = function(self,name)
+		self.menus[#self.menus+1] = {name = name,entries = {},yindex = 0}
+		self.index[name] = #self.menus
+	end
+	
+	ui.addbutton = function(self,menu,name,text,toggle,bind,callback)
+		local index = self.menus[self.index[menu]]
+		
+		index.entries[#index.entries+1] = {class = "btn",name = name,text = text,toggle = toggle,bind = bind,callback = callback}
+	end
+
+	ui.addinput = function(self,menu,name,text,default,callback)
+		local index = self.menus[self.index[menu]]
+		
+		index.entries[#index.entries+1] = {class = "ipt",name = name,text = text,default = default,callback = callback}
+	end
+
+	ui.addslider = function(self,menu,name,text,min,max,default,callback)
+		local index = self.menus[self.index[menu]]
+		
+		index.entries[#index.entries+1] = {class = "sdr",name = name,text = text,min = min,max = max,default = default,callback = callback}
+	end
+end
+
+do -- lib
+	local self = lib
+	
+	self.environment = {
+	    get_upvalues = debug.getupvalues or getupvalues or getupvals or false,
+	    get_upvalue = debug.getupvalue or getupvalue or getupval or false,
+	    get_metatable = getrawmetatable or debug.getmetatable or false,
+	    get_stack = debug.getstack or getstack or false,
+	    get_namecall = getnamecallmethod or false,
+	    get_reg = getreg or debug.getregistry or false,
+	    get_gc = getgc or false,
+	    get_thread_context = (syn and syn.get_thread_identity) or getthreadcontext or getcontext or false,
+	    set_thread_context = (syn and syn.set_thread_identity) or setthreadcontext or setcontext or false,
+	    set_namecall = setnamecallmethod or false,
+	    set_upvalue = debug.setupvalue or setupvalue or setupval or false,
+	    set_readonly = setreadonly or make_writeable or false,
+	    is_l_closure = islclosure or (iscclosure and function(closure) return not iscclosure(closure) end) or false,
+	    is_x_closure = is_synapse_function or is_protosmasher_closure or issentinelclosure or false,
+	    hook_function = hookfunction or hookfunc or false,
+	    new_cclosure = newcclosure or false,
+	    to_clipboard = (syn and syn.write_clipboard) or writeclipboard or toclipboard or setclipboard or false,
+	    check_caller = checkcaller or false,
+	}
+	
+	self.rainbow = function(self,x)
+		return math.acos(math.cos(x*math.pi))/math.pi
+	end
+end
+
+do -- client
+	local self = client
+	
+	self.binds = {}
+end
+
+ui:addmenu("test menu")
+ui:addmenu("test menu2")
+ui:addmenu("settings")
+
+ui:addbutton("test menu","button","test button")
+ui:addbutton("test menu","toggle","test toggle",true,"testbind")
+ui:addinput("test menu","input","test input","example",function(value)
+	print(value)
+end)
+ui:addslider("test menu","slider","test slider",1,150,16,function(value)
+	if character then
+		character.Humanoid.WalkSpeed = value
+	end
+end)
+
+ui:addbutton("test menu2","button","test button")
+ui:addbutton("test menu2","toggle","test toggle",true,"testbind")
+ui:addinput("test menu2","input","test input","example",function(value)
+	print(value)
+end)
+ui:addslider("test menu2","slider","test slider",1,10000,16,function(value)
+	if character then
+		character.Humanoid.JumpPower = value
+	end
+end)
+
+ui:addslider("settings","colorminh","min hue",0,360,260,function(value)
+	ui.colorminh = value
+end)
+ui:addslider("settings","colormaxh","max hue",0,360,290,function(value)
+	ui.colormaxh = value
+end)
+ui:addslider("settings","colors","saturation",100,255,190,function(value)
+	ui.colors = value
+end)
+ui:addslider("settings","colorv","value",0,255,255,function(value)
+	ui.colorv = value
+end)
+ui:addslider("settings","animspeed","speed",1,10,3,function(value)
+	ui.animspeed = value
+end)
+ui:addbutton("settings","copy","copy data",false,nil,function(btn)
+	local t = {colorminh = ui.colorminh,colormaxh = ui.colormaxh,colors = ui.colors,colorv = ui.colorv,animspeed = ui.animspeed}
+	local j = http:JSONEncode(t)
+	
+	if lib.environment.to_clipboard then
+		lib.environment.to_clipboard(j)
+	else
+		print(j)
+		btn.Text = "clipboard not supported"
+		wait(0.5)
+		btn.Text = "copy data"
+	end
+end)
+
+ui:addinput("settings","data","paste data","",function(value)
+	local t = http:JSONDecode(value)
+	
+	for i,v in pairs(t) do
+		ui:updateslider(i,v)
+	end
+end)
+
+wait(1)
+
+ui:init("Game Name", "guiname")
+
+local speeds = {
+	0.25,
+	0.5,
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8
+}
+
+run.RenderStepped:Connect(function(dt)
+	for i,g in pairs(ui.rainbow) do
+		local h = (ui.colormaxh+ui.colorminh)/2 + (math.sin(tick() * speeds[ui.animspeed]) * (ui.colormaxh-ui.colorminh)/2)
+		local s = ui.colors
+		local v = ui.colorv
+		
+		g.BackgroundColor3 = Color3.fromHSV(h/360,s/255,v/255)
+	end
+end)

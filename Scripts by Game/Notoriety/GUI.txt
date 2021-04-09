@@ -1,0 +1,1257 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local BUYPAYDAY2PLS = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local BreakGlasses = Instance.new("TextButton")
+local WalkSpeed = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local JumpPower = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Annoy = Instance.new("TextButton")
+local Target = Instance.new("TextButton")
+local Key = Instance.new("TextBox")
+local killcops = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local Constantkillcops = Instance.new("TextButton")
+local createGMC = Instance.new("TextButton")
+local createBrickBank = Instance.new("TextButton")
+local DifficultyChooser = Instance.new("TextButton")
+local TaticChooser = Instance.new("TextButton")
+local PermissionChooser = Instance.new("TextButton")
+local AIChooser = Instance.new("TextButton")
+local Safe = Instance.new("TextButton")
+local SafeRarity = Instance.new("TextButton")
+local PageController = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local Interactions = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local LooseItems = Instance.new("TextButton")
+local OpenSafes = Instance.new("TextButton")
+local Pagers = Instance.new("TextButton")
+local CleanBodies = Instance.new("TextButton")
+local Slots = Instance.new("TextButton")
+local Water = Instance.new("TextButton")
+local FixBFD = Instance.new("TextButton")
+local Loot = Instance.new("TextButton")
+local Snow = Instance.new("TextButton")
+local Keycards = Instance.new("TextButton")
+local Safes = Instance.new("TextButton")
+local page = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local KCCROWBAR = Instance.new("TextButton")
+--Properties:
+BUYPAYDAY2PLS.Name = "BUYPAYDAY2PLS"
+BUYPAYDAY2PLS.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BUYPAYDAY2PLS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = BUYPAYDAY2PLS
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.new(1, 1, 1)
+Main.Position = UDim2.new(0.484717429, 0, 0.506527364, 0)
+Main.Size = UDim2.new(0.628027678, 0, 0.738903403, 0)
+Main.Visible = false
+
+BreakGlasses.Name = "BreakGlasses"
+BreakGlasses.Parent = Main
+BreakGlasses.AnchorPoint = Vector2.new(0.5, 0.5)
+BreakGlasses.BackgroundColor3 = Color3.new(1, 1, 1)
+BreakGlasses.Position = UDim2.new(0.18916437, 0, 0.844523013, 0)
+BreakGlasses.Size = UDim2.new(0.247933879, 0, 0.15194346, 0)
+BreakGlasses.Font = Enum.Font.SourceSans
+BreakGlasses.Text = "Earrape( CAN ONLY BE USED ONCE AND ON MAP THAT HAVE GLASS)"
+BreakGlasses.TextColor3 = Color3.new(0, 0, 0)
+BreakGlasses.TextScaled = true
+BreakGlasses.TextSize = 14
+BreakGlasses.TextWrapped = true
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = Main
+WalkSpeed.AnchorPoint = Vector2.new(0.5, 0.5)
+WalkSpeed.BackgroundColor3 = Color3.new(1, 1, 1)
+WalkSpeed.Position = UDim2.new(0.157024801, 0, 0.210247353, 0)
+WalkSpeed.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.new(0, 0, 0)
+WalkSpeed.TextScaled = true
+WalkSpeed.TextSize = 14
+WalkSpeed.TextWrapped = true
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Main
+Noclip.AnchorPoint = Vector2.new(0.5, 0.5)
+Noclip.BackgroundColor3 = Color3.new(1, 1, 1)
+Noclip.Position = UDim2.new(0.499540895, 0, 0.210247353, 0)
+Noclip.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.new(0, 0, 0)
+Noclip.TextScaled = true
+Noclip.TextSize = 14
+Noclip.TextWrapped = true
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Main
+JumpPower.AnchorPoint = Vector2.new(0.5, 0.5)
+JumpPower.BackgroundColor3 = Color3.new(1, 1, 1)
+JumpPower.Position = UDim2.new(0.80991745, 0, 0.210247353, 0)
+JumpPower.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+JumpPower.Font = Enum.Font.SourceSans
+JumpPower.Text = "Jump Power"
+JumpPower.TextColor3 = Color3.new(0, 0, 0)
+JumpPower.TextScaled = true
+JumpPower.TextSize = 14
+JumpPower.TextWrapped = true
+
+TextLabel.Parent = Main
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.483471125, 0, 0.091872789, 0)
+TextLabel.Size = UDim2.new(0.469237953, 0, 0.0883392245, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "General Movements"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Main
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.482552856, 0, 0.724381626, 0)
+TextLabel_2.Size = UDim2.new(0.469237953, 0, 0.0883392245, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Trolls"
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+Annoy.Name = "Annoy"
+Annoy.Parent = Main
+Annoy.AnchorPoint = Vector2.new(0.5, 0.5)
+Annoy.BackgroundColor3 = Color3.new(1, 1, 1)
+Annoy.Position = UDim2.new(0.483011991, 0, 0.812720835, 0)
+Annoy.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Annoy.Font = Enum.Font.SourceSans
+Annoy.Text = "Annoy"
+Annoy.TextColor3 = Color3.new(0, 0, 0)
+Annoy.TextScaled = true
+Annoy.TextSize = 14
+Annoy.TextWrapped = true
+
+Target.Name = "Target"
+Target.Parent = Main
+Target.AnchorPoint = Vector2.new(0.5, 0.5)
+Target.BackgroundColor3 = Color3.new(1, 1, 1)
+Target.Position = UDim2.new(0.483011991, 0, 0.901060045, 0)
+Target.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Target.Font = Enum.Font.SourceSans
+Target.Text = "No current target"
+Target.TextColor3 = Color3.new(0, 0, 0)
+Target.TextScaled = true
+Target.TextSize = 14
+Target.TextWrapped = true
+
+Key.Name = "Key"
+Key.Parent = Main
+Key.AnchorPoint = Vector2.new(0.5, 0.5)
+Key.BackgroundColor3 = Color3.new(1, 1, 1)
+Key.Position = UDim2.new(0.091827333, 0, 0.0424028039, 0)
+Key.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Key.Font = Enum.Font.SourceSans
+Key.Text = "Insert key here."
+Key.TextColor3 = Color3.new(0, 0, 0)
+Key.TextScaled = true
+Key.TextSize = 14
+Key.TextWrapped = true
+
+killcops.Name = "killcops"
+killcops.Parent = Main
+killcops.AnchorPoint = Vector2.new(0.5, 0.5)
+killcops.BackgroundColor3 = Color3.new(1, 1, 1)
+killcops.Position = UDim2.new(0.788338065, 0, 0.848056614, 0)
+killcops.Size = UDim2.new(0.29476583, 0, 0.194346294, 0)
+killcops.Font = Enum.Font.SourceSans
+killcops.Text = "Kill all cops  (Once/need Key)"
+killcops.TextColor3 = Color3.new(0, 0, 0)
+killcops.TextScaled = true
+killcops.TextSize = 14
+killcops.TextWrapped = true
+
+TextLabel_3.Parent = Main
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.483471125, 0, 0.326855123, 0)
+TextLabel_3.Size = UDim2.new(0.469237953, 0, 0.0883392245, 0)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Utilities"
+TextLabel_3.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14
+TextLabel_3.TextWrapped = true
+
+Constantkillcops.Name = "Constantkillcops"
+Constantkillcops.Parent = Main
+Constantkillcops.AnchorPoint = Vector2.new(0.5, 0.5)
+Constantkillcops.BackgroundColor3 = Color3.new(1, 1, 1)
+Constantkillcops.Position = UDim2.new(0.157024801, 0, 0.415194333, 0)
+Constantkillcops.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Constantkillcops.Font = Enum.Font.SourceSans
+Constantkillcops.Text = "Constantly kill all cops(Need key)"
+Constantkillcops.TextColor3 = Color3.new(0, 0, 0)
+Constantkillcops.TextScaled = true
+Constantkillcops.TextSize = 14
+Constantkillcops.TextWrapped = true
+
+createGMC.Name = "createGMC"
+createGMC.Parent = Main
+createGMC.AnchorPoint = Vector2.new(0.5, 0.5)
+createGMC.BackgroundColor3 = Color3.new(1, 1, 1)
+createGMC.Position = UDim2.new(0.156106502, 0, 0.524734974, 0)
+createGMC.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+createGMC.Font = Enum.Font.SourceSans
+createGMC.Text = "Create GMC"
+createGMC.TextColor3 = Color3.new(0, 0, 0)
+createGMC.TextScaled = true
+createGMC.TextSize = 14
+createGMC.TextWrapped = true
+
+createBrickBank.Name = "createBrickBank"
+createBrickBank.Parent = Main
+createBrickBank.AnchorPoint = Vector2.new(0.5, 0.5)
+createBrickBank.BackgroundColor3 = Color3.new(1, 1, 1)
+createBrickBank.Position = UDim2.new(0.156106502, 0, 0.62544167, 0)
+createBrickBank.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+createBrickBank.Font = Enum.Font.SourceSans
+createBrickBank.Text = "Create Brick Bank"
+createBrickBank.TextColor3 = Color3.new(0, 0, 0)
+createBrickBank.TextScaled = true
+createBrickBank.TextSize = 14
+createBrickBank.TextWrapped = true
+
+DifficultyChooser.Name = "DifficultyChooser"
+DifficultyChooser.Parent = Main
+DifficultyChooser.AnchorPoint = Vector2.new(0.5, 0.5)
+DifficultyChooser.BackgroundColor3 = Color3.new(1, 1, 1)
+DifficultyChooser.Position = UDim2.new(0.330578506, 0, 0.575088322, 0)
+DifficultyChooser.Size = UDim2.new(0.106519744, 0, 0.189045936, 0)
+DifficultyChooser.Font = Enum.Font.SourceSans
+DifficultyChooser.Text = "Difficulty: Nightmare"
+DifficultyChooser.TextColor3 = Color3.new(0, 0, 0)
+DifficultyChooser.TextScaled = true
+DifficultyChooser.TextSize = 14
+DifficultyChooser.TextWrapped = true
+
+TaticChooser.Name = "TaticChooser"
+TaticChooser.Parent = Main
+TaticChooser.AnchorPoint = Vector2.new(0.5, 0.5)
+TaticChooser.BackgroundColor3 = Color3.new(1, 1, 1)
+TaticChooser.Position = UDim2.new(0.47382921, 0, 0.575088322, 0)
+TaticChooser.Size = UDim2.new(0.106519744, 0, 0.189045936, 0)
+TaticChooser.Font = Enum.Font.SourceSans
+TaticChooser.Text = "Tatic: Loud"
+TaticChooser.TextColor3 = Color3.new(0, 0, 0)
+TaticChooser.TextScaled = true
+TaticChooser.TextSize = 14
+TaticChooser.TextWrapped = true
+
+PermissionChooser.Name = "PermissionChooser"
+PermissionChooser.Parent = Main
+PermissionChooser.AnchorPoint = Vector2.new(0.5, 0.5)
+PermissionChooser.BackgroundColor3 = Color3.new(1, 1, 1)
+PermissionChooser.Position = UDim2.new(0.627180934, 0, 0.575088322, 0)
+PermissionChooser.Size = UDim2.new(0.106519744, 0, 0.189045936, 0)
+PermissionChooser.Font = Enum.Font.SourceSans
+PermissionChooser.Text = "Permission: Public"
+PermissionChooser.TextColor3 = Color3.new(0, 0, 0)
+PermissionChooser.TextScaled = true
+PermissionChooser.TextSize = 14
+PermissionChooser.TextWrapped = true
+
+AIChooser.Name = "AIChooser"
+AIChooser.Parent = Main
+AIChooser.AnchorPoint = Vector2.new(0.5, 0.5)
+AIChooser.BackgroundColor3 = Color3.new(1, 1, 1)
+AIChooser.Position = UDim2.new(0.787878811, 0, 0.575088322, 0)
+AIChooser.Size = UDim2.new(0.106519744, 0, 0.189045936, 0)
+AIChooser.Font = Enum.Font.SourceSans
+AIChooser.Text = "AI Enabled"
+AIChooser.TextColor3 = Color3.new(0, 0, 0)
+AIChooser.TextScaled = true
+AIChooser.TextSize = 14
+AIChooser.TextWrapped = true
+
+Safe.Name = "Safe"
+Safe.Parent = Main
+Safe.AnchorPoint = Vector2.new(0.5, 0.5)
+Safe.BackgroundColor3 = Color3.new(1, 1, 1)
+Safe.Position = UDim2.new(0.369146019, 0, 0.415194333, 0)
+Safe.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+Safe.Font = Enum.Font.SourceSans
+Safe.Text = "Buy Safes"
+Safe.TextColor3 = Color3.new(0, 0, 0)
+Safe.TextScaled = true
+Safe.TextSize = 14
+Safe.TextWrapped = true
+
+SafeRarity.Name = "SafeRarity"
+SafeRarity.Parent = Main
+SafeRarity.AnchorPoint = Vector2.new(0.5, 0.5)
+SafeRarity.BackgroundColor3 = Color3.new(1, 1, 1)
+SafeRarity.Position = UDim2.new(0.650137722, 0, 0.415194333, 0)
+SafeRarity.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+SafeRarity.Font = Enum.Font.SourceSans
+SafeRarity.Text = "Rarity: Ruby"
+SafeRarity.TextColor3 = Color3.new(0, 0, 0)
+SafeRarity.TextScaled = true
+SafeRarity.TextSize = 14
+SafeRarity.TextWrapped = true
+
+PageController.Name = "PageController"
+PageController.Parent = Main
+PageController.AnchorPoint = Vector2.new(0.5, 0.5)
+PageController.BackgroundColor3 = Color3.new(1, 1, 1)
+PageController.Position = UDim2.new(0.908172607, 0, 0.0441696122, 0)
+PageController.Size = UDim2.new(0.183654726, 0, 0.0883392245, 0)
+PageController.Font = Enum.Font.SourceSans
+PageController.Text = "Next Page"
+PageController.TextColor3 = Color3.new(0, 0, 0)
+PageController.TextScaled = true
+PageController.TextSize = 14
+PageController.TextWrapped = true
+
+TextLabel_4.Parent = Main
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Position = UDim2.new(0.14692378, 0, 0.71378088, 0)
+TextLabel_4.Size = UDim2.new(0.295684099, 0, 0.0883392245, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Note: manually create a lobby(any) after using the lobby creators or its gonna be glitchy"
+TextLabel_4.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14
+TextLabel_4.TextWrapped = true
+
+TextLabel_5.Parent = Main
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_5.BackgroundTransparency = 1
+TextLabel_5.Position = UDim2.new(0.499540865, 0, 0.0335689038, 0)
+TextLabel_5.Size = UDim2.new(0.633608758, 0, 0.0565371029, 0)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Note: You can find the 'Key' by using remote spy and shooting at guards/police. The second arguement is the one you are looking for.(yes its a string put the string in don remove the quotes)"
+TextLabel_5.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14
+TextLabel_5.TextWrapped = true
+
+Interactions.Name = "Interactions"
+Interactions.Parent = BUYPAYDAY2PLS
+Interactions.AnchorPoint = Vector2.new(0.5, 0.5)
+Interactions.BackgroundColor3 = Color3.new(1, 1, 1)
+Interactions.Position = UDim2.new(0.484717429, 0, 0.506527364, 0)
+Interactions.Size = UDim2.new(0.628027678, 0, 0.738903403, 0)
+
+TextLabel_6.Parent = Interactions
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_6.BackgroundTransparency = 1
+TextLabel_6.Position = UDim2.new(0.518824637, 0, 0.0689045936, 0)
+TextLabel_6.Size = UDim2.new(0.404040396, 0, 0.0883392245, 0)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.Text = "(Near) Instant Interactions"
+TextLabel_6.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14
+TextLabel_6.TextWrapped = true
+
+LooseItems.Name = "LooseItems"
+LooseItems.Parent = Interactions
+LooseItems.AnchorPoint = Vector2.new(0.5, 0.5)
+LooseItems.BackgroundColor3 = Color3.new(1, 1, 1)
+LooseItems.Position = UDim2.new(0.193296596, 0, 0.181978807, 0)
+LooseItems.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+LooseItems.Font = Enum.Font.SourceSans
+LooseItems.Text = "Pick Up Loose Items"
+LooseItems.TextColor3 = Color3.new(0, 0, 0)
+LooseItems.TextScaled = true
+LooseItems.TextSize = 14
+LooseItems.TextWrapped = true
+
+OpenSafes.Name = "OpenSafes"
+OpenSafes.Parent = Interactions
+OpenSafes.AnchorPoint = Vector2.new(0.5, 0.5)
+OpenSafes.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenSafes.Position = UDim2.new(0.523875117, 0, 0.181978807, 0)
+OpenSafes.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+OpenSafes.Font = Enum.Font.SourceSans
+OpenSafes.Text = "Open safes "
+OpenSafes.TextColor3 = Color3.new(0, 0, 0)
+OpenSafes.TextScaled = true
+OpenSafes.TextSize = 14
+OpenSafes.TextWrapped = true
+
+Pagers.Name = "Pagers"
+Pagers.Parent = Interactions
+Pagers.AnchorPoint = Vector2.new(0.5, 0.5)
+Pagers.BackgroundColor3 = Color3.new(1, 1, 1)
+Pagers.Position = UDim2.new(0.844352603, 0, 0.181978807, 0)
+Pagers.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Pagers.Font = Enum.Font.SourceSans
+Pagers.Text = "Answer pagers"
+Pagers.TextColor3 = Color3.new(0, 0, 0)
+Pagers.TextScaled = true
+Pagers.TextSize = 14
+Pagers.TextWrapped = true
+
+CleanBodies.Name = "CleanBodies"
+CleanBodies.Parent = Interactions
+CleanBodies.AnchorPoint = Vector2.new(0.5, 0.5)
+CleanBodies.BackgroundColor3 = Color3.new(1, 1, 1)
+CleanBodies.Position = UDim2.new(0.844352603, 0, 0.362190843, 0)
+CleanBodies.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+CleanBodies.Font = Enum.Font.SourceSans
+CleanBodies.Text = "Bag bodies"
+CleanBodies.TextColor3 = Color3.new(0, 0, 0)
+CleanBodies.TextScaled = true
+CleanBodies.TextSize = 14
+CleanBodies.TextWrapped = true
+
+Slots.Name = "Slots"
+Slots.Parent = Interactions
+Slots.AnchorPoint = Vector2.new(0.5, 0.5)
+Slots.BackgroundColor3 = Color3.new(1, 1, 1)
+Slots.Position = UDim2.new(0.523875117, 0, 0.37632513, 0)
+Slots.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Slots.Font = Enum.Font.SourceSans
+Slots.Text = "Play slots (GMC)"
+Slots.TextColor3 = Color3.new(0, 0, 0)
+Slots.TextScaled = true
+Slots.TextSize = 40
+Slots.TextWrapped = true
+
+Water.Name = "Water"
+Water.Parent = Interactions
+Water.AnchorPoint = Vector2.new(0.5, 0.5)
+Water.BackgroundColor3 = Color3.new(1, 1, 1)
+Water.Position = UDim2.new(0.193296611, 0, 0.37632513, 0)
+Water.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Water.Font = Enum.Font.SourceSans
+Water.Text = "Get water(GMC)"
+Water.TextColor3 = Color3.new(0, 0, 0)
+Water.TextScaled = true
+Water.TextSize = 40
+Water.TextWrapped = true
+
+FixBFD.Name = "FixBFD"
+FixBFD.Parent = Interactions
+FixBFD.AnchorPoint = Vector2.new(0.5, 0.5)
+FixBFD.BackgroundColor3 = Color3.new(1, 1, 1)
+FixBFD.Position = UDim2.new(0.193296611, 0, 0.556537151, 0)
+FixBFD.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+FixBFD.Font = Enum.Font.SourceSans
+FixBFD.Text = "Fill Water(BFD,GMC)"
+FixBFD.TextColor3 = Color3.new(0, 0, 0)
+FixBFD.TextScaled = true
+FixBFD.TextSize = 40
+FixBFD.TextWrapped = true
+
+Loot.Name = "Loot"
+Loot.Parent = Interactions
+Loot.AnchorPoint = Vector2.new(0.5, 0.5)
+Loot.BackgroundColor3 = Color3.new(1, 1, 1)
+Loot.Position = UDim2.new(0.523875117, 0, 0.556537151, 0)
+Loot.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Loot.Modal = true
+Loot.Font = Enum.Font.SourceSans
+Loot.Text = "Bag (most)'baggable' items"
+Loot.TextColor3 = Color3.new(0, 0, 0)
+Loot.TextScaled = true
+Loot.TextSize = 40
+Loot.TextWrapped = true
+
+Snow.Name = "Snow"
+Snow.Parent = Interactions
+Snow.AnchorPoint = Vector2.new(0.5, 0.5)
+Snow.BackgroundColor3 = Color3.new(1, 1, 1)
+Snow.Position = UDim2.new(0.843434334, 0, 0.556537151, 0)
+Snow.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Snow.Modal = true
+Snow.Font = Enum.Font.SourceSans
+Snow.Text = "Pick up snow(Santa's Workshop oh wait I meant Gift Factory)"
+Snow.TextColor3 = Color3.new(0, 0, 0)
+Snow.TextScaled = true
+Snow.TextSize = 40
+Snow.TextWrapped = true
+
+Keycards.Name = "Keycards"
+Keycards.Parent = Interactions
+Keycards.AnchorPoint = Vector2.new(0.5, 0.5)
+Keycards.BackgroundColor3 = Color3.new(1, 1, 1)
+Keycards.Position = UDim2.new(0.844352603, 0, 0.752650261, 0)
+Keycards.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Keycards.Modal = true
+Keycards.Font = Enum.Font.SourceSans
+Keycards.Text = "Pick up keycards"
+Keycards.TextColor3 = Color3.new(0, 0, 0)
+Keycards.TextScaled = true
+Keycards.TextSize = 40
+Keycards.TextWrapped = true
+
+Safes.Name = "Safes"
+Safes.Parent = Interactions
+Safes.AnchorPoint = Vector2.new(0.5, 0.5)
+Safes.BackgroundColor3 = Color3.new(1, 1, 1)
+Safes.Position = UDim2.new(0.193296611, 0, 0.752650261, 0)
+Safes.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+Safes.Modal = true
+Safes.Font = Enum.Font.SourceSans
+Safes.Text = "Take cardboard/metal safe"
+Safes.TextColor3 = Color3.new(0, 0, 0)
+Safes.TextScaled = true
+Safes.TextSize = 40
+Safes.TextWrapped = true
+
+page.Name = "page"
+page.Parent = Interactions
+page.AnchorPoint = Vector2.new(0.5, 0.5)
+page.BackgroundColor3 = Color3.new(1, 1, 1)
+page.Position = UDim2.new(0.110192835, 0, 0.0441696122, 0)
+page.Size = UDim2.new(0.220385671, 0, 0.0883392245, 0)
+page.Font = Enum.Font.SourceSans
+page.Text = "Previous page"
+page.TextColor3 = Color3.new(0, 0, 0)
+page.TextScaled = true
+page.TextSize = 14
+page.TextWrapped = true
+
+TextLabel_7.Parent = Interactions
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_7.BackgroundTransparency = 1
+TextLabel_7.Position = UDim2.new(0.192837462, 0, 0.938162744, 0)
+TextLabel_7.Size = UDim2.new(0.385674924, 0, 0.123675101, 0)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.Text = "Note: Please use 'Pick Up Loose Items' after winning the slot"
+TextLabel_7.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = Interactions
+TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_8.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_8.BackgroundTransparency = 1
+TextLabel_8.Position = UDim2.new(0.523875117, 0, 0.93021208, 0)
+TextLabel_8.Size = UDim2.new(0.247015581, 0, 0.139575943, 0)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Tip: You can do every single one of these without masking up."
+TextLabel_8.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14
+TextLabel_8.TextWrapped = true
+
+KCCROWBAR.Name = "KC/CROWBAR"
+KCCROWBAR.Parent = Interactions
+KCCROWBAR.AnchorPoint = Vector2.new(0.5, 0.5)
+KCCROWBAR.BackgroundColor3 = Color3.new(1, 1, 1)
+KCCROWBAR.Position = UDim2.new(0.523875117, 0, 0.752650261, 0)
+KCCROWBAR.Size = UDim2.new(0.24701561, 0, 0.137809187, 0)
+KCCROWBAR.Modal = true
+KCCROWBAR.Font = Enum.Font.SourceSans
+KCCROWBAR.Text = "Get crowbar(Shadow Raid)"
+KCCROWBAR.TextColor3 = Color3.new(0, 0, 0)
+KCCROWBAR.TextScaled = true
+KCCROWBAR.TextSize = 40
+KCCROWBAR.TextWrapped = true
+-- Scripts:
+function SCRIPT_GOAK65_FAKESCRIPT() -- BreakGlasses.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = BreakGlasses
+script.Parent.Activated:Connect(function()
+spawn(function()
+for i,v in pairs(workspace:GetDescendants()) do
+   if v.Name == 'Glass' then
+       game:GetService("ReplicatedStorage").Assets.Remotes.HitObject:FireServer(v, true)
+   end
+end
+wait(1)
+for i = 1,2 do
+wait()
+for i,v in pairs(workspace:GetDescendants()) do
+   if v.Name == 'Broken' then
+       game:GetService("ReplicatedStorage").Assets.Remotes.HitObject:FireServer(v, true)
+   end
+end
+end
+end)
+end)
+print'break glass button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GOAK65_FAKESCRIPT))
+function SCRIPT_OICL90_FAKESCRIPT() -- WalkSpeed.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = WalkSpeed
+script.Parent.Activated:Connect(function()
+spawn(function()
+for i=1,10 do
+   while wait() do
+       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+   end
+end
+end)
+end)
+print'ws button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_OICL90_FAKESCRIPT))
+function SCRIPT_MVRL74_FAKESCRIPT() -- Noclip.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Noclip
+_G.clip = true
+game:GetService'RunService'.Heartbeat:connect(function()
+   if not _G.clip then
+       game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+   end
+end)
+script.Parent.Activated:Connect(function()
+if _G.clip then
+_G.clip = not _G.clip
+script.Parent.Text = 'Noclip activated'
+else
+_G.clip = true
+script.Parent.Text = 'Noclip deactivated'
+end
+end)
+print'noclip button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MVRL74_FAKESCRIPT))
+function SCRIPT_MJGQ67_FAKESCRIPT() -- JumpPower.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = JumpPower
+local yes = false
+local grav = workspace.Gravity
+script.Parent.Activated:Connect(function()
+if yes then
+yes = not yes
+workspace.Gravity = grav
+else
+yes = true
+workspace.Gravity = 100
+end
+end)
+print'jp button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MJGQ67_FAKESCRIPT))
+function SCRIPT_WSRK79_FAKESCRIPT() -- Annoy.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Annoy
+local annoying = false
+script.Parent.Activated:Connect(function()
+if annoying then
+annoying = not annoying
+else
+annoying = true
+end
+end)
+game:GetService("RunService").Heartbeat:Connect(function()
+if annoying then
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(game.Players:WaitForChild(script.Parent.Parent.annoyTarget.Text).Character:GetPrimaryPartCFrame())
+end
+end)
+print'annoy button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_WSRK79_FAKESCRIPT))
+function SCRIPT_VPFZ70_FAKESCRIPT() -- Target.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Target
+local count = 1
+script.Parent.Activated:Connect(function()
+local players = game.Players:GetPlayers()
+if count  < #players then
+count =  count +1
+else
+count = 1
+end
+script.Parent.Text = 'Target: '..tostring(players[count])
+end)
+print'annoy target chooser activated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VPFZ70_FAKESCRIPT))
+function SCRIPT_NIBQ87_FAKESCRIPT() -- killcops.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = killcops
+script.Parent.Activated:Connect(function()
+   for i,v in pairs(workspace.Police:children()) do
+       if v:findFirstChild'Head' and v:findFirstChild'Humanoid' then
+           game:GetService("ReplicatedStorage").Assets.Remotes.Damage:FireServer("Damage", thing, v.Humanoid, 9999,v.Head, '', v.Head.Position)
+       end
+   end
+end)
+print'kill cop button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_NIBQ87_FAKESCRIPT))
+function SCRIPT_BFZG77_FAKESCRIPT() -- Constantkillcops.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Constantkillcops
+local yes = false
+script.Parent.Activated:Connect(function()
+if not yes then
+yes = true
+script.Parent.Text = 'Constantly kill cops activated'
+else
+yes = not yes
+script.Parent.Text = 'Constantly kill cops deactivated'
+end
+end)
+spawn(function()
+while wait(2) do
+if script.Parent.Parent.Key.Text ~= 'Insert Key here.' then
+local thing = script.Parent.Parent.Key.Text
+if workspace:FindFirstChild'Police' then
+for i,v in pairs(workspace.Police:children()) do
+if v:findFirstChild'Head' and v:findFirstChild'Humanoid' then
+if game:GetService("ReplicatedStorage"):findFirstChild'Assets' then
+game:GetService("ReplicatedStorage").Assets.Remotes.Damage:FireServer("Damage", thing, v.Humanoid, 9999,v.Head, "", v.Head.Position)
+end
+end
+end
+end
+end
+end
+end)
+print'constantly kill cops button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_BFZG77_FAKESCRIPT))
+function SCRIPT_RZXJ76_FAKESCRIPT() -- createGMC.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = createGMC
+script.Parent.Activated:Connect(function()
+local Difficulty = script.Parent.Parent.DifficultyChooser.Text:sub(12,#script.Parent.Parent.DifficultyChooser.Text)
+local Permission =  script.Parent.Parent.PermissionChooser.Text:sub(13,#script.Parent.Parent.PermissionChooser.Text)
+local Tatic = script.Parent.Parent.TaticChooser.Text:sub(8,#script.Parent.Parent.TaticChooser.Text)
+local AI = true
+if script.Parent.Parent.AIChooser.Text == 'AI Disabled' then
+AI = false 
+end
+game:GetService("ReplicatedStorage").MakeLobby:InvokeServer('Golden Mask Casino', Difficulty, true, Permission, Tatic, AI, false)
+end)
+print'GMC lobby creator Enabled'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RZXJ76_FAKESCRIPT))
+function SCRIPT_RFIU84_FAKESCRIPT() -- createBrickBank.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = createBrickBank
+script.Parent.Activated:Connect(function()
+local Difficulty = script.Parent.Parent.DifficultyChooser.Text:sub(12,#script.Parent.Parent.DifficultyChooser.Text)
+local Permission =  script.Parent.Parent.PermissionChooser.Text:sub(13,#script.Parent.Parent.PermissionChooser.Text)
+local Tatic = script.Parent.Parent.TaticChooser.Text:sub(8,#script.Parent.Parent.TaticChooser.Text)
+local AI = true
+if script.Parent.Parent.AIChooser.Text == 'AI Disabled' then
+AI = false 
+end
+game:GetService("ReplicatedStorage").MakeLobby:InvokeServer('Brick Bank', Difficulty, true, Permission, Tatic, AI, false)
+end)
+print'Brick Bank lobby creator Enabled'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RFIU84_FAKESCRIPT))
+function SCRIPT_MSVO88_FAKESCRIPT() -- DifficultyChooser.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = DifficultyChooser
+local count = 5
+script.Parent.Activated:Connect(function()
+if count <5 then
+count = count +1
+else 
+count = 0
+end
+if count == 5 then
+script.Parent.Text = 'Difficulty: Nightmare'
+elseif count == 0 then
+script.Parent.Text = 'Difficulty: Normal'
+elseif count  == 1 then
+script.Parent.Text = 'Difficulty: Hard'
+elseif count == 2 then
+script.Parent.Text = 'Difficulty: Very Hard'
+elseif count == 3 then
+script.Parent.Text = 'Difficulty: Extreme'
+else
+script.Parent.Text = 'Difficulty: Anarchy'
+end
+end)
+print'difficulty chooser initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MSVO88_FAKESCRIPT))
+function SCRIPT_TDCX77_FAKESCRIPT() -- TaticChooser.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = TaticChooser
+local count = 0
+script.Parent.Activated:Connect(function()
+if count < 2 then
+count = count + 1
+else
+count = 0
+end
+if count == 0 then
+script.Parent.Text = 'Tatic: Loud'
+elseif count == 1 then
+script.Parent.Text = 'Tatic: Stealth'
+else
+script.Parent.Text = 'Tatic: Any'
+end
+end)
+print'tatic button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_TDCX77_FAKESCRIPT))
+function SCRIPT_GYQM76_FAKESCRIPT() -- PermissionChooser.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = PermissionChooser
+local count = 0
+script.Parent.Activated:Connect(function()
+if count <12 then
+count = count +1
+else
+count = 0
+end
+if count == 0 then
+script.Parent.Text = 'Permission: Public'
+elseif count == 1 then
+script.Parent.Text = 'Permission: Friends'
+elseif count == 2 then
+script.Parent.Text = 'Permission: Private'
+elseif count == 3 then
+script.Parent.Text = 'Permission: Minimum Level 10'
+elseif count == 4 then
+script.Parent.Text = 'Permission: Minimum Level 20'
+elseif count == 5 then
+script.Parent.Text = 'Permission: Minimum Level 30'
+elseif count == 6 then
+script.Parent.Text = 'Permission: Minimum Level 40'
+elseif count == 7 then
+script.Parent.Text = 'Permission: Minimum Level 50'
+elseif count == 8 then
+script.Parent.Text = 'Permission: Minimum Level 60'
+elseif count == 9 then
+script.Parent.Text = 'Permission: Minimum Level 70'
+elseif count == 10 then
+script.Parent.Text = 'Permission: Minimum Level 80'
+elseif count == 11 then
+script.Parent.Text = 'Permission: Minimum Level 90'
+else
+script.Parent.Text = 'Permission: Minimum Level 100'
+end
+end)
+print'permission chooser initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GYQM76_FAKESCRIPT))
+function SCRIPT_DENB78_FAKESCRIPT() -- AIChooser.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = AIChooser
+local yes = true
+script.Parent.Activated:Connect(function()
+if yes then
+yes = not yes
+script.Parent.Text = 'AI Disabled'
+else
+yes = true
+script.Parent.Text = 'AI Enabled'
+end
+end)
+print'AI chooser initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_DENB78_FAKESCRIPT))
+function SCRIPT_PZEK86_FAKESCRIPT() -- Safe.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Safe
+script.Parent.Activated:Connect(function()
+if script.Parent.Parent.SafeRarity.Text ~= 'Rarity: Cardboard' then
+game:GetService("ReplicatedStorage").BuySafe:FireServer(script.Parent.Parent.SafeRarity.Text:sub(9,#script.Parent.Parent.SafeRarity.Text)..' Safe')
+else
+game:GetService("ReplicatedStorage").BuySafe:FireServer(script.Parent.Parent.SafeRarity.Text:sub(9,#script.Parent.Parent.SafeRarity.Text).." 'Safe'")
+end
+end)
+print'safe rarity initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_PZEK86_FAKESCRIPT))
+function SCRIPT_VUIG82_FAKESCRIPT() -- SafeRarity.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = SafeRarity
+local count = 3
+script.Parent.Activated:Connect(function()
+if count <3 then
+count = count +1
+else
+count = 0
+end
+if count == 3 then
+script.Parent.Text = 'Rarity: Ruby'
+elseif count == 0 then
+script.Parent.Text = 'Rarity: Cardboard'
+elseif count == 1 then
+script.Parent.Text = 'Rarity: Metal'
+else
+script.Parent.Text = 'Rarity: Diamond'
+end
+end)
+print'safe rarity chooser initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VUIG82_FAKESCRIPT))
+function SCRIPT_QYAK73_FAKESCRIPT() -- PageController.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = PageController
+script.Parent.Activated:Connect(function()
+script.Parent.Parent.Visible = false
+script.Parent.Parent.Parent.Interactions.Visible = true
+end)
+print"'next page' button initiated"
+
+end
+coroutine.resume(coroutine.create(SCRIPT_QYAK73_FAKESCRIPT))
+function SCRIPT_GTHS78_FAKESCRIPT() -- LooseItems.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = LooseItems
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+local n = v.Name
+if n == 'DepositRing' or n =='SmallJewels2' or n =='SmallJewels' or n =='PokerChips'
+or n =='Cash Register' or n =='Money' or n == 'WinningTicket' or n == 'CellPhoneLoot'
+or n == 'DepositGoldBar' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'loose items button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GTHS78_FAKESCRIPT))
+function SCRIPT_GYTK68_FAKESCRIPT() -- OpenSafes.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = OpenSafes
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'Safe' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'Safe opening button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GYTK68_FAKESCRIPT))
+function SCRIPT_DWZI81_FAKESCRIPT() -- Pagers.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Pagers
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'Pager' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'pager answering button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_DWZI81_FAKESCRIPT))
+function SCRIPT_XEFA70_FAKESCRIPT() -- CleanBodies.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = CleanBodies
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'DeadBody' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'clean body button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_XEFA70_FAKESCRIPT))
+function SCRIPT_RWSD66_FAKESCRIPT() -- Slots.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Slots
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'SlotMachine' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'slots player button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RWSD66_FAKESCRIPT))
+function SCRIPT_GKEZ65_FAKESCRIPT() -- Water.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Water
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'Sink' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'get water button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GKEZ65_FAKESCRIPT))
+function SCRIPT_YBZO74_FAKESCRIPT() -- FixBFD.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = FixBFD
+script.Parent.Activated:conect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'BFDWaterEmpty' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'fix Big Fucking Drill button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_YBZO74_FAKESCRIPT))
+function SCRIPT_TTWY72_FAKESCRIPT() -- Loot.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Loot
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+local n = v.Name
+if n == 'DepositMoney' or n == 'DepositMoneyStack' or n == 'GoldBars' or n == 'WeaponBagger' or n == 'Coke'
+or n == 'LootablePainting' or n == 'Jewels' or n == 'Bag' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'Bag baggable items button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_TTWY72_FAKESCRIPT))
+function SCRIPT_BFHK76_FAKESCRIPT() -- Snow.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Snow
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'Snow' and v.Parent.Name == 'SnowClumps' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'snow taking button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_BFHK76_FAKESCRIPT))
+function SCRIPT_ECJN74_FAKESCRIPT() -- Keycards.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Keycards
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'KeyCard' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'keycard stealing button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ECJN74_FAKESCRIPT))
+function SCRIPT_PUOE77_FAKESCRIPT() -- Safes.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Safes
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'CardboardSafeSpot' or v.Name == 'MetalSafeSpot' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'safes finder button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_PUOE77_FAKESCRIPT))
+function SCRIPT_LVZW85_FAKESCRIPT() -- page.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = page
+script.Parent.Activated:Connect(function()
+script.Parent.Parent.Visible = false
+script.Parent.Parent.Parent.Main.Visible = true
+end)
+print"'previous page' button initiated"
+
+end
+coroutine.resume(coroutine.create(SCRIPT_LVZW85_FAKESCRIPT))
+function SCRIPT_PVOQ89_FAKESCRIPT() -- KCCROWBAR.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = KCCROWBAR
+script.Parent.Activated:Connect(function()
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local remotes = game:GetService("ReplicatedStorage").Remotes
+local char = game.Players.LocalPlayer.Character
+_G.clip = false
+for i,v in pairs(workspace:GetDescendants()) do
+if v.Name == 'Crowbar' then
+           char.HumanoidRootPart.CFrame = v:GetPrimaryPartCFrame()
+           remotes.StartInteraction:FireServer(v)
+           wait(.15)
+           remotes.CompleteInteraction:FireServer(v)
+end
+end
+char:SetPrimaryPartCFrame(pos)
+wait(.5)
+_G.clip = true
+end)
+print'Crowbar getting button initiated'
+
+end
+coroutine.resume(coroutine.create(SCRIPT_PVOQ89_FAKESCRIPT))
+function SCRIPT_UKMD76_FAKESCRIPT() -- BUYPAYDAY2PLS.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = BUYPAYDAY2PLS
+local usingit = true
+game:GetService("UserInputService").InputBegan:Connect(function(a)
+if a.KeyCode == Enum.KeyCode.Four then
+if not usingit then
+usingit = true
+script.Parent.Main.Visible = true
+else
+usingit = not usingit
+script.Parent.Main.Visible = false
+script.Parent.Interactions.Visible = false
+end 
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_UKMD76_FAKESCRIPT))

@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Backpack.Detector.Events:FireServer("SetHealth", math.huge)

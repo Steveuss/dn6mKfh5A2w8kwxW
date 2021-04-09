@@ -1,0 +1,8 @@
+while wait() do
+    for i , v in pairs(game.Players:GetChildren()) do
+        if v ~= game.Players.LocalPlayer and v.Character ~= nil and v.Character:FindFirstChild("HumanoidRootPart") then
+            v.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 5
+            v.Character.HumanoidRootPart.Anchored = true
+    end
+    end
+end

@@ -1,0 +1,19 @@
+--[[ FE Hold Hat / Hat To Tool Converter V1.1
+    Script made by Cyclically
+    Credits to dhruvil123 for help
+    https://v3rmillion.net/member.php?action=profile&uid=785986
+]]
+
+-- Don't edit script unless you know what you're doing. If you wanna add this into a script, please give credits and message me on discord that you added it in a script at Cyclically#4905
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+for _, hat in pairs(LocalPlayer.Character.Humanoid:GetAccessories()) do
+    if hat.Handle ~= nil then
+        local tool = Instance.new("Tool", LocalPlayer.Backpack)
+        tool.Name = hat.Name
+        local hathandle = hat.Handle
+        hathandle:FindFirstChildOfClass("Weld"):Destroy()
+        hathandle.Parent = tool
+        hathandle.Massless = true
+    end
+end

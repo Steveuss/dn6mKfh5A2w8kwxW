@@ -1,0 +1,768 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local starwarsfrickerv25 = Instance.new("ScreenGui")
+local GUI = Instance.new("Frame")
+local labelframe = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local scriptframe = Instance.new("Frame")
+local Walkspeed = Instance.new("TextButton")
+local InfForce = Instance.new("TextButton")
+local Instakill = Instance.new("TextButton")
+local FreeLoadout = Instance.new("TextButton")
+local Crystal_GUI = Instance.new("TextButton")
+local scripts = Instance.new("TextLabel")
+local discord = Instance.new("TextLabel")
+local open = Instance.new("TextButton")
+local Loadout_GUI = Instance.new("Frame")
+local labelframe_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local close_2 = Instance.new("TextButton")
+local loadouts = Instance.new("TextLabel")
+local loadoutframe = Instance.new("Frame")
+local Double = Instance.new("TextButton")
+local Dual = Instance.new("TextButton")
+local Backhand = Instance.new("TextButton")
+local Advanced_Trooper = Instance.new("TextButton")
+local Elite_Trooper = Instance.new("TextButton")
+--Properties:
+starwarsfrickerv25.Name = "starwars fricker v2.5"
+starwarsfrickerv25.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+starwarsfrickerv25.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GUI.Name = "GUI"
+GUI.Parent = starwarsfrickerv25
+GUI.BackgroundColor3 = Color3.new(1, 1, 1)
+GUI.BorderSizePixel = 5
+GUI.Position = UDim2.new(0.789705813, 0, 0.283261806, 0)
+GUI.Size = UDim2.new(0, 200, 0, 473)
+
+labelframe.Name = "labelframe"
+labelframe.Parent = GUI
+labelframe.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+labelframe.BorderSizePixel = 5
+labelframe.Size = UDim2.new(0, 200, 0, 30)
+
+TextLabel.Parent = labelframe
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 200, 0, 30)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "STAR WARS FRICKER V2.5"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextStrokeColor3 = Color3.new(0, 0.14902, 1)
+TextLabel.TextStrokeTransparency = 0.80000001192093
+TextLabel.TextWrapped = true
+
+close.Name = "close"
+close.Parent = GUI
+close.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+close.BorderSizePixel = 5
+close.Position = UDim2.new(1, 0, -0.0625, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.Font = Enum.Font.SourceSans
+close.Text = ">"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+
+scriptframe.Name = "scriptframe"
+scriptframe.Parent = GUI
+scriptframe.BackgroundColor3 = Color3.new(1, 1, 1)
+scriptframe.BorderSizePixel = 5
+scriptframe.Position = UDim2.new(0.075000003, 0, 0.219999984, 0)
+scriptframe.Size = UDim2.new(0, 170, 0, 333)
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = scriptframe
+Walkspeed.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Walkspeed.BorderSizePixel = 3
+Walkspeed.Position = UDim2.new(0.0588235296, 0, 0.0237636566, 0)
+Walkspeed.Size = UDim2.new(0, 150, 0, 50)
+Walkspeed.Font = Enum.Font.SourceSans
+Walkspeed.Text = "Walkspeed"
+Walkspeed.TextColor3 = Color3.new(0, 0, 0)
+Walkspeed.TextScaled = true
+Walkspeed.TextSize = 14
+Walkspeed.TextWrapped = true
+
+InfForce.Name = "Inf Force"
+InfForce.Parent = scriptframe
+InfForce.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+InfForce.BorderSizePixel = 3
+InfForce.Position = UDim2.new(0.0588235296, 0, 0.207134977, 0)
+InfForce.Size = UDim2.new(0, 150, 0, 50)
+InfForce.Font = Enum.Font.SourceSans
+InfForce.Text = "Inf Force"
+InfForce.TextColor3 = Color3.new(0, 0, 0)
+InfForce.TextScaled = true
+InfForce.TextSize = 14
+InfForce.TextWrapped = true
+
+Instakill.Name = "Instakill"
+Instakill.Parent = scriptframe
+Instakill.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Instakill.BorderSizePixel = 3
+Instakill.Position = UDim2.new(0.0588235296, 0, 0.395689279, 0)
+Instakill.Size = UDim2.new(0, 150, 0, 50)
+Instakill.Font = Enum.Font.SourceSans
+Instakill.Text = "Instakill"
+Instakill.TextColor3 = Color3.new(0, 0, 0)
+Instakill.TextScaled = true
+Instakill.TextSize = 14
+Instakill.TextWrapped = true
+
+FreeLoadout.Name = "Free Loadout"
+FreeLoadout.Parent = scriptframe
+FreeLoadout.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+FreeLoadout.BorderSizePixel = 3
+FreeLoadout.Position = UDim2.new(0.0588235296, 0, 0.577965319, 0)
+FreeLoadout.Size = UDim2.new(0, 150, 0, 50)
+FreeLoadout.Font = Enum.Font.SourceSans
+FreeLoadout.Text = "Free Loadouts"
+FreeLoadout.TextColor3 = Color3.new(0, 0, 0)
+FreeLoadout.TextScaled = true
+FreeLoadout.TextSize = 14
+FreeLoadout.TextWrapped = true
+
+Crystal_GUI.Name = "Crystal_GUI"
+Crystal_GUI.Parent = scriptframe
+Crystal_GUI.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Crystal_GUI.BorderSizePixel = 3
+Crystal_GUI.Position = UDim2.new(0.0588235296, 0, 0.769942462, 0)
+Crystal_GUI.Size = UDim2.new(0, 150, 0, 50)
+Crystal_GUI.Font = Enum.Font.SourceSans
+Crystal_GUI.Text = "Crystal Finder GUI"
+Crystal_GUI.TextColor3 = Color3.new(0, 0, 0)
+Crystal_GUI.TextScaled = true
+Crystal_GUI.TextSize = 14
+Crystal_GUI.TextWrapped = true
+
+scripts.Name = "scripts"
+scripts.Parent = GUI
+scripts.BackgroundColor3 = Color3.new(1, 1, 1)
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0.075000003, 0, 0.084722206, 0)
+scripts.Size = UDim2.new(0, 170, 0, 54)
+scripts.Font = Enum.Font.SourceSans
+scripts.Text = "Scripts"
+scripts.TextColor3 = Color3.new(0, 0, 0)
+scripts.TextScaled = true
+scripts.TextSize = 14
+scripts.TextWrapped = true
+
+discord.Name = "discord"
+discord.Parent = GUI
+discord.BackgroundColor3 = Color3.new(1, 1, 1)
+discord.BorderSizePixel = 0
+discord.Position = UDim2.new(0.104999997, 0, 0.947145879, 0)
+discord.Size = UDim2.new(0, 157, 0, 17)
+discord.Font = Enum.Font.SourceSans
+discord.Text = "kolisnyk2 or WotnTarnation#0147"
+discord.TextColor3 = Color3.new(0, 0, 0)
+discord.TextScaled = true
+discord.TextSize = 14
+discord.TextStrokeColor3 = Color3.new(0.0627451, 0.705882, 1)
+discord.TextStrokeTransparency = 0.80000001192093
+discord.TextWrapped = true
+
+open.Name = "open"
+open.Parent = starwarsfrickerv25
+open.BackgroundColor3 = Color3.new(0.0470588, 1, 0)
+open.BackgroundTransparency = 0.20000000298023
+open.BorderSizePixel = 5
+open.Position = UDim2.new(0.943880856, 0, 0.917024255, 0)
+open.Size = UDim2.new(0, 60, 0, 50)
+open.Visible = false
+open.Font = Enum.Font.SourceSans
+open.Text = "Open"
+open.TextColor3 = Color3.new(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14
+open.TextWrapped = true
+
+Loadout_GUI.Name = "Loadout_GUI"
+Loadout_GUI.Parent = starwarsfrickerv25
+Loadout_GUI.BackgroundColor3 = Color3.new(1, 1, 1)
+Loadout_GUI.BorderSizePixel = 5
+Loadout_GUI.Position = UDim2.new(0.578859031, 0, 0.177396268, 0)
+Loadout_GUI.Size = UDim2.new(0, 200, 0, 500)
+Loadout_GUI.Visible = false
+
+labelframe_2.Name = "labelframe"
+labelframe_2.Parent = Loadout_GUI
+labelframe_2.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+labelframe_2.BorderSizePixel = 5
+labelframe_2.Size = UDim2.new(0, 200, 0, 30)
+
+TextLabel_2.Parent = labelframe_2
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Size = UDim2.new(0, 200, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "STAR WARS FRICKER V2.5"
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextStrokeColor3 = Color3.new(0, 0.14902, 1)
+TextLabel_2.TextStrokeTransparency = 0.80000001192093
+TextLabel_2.TextWrapped = true
+
+close_2.Name = "close"
+close_2.Parent = Loadout_GUI
+close_2.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+close_2.BorderSizePixel = 5
+close_2.Position = UDim2.new(1, 0, -0.050499998, 0)
+close_2.Size = UDim2.new(0, 25, 0, 25)
+close_2.Font = Enum.Font.SourceSans
+close_2.Text = ">"
+close_2.TextColor3 = Color3.new(0, 0, 0)
+close_2.TextScaled = true
+close_2.TextSize = 14
+close_2.TextWrapped = true
+
+loadouts.Name = "loadouts"
+loadouts.Parent = Loadout_GUI
+loadouts.BackgroundColor3 = Color3.new(1, 1, 1)
+loadouts.BorderSizePixel = 0
+loadouts.Position = UDim2.new(0.0399999991, 0, 0.0804999992, 0)
+loadouts.Size = UDim2.new(0, 184, 0, 46)
+loadouts.Font = Enum.Font.SourceSans
+loadouts.Text = "Loadouts (Reset after click)"
+loadouts.TextColor3 = Color3.new(0, 0, 0)
+loadouts.TextScaled = true
+loadouts.TextSize = 14
+loadouts.TextWrapped = true
+
+loadoutframe.Name = "loadout frame"
+loadoutframe.Parent = Loadout_GUI
+loadoutframe.BackgroundColor3 = Color3.new(1, 1, 1)
+loadoutframe.BorderSizePixel = 5
+loadoutframe.Position = UDim2.new(0.099999994, 0, 0.216000006, 0)
+loadoutframe.Size = UDim2.new(0, 160, 0, 338)
+
+Double.Name = "Double"
+Double.Parent = loadoutframe
+Double.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Double.BorderSizePixel = 3
+Double.Position = UDim2.new(0.0713233948, 0, 0.0198618863, 0)
+Double.Size = UDim2.new(0, 137, 0, 50)
+Double.Font = Enum.Font.SourceSans
+Double.Text = "Double Lightsaber"
+Double.TextColor3 = Color3.new(0, 0, 0)
+Double.TextScaled = true
+Double.TextSize = 14
+Double.TextWrapped = true
+
+Dual.Name = "Dual"
+Dual.Parent = loadoutframe
+Dual.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Dual.BorderSizePixel = 3
+Dual.Position = UDim2.new(0.0713233948, 0, 0.197376683, 0)
+Dual.Size = UDim2.new(0, 137, 0, 50)
+Dual.Font = Enum.Font.SourceSans
+Dual.Text = "Dual Lightsabers"
+Dual.TextColor3 = Color3.new(0, 0, 0)
+Dual.TextScaled = true
+Dual.TextSize = 14
+Dual.TextWrapped = true
+
+Backhand.Name = "Backhand"
+Backhand.Parent = loadoutframe
+Backhand.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Backhand.BorderSizePixel = 3
+Backhand.Position = UDim2.new(0.0713233948, 0, 0.37489146, 0)
+Backhand.Size = UDim2.new(0, 137, 0, 50)
+Backhand.Font = Enum.Font.SourceSans
+Backhand.Text = "Backhand Lightsaber"
+Backhand.TextColor3 = Color3.new(0, 0, 0)
+Backhand.TextScaled = true
+Backhand.TextSize = 14
+Backhand.TextWrapped = true
+
+Advanced_Trooper.Name = "Advanced_Trooper"
+Advanced_Trooper.Parent = loadoutframe
+Advanced_Trooper.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Advanced_Trooper.BorderSizePixel = 3
+Advanced_Trooper.Position = UDim2.new(0.0713233948, 0, 0.567199171, 0)
+Advanced_Trooper.Size = UDim2.new(0, 137, 0, 50)
+Advanced_Trooper.Font = Enum.Font.SourceSans
+Advanced_Trooper.Text = "Advanced Blasters"
+Advanced_Trooper.TextColor3 = Color3.new(0, 0, 0)
+Advanced_Trooper.TextScaled = true
+Advanced_Trooper.TextSize = 14
+Advanced_Trooper.TextWrapped = true
+
+Elite_Trooper.Name = "Elite_Trooper"
+Elite_Trooper.Parent = loadoutframe
+Elite_Trooper.BackgroundColor3 = Color3.new(0.0627451, 0.705882, 1)
+Elite_Trooper.BorderSizePixel = 3
+Elite_Trooper.Position = UDim2.new(0.0713233948, 0, 0.771341205, 0)
+Elite_Trooper.Size = UDim2.new(0, 137, 0, 50)
+Elite_Trooper.Font = Enum.Font.SourceSans
+Elite_Trooper.Text = "Advanced Blasters"
+Elite_Trooper.TextColor3 = Color3.new(0, 0, 0)
+Elite_Trooper.TextScaled = true
+Elite_Trooper.TextSize = 14
+Elite_Trooper.TextWrapped = true
+-- Scripts:
+function SCRIPT_ROID86_FAKESCRIPT() -- close.close script 
+	local script = Instance.new('Script')
+	script.Parent = close
+	script.Parent.MouseButton1Click:Connect(function()
+		script.parent.parent.Visible = false
+		script.parent.parent.parent.open.Visible = true
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ROID86_FAKESCRIPT))
+function SCRIPT_FBPZ81_FAKESCRIPT() -- Walkspeed.walkspeed script 
+	local script = Instance.new('Script')
+	script.Parent = Walkspeed
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid".WalkSpeed = 100
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_FBPZ81_FAKESCRIPT))
+function SCRIPT_PYPF76_FAKESCRIPT() -- InfForce.inf force script 
+	local script = Instance.new('Script')
+	script.Parent = InfForce
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Force.Value = 77732
+	
+	game.Players.LocalPlayer.MaxForce.Value = 89934
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_PYPF76_FAKESCRIPT))
+function SCRIPT_DIZY78_FAKESCRIPT() -- Instakill.instakill script 
+	local script = Instance.new('Script')
+	script.Parent = Instakill
+	script.Parent.MouseButton1Click:Connect(function()
+	while wait() do 
+	   for i,v in next, game:service'Players':GetPlayers() do
+	       if v ~= game:service'Players'.LocalPlayer then
+	           local distance = v:DistanceFromCharacter(game:service'Players'.LocalPlayer.Character.HumanoidRootPart.Position)
+	           if distance < 20 then
+	               spawn(function()
+	                   workspace[game:service'Players'.LocalPlayer.Name].Lightsaber.RemoteEvent:FireServer("Attack", v.Character.Humanoid)
+	               end)
+	           end
+	       end
+	   end
+	end
+	end)
+	
+	script.Parent.MouseEnter:Connect(function()
+		script.Parent.Text = "Only works with single blade"
+	wait(2)
+		script.Parent.Text = "Instakill"
+	end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_DIZY78_FAKESCRIPT))
+function SCRIPT_VJRX67_FAKESCRIPT() -- FreeLoadout.loadout gui 
+	local script = Instance.new('Script')
+	script.Parent = FreeLoadout
+	script.parent.MouseButton1Click:Connect(function()
+		script.parent.parent.parent.parent.Loadout_GUI.Visible = true
+	end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VJRX67_FAKESCRIPT))
+function SCRIPT_ERTP78_FAKESCRIPT() -- Crystal_GUI.crystal gui 
+	local script = Instance.new('Script')
+	script.Parent = Crystal_GUI
+	script.parent.MouseButton1Click:Connect(function()
+		local colors = {"Blue", "Green", "Yellow", "Cyan", "Purple", "White", "BlackGreen", "Orange", "BlackBlue", "BlackRed", "BlackYellow", "BlackPurple"}
+	local sabers = {"Dual", "Cross", "Double", "Backhand"}
+	local guns = {"Recruit", "Trooper", "Advanced", "Elite"}
+	
+	local player = game:GetService("Players").LocalPlayer
+	
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local gui = Instance.new("ScreenGui")
+	local toggleRainbow = true
+	
+	--// Main Frame Creation
+	
+	local frame = Instance.new("Frame")
+	frame.Name = "Main"
+	frame.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+	frame.BorderColor3 = Color3.fromRGB(255, 255, 127)
+	frame.Position = UDim2.new(0.01, 0, 0.5, -150)
+	frame.Size = UDim2.new(0, 200, 0, 300)
+	frame.Draggable = true
+	frame.Parent = gui
+	
+	--// Creation of the Title
+	
+	local title = Instance.new("TextLabel")
+	title.ZIndex = 3
+	title.TextScaled  = true
+	title.Text = "Goats Illum UI"
+	title.TextColor3 = Color3.fromRGB(255, 255, 127)
+	title.BackgroundTransparency = 1
+	title.Size = UDim2.new(0, 200, 0, 50)
+	title.Name = "Title"
+	
+	local title_shadow = title:Clone()
+	title_shadow.TextColor3 = Color3.fromRGB(0, 0, 0)
+	title_shadow.ZIndex = 2
+	title_shadow.Position = UDim2.new(0, 0, 0.05, 0)
+	title_shadow.Name = "Shadow"
+	title_shadow.Parent = title
+	
+	local detail = Instance.new("TextLabel")
+	detail.Text = ""
+	detail.Size = UDim2.new(1, 0, 0.01, 0)
+	detail.Position = UDim2.new(0, 0, 1, 0)
+	detail.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+	detail.BorderSizePixel = 0
+	detail.Name = "Detail"
+	detail.Parent = title
+	
+	--// Creation of list
+	
+	local list = frame:Clone()
+	list.Name = "Derp"
+	list.Position = UDim2.new(1.075, 0, 0, 0)
+	list.Size = UDim2.new(0, 150, 0, 300)
+	list.Visible = false
+	list.Parent = frame
+	
+	local list_layout = Instance.new("UIListLayout")
+	list_layout.HorizontalAlignment = "Center"
+	list_layout.Padding = UDim.new(0, -1)
+	list_layout.Parent = list
+	
+	local list2 = frame:Clone()
+	list2.Name = "Derp"
+	list2.Position = UDim2.new(1.075, 0, 0, 0)
+	list2.Size = UDim2.new(0, 150, 0, 300)
+	list2.Visible = false
+	list2.Parent = frame
+	
+	local list_layout2 = Instance.new("UIListLayout")
+	list_layout2.HorizontalAlignment = "Center"
+	list_layout2.Padding = UDim.new(0, -1)
+	list_layout2.Parent = list2
+	
+	local list3 = frame:Clone()
+	list3.Name = "Derp"
+	list3.Position = UDim2.new(1.075, 0, 0, 0)
+	list3.Size = UDim2.new(0, 150, 0, 300)
+	list3.Visible = false
+	list3.Parent = frame
+	
+	local list_layout3 = Instance.new("UIListLayout")
+	list_layout3.HorizontalAlignment = "Center"
+	list_layout3.Padding = UDim.new(0, -1)
+	list_layout3.Parent = list3
+	
+	
+	for i = 1, 4 do
+		local lol = Instance.new("TextButton")
+		lol.BackgroundTransparency = 1
+		lol.ZIndex = 3
+		lol.TextColor3 = Color3.fromRGB(255, 255, 127)
+		lol.TextScaled = true
+		lol.Text = sabers[i]
+		lol.Size = UDim2.new(1,0, 0.2, 0)
+		lol.Parent = list
+			
+		local lol_shadow = title_shadow:Clone()
+		lol_shadow.Size = UDim2.new(1, 0, 1, 0)
+		lol_shadow.ZIndex = 2
+		lol_shadow.Text = sabers[i]
+		lol_shadow.Parent = lol
+			
+		lol.MouseButton1Down:connect(function()
+			if lol.Text == "Cross" then
+				ReplicatedStorage:WaitForChild("Remotes")['GiveLoadout']:FireServer("Crossguard", "Lightsaber")
+			elseif lol.Text ~= "Cross" then
+				ReplicatedStorage:WaitForChild("Remotes")['GiveLoadout']:FireServer(lol.Text, "Lightsaber")
+			end
+			frame.Visible = false
+			player.Character:BreakJoints()
+		end)
+	end
+	
+	
+	print(string.reverse("6792#taoG yb detpircs IUG mullI"))
+	
+	for i = 1, 4 do
+		local lol2 = Instance.new("TextButton")
+		lol2.BackgroundTransparency = 1
+		lol2.ZIndex = 3
+		lol2.TextColor3 = Color3.fromRGB(255, 255, 127)
+		lol2.TextScaled = true
+		lol2.Text = guns[i]
+		lol2.Size = UDim2.new(1,0, 0.2, 0)
+		lol2.Parent = list2
+			
+		local lol2_shadow = title_shadow:Clone()
+		lol2_shadow.Size = UDim2.new(1, 0, 1, 0)
+		lol2_shadow.ZIndex = 2
+		lol2_shadow.Text = guns[i]
+		lol2_shadow.Parent = lol2
+			
+		lol2.MouseButton1Down:connect(function()
+			if lol2.Text == "Advanced" then
+				ReplicatedStorage:WaitForChild("Remotes")['GiveLoadout']:FireServer("Advanced Trooper", "BlasterPistol")
+			elseif lol2.Text == "Elite" then
+				ReplicatedStorage:WaitForChild("Remotes")['GiveLoadout']:FireServer("Elite Trooper", "BlasterPistol")
+			else
+				ReplicatedStorage:WaitForChild("Remotes")['GiveLoadout']:FireServer(lol2.Text, "Blaster")
+			end
+			frame.Visible = false
+			player.Character:BreakJoints()
+		end)
+	end
+	
+	
+	
+	for _,crystal in pairs(workspace:WaitForChild("Crystals"):GetChildren()) do
+		local lol3 = Instance.new("TextButton")
+		lol3.BackgroundTransparency = 1
+		lol3.ZIndex = 3
+		lol3.TextColor3 = Color3.fromRGB(255, 255, 127)
+		lol3.TextScaled = true
+		lol3.Text = crystal.Name
+		lol3.Size = UDim2.new(1, 0, 0.085, 0)
+		lol3.Parent = list3
+			
+		local lol3_shadow = title_shadow:Clone()
+		lol3_shadow.Size = UDim2.new(1, 0, 1, 0)
+		lol3_shadow.ZIndex = 2
+		lol3_shadow.Text = crystal.Name
+		lol3_shadow.Parent = lol3
+			
+		lol3.MouseButton1Down:connect(function()
+			player.Character.HumanoidRootPart.CFrame = CFrame.new(crystal.Position)
+		end)
+	end
+	
+	
+	title.Parent = frame
+	
+	--// Creation of the Buttons
+	
+	local buttons = Instance.new("Frame")
+	buttons.Name = "Buttons"
+	buttons.Size = UDim2.new(1, 0, 0.83, 0)
+	buttons.Position = UDim2.new(0, 0, 0.17, 0)
+	buttons.BackgroundTransparency = 1
+	buttons.Parent = frame
+	
+	local layout = Instance.new("UIListLayout")
+	layout.HorizontalAlignment = "Center"
+	layout.Padding = UDim.new(0, -1)
+	layout.Parent = buttons
+	
+	local b1 = Instance.new("TextButton")
+	b1.BackgroundTransparency = 1
+	b1.ZIndex = 3
+	b1.TextColor3 = Color3.fromRGB(255, 255, 127)
+	b1.TextScaled = true
+	b1.Text = "Rainbow: Off"
+	b1.Size = UDim2.new(0, 200, 0, 50)
+	b1.Parent = buttons
+	
+	b1_shadow = title_shadow:Clone()
+	b1_shadow.ZIndex = 2
+	b1_shadow.Text = b1.Text
+	b1_shadow.Parent = b1
+	
+	b1.MouseButton1Down:connect(function()
+		if b1.Text == "Rainbow: Off" then
+			toggleRainbow = true
+			b1.Text = "Rainbow: On"
+			b1_shadow.Text = "Rainbow: On"
+			b1.TextColor3 = Color3.fromRGB(255, 117, 119)
+		elseif b1.Text == "Rainbow: On" then
+			toggleRainbow = false
+			b1.Text = "Rainbow: Off"
+			b1_shadow.Text = "Rainbow: Off"
+			b1.TextColor3 = Color3.fromRGB(255, 255, 127)
+		end
+		spawn(function()
+			while toggleRainbow do
+			    for _,chosenColor in pairs(colors) do
+			        ReplicatedStorage:WaitForChild("Remotes")['CrystalChange']:FireServer(chosenColor)
+			        wait(0.1)
+			    end
+			end
+		end)
+	end)
+	
+	local b2 = Instance.new("TextButton")
+	b2.BackgroundTransparency = 1
+	b2.ZIndex = 3
+	b2.TextColor3 = Color3.fromRGB(255, 255, 127)
+	b2.TextScaled = true
+	b2.Text = "Any Saber"
+	b2.Size = UDim2.new(0, 200, 0, 50)
+	
+	b2_shadow = title_shadow:Clone()
+	b2_shadow.ZIndex = 2
+	b2_shadow.Text = b2.Text
+	
+	b2.MouseButton1Down:connect(function()
+		list.Visible = not list.Visible
+		list2.Visible = false
+		list3.Visible = false
+	end)
+	
+	b3 = b2:Clone()
+	b3.Text = "Any gun / pack"
+	b3.Parent = buttons
+	
+	b3_shadow = title_shadow:Clone()
+	b3_shadow.ZIndex = 2
+	b3_shadow.Text = b3.Text
+	b3_shadow.Parent = b3
+	
+	b3.MouseButton1Down:connect(function()
+		list2.Visible = not list2.Visible
+		list.Visible = false
+		list3.Visible = false
+	end)
+	
+	b4 = b2:Clone()
+	b4.Text = "Crystal TP"
+	b4.Parent = buttons
+	
+	b4_shadow = title_shadow:Clone()
+	b4_shadow.ZIndex = 2
+	b4_shadow.Text = b4.Text
+	b4_shadow.Parent = b4
+	
+	b4.MouseButton1Down:connect(function()
+		list3.Visible = not list3.Visible
+		list.Visible = false
+		list2.Visible = false
+	end)
+	
+	b2_shadow.Parent = b2
+	b2.Parent = buttons
+	gui.Parent = game.CoreGui
+	
+	game:GetService("UserInputService").InputBegan:connect(function(key, typing)
+		if not typing and key.KeyCode == Enum.KeyCode.R then
+			frame.Visible = not frame.Visible
+		end
+	end)
+	
+	print(string.reverse("6792#taoG yb detpircs IUG mullI"))
+	end)
+	
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ERTP78_FAKESCRIPT))
+function SCRIPT_RLOE77_FAKESCRIPT() -- open.open script 
+	local script = Instance.new('Script')
+	script.Parent = open
+	script.Parent.MouseButton1Click:Connect(function()
+		script.parent.parent.GUI.Visible = true
+		script.parent.Visible = false
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_RLOE77_FAKESCRIPT))
+function SCRIPT_PKFQ71_FAKESCRIPT() -- close_2.close script 
+	local script = Instance.new('Script')
+	script.Parent = close_2
+	script.Parent.MouseButton1Click:Connect(function()
+		script.parent.parent.Visible = false
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_PKFQ71_FAKESCRIPT))
+function SCRIPT_NURU69_FAKESCRIPT() -- Double.double script 
+	local script = Instance.new('Script')
+	script.Parent = Double
+	script.parent.MouseButton1Click:Connect(function()
+	local A_1 = "Double"
+	local A_2 = "Lightsaber"
+	local A_3 = 
+	{
+	[1] = 0
+	}
+	local Event = game:GetService("ReplicatedStorage").Remotes.GiveLoadout
+	Event:InvokeServer(A_1, A_2, A_3)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_NURU69_FAKESCRIPT))
+function SCRIPT_MQSQ65_FAKESCRIPT() -- Dual.dual script 
+	local script = Instance.new('Script')
+	script.Parent = Dual
+	script.parent.MouseButton1Click:Connect(function()
+	local A_1 = "Dual"
+	local A_2 = "Lightsaber"
+	local A_3 = 
+	{
+	[1] = 0
+	}
+	local Event = game:GetService("ReplicatedStorage").Remotes.GiveLoadout
+	Event:InvokeServer(A_1, A_2, A_3)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_MQSQ65_FAKESCRIPT))
+function SCRIPT_GJSR83_FAKESCRIPT() -- Backhand.dual script 
+	local script = Instance.new('Script')
+	script.Parent = Backhand
+	script.parent.MouseButton1Click:Connect(function()
+	local A_1 = "Backhand"
+	local A_2 = "Lightsaber"
+	local A_3 = 
+	{
+	[1] = 0
+	}
+	local Event = game:GetService("ReplicatedStorage").Remotes.GiveLoadout
+	Event:InvokeServer(A_1, A_2, A_3)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GJSR83_FAKESCRIPT))
+function SCRIPT_QAEN71_FAKESCRIPT() -- Advanced_Trooper.advanced script 
+	local script = Instance.new('Script')
+	script.Parent = Advanced_Trooper
+	script.parent.MouseButton1Click:Connect(function()
+	local A_1 = "Advanced Trooper"
+	local A_2 = "Blaster"
+	local A_3 = 
+	{
+	[1] = 0
+	}
+	local Event = game:GetService("ReplicatedStorage").Remotes.GiveLoadout
+	Event:InvokeServer(A_1, A_2, A_3)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_QAEN71_FAKESCRIPT))
+function SCRIPT_AWHO73_FAKESCRIPT() -- Elite_Trooper.elite script 
+	local script = Instance.new('Script')
+	script.Parent = Elite_Trooper
+	script.parent.MouseButton1Click:Connect(function()
+	local A_1 = "Elite Trooper"
+	local A_2 = "Blaster"
+	local A_3 = 
+	{
+	[1] = 0
+	}
+	local Event = game:GetService("ReplicatedStorage").Remotes.GiveLoadout
+	Event:InvokeServer(A_1, A_2, A_3)
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_AWHO73_FAKESCRIPT))

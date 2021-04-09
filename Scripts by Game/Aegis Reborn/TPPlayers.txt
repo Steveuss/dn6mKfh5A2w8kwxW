@@ -1,0 +1,8 @@
+local playerName = ""
+
+
+if game.Players:FindFirstChild(playerName) then
+    game.Players.LocalPlayer.Character.PrimaryPart.CFrame = game.Players[playerName].Character.PrimaryPart.CFrame
+    else
+    print("Player with name: '"..playerName.."' does not exist.")
+end

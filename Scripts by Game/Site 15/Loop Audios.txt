@@ -1,0 +1,9 @@
+--Credits to The Unknown God on V3rmillion
+
+local remote = game.Workspace.RadioFE.sound
+
+for _, instance in pairs(workspace:GetDescendants()) do
+   if instance:IsA("Sound") then
+       remote:FireServer(instance)
+   end
+end

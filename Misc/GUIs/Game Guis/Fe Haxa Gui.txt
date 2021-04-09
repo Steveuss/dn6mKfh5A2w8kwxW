@@ -1,0 +1,797 @@
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+TextLabel_2 = Instance.new("TextLabel")
+ToolSpam = Instance.new("TextButton")
+Punish = Instance.new("TextButton")
+BringAll = Instance.new("TextButton")
+Drop = Instance.new("TextButton")
+KillHax = Instance.new("TextButton")
+KillHaxV2 = Instance.new("TextButton")
+invis = Instance.new("TextButton")
+Naked = Instance.new("TextButton")
+LagGui = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.278431, 0.278431, 0.278431)
+main.BorderColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+main.BorderSizePixel = 12
+main.Position = UDim2.new(0.0331790149, 0, 0.616209745, 0)
+main.Size = UDim2.new(0, 515, 0, 260)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 515, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "Fe Haxa"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 25
+TextLabel.TextStrokeTransparency = 0
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.801941752, 0, 0.861538529, 0)
+TextLabel_2.Size = UDim2.new(0, 102, 0, 36)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.FontSize = Enum.FontSize.Size10
+TextLabel_2.Text = "By Hackmaster12"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextSize = 10
+TextLabel_2.TextStrokeTransparency = 0
+
+ToolSpam.Name = "ToolSpam"
+ToolSpam.Parent = main
+ToolSpam.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+ToolSpam.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+ToolSpam.BorderSizePixel = 5
+ToolSpam.Position = UDim2.new(0.0873786435, 0, 0.269230783, 0)
+ToolSpam.Size = UDim2.new(0, 135, 0, 43)
+ToolSpam.Font = Enum.Font.GothamBold
+ToolSpam.FontSize = Enum.FontSize.Size24
+ToolSpam.Text = "Tool Spam"
+ToolSpam.TextColor3 = Color3.new(1, 1, 1)
+ToolSpam.TextSize = 20
+ToolSpam.TextStrokeTransparency = 0
+ToolSpam.MouseButton1Down:connect(function()
+
+local toolamount = 100
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+tempchar:Destroy()
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        wait()
+        LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+        tool.Parent = LocalPlayer.Backpack
+        tool.Parent = LocalPlayer.Character
+        if tool.Handle:FindFirstChild("Mesh") ~= nil then
+            tool.Handle:FindFirstChild("Mesh"):Destroy()
+        end
+        tool.Parent = workspace.Terrain
+    end
+end
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if v:IsA("Tool") then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if (v:IsA("Tool")) then
+v.Parent = workspace
+end
+end
+wait(15)
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if v:IsA("Tool") then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if (v:IsA("Tool")) then
+v.Parent = workspace
+end
+end
+end)
+
+Punish.Name = "Punish"
+Punish.Parent = main
+Punish.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+Punish.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+Punish.BorderSizePixel = 5
+Punish.Position = UDim2.new(0.368932039, 0, 0.269230783, 0)
+Punish.Size = UDim2.new(0, 135, 0, 43)
+Punish.Font = Enum.Font.GothamBold
+Punish.FontSize = Enum.FontSize.Size24
+Punish.Text = "Punish All"
+Punish.TextColor3 = Color3.new(1, 1, 1)
+Punish.TextSize = 20
+Punish.TextStrokeTransparency = 0
+Punish.MouseButton1Down:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Punishes multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might punish more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+    i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait(math.random(0,.00375))
+for i=1,math.random(2,8) do wait(math.random(0,.0625))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,1000000000,0)
+end
+end)
+
+BringAll.Name = "Bring All"
+BringAll.Parent = main
+BringAll.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+BringAll.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+BringAll.BorderSizePixel = 5
+BringAll.Position = UDim2.new(0.642718434, 0, 0.269230783, 0)
+BringAll.Size = UDim2.new(0, 135, 0, 43)
+BringAll.Font = Enum.Font.GothamBold
+BringAll.FontSize = Enum.FontSize.Size24
+BringAll.Text = "Bring All"
+BringAll.TextColor3 = Color3.new(1, 1, 1)
+BringAll.TextSize = 20
+BringAll.TextStrokeTransparency = 0
+BringAll.MouseButton1Down:connect(function()
+local SpreadAmount = 1 -- You don't really have to change this
+
+--[[Brings multiple players to you from the server (sometimes all)
+Spread_Amount = How much you want to spread the tools
+(Might bring more players)
+Cyclically's FE Tool Duplicate Tools V3
+https://v3rmillion.net/member.php?action=profile&uid=785986
+
+%%  Don't touch below unless you know what you're doing  %%
+]]
+
+local Spread_Amount = SpreadAmount - math.random(.0625,.1875)
+local toolamount = -8*-8/4+math.random(-1,0)
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+   workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+   for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+   if tool:IsA("Tool") then
+           tool.Parent = LocalPlayer
+       end
+   end
+   LocalPlayer.Character:ClearAllChildren()
+   local char = Instance.new("Model", workspace)
+   table.insert(characters, char)
+   Instance.new("Humanoid", char)
+   LocalPlayer.Character = char
+   repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount + 1
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+   char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+   if tool:IsA("Tool") then
+       tool.Parent = LocalPlayer.Backpack
+   end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+wait()
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(-1*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-2.5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),-1*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1.5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2.5*Spread_Amount-math.random(1,6),.6*Spread_Amount,-4*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),0.1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),0*Spread_Amount,-2*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),.2*Spread_Amount,-6*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(3*Spread_Amount-math.random(1,6),-.2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(1*Spread_Amount-math.random(1,6),3*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(2*Spread_Amount-math.random(1,6),2*Spread_Amount,-5*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(4*Spread_Amount-math.random(1,6),1*Spread_Amount,-1*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").GripPos = Vector3.new(5*Spread_Amount-math.random(1,6),0.3*Spread_Amount,-3*Spread_Amount)
+LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait()
+LocalPlayer.Character.Animate.Disabled = true
+wait()
+for i=1,toolamount do
+LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = workspace.Terrain
+end
+wait()
+for v,i in pairs(game.Players:GetChildren()) do
+   i.Character.HumanoidRootPart.CFrame = LocalPlayer.Character["Right Arm"].CFrame
+end
+wait()
+LocalPlayer.Character.Animate.Disabled = false
+end)
+
+Drop.Name = "Drop"
+Drop.Parent = main
+Drop.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+Drop.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+Drop.BorderSizePixel = 5
+Drop.Position = UDim2.new(0.0873786211, 0, 0.465384632, 0)
+Drop.Size = UDim2.new(0, 135, 0, 43)
+Drop.Font = Enum.Font.GothamBold
+Drop.FontSize = Enum.FontSize.Size24
+Drop.Text = "Drop All Tools"
+Drop.TextColor3 = Color3.new(1, 1, 1)
+Drop.TextSize = 20
+Drop.TextStrokeTransparency = 0
+Drop.MouseButton1Down:connect(function()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if v:IsA("Tool") then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if (v:IsA("Tool")) then
+v.Parent = workspace
+end
+end
+end)
+
+KillHax.Name = "KillHax"
+KillHax.Parent = main
+KillHax.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+KillHax.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+KillHax.BorderSizePixel = 5
+KillHax.Position = UDim2.new(0.368932009, 0, 0.465384632, 0)
+KillHax.Size = UDim2.new(0, 135, 0, 43)
+KillHax.Font = Enum.Font.GothamBold
+KillHax.FontSize = Enum.FontSize.Size24
+KillHax.Text = "KillHax"
+KillHax.TextColor3 = Color3.new(1, 1, 1)
+KillHax.TextSize = 20
+KillHax.TextStrokeTransparency = 0
+KillHax.MouseButton1Down:connect(function()
+local lplayer = game:GetService('Players').LocalPlayer
+
+local killing = false
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "others" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name ~= lplayer.Name then
+table.insert(Found,v)
+end
+end 
+elseif strl == "me" then
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name == lplayer.Name then
+table.insert(Found,v)
+end
+end 
+else
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end 
+end
+return Found 
+end
+function ahh(thing)
+local asd = {'kill','gui','kill gui'}
+local f = string.upper(asd[math.random(1,#asd)])
+return f
+end
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+Playr = Instance.new("TextBox")
+KL = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.2, 0.694118, 1)
+main.BorderColor3 = Color3.new(0.105882, 0.258824, 0.32549)
+main.BorderSizePixel = 10
+main.Position = UDim2.new(0.0733024701, 0, 0.671036899, 0)
+main.Size = UDim2.new(0, 449, 0, 240)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 0.89999997615814
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 449, 0, 50)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "KillHax By Hackmaster12"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 25
+
+Playr.Name = "Playr"
+Playr.Parent = main
+Playr.BackgroundColor3 = Color3.new(0.192157, 0.745098, 1)
+Playr.BorderColor3 = Color3.new(0.109804, 0.443137, 0.584314)
+Playr.BorderSizePixel = 4
+Playr.Position = UDim2.new(0.25167039, 0, 0.25, 0)
+Playr.Size = UDim2.new(0, 223, 0, 50)
+Playr.Font = Enum.Font.GothamBlack
+Playr.FontSize = Enum.FontSize.Size14
+Playr.Text = "Player"
+Playr.TextColor3 = Color3.new(0, 0, 0)
+Playr.TextSize = 14
+Playr.TextWrapped = true
+
+KL.Name = "KL"
+KL.Parent = main
+KL.BackgroundColor3 = Color3.new(0.192157, 0.745098, 1)
+KL.BorderColor3 = Color3.new(0.101961, 0.407843, 0.541176)
+KL.BorderSizePixel = 5
+KL.Position = UDim2.new(0.27616927, 0, 0.583333373, 0)
+KL.Size = UDim2.new(0, 200, 0, 50)
+KL.Font = Enum.Font.GothamBold
+KL.FontSize = Enum.FontSize.Size14
+KL.Text = "Kill"
+KL.TextColor3 = Color3.new(0, 0, 0)
+KL.TextSize = 14
+KL.MouseButton1Click:Connect(function()
+local target = unpack(GetPlayer(Playr.Text)).Character
+
+game:GetService'Players'.LocalPlayer.Character.Humanoid.PlatformStand = true
+killing = true
+local coin = Instance.new('BodyThrust',game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart)
+coin.Force = Vector3.new(9999,9999,9999)
+coin.Name = "killforce"
+repeat game:GetService'Players'.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Head.CFrame;coin.Location = target.Head.Position game["Run Service"].Heartbeat:wait() until not target.Head or killing == false
+end)
+end)
+
+KillHaxV2.Name = "KillHax V2"
+KillHaxV2.Parent = main
+KillHaxV2.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+KillHaxV2.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+KillHaxV2.BorderSizePixel = 5
+KillHaxV2.Position = UDim2.new(0.642718434, 0, 0.465384632, 0)
+KillHaxV2.Size = UDim2.new(0, 135, 0, 43)
+KillHaxV2.Font = Enum.Font.GothamBold
+KillHaxV2.FontSize = Enum.FontSize.Size24
+KillHaxV2.Text = "Kill Hax v2"
+KillHaxV2.TextColor3 = Color3.new(1, 1, 1)
+KillHaxV2.TextSize = 20
+KillHaxV2.TextStrokeTransparency = 0
+KillHaxV2.MouseButton1Down:connect(function()
+-- Objects
+
+local kill = Instance.new("ScreenGui")
+local mainframe = Instance.new("Frame")
+local stuff = Instance.new("Frame")
+local close = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local box = Instance.new("TextBox")
+local killbutton = Instance.new("TextButton")
+
+-- Properties
+
+kill.Name = "kill"
+kill.Parent = game.CoreGui
+
+function GetPlayer(String) -- Credit to Timeless/xFunnieuss
+    local Found = {}
+    local strl = String:lower()
+    if strl == "all" then
+        for i,v in pairs(game.Players:GetPlayers()) do
+            table.insert(Found,v)
+        end
+    elseif strl == "others" then
+        for i,v in pairs(game.Players:GetPlayers()) do
+            if v.Name ~= game.Players.LocalPlayer.Name then
+                table.insert(Found,v)
+            end
+        end    
+    else
+        for i,v in pairs(game.Players:GetPlayers()) do
+            if v.Name:lower():sub(1, #String) == String:lower() then
+                table.insert(Found,v)
+            end
+        end    
+    end
+    return Found    
+end
+
+mainframe.Name = "mainframe"
+mainframe.Parent = kill
+mainframe.BackgroundColor3 = Color3.new(0.882353, 0.882353, 0.882353)
+mainframe.Position = UDim2.new(0, 414, 0, 200)
+mainframe.Size = UDim2.new(0, 391, 0, 191)
+
+stuff.Name = "stuff"
+stuff.Parent = mainframe
+stuff.BackgroundColor3 = Color3.new(0.705882, 0.572549, 0.0941177)
+stuff.Size = UDim2.new(0, 391, 0, 17)
+
+close.Name = "close"
+close.Parent = stuff
+close.BackgroundColor3 = Color3.new(1, 1, 1)
+close.BackgroundTransparency = 1
+close.Position = UDim2.new(0, 372, 0, 0)
+close.Size = UDim2.new(0, 17, 0, 17)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.new(1, 0, 0)
+close.TextSize = 14
+close.MouseButton1Down:connect(function()
+kill:Destroy()
+end)
+
+title.Name = "title"
+title.Parent = stuff
+title.BackgroundColor3 = Color3.new(1, 1, 1)
+title.BackgroundTransparency = 1
+title.Size = UDim2.new(0, 200, 0, 17)
+title.Font = Enum.Font.SourceSans
+title.Text = "fe kill hax lol"
+title.TextSize = 20
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+box.Name = "box"
+box.Parent = mainframe
+box.BackgroundColor3 = Color3.new(1, 1, 1)
+box.Position = UDim2.new(0, 96, 0, 43)
+box.Size = UDim2.new(0, 200, 0, 50)
+box.Font = Enum.Font.SourceSans
+box.Text = "Victim M8"
+box.TextSize = 30
+
+killbutton.Name = "killbutton"
+killbutton.Parent = mainframe
+killbutton.BackgroundColor3 = Color3.new(1, 1, 1)
+killbutton.Position = UDim2.new(0, 96, 0, 127)
+killbutton.Size = UDim2.new(0, 200, 0, 50)
+killbutton.Font = Enum.Font.SourceSans
+killbutton.Text = "Kill"
+killbutton.TextSize = 25
+killbutton.MouseButton1Down:connect(function()
+	for i,v in pairs(GetPlayer(box.Text))do
+		game.Players.LocalPlayer.Character.Humanoid.Name = 1
+		local l = game.Players.LocalPlayer.Character["1"]:Clone()
+		l.Parent = game.Players.LocalPlayer.Character
+		l.Name = "Humanoid"
+		wait(0.1)
+		game.Players.LocalPlayer.Character["1"]:Destroy()
+		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		game.Players.LocalPlayer.Character.Animate.Disabled = true
+		wait(0.1)
+		game.Players.LocalPlayer.Character.Animate.Disabled = false
+		game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+		for i,v in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
+		wait(0.2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[v.Name].Character.HumanoidRootPart.CFrame
+		wait(0.4)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(10000, 10000, 10000))
+	end
+end)
+
+while wait() do
+title.TextColor3 = Color3.new(1,0,0)
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g+(17/255),title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r-(17/255),title.TextColor3.g,title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g,title.TextColor3.b+(17/255))
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g-(17/255),title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r+(17/255),title.TextColor3.g,title.TextColor3.b)
+end
+for i=1,15 do
+game:GetService("RunService").RenderStepped:wait()
+title.TextColor3 = Color3.new(title.TextColor3.r,title.TextColor3.g,title.TextColor3.b-(17/255))
+end
+end
+end)
+
+invis.Name = "invis"
+invis.Parent = main
+invis.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+invis.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+invis.BorderSizePixel = 5
+invis.Position = UDim2.new(0.0873786211, 0, 0.657692313, 0)
+invis.Size = UDim2.new(0, 135, 0, 43)
+invis.Font = Enum.Font.GothamBold
+invis.FontSize = Enum.FontSize.Size24
+invis.Text = "Invisible"
+invis.TextColor3 = Color3.new(1, 1, 1)
+invis.TextSize = 20
+invis.TextStrokeTransparency = 0
+invis.MouseButton1Down:connect(function()
+local player = game.Players.LocalPlayer
+position     = player.Character.HumanoidRootPart.Position
+wait(0.1)
+player.Character:MoveTo(position + Vector3.new(0, 1000000, 0))
+wait(0.1)
+humanoidrootpart = player.Character.HumanoidRootPart:clone()
+wait(0.1)
+player.Character.HumanoidRootPart:Destroy()
+humanoidrootpart.Parent = player.Character
+player.Character:MoveTo(position)
+wait()
+-- Remove this if you want to see yourself (others still won't see you)
+game.Players.LocalPlayer.Character.Torso.Transparency = 1
+game.Players.LocalPlayer.Character.Head.Transparency  = 1
+game.Players.LocalPlayer.Character["Left Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Arm"].Transparency = 1
+game.Players.LocalPlayer.Character["Left Leg"].Transparency = 1
+game.Players.LocalPlayer.Character["Right Leg"].Transparency = 1
+game.Players.LocalPlayer.Character.Humanoid:RemoveAccessories()
+game.Players.LocalPlayer.Character.Head.face:Remove()
+end)
+
+Naked.Name = "Naked"
+Naked.Parent = main
+Naked.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+Naked.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+Naked.BorderSizePixel = 5
+Naked.Position = UDim2.new(0.368932009, 0, 0.657692313, 0)
+Naked.Size = UDim2.new(0, 135, 0, 43)
+Naked.Font = Enum.Font.GothamBold
+Naked.FontSize = Enum.FontSize.Size24
+Naked.Text = "Naked"
+Naked.TextColor3 = Color3.new(1, 1, 1)
+Naked.TextSize = 20
+Naked.TextStrokeTransparency = 0
+Naked.MouseButton1Down:connect(function()
+local pchar = game:GetService("Players").LocalPlayer.Character
+if pchar:FindFirstChild("Shirt") then
+    pchar.Shirt:Remove()
+end
+if pchar:FindFirstChild("Pants") then
+    pchar.Pants:Remove()
+end
+if pchar:FindFirstChild("Shirt Graphic") then
+    pchar["Shirt Graphic"].Graphic = ""
+end
+end)
+
+LagGui.Name = "LagGui"
+LagGui.Parent = main
+LagGui.BackgroundColor3 = Color3.new(0.329412, 0.329412, 0.329412)
+LagGui.BorderColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+LagGui.BorderSizePixel = 5
+LagGui.Position = UDim2.new(0.642718434, 0, 0.657692313, 0)
+LagGui.Size = UDim2.new(0, 135, 0, 43)
+LagGui.Font = Enum.Font.GothamBold
+LagGui.FontSize = Enum.FontSize.Size24
+LagGui.Text = "Lagger Gui"
+LagGui.TextColor3 = Color3.new(1, 1, 1)
+LagGui.TextSize = 20
+LagGui.TextStrokeTransparency = 0
+LagGui.MouseButton1Down:connect(function()
+ScreenGui = Instance.new("ScreenGui")
+main = Instance.new("Frame")
+TextLabel = Instance.new("TextLabel")
+se = Instance.new("TextButton")
+Power = Instance.new("TextBox")
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+main.Position = UDim2.new(0.68364197, 0, 0.704410017, 0)
+main.Size = UDim2.new(0, 361, 0, 205)
+main.Active = true
+main.Draggable = true
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.new(0.482353, 0.827451, 0.196078)
+TextLabel.Position = UDim2.new(0, 0, -0.243902445, 0)
+TextLabel.Size = UDim2.new(0, 361, 0, 50)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.FontSize = Enum.FontSize.Size28
+TextLabel.Text = "Roblox Server Stresser"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 28
+
+se.Name = "se"
+se.Parent = main
+se.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+se.Position = UDim2.new(0.221606642, 0, 0.560975671, 0)
+se.Size = UDim2.new(0, 200, 0, 50)
+se.Font = Enum.Font.SourceSansItalic
+se.FontSize = Enum.FontSize.Size60
+se.Text = "Send"
+se.TextColor3 = Color3.new(0, 0, 0)
+se.TextSize = 49
+se.MouseButton1Down:connect(function()
+
+
+local lag_strength = Power.Text
+
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+while game:GetService("RunService").RenderStepped:Wait() do
+    for i = 1, lag_strength do
+        local anim = Instance.new("Animation")
+        anim.AnimationId = "init\n"..math.random()
+        LocalPlayer.Character.Humanoid:LoadAnimation(anim):Play()
+        anim:Destroy()
+    end
+end
+end)
+
+Power.Name = "Power"
+Power.Parent = main
+Power.BackgroundColor3 = Color3.new(0.580392, 1, 0.239216)
+Power.Position = UDim2.new(0.221606642, 0, 0.160975605, 0)
+Power.Size = UDim2.new(0, 200, 0, 50)
+Power.Font = Enum.Font.Highway
+Power.FontSize = Enum.FontSize.Size28
+Power.Text = "Power"
+Power.TextColor3 = Color3.new(0, 0, 0)
+Power.TextSize = 25
+Power.TextWrapped = true
+end)

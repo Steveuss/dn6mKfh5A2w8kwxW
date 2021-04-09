@@ -1,0 +1,14 @@
+local player = game.Players.LocalPlayer
+
+function bypassAntiExploit()
+for i,v in next, getconnections(player.Character.Humanoid:GetPropertyChangedSignal("WalkSpeed")) do
+v:Disable()
+end
+end
+
+bypassAntiExploit()
+player.Character.Humanoid.WalkSpeed = 100
+
+player.CharacterAdded:connect(function()
+bypassAntiExploit()
+end)

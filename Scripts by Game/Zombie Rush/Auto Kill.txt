@@ -1,0 +1,13 @@
+local char=workspace[game.Players.LocalPlayer.Name]
+local t=char:findFirstChildOfClass'Tool'
+local r=t.GunController.RemoteFunction
+function a()
+   for i,v in pairs(workspace['Zombie Storage']:children()) do
+       if v:findFirstChild'Head' and v:findFirstChild'Humanoid' then
+           r:InvokeServer({ ["Name"]= t.Name, ["HumanoidTables"]= { { ["HeadHits"]= 1, ["THumanoid"]= v.Humanoid, ["BodyHits"]= 0 } } })
+       end
+   end
+end
+for i=1,20 do
+   a()
+end

@@ -1,0 +1,4127 @@
+---------------------------------------------------------------
+---------------------------------------------------------------
+--  _____       __ _       _ _        __   ___      _     _  --
+-- |_   _|     / _(_)     (_) |       \ \ / (_)    | |   | | --
+--   | | _ __ | |_ _ _ __  _| |_ ___   \ V / _  ___| | __| | --
+--   | || '_ \|  _| | '_ \| | __/ _ \   \ / | |/ _ \ |/ _` | --
+--  _| || | | | | | | | | | | ||  __/   | | | |  __/ | (_| | --
+--  \___/_| |_|_| |_|_| |_|_|\__\___|   \_/ |_|\___|_|\__,_| --
+--                                                           --
+---------------------------------------------------------------
+---------------------------Edge-Moon---------------------------
+---------------------------------------------------------------
+
+local Version = '9.5.1'
+HttpService = game:GetService("HttpService")
+SAVEFILE = {
+	colorR = 0.121569;
+	colorG = 0.121569;
+	colorB = 0.121569;
+	cmdprefix = ';';
+	suggestionstoggle = true;
+	allowfriends = true;
+	JLnotify = true;
+	Mseconds = '7';
+	Nfriends = true;
+	cmdbarbind = ';';
+	chatsV = false;
+	whispersV = false;
+	commandsV = false;
+	aliasSave = {}
+}
+defaults = HttpService:JSONEncode(SAVEFILE)
+
+loaded = false
+function run()
+local function writeF()
+writefile("IY.txt", defaults)
+wait(1)
+local newjson = readfile("IY.txt")
+local CREATEFILE = HttpService:JSONDecode(newjson)
+colorR = CREATEFILE.colorR
+colorG = CREATEFILE.colorG
+colorB = CREATEFILE.colorB
+cmdprefix = CREATEFILE.cmdprefix
+suggestionstoggle = CREATEFILE.suggestionstoggle
+allowfriends = CREATEFILE.allowfriends
+JLnotify = CREATEFILE.JLnotify
+Mseconds = CREATEFILE.Mseconds
+Nfriends = CREATEFILE.Nfriends
+cmdbarbind = CREATEFILE.cmdbarbind
+chatsV = CREATEFILE.chatsV
+whispersV = CREATEFILE.whispersV
+commandsV = CREATEFILE.commandsV
+aliasSave = CREATEFILE.aliasSave
+loaded = true end
+function pcWRITE()
+local file, err = pcall(writeF)
+if not file then
+warn("READ/WRITE ERROR: "..err)
+R_W = game:GetObjects("rbxassetid://01587976911")[1] R_W.Parent = game.CoreGui
+function Click(mouse) R_W:Destroy()
+for _, child in pairs(game.CoreGui:GetChildren()) do
+if child.Name == "IYrun" then
+child:Destroy() end end end
+R_W.drag.PromptDialog.shadow.Exit.MouseButton1Down:connect(Click) end end
+if is_protosmasher_caller ~= nil or elysianexecute ~= nil or Synapse ~= nil then
+local function sfile()
+local checktxt = readfile("IY.txt")
+if checktxt == nil then pcWRITE() writeF()
+else return end end
+local success, message2 = pcall(sfile)
+if success then
+local json = readfile("IY.txt")
+local LOADFILE = HttpService:JSONDecode(json)
+colorR = LOADFILE.colorR
+colorG = LOADFILE.colorG
+colorB = LOADFILE.colorB
+cmdprefix = LOADFILE.cmdprefix
+suggestionstoggle = LOADFILE.suggestionstoggle
+allowfriends = LOADFILE.allowfriends
+JLnotify = LOADFILE.JLnotify
+Mseconds = LOADFILE.Mseconds
+Nfriends = LOADFILE.Nfriends
+cmdbarbind = LOADFILE.cmdbarbind
+chatsV = LOADFILE.chatsV
+whispersV = LOADFILE.whispersV
+commandsV = LOADFILE.commandsV
+aliasSave = LOADFILE.aliasSave
+loaded = true else
+pcWRITE() writeF() end
+else
+	colorR = 0.121569
+	colorG = 0.121569
+	colorB = 0.121569
+	cmdprefix = ';'
+	suggestionstoggle = true
+	allowfriends = true
+	JLnotify = true
+	Mseconds = '7'
+	Nfriends = true
+	cmdbarbind = ';'
+	chatsV = false
+	whispersV = false
+	commandsV = false
+	aliasSave = {}
+	loaded = true
+end
+repeat wait() until loaded == true
+local gCoreGui = game:GetService('CoreGui') local gPlayers = game:GetService('Players') local gLighting = game:GetService('Lighting') local Player = gPlayers.LocalPlayer
+local Mouse = Player:GetMouse() local char = Player.Character local LP = gPlayers.LocalPlayer local gPlayers = game:GetService("Players") local _players = game:GetService('Players') MSGhook = false local services={} local cmds={}
+local std={} local loopkillT = {} local rainbowT = {} local disabletoolsT = {} local banT = {} local adminT = {} function FIND_CHILD(PATH, NAME) if PATH:FindFirstChild(NAME) then return true end return false end
+services.events = {} local user = gPlayers.LocalPlayer local bringT = {} agelock = nil isagelocked = false local scriptprefix='\\'
+local split=" " slock = false
+function updatefile()
+local update = {
+	colorR = colorR;
+	colorG = colorG;
+	colorB = colorB;
+	cmdprefix = cmdprefix;
+	suggestionstoggle = suggestionstoggle;
+	allowfriends = allowfriends;
+	JLnotify = JLnotify;
+	Mseconds = Mseconds;
+	Nfriends = Nfriends;
+	cmdbarbind = cmdbarbind;
+	chatsV = chatsV;
+	whispersV = whispersV;
+	commandsV = commandsV;
+	aliasSave = aliasSave
+}
+local updated = HttpService:JSONEncode(update)
+wait(0.1)
+writefile("IY.txt", updated) end
+function isNumber(str)
+return tonumber(str) ~= nil end
+function msghook()
+for _, child in pairs( workspace:GetChildren()) do
+if MSGhook == false and child.ClassName == "Message" and child.Name ~= "IYmessage" then
+child.Name = "IYmessage" child.Text = '' MSGhook = true end end
+if workspace:FindFirstChild("IYmessage") then MSGhook = true
+else MSGhook = false end end
+game:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("GuiService"):SetGlobalGuiInset(0,72,0,0)
+if r15noclip then
+if LP.Character:FindFirstChild('Humanoid') then LP.Character.Humanoid:ChangeState(11) end end
+if LP.Character and LP.Character:FindFirstChild('Humanoid') then
+	LP.Character.Humanoid.Died:connect(function() FLYING = false end)
+if MSGhook == true and workspace:FindFirstChild("IYmessage") then
+	if workspace.IYmessage.Text == '' then
+	for _, child in pairs( LightingService:GetChildren()) do
+    	if child.Name == "IYmblur" then
+        child:Destroy() end end end
+	else MSGhook = false end
+	for i,v in pairs(_players:GetPlayers()) do
+		if FindTable(loopkillT, v.Name) then
+		v.Character:BreakJoints() end
+		if FindTable(disabletoolsT, v.Name) and v:FindFirstChild('Backpack') then
+		v.Backpack:Destroy()
+		for i,n in pairs(v.Character:GetChildren()) do
+			if n:IsA('Tool') or n:IsA('HopperBin') then
+				n:destroy() end end end
+		if FindTable(rainbowT, v.Name) then
+			v.Neutral = false
+			v.TeamColor = BrickColor.random()
+end end end end)
+LightingService = game:GetService("Lighting")
+origsettings = {abt = LightingService.Ambient, oabt = LightingService.OutdoorAmbient, brt = LightingService.Brightness, time = 
+LightingService.TimeOfDay, fclr = LightingService.FogColor, fe = LightingService.FogEnd, fs = LightingService.FogStart}
+function lponly(player) game:GetService('Chat'):Chat(player.Character, 'That is a LocalPlayer only command!', 2) end
+function FindTable(Table, Name)
+	for i,v in pairs(Table) do
+		if v == Name then
+			return true
+		end end
+	return false
+end
+function GetInTable(Table, Name)
+	for i = 1, #Table do
+		if Table[i] == Name then
+			return i
+		end end
+return false end
+_players.PlayerRemoving:connect(function(player)
+for a,b in pairs(injail) do if b == player.Name then table.remove(injail, a) workspace["JAIL_" .. player.Name]:Destroy() end end
+for a,b in pairs(hastab) do if b == player.Name then table.remove(hastab, a) workspace[player.Name .. "TAB"]:Destroy() end end
+if JLnotify == true and Nfriends == true and player:IsFriendsWith(user.userId) then
+			game:FindService('StarterGui'):SetCore('SendNotification', {
+				Title = player.Name,
+				Text = 'has left the server.\n[AGE: ' ..player.AccountAge.. ']',
+				Icon = [[http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&userName=]]..player.Name..[[&RAND]] .. math.random(1,100000000),
+				Duration = 5,
+			})
+elseif JLnotify == true and Nfriends == false then
+			game:FindService('StarterGui'):SetCore('SendNotification', {
+				Title = player.Name,
+				Text = 'has left the server.\n[AGE: ' ..player.AccountAge.. ']',
+				Icon = [[http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&userName=]]..player.Name..[[&RAND]] .. math.random(1,100000000),
+				Duration = 5,
+			})
+end
+end)		
+FLYING = false
+iyflyspeed = 1
+function sFLY() -- from rocky2u cmdscript
+	repeat wait() until LP and LP.Character and LP.Character:FindFirstChild('HumanoidRootPart') and LP.Character:FindFirstChild('Humanoid')
+	repeat wait() until Mouse
+	
+	local T = LP.Character.HumanoidRootPart
+	local CONTROL = {F = 0, B = 0, L = 0, R = 0}
+	local lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+	local SPEED = 0
+	
+	local function FLY()
+		FLYING = true
+		local BG = Instance.new('BodyGyro', T)
+		local BV = Instance.new('BodyVelocity', T)
+		BG.P = 9e4
+		BG.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		BG.cframe = T.CFrame
+		BV.velocity = Vector3.new(0, 0.1, 0)
+		BV.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		spawn(function()
+		repeat wait()
+		LP.Character.Humanoid.PlatformStand = true
+		if CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0 then
+		SPEED = 50
+		elseif not (CONTROL.L + CONTROL.R ~= 0 or CONTROL.F + CONTROL.B ~= 0) and SPEED ~= 0 then
+		SPEED = 0
+		end
+if (CONTROL.L + CONTROL.R) ~= 0 or (CONTROL.F + CONTROL.B) ~= 0 then
+BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (CONTROL.F + CONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(CONTROL.L + CONTROL.R, (CONTROL.F + CONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+lCONTROL = {F = CONTROL.F, B = CONTROL.B, L = CONTROL.L, R = CONTROL.R}
+elseif (CONTROL.L + CONTROL.R) == 0 and (CONTROL.F + CONTROL.B) == 0 and SPEED ~= 0 then
+BV.velocity = ((workspace.CurrentCamera.CoordinateFrame.lookVector * (lCONTROL.F + lCONTROL.B)) + ((workspace.CurrentCamera.CoordinateFrame * CFrame.new(lCONTROL.L + lCONTROL.R, (lCONTROL.F + lCONTROL.B) * 0.2, 0).p) - workspace.CurrentCamera.CoordinateFrame.p)) * SPEED
+else
+BV.velocity = Vector3.new(0, 0.1, 0)
+end
+	BG.cframe = workspace.CurrentCamera.CoordinateFrame
+			until not FLYING
+			CONTROL = {F = 0, B = 0, L = 0, R = 0}
+			lCONTROL = {F = 0, B = 0, L = 0, R = 0}
+			SPEED = 0
+			BG:destroy()
+			BV:destroy()
+			LP.Character.Humanoid.PlatformStand = false
+		end)
+	end
+	Mouse.KeyDown:connect(function(KEY)
+		if KEY:lower() == 'w' then
+			CONTROL.F = iyflyspeed
+		elseif KEY:lower() == 's' then
+			CONTROL.B = -iyflyspeed
+		elseif KEY:lower() == 'a' then
+			CONTROL.L = -iyflyspeed 
+		elseif KEY:lower() == 'd' then 
+			CONTROL.R = iyflyspeed
+		end
+	end)
+	Mouse.KeyUp:connect(function(KEY)
+		if KEY:lower() == 'w' then
+			CONTROL.F = 0
+		elseif KEY:lower() == 's' then
+			CONTROL.B = 0
+		elseif KEY:lower() == 'a' then
+			CONTROL.L = 0
+		elseif KEY:lower() == 'd' then
+			CONTROL.R = 0
+		end
+	end)
+	FLY()
+end
+function NOFLY()
+	FLYING = false
+	LP.Character.Humanoid.PlatformStand = false
+end
+HK = {
+	'-HOTKEYS-',
+	'HOLD F2 - Click TP',
+	'F4 - Toggle Fly',
+	'F5 - Toggle Noclip',
+	'-COMMANDS-'
+}
+CMDs = {
+	'addalias [cmd] [alias]',
+	'addstat [plr] [text]',
+	'admins',
+	'admin [plr]',
+	'agelock [age num]',
+	'addban [full username]',
+	'age [plr]',
+	'aliases',
+	'alien / ayylmao [plr]',
+	'ambient [R G B]',
+	'anchor',
+	'animation [plr] [anim]',
+	'arrest [plr]',
+	'bait',
+	'ball [plr]',
+	'bang [plr] [plr] / bang [plr]',
+	'bans',
+	'ban [plr]',
+	'base',
+	'begone / thot [plr]',
+	'bgui [plr] [text]',
+	'blackandwhite',
+	'bleach [plr]',
+	'blackify [plr]',
+	'blind [plr]',
+	'blur [num]',
+	'bomb [plr]',
+	'box [plr]',
+	'breakloops/break (cmd loops)',
+	'brightness [num]',
+	'bring [plr]',
+	'btools [plr]',
+	'burn [plr]',
+	'cape [plr] [R G B]',
+	'car [plr]',
+	'change [plr] [stat] [num]',
+	'charplr / cp [plr] [plr]',
+	'char [plr] [ID]',
+	'chat [plr] [msg]',
+	'chickenarms / chicken [plr]',
+	'clear',
+	'clip',
+	'clone [plr]',
+	'clraliases',
+	'clrbans',
+	'clrterrain',
+	'cmds',
+	'confuse [plr]',
+	'control [plr]',
+	'copytools / ctools [plr]',
+	'countdown [num]',
+	'crash [plr]',
+	'creeper [plr]',
+	'cripple [plr]',
+	'crucify [plr]',
+	'damage [plr]',
+	'dance [plr]',
+	'day',
+	'decalspam [ID]',
+	'deleteclass / dc [class name]',
+	'deletepos / dpos [name]',
+	'delete [part name]',
+	'devuzi',
+	'disablereset [plr]',
+	'disabletools [plr]',
+	'disable [plr]',
+	'disco',
+	'discomesh [plr]',
+	'distortsound / distort [num]',
+	'dog [plr]',
+	'dong [plr]',
+	'draw',
+	'duck [plr]',
+	'dummy [name]',
+	'earthquake [power] [intensity]',
+	'enablereset [plr]',
+	'enabletools [plr]',
+	'enable [plr]',
+	'esp [plr]',
+	'exit',
+	'explode [plr]',
+	'explorer / dex',
+	'f3x',
+	'face [plr] [ID]',
+	'fart [plr]',
+	'fat [plr]',
+	'fegod',
+	'feinvisible / feinvis',
+	'fekill [plr] (need a tool)',
+	'ff [plr]',
+	'filtering',
+	'fire [plr] [R G B]',
+	'firstp [plr]',
+	'fix',
+	'fixcam',
+	'fixlighting / fixl',
+	'flashlight [plr]',
+	'fling [plr]',
+	'float [plr]',
+	'flood',
+	'fly',
+	'flyspeed [num]',
+	'fogcolor [R G B]',
+	'fogend [num]',
+	'freecam / fc',
+	'freecamspeed / fcspeed [num]',
+	'freeze / fr [plr]',
+	'ghost [plr]',
+	'glass [plr]',
+	'globalshadows / gshadows',
+	'glowstick [plr] [R G B]',
+	'god [plr]',
+	'goto [plr]',
+	'gravity [num]',
+	'hang [plr]',
+	'hatsize [plr] [num]',
+	'hat [plr] [ID]',
+	'headshake [plr]',
+	'headsize [plr] [num]',
+	'heal [plr]',
+	'hidename [plr]',
+	'hideplaylist / hideplayer',
+	'hipheight / hheight [plr] [num]',
+	'hub',
+	'infect [plr]',
+	'insert [ID/name]',
+	'invert',
+	'invisible / invis [plr]',
+	'invisibleff / invisff [plr]',
+	'iyspam',
+	'jail [plr]',
+	'jumppower / jpower [plr] [num]',
+	'jump [plr]',
+	'keeptools / ktools [plr]',
+	'keybind [key] [cmd]',
+	'kick [plr]',
+	'kidnap [plr]',
+	'kill [plr]',
+	'knife',
+	'knuckles [plr]',
+	'light [plr] [R G B]',
+	'loadm',
+	'loadmap [ID]',
+	'loadpos / lpos [plr] [name]',
+	'lockws',
+	'lock [plr]',
+	'logs',
+	'longneck [plr]',
+	'loopbring [plr]',
+	'loopheal [plr]',
+	'loopjump / ljump [plr]',
+	'loopkill [plr]',
+	'loopname / lname [plr]',
+	'loopoof',
+	'loopsit / lsit [plr]',
+	'mage',
+	'maxhealth [plr] [num]',
+	'maxzoom [plr] [num]',
+	'mesh [plr] [mesh] [texture]',
+	'message / m [msg]',
+	'meteor [plr]',
+	'name [plr]',
+	'neon [plr]',
+	'nextsong',
+	'night',
+	'nil [plr]',
+	'noarms [plr]',
+	'nobox [plr]',
+	'noclip',
+	'noclones [plr]',
+	'nodong [plr]',
+	'nodummies',
+	'noesp [plr]',
+	'noglobalshadows / nogshadows',
+	'nokeeptools / noktools [plr]',
+	'nolimbs [plr]',
+	'nooutlines',
+	'noparticles [plr]',
+	'noplrsound [plr]',
+	'norain',
+	'normal [plr]',
+	'notools [plr]',
+    'nuke [plr]',
+    'os [plr]',
+	'offset [plr] [coordinate]',
+	'outlines',
+	'paper [plr]',
+	'partdisco',
+	'particles [plr] [ID]',
+	'pipetp [plr] [plr]',
+	'pitch [num]',
+	'playhash / hash [hash]',
+	'playlist / player [ID],[ID]...',
+	'plrsound [plr] [ID]',
+	'positions / pos',
+	'prefix [string]',
+	'prevsong',
+	'punish [plr]',
+	'rainbowname [plr]',
+	'rainbow [plr]',
+	'rain [mesh] [texture]',
+	'refresh / re [plr]',
+	'rejoin',
+	'remotespy',
+	'removealias [alias]',
+	'removebait / nobait',
+	'rgui',
+	'removehats / rhats [plr]',
+	'removespawns',
+	'respawn [plr]',
+	'restoremap / rmap',
+	'rocket [plr]',
+	'savelighting / slighting',
+	'savemap / smap',
+	'savepos / spos [name]',
+	'script [script]',
+	'seagull / gull [plr]',
+	'seizure [plr]',
+	'serverinfo / info',
+	'serverlock / slock',
+	'servermessage / sm [msg]',
+	'sethealth [plr] [num]',
+	'setsong [num]',
+	'settings',
+	'sgod [plr]',
+	'shiny [plr]',
+	'shrek [plr]',
+	'shutdown',
+	'sit [plr]',
+	'size [plr] [num]',
+	'skydive [plr]',
+	'skygif [ID],[ID]... [interval]',
+	'sky [ID]',
+	'smite [plr]',
+	'smoke [plr]',
+	'sound / music [ID/name]',
+	'sparkles / sp [plr] [R G B]',
+	'spasm [plr]',
+	'spawnpoint [plr]',
+	'spectate / view [plr]',
+	'speed / ws [plr] [num]',
+	'sphere [plr]',
+	'spin [plr]',
+	'spookyify',
+	'starman [plr]',
+	'strength [plr]',
+	'strobe',
+	'stun [plr]',
+	'sun [intense] [spread]',
+	'sword [plr]',
+	'tablet',
+	'team [plr] [team]',
+	'terrain',
+	'thaw / unfr [plr]',
+	'thirdp [plr]',
+	'time [num]',
+	'tools [plr]',
+	'torso [plr]',
+	'tppos [plr] [coordinate]',
+	'tp [plr] [plr]',
+	'trail [plr] [R G B]',
+	'trip [plr]',
+	'unadmin [plr]',
+	'unagelock',
+	'unanchor',
+	'unball [plr]',
+	'unban [plr]',
+	'unbgui [plr]',
+	'unblind [plr]',
+	'unblur',
+	'uncape [plr]',
+	'uncar [plr]',
+	'unchar [plr]',
+	'unconfuse [plr]',
+	'uncreeper [plr]',
+	'uncripple [plr]',
+	'undecalspam',
+	'undisco',
+	'undog [plr]',
+	'unduck [plr]',
+	'unff [plr]',
+	'unfire [plr]',
+	'unfloat [plr]',
+	'unfly',
+	'unfreecam / unfc',
+	'unghost [plr]',
+	'ungod [plr]',
+	'unhidename [plr]',
+	'uninfect [plr]',
+	'unjail [plr]',
+	'unkeybind [key]',
+	'unlight [plr]',
+	'unlockws',
+	'unlock [plr]',
+	'unlongneck [plr]',
+	'unloopbring [plr]',
+	'unloopheal [plr]',
+	'unloopjump / unljump [plr]',
+	'unloopkill [plr]',
+	'unloopname / unlname [plr]',
+	'unloopoof',
+	'unloopsit / unlsit [plr]',
+	'unname [plr]',
+	'unpartdisco',
+	'unpunish [plr]',
+	'unrainbowname [plr]',
+	'unseizure [plr]',
+	'unserverlock / unslock',
+	'unshrek [plr]',
+	'unskygif',
+	'unsmoke [plr]',
+	'unsparkles / unsp [plr]',
+	'unspectate / unview',
+	'unspin [plr]',
+	'unstarman [plr]',
+	'unstrength [plr]',
+	'unstrobe',
+	'unstun [plr]',
+	'untrail [plr]',
+	'unweaken [plr]',
+	'version',
+	'visible / vis [plr]',
+	'volume / vol [num]',
+	'weaken [plr]',
+	'whiteify [plr]',
+	'zinnia [plr]'
+}
+function updateevents(player) local C = player.Chatted:connect(function(M) if isAdmin(player) then do_exec(M, player) end end) table.insert(services.events, C) end
+
+std.inTable=function(tbl,val)
+    if tbl==nil then return false end
+
+    for _,v in pairs(tbl)do
+        if v==val then return true end
+    end 
+	return false
+end
+std.out=function(str)
+    print(str)
+end
+std.list=function(tbl)
+    local str=''
+    for i,v in pairs(tbl)do
+        str=str..tostring(v)
+        if i~=#tbl then str=str..', ' end
+    end 
+	return str
+end
+std.endat=function(str,val)
+    local z=str:find(val)
+    if z then 
+		return str:sub(0,z-string.len(val)),true
+    else 
+		return str,false 
+	end
+end
+std.first=function(str) return str:sub(1,1) end
+
+function isAdmin(name) if FindTable(adminT, name.userId) then return true elseif name.userId == LP.userId then return true end end
+
+local exec=function(str)
+    spawn(function()
+        local script, loaderr = loadstring(str)
+        if not script then
+            error(loaderr)
+        else
+        	script()
+		end
+    end)
+end
+local findCmd=function(cmd_name)
+    for i,v in pairs(cmds)do
+        if v.NAME:lower()==cmd_name:lower() or std.inTable(v.ALIAS,cmd_name:lower())then
+            return v
+        end
+    end
+end
+local getCmd=function(msg)
+    local cmd,hassplit=std.endat(msg:lower(),split)
+    if hassplit then 
+		return {cmd,true} 
+	else 
+		return {cmd,false}
+	end
+end
+local getprfx=function(strn)
+    if strn:sub(1,string.len(cmdprefix))==cmdprefix then return{'cmd',string.len(cmdprefix)+1}
+    elseif strn:sub(1,string.len(scriptprefix))==scriptprefix then return{'exec',string.len(scriptprefix)+1}
+    end return
+end
+function dragGUI(gui)
+spawn(function()
+local UserInputService = game:GetService("UserInputService")
+local dragging
+local dragInput
+local dragStart
+local startPos
+local function update(input)
+    local delta = input.Position - dragStart
+	gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), "InOut", "Quart", 0.04, true, nil) 
+end
+gui.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = gui.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+gui.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
+end)
+end
+maincolor = Color3.new(colorR, colorG, colorB)
+function updatecolors(color)
+colorR = maincolor.r colorG = maincolor.g colorB = maincolor.b
+maincolor = color
+for _, child in pairs( game.CoreGui.RobloxGui:GetChildren()) do
+    if child.Name == "TopBarContainer" then
+        child.BackgroundColor3 = color
+    end end
+FeedbackMain.BackgroundColor3 = maincolor
+MAIN.BackgroundColor3 = maincolor
+bar.BackgroundColor3 = maincolor
+game.CoreGui.sugg.suggestions.BackgroundColor3 = color
+if game.CoreGui:FindFirstChild('Updates') then
+game.CoreGui.Updates.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Updates.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Sinfo') then
+game.CoreGui.Sinfo.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Sinfo.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('cp') then
+game.CoreGui.cp.Frame.holder.bar.BackgroundColor3 = color
+game.CoreGui.cp.Frame.holder.FeedbackMain.BackgroundColor3 = color 
+game.CoreGui.cp.Frame.holder.size.MAIN.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Bans') then
+game.CoreGui.Bans.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Bans.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Pos') then
+game.CoreGui.Pos.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Pos.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Admins') then
+game.CoreGui.Admins.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Admins.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Logs') then
+game.CoreGui.Logs.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Logs.drag.PromptDialog.shadow.BackgroundColor3 = color end
+if game.CoreGui:FindFirstChild('Aliases') then
+game.CoreGui.Aliases.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+game.CoreGui.Aliases.drag.PromptDialog.shadow.BackgroundColor3 = color end
+for _, child in pairs( game.CoreGui:GetChildren()) do
+    if child.Name == "Models" then
+        game.CoreGui.Models.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+		game.CoreGui.Models.drag.PromptDialog.shadow.BackgroundColor3 = color
+    end
+end
+for _, child in pairs( game.CoreGui:GetChildren()) do
+    if child.Name == "Audios" then
+        game.CoreGui.Audios.drag.PromptDialog.ContainerFrame.BackgroundColor3 = color
+		game.CoreGui.Audios.drag.PromptDialog.shadow.BackgroundColor3 = color
+    end
+end
+end
+
+function respawn(plr)
+local M = Instance.new('Model', workspace) M.Name = 'respawn_iy'
+local H = Instance.new('Humanoid', M)
+local T = Instance.new('Part', M) T.Name = 'Torso' T.CanCollide = false T.Transparency = 1
+plr.Character = M end
+
+local dummy = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://1498924930")
+WL = {'IoIman616','Conceptual_Nullifier','Thomasbudge','N3xuI','MoonlightTears','DesiredUsername1233','marie','InnovatingCreativity','Usingthisisfun',LP.Name}
+function kickF(plr)
+spawn(function()
+if plr.Parent ~= nil then
+if FindTable(WL, plr.Name) then Notify('Error: '..plr.Name..' is whitelisted') else
+local newChar = dummy:Clone() newChar.Parent = workspace
+newChar.HumanoidRootPart.Position = Vector3.new(math.random(999000, 1001000), 10000, 0)
+for i = 1,4 do
+local Plat = Instance.new('SkateboardPlatform', newChar)
+Plat.Position = newChar.HumanoidRootPart.Position
+Plat.Name = 'IYplat'
+Plat.Size = Vector3.new(10, 1.2, 10)
+Plat.Transparency = 1 end
+plr.Character = newChar
+local PART = Instance.new('Part', newChar)
+PART.CFrame = newChar.HumanoidRootPart.CFrame - Vector3.new(0, 3, 0)
+PART.Size = Vector3.new(10, 1.2, 10)
+PART.Anchored = true
+PART.Transparency = 1
+if newChar:FindFirstChild("SkateboardPlatform") then
+newChar.SkateboardPlatform.CFrame = newChar.HumanoidRootPart.CFrame end
+wait(0.4)
+if newChar then newChar:Destroy() end
+kickF(plr) end
+end end) end
+
+function refresh(plr)
+spawn(function()
+local rpos = plr.Character.HumanoidRootPart.Position
+wait(0.1) plr.Character:Destroy() respawn(plr) wait(0.1)
+repeat wait() until plr.Character ~= nil and plr.Character:FindFirstChild('HumanoidRootPart')
+plr.Character:MoveTo(rpos) end) end
+
+function getArgs(str) local A = {} local NA = nil local HS = nil local S = str repeat NA, HS = std.endat(S:lower(), split) if NA ~= '' then table.insert(A, NA) S = S:sub(string.len(NA) + string.len(split) + 1) end until not HS return A end
+function getCapArgs(str) local A = {} local NA = nil local HS = nil local S = str repeat NA, HS = std.endat(S, split) if NA ~= '' then table.insert(A, NA) S = S:sub(string.len(NA) + string.len(split) + 1) end until not HS return A end
+_players.PlayerAdded:connect(function(player)
+if JLnotify == true and Nfriends == true and player:IsFriendsWith(user.userId) then
+			game:FindService('StarterGui'):SetCore('SendNotification', {
+				Title = player.Name,
+				Text = 'has joined the server.\n[AGE: ' ..player.AccountAge.. ']',
+				Icon = [[http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&userName=]]..player.Name..[[&RAND]] .. math.random(1,100000000),
+				Duration = 5,
+			})
+elseif JLnotify == true and Nfriends == false then
+			game:FindService('StarterGui'):SetCore('SendNotification', {
+				Title = player.Name,
+				Text = 'has joined the server.\n[AGE: ' ..player.AccountAge.. ']',
+				Icon = [[http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&Format=Png&userName=]]..player.Name..[[&RAND]] .. math.random(1,100000000),
+				Duration = 5,
+			})
+end
+	if slock == true and allowfriends == false then player.CharacterAdded:connect(function()
+	spawn(function()
+repeat wait() until player.Character
+kickF(player)
+	end)
+	end)
+	elseif slock == true and allowfriends == true and not player:IsFriendsWith(user.userId) then
+	spawn(function()
+repeat wait() until player.Character
+kickF(player)
+	end)
+	end
+if FindTable(banT, player.userId) then
+	spawn(function()
+repeat wait() until player.Character
+Notify('Banned player, ' .. player.Name .. ' attempted to join')
+kickF(player)
+end)
+end
+if isagelocked == true and allowfriends == false and player.AccountAge <= agelock then
+	spawn(function()
+repeat wait() until player.Character
+kickF(player)
+end)
+else
+if isagelocked == true and allowfriends == true and not player:IsFriendsWith(user.userId) and player.AccountAge <= agelock then
+	spawn(function()
+repeat wait() until player.Character
+kickF(player)
+end)
+end
+end
+end)
+local customAlias = {}
+local findCmd=function(cmd_name)
+    for i,v in pairs(cmds)do
+        if v.NAME:lower()==cmd_name:lower() or std.inTable(v.ALIAS,cmd_name:lower()) then
+            return v
+        end
+    end
+    return customAlias[cmd_name:lower()]
+end
+local function splitString(str,delim)
+	local broken = {}
+	if delim == nil then delim = "," end
+	for w in string.gmatch(str,"[^"..delim.."]+") do
+		table.insert(broken,w)
+	end
+	return broken
+end
+local historyCount = 0
+local cmdHistory = {}
+lastBreakTime = 0
+local function execCmd(cmdStr,speaker)
+    local rawCmdStr = cmdStr
+    cmdStr = string.gsub(cmdStr,"\\\\","%%BackSlash%%")
+    local commandsToRun = splitString(cmdStr,"\\")
+    for i,v in pairs(commandsToRun) do
+        v = string.gsub(v,"%%BackSlash%%","\\")
+        local x,y,num = v:find("^(%d+)%^")
+        local cmdDelay = 0
+        if num then
+            v = v:sub(y+1)
+            local x,y,del = v:find("^([%d%.]+)%^")
+            if del then
+                v = v:sub(y+1)
+                cmdDelay = tonumber(del) or 0
+            end
+        end
+        num = tonumber(num or 1)
+        local args = splitString(v,split)
+        local cmd = findCmd(args[1])
+        if cmd then
+            table.remove(args,1)
+            cargs = args
+            if speaker == gPlayers.LocalPlayer then
+                if cmdHistory[1] ~= rawCmdStr then table.insert(cmdHistory,1,rawCmdStr) end
+            end
+            if #cmdHistory > 20 then table.remove(cmdHistory) end
+            local cmdStartTime = tick()
+            for rep = 1,num do
+                if lastBreakTime > cmdStartTime then break end
+                pcall(function()
+                    cmd.FUNC(args, speaker)
+                end)
+                if cmdDelay ~= 0 then wait(cmdDelay) end
+            end
+        end
+    end
+end
+logsloaded = false
+ChatLog = function(plr)
+plr.Chatted:Connect(function(Message)
+if logsloaded == true then
+if whispersV == true and Message:lower():sub(1,2) == '/w' then
+CreateLabel(plr.Name,Message)
+elseif commandsV == true and isAdmin(plr) and Message:lower():sub(1,1) == cmdprefix then
+CreateLabel(plr.Name,Message)
+elseif commandsV == true and isAdmin(plr) and Message:lower():sub(1,4) == '/e '..cmdprefix then
+CreateLabel(plr.Name,Message)
+elseif chatsV == true and Message:lower():sub(1,2) ~= '/e' and Message:lower():sub(1,2) ~= '/w' and Message:lower():sub(1,1) ~= cmdprefix then 
+CreateLabel(plr.Name,Message)
+end end end) end
+function do_exec(str, plr) if not isAdmin(plr) then return end str = str:gsub('/e ', '') local t = getprfx(str) if not t then return end str = str:sub(t[2]) if t[1]=='exec' then exec(str) elseif t[1]=='cmd' then execCmd(str, plr) end end
+for _, plr in pairs(gPlayers:GetChildren()) do
+    if plr.ClassName == "Player" then
+        updateevents(plr) ChatLog(plr) end end
+_players.PlayerAdded:connect(function(player)
+	updateevents(player) ChatLog(player)
+end)
+_G.exec_cmd = execCmd
+--gPlayers.LocalPlayer.Chatted:connect(doexec)
+function GLS(lower, start) local AA = '' for i,v in pairs(cargs) do if i > start then if AA ~= '' then AA = AA .. ' ' .. v else AA = AA .. v end end end if not lower then return AA else return string.lower(AA) end end
+local _char=function(plr_name)
+    for i,v in pairs(gPlayers:GetChildren())do
+        if v:IsA'Player'then
+            if v.Name==plr_name then return v.Character end
+        end
+    end
+    return
+end
+local _plr=function(plr_name)
+    for i,v in pairs(gPlayers:GetChildren())do
+        if v:IsA'Player'then
+            if v.Name==plr_name then return v end
+        end
+    end
+    return
+end
+function addcmd(name,desc,alias,func)
+    cmds[#cmds+1]=
+    {
+        NAME=name;
+        DESC=desc;
+        ALIAS=alias;
+        FUNC=func;
+    }
+end
+SPC = {'all', 'others', 'random', 'allies', 'enemies', 'team', 'nonteam', 'friends', 'nonfriends', 'admins', 'nonadmins','bacons'}
+local SpecialPlayerCases = {
+	["all"] = function(speaker)return game:GetService("Players"):GetPlayers() end,
+	["others"] = function(speaker)
+		local plrs = {}
+		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v ~= speaker then
+				table.insert(plrs,v)
+			end
+		end
+		return plrs
+	 end,
+	["me"] = function(speaker)return {speaker} end,
+	["#(%d+)"] = function(speaker,args,currentList)
+		local returns = {}
+		local randAmount = tonumber(args[1])
+		local players = {unpack(currentList)}
+		for i = 1,randAmount do
+			if #players == 0 then break end
+			local randIndex = math.random(1,#players)
+			table.insert(returns,players[randIndex])
+			table.remove(players,randIndex)
+		end
+		return returns
+	end,
+	["random"] = function(speaker,args,currentList)
+		local players = currentList
+		return {players[math.random(1,#players)]}
+	end,
+	["%%(.+)"] = function(speaker,args) -- This is team Ex:[;kill %green]
+		local returns = {}
+		local team = args[1]
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Team and string.sub(string.lower(plr.Team.Name),1,#team) == string.lower(team) then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["allies"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Team == team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["enemies"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Team ~= team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["team"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Team == team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nonteam"] = function(speaker)
+		local returns = {}
+		local team = speaker.Team
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Team ~= team then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["friends"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nonfriends"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if not plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["guests"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Guest then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["bacons"] = function(speaker,args)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Character:FindFirstChild('Pal Hair') or plr.Character:FindFirstChild('Kate Hair') then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["admins"] = function(speaker)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if isAdmin(plr) then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["nonadmins"] = function(speaker)
+		local returns = {}
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if not isAdmin(plr) then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["age(%d+)"] = function(speaker,args)
+		local returns = {}
+		local age = tonumber(args[1])
+		if not age == nil then return end
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+		if plr.AccountAge <= age then
+				table.insert(returns,plr)
+			end
+		end
+		return returns
+	end,
+	["rad(%d+)"] = function(speaker,args)
+		local returns = {}
+		local radius = tonumber(args[1])
+		local speakerChar = speaker.Character
+		if not speakerChar or not speakerChar:FindFirstChild("HumanoidRootPart") then return end
+		for _,plr in pairs(game:GetService("Players"):GetPlayers()) do
+			if plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+				local magnitude = (plr.Character:FindFirstChild("HumanoidRootPart").Position-speakerChar.HumanoidRootPart.Position).magnitude
+				if magnitude <= radius then table.insert(returns,plr) end
+			end
+		end
+		return returns
+	end
+}
+local function toTokens(str)
+	local tokens = {}
+	for op,name in string.gmatch(str,"([+-])([^+-]+)") do
+		table.insert(tokens,{Operator = op,Name = name})
+	end
+	return tokens
+end
+local function onlyIncludeInTable(tab,matches)
+	local matchTable = {}
+	local resultTable = {}
+	for i,v in pairs(matches) do matchTable[v.Name] = true end
+	for i,v in pairs(tab) do if matchTable[v.Name] then table.insert(resultTable,v) end end
+	return resultTable
+end
+local function removeTableMatches(tab,matches)
+	local matchTable = {}
+	local resultTable = {}
+	for i,v in pairs(matches) do matchTable[v.Name] = true end
+	for i,v in pairs(tab) do if not matchTable[v.Name] then table.insert(resultTable,v) end end
+	return resultTable
+end
+local function getPlayersByName(name)
+	local found = {}
+	for i,v in pairs(game:GetService("Players"):GetChildren()) do
+		if string.sub(string.lower(v.Name),1,#name) == string.lower(name) then
+			table.insert(found,v)
+		end
+	end
+	return found
+end
+local function getPlayer(list,speaker)
+	if list == nil then return {speaker.Name} end
+	local nameList = splitString(list,",")
+	
+	local foundList = {}
+	
+	for _,name in pairs(nameList) do
+		if string.sub(name,1,1) ~= "+" and string.sub(name,1,1) ~= "-" then name = "+"..name end
+		local tokens = toTokens(name)
+		local initialPlayers = game:GetService("Players"):GetPlayers()
+		
+		for i,v in pairs(tokens) do
+			if v.Operator == "+" then
+				local tokenContent = v.Name
+				local foundCase = false
+				for regex,case in pairs(SpecialPlayerCases) do
+					local matches = {string.match(tokenContent,"^"..regex.."$")}
+					if #matches > 0 then
+						foundCase = true
+						initialPlayers = onlyIncludeInTable(initialPlayers,case(speaker,matches,initialPlayers))
+					end
+				end
+				if not foundCase then
+					initialPlayers = onlyIncludeInTable(initialPlayers,getPlayersByName(tokenContent))
+				end
+			else
+				local tokenContent = v.Name
+				local foundCase = false
+				for regex,case in pairs(SpecialPlayerCases) do
+					local matches = {string.match(tokenContent,"^"..regex.."$")}
+					if #matches > 0 then
+						foundCase = true
+						initialPlayers = removeTableMatches(initialPlayers,case(speaker,matches,initialPlayers))
+					end
+				end
+				if not foundCase then
+					initialPlayers = removeTableMatches(initialPlayers,getPlayersByName(tokenContent))
+				end
+			end
+		end
+		
+		for i,v in pairs(initialPlayers) do table.insert(foundList,v) end
+	end
+	
+	local foundNames = {}
+	for i,v in pairs(foundList) do table.insert(foundNames,v.Name) end
+	
+	return foundNames
+end
+function fWeld(zName, zParent, zPart0, zPart1, zCoco, A, B, C, D, E, F)
+	local funcw = Instance.new('Weld') funcw.Name = zName funcw.Parent = zParent funcw.Part0 = zPart0 funcw.Part1 = zPart1
+	if (zCoco) then
+		funcw.C0 = CFrame.new(A, B, C) * CFrame.fromEulerAnglesXYZ(D, E, F)
+	else
+		funcw.C1 = CFrame.new(A, B, C) * CFrame.fromEulerAnglesXYZ(D, E, F)
+	end
+	return funcw
+end
+function _G.msg(txt)
+	spawn(function()
+	msghook()
+	if MSGhook == true then
+	workspace.IYmessage.Text = ''
+	wait(0.1)
+	local b = Instance.new("BlurEffect", LightingService)
+	b.Name = "IYmblur"
+    b.Size = 18
+	workspace.IYmessage.Text = txt
+	wait(Mseconds)
+	b:Destroy()
+	if workspace.IYmessage.Text == txt then
+	workspace.IYmessage.Text = '' end
+	elseif MSGhook == false then
+	execCmd("loadm")
+	repeat wait() until workspace:FindFirstChild("IYmessage")
+	workspace.IYmessage.Text = ''
+	wait(0.1)
+	local b = Instance.new("BlurEffect", LightingService)
+	b.Name = "IYmblur"
+    b.Size = 18
+	workspace.IYmessage.Text = txt
+	wait(Mseconds)
+	b:Destroy()
+	if workspace.IYmessage.Text == txt then
+	workspace.IYmessage.Text = '' end
+	end
+end)
+end
+function bleach(plr)
+spawn(function()
+local char = plr.Character
+local hit1 = Instance.new("Sound", workspace)
+hit1.SoundId = "http://roblox.com/asset?id=145486953"
+local hit = Instance.new("Sound", workspace)
+hit.SoundId = "http://roblox.com/asset?id=178646271"
+local Bleach = Instance.new("Part", char["Left Arm"])
+Bleach.CanCollide = false
+local Mesh = Instance.new("SpecialMesh", Bleach)
+Mesh.MeshId = "http://roblox.com/asset?id=483388971"
+Mesh.Scale = Vector3.new(0.005, 0.005, 0.005)
+Mesh.TextureId = "http://roblox.com/asset?id=520016684"
+local Handy = Instance.new("Weld", Bleach)
+Handy.Part0 = Bleach
+Handy.Part1 = char["Left Arm"]
+Handy.C0 = CFrame.new(0.5,1.8,0)
+Handy.C1 = CFrame.Angles(0,4,1)
+local drink = Instance.new("Sound", char.Head)
+drink.SoundId = "http://roblox.com/asset?id=10722059"
+wait(3)
+        game.Chat:Chat(char.Head,"I need to die","Red")
+        for i = 1,10 do
+            wait()
+            char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.018,0,0)
+            Handy.C0 = Handy.C0 * CFrame.new(-0.05,-0.07,0.09)
+            Handy.C0 = Handy.C0 * CFrame.Angles(0.12,0,0)
+            char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0.2,0,-0.1)
+        end
+        drink:Play()
+        wait(3.4)
+        drink:Stop()
+        for i = 1,10 do
+            wait()
+            char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.new(0,-0.50,0)
+            char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.175,0,0)
+            Handy.C0 = Handy.C0 * CFrame.new(0.05,0.07,-0.09)
+            Handy.C0 = Handy.C0 * CFrame.Angles(-0.1,0,0)
+            char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(-0.15,-0.04,0.2)
+            char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(-0.05,0.03,0)
+            char.Torso["Right Hip"].C0 = char.Torso["Right Hip"].C0 * CFrame.Angles(-0.02,0,0)
+            char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(-0.01,0,0)
+        end
+        wait(0.01)
+        char.Torso.Anchored = true
+        char["Left Arm"].Anchored = true
+        char["Right Arm"].Anchored = true
+        char["Left Leg"].Anchored = true
+        char["Right Leg"].Anchored = true
+        char.Head.Anchored = true
+        hit:Play()
+        hit1:Play()
+        wait(4)
+        local bl00d = Instance.new("Part", char.Head)
+        bl00d.Size = Vector3.new(0.1,0.1,0.1)
+        bl00d.Rotation = Vector3.new(0,0,-90)
+        bl00d.CanCollide = false
+        bl00d.Anchored = true
+        bl00d.BrickColor = BrickColor.new("Maroon")
+        bl00d.Position = char.Head.Position
+        bl00d.CFrame = bl00d.CFrame * CFrame.new(0.43,-0.65,0)
+        bl00d.Shape = "Cylinder"
+        bl00d.Material = "Pebble"
+        for i = 1,100 do
+            wait()
+            bl00d.Size = bl00d.Size + Vector3.new(0,0.05,0.05)
+        end
+        wait(1)
+        char.Humanoid.Health = 0
+end)
+end
+function rape(victim, speaker) -- from rocky2u cmdscript
+	spawn(function()
+		local P1 = game:GetService("Players")[speaker].Character.Torso
+		local V1 = game:GetService("Players")[victim].Character.Torso
+		V1.Parent.Humanoid.PlatformStand = true
+		P1['Left Shoulder']:destroy() local LA1 = Instance.new('Weld', P1) LA1.Part0 = P1 LA1.Part1 = P1.Parent['Left Arm'] LA1.C0 = CFrame.new(-1.5, 0, 0) LA1.Name = 'Left Shoulder'
+		P1['Right Shoulder']:destroy() local RS1 = Instance.new('Weld', P1) RS1.Part0 = P1 RS1.Part1 = P1.Parent['Right Arm'] RS1.C0 = CFrame.new(1.5, 0, 0) RS1.Name = 'Right Shoulder'
+		V1['Left Shoulder']:destroy() local LS2 = Instance.new('Weld', V1) LS2.Part0 = V1 LS2.Part1 = V1.Parent['Left Arm'] LS2.C0 = CFrame.new(-1.5, 0, 0) LS2.Name = 'Left Shoulder'
+		V1['Right Shoulder']:destroy() local RS2 = Instance.new('Weld', V1) RS2.Part0 = V1 RS2.Part1 = V1.Parent['Right Arm'] RS2.C0 = CFrame.new(1.5, 0, 0) RS2.Name = 'Right Shoulder'
+		V1['Left Hip']:destroy() local LH2 = Instance.new('Weld', V1) LH2.Part0 = V1 LH2.Part1 = V1.Parent['Left Leg'] LH2.C0 = CFrame.new(-0.5, -2, 0) LH2.Name = 'Left Hip'
+		V1['Right Hip']:destroy() local RH2 = Instance.new('Weld', V1) RH2.Part0 = V1 RH2.Part1 = V1.Parent['Right Leg'] RH2.C0 = CFrame.new(0.5, -2, 0) RH2.Name = 'Right Hip'
+		local D = Instance.new('Part', P1) D.TopSurface = 0 D.BottomSurface = 0 D.CanCollide = false D.BrickColor = BrickColor.new('Pastel brown') D.Shape = 'Ball' D.Size = Vector3.new(1, 1, 1)
+		local DM1 = Instance.new('SpecialMesh', D) DM1.MeshType = 'Sphere' DM1.Scale = Vector3.new(0.4, 0.4, 0.4)
+		fWeld('weld', P1, P1, D, true, -0.2, -1.3, -0.6, 0, 0, 0)
+		local D2 = D:Clone() D2.Parent = P1
+		fWeld('weld', P1, P1, D2, true, 0.2, -1.3, -0.6, 0, 0, 0)
+		local C = Instance.new('Part', P1) C.TopSurface = 0 C.BottomSurface = 0 C.CanCollide = false C.BrickColor = BrickColor.new('Pastel brown') C.Size = Vector3.new(0.4, 1.3, 0.4)
+		fWeld('weld', P1, P1, C, true, 0, -1, -0.52 + (-C.Size.y / 2), math.rad(-80), 0, 0)
+		local C2 = D:Clone() C2.BrickColor = BrickColor.new('Pink') C2.Mesh.Scale = Vector3.new(0.4, 0.62, 0.4) C2.Parent = P1
+		fWeld('weld', C, C, C2, true, 0, 0 + (C.Size.y / 2), 0, math.rad(-10), 0, 0)
+		local CM = Instance.new('CylinderMesh', C)
+		local BL = Instance.new('Part', V1) BL.TopSurface = 0 BL.BottomSurface = 0 BL.CanCollide = false BL.BrickColor = BrickColor.new('Pastel brown') BL.Shape = 'Ball' BL.Size = Vector3.new(1, 1, 1)
+		local DM2 = Instance.new('SpecialMesh', BL) DM2.MeshType = 'Sphere' DM2.Scale = Vector3.new(1.2, 1.2, 1.2)
+		fWeld('weld', V1, V1, BL, true, -0.5, 0.5, -0.6, 0, 0, 0)
+		local BR = Instance.new('Part', V1) BR.TopSurface = 0 BR.BottomSurface = 0 BR.CanCollide = false BR.BrickColor = BrickColor.new('Pastel brown') BR.Shape = 'Ball' BR.Size = Vector3.new(1, 1, 1)
+		local DM3 = Instance.new('SpecialMesh', BR) DM3.MeshType = 'Sphere' DM3.Scale = Vector3.new(1.2, 1.2, 1.2)
+		fWeld('weld', V1, V1, BR, true, 0.5, 0.5, -0.6, 0, 0, 0)
+		local BLN = Instance.new('Part', V1) BLN.TopSurface = 0 BLN.BottomSurface = 0 BLN.CanCollide = false BLN.BrickColor = BrickColor.new('Pink') BLN.Shape = 'Ball' BLN.Size = Vector3.new(1, 1, 1)
+		local DM4 = Instance.new('SpecialMesh', BLN) DM4.MeshType = 'Sphere' DM4.Scale = Vector3.new(0.2, 0.2, 0.2)
+		fWeld('weld', V1, V1, BLN, true, -0.5, 0.5, -1.2, 0, 0, 0)
+		local BRN = Instance.new('Part', V1) BRN.TopSurface = 0 BRN.BottomSurface = 0 BRN.CanCollide = false BRN.BrickColor = BrickColor.new('Pink') BRN.Shape = 'Ball' BRN.Size = Vector3.new(1, 1, 1)
+		local DM5 = Instance.new('SpecialMesh', BRN) DM5.MeshType = 'Sphere' DM5.Scale = Vector3.new(0.2, 0.2, 0.2)
+		fWeld('weld', V1, V1, BRN, true, 0.5, 0.5, -1.2, 0, 0, 0)
+		LH2.C1 = CFrame.new(0.2, 1.6, 0.4) * CFrame.Angles(3.9, -0.4, 0) RH2.C1 = CFrame.new(-0.2, 1.6, 0.4) * CFrame.Angles(3.9, 0.4, 0)
+		LS2.C1 = CFrame.new(-0.2, 0.9, 0.6) * CFrame.Angles(3.9, -0.2, 0) RS2.C1 = CFrame.new(0.2, 0.9, 0.6) * CFrame.Angles(3.9, 0.2, 0)
+		LA1.C1 = CFrame.new(-0.5, 0.7, 0) * CFrame.Angles(-0.9, -0.4, 0) RS1.C1 = CFrame.new(0.5, 0.7, 0) * CFrame.Angles(-0.9, 0.4, 0)
+		if P1:FindFirstChild('weldx') then P1.weldx:destroy() end
+		WE = fWeld('weldx', P1, P1, V1, true, 0, -0.9, -1.3, math.rad(-90), 0, 0)
+		local N = V1.Neck N.C0 = CFrame.new(0, 1.5, 0) * CFrame.Angles(math.rad(-210), math.rad(180), 0)
+	end)
+	spawn(function() while wait() do for i = 1, 6 do WE.C1 = WE.C1 * CFrame.new(0, -0.3, 0) end for i = 1, 6 do WE.C1 = WE.C1 * CFrame.new(0, 0.3, 0) end end end)
+end
+
+addcmd('addalias','Adds an alias to a command',{},
+function(args,speaker)
+    if #args < 2 then return end
+    local cmd = string.lower(args[1])
+    local alias = string.lower(args[2])
+    for i,v in pairs(cmds) do
+        if v.NAME:lower()==cmd or std.inTable(v.ALIAS,cmd) then
+            customAlias[alias] = v
+			if not aliasSave or aliasSave == nil then aliasSave = {} end
+			aliasSave[#aliasSave + 1] = {CMD = cmd, ALIAS = alias}
+            Notify("Added "..alias.." as an alias to "..cmd)
+			updatefile()
+			updatealiases()
+            break
+        end
+    end
+end)
+
+addcmd('877241loadalias','dab',{},
+function(args,speaker)
+    if #args < 2 then return end
+    local cmd = string.lower(args[1])
+    local alias = string.lower(args[2])
+    for i,v in pairs(cmds) do
+        if v.NAME:lower()==cmd or std.inTable(v.ALIAS,cmd) then
+            customAlias[alias] = v
+			updatealiases()
+            break
+        end
+    end
+end)
+
+addcmd('removealias','Removes a custom alias',{},
+function(args,speaker)
+    if #args < 1 then return end
+    local alias = string.lower(args[1])
+    if customAlias[alias] then
+        local cmd = customAlias[alias].NAME
+        customAlias[alias] = nil
+		for i,v in pairs(aliasSave) do
+		if v.ALIAS == tostring(alias) then
+		table.remove(aliasSave, i)
+		end end
+        Notify("Removed the alias "..alias.." from "..cmd)
+		updatefile()
+		updatealiases()
+    end
+end)
+
+addcmd('clraliases','Removes all custom alias',{},
+function(args,speaker)
+customAlias = {}
+aliasSave ={}
+updatefile()
+updatealiases()
+Notify('Removed all aliases')
+end)
+
+addcmd('s','runs a script in the chat or cmdbar',{'script'},
+function(args, speaker)
+loadstring(tostring(GLS(false, 0)))()
+end)
+
+function hub()
+if not game.CoreGui:FindFirstChild('ScriptHub') then
+loadstring(game:HttpGet(('https://pastebin.com/raw/VvDQgSZT'),true))() end end
+addcmd('hub','opens script hub',{'scripts'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker) else
+hub()
+end end)
+
+addcmd('ff','gives ff to player',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        Instance.new("ForceField", pchar)
+    end
+end)
+
+addcmd('maxhealth','sets a limit of health to player',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+		pchar.Humanoid.MaxHealth = args[2]
+    end
+end)
+
+addcmd('sethealth','sets the health of a player',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        pchar.Humanoid.Health = args[2]
+    end
+end)
+
+addcmd('breakloops','stops any cmd loops',{'break'},
+function(args, speaker)
+lastBreakTime = tick()
+end)
+
+addcmd('invisibleff','gives invisible ff to player',{'invisff'},
+function(args, speaker)
+local players = getPlayer(args[1], speaker)
+for i,v in pairs(players)do
+local pchar=_char(v)
+local invisff = Instance.new("ForceField", pchar)
+invisff.Visible = false
+end
+end)
+
+addcmd('rocket','attaches a player to a rocket',{'missile'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        spawn(function()
+		local m = missile:Clone()
+		m.Parent = workspace
+		local W = Instance.new('Weld', m)
+		W.Part0 = W.Parent
+		W.Part1 = pchar.HumanoidRootPart
+		W.C1 = CFrame.new(0, 0.5, 1)
+		m.force.Force = Vector3.new(0, 15000, 0)
+		wait(0.01)
+		pchar.HumanoidRootPart.CFrame = pchar.HumanoidRootPart.CFrame * CFrame.new(0, 5, 0)
+		wait(5)
+		Instance.new('Explosion', m).Position = m.Position
+		wait(0.01)
+		pchar:BreakJoints()
+		wait(1)
+		m:destroy()
+		end)
+    end
+end)
+
+addcmd('kidnap', 'Kidnaps the player in a candy van',{}, function(args, speaker) 
+	local players = getPlayer(args[1], speaker)
+	if not game:GetService("CoreGui"):FindFirstChild('VanEvent') then
+		loadstring(game:HttpGet(('https://pastebin.com/raw/NbY247zv'),true))()
+	end
+	for i,v in pairs(players) do 
+		game:GetService("CoreGui").VanEvent:Fire(gPlayers[v]) 
+	end 
+end)
+
+addcmd('rejoin','makes you rejoin the game',{'rj'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+game:GetService('TeleportService'):Teleport(game.PlaceId)
+end
+end)
+
+addcmd('unff', 'takes away ff from player',{'noff'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar:GetChildren()) do
+			if v1:IsA("ForceField") then
+				v1:Destroy()
+			end
+		end
+    end
+end)
+
+addcmd('flashlight', 'gives a player a flashlight',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+	local flashlight = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://01679418710")
+	flashlight.Parent = gPlayers[v].Backpack
+	flashlight.Name = "IYflashlight"
+	end)
+	end
+end)
+
+addcmd('car', 'inserts a car',{'vehicle'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+	local pchar=_char(v)
+	local model = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://01172688590")
+	model.Parent = workspace
+	model:MakeJoints()
+	model:MoveTo(pchar.HumanoidRootPart.Position + Vector3.new(5, 5, 0))
+	model.Name = "IYcar" .. gPlayers[v].Name wait(0.2)
+	for _, child in pairs( model:GetChildren()) do
+    if child.ClassName == "Part" then
+	child.Anchored = true
+	wait(1)
+	child.Anchored = false
+end end end) end end)
+
+addcmd('uncar', 'removes a players car',{'unvehicle','nocar','novehicle'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	for _, child in pairs( workspace:GetChildren()) do
+    if child.Name == "IYcar" .. gPlayers[v].Name then
+    child:Destroy()
+    end
+end
+end
+end)
+
+addcmd('team','team [plr] [team]',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+	local teamname = nil
+    for i,v in pairs(players)do
+		for a,b in pairs(game.Teams:GetChildren()) do local L_name = b.Name:lower() local F = L_name:find(GLS(true, 1)) if F == 1 then teamname = b end end
+			_players[v].Team = teamname
+	end
+end)
+
+addcmd('maxzoom','maximum camera zoom',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	_players[v].CameraMaxZoomDistance = args[2]
+	end
+end)
+
+function spawnrain(mesh,texture)
+spawn(function()
+for i,v in pairs(gPlayers:GetChildren()) do
+if v.Character ~= nil and v.Character:FindFirstChild('HumanoidRootPart') then
+if raining == true then
+local rain = Instance.new("Part",workspace)
+rain.CanCollide = true
+local m = Instance.new("SpecialMesh",rain)
+m.MeshId = "http://www.roblox.com/asset/?id="..mesh
+m.TextureId = "http://www.roblox.com/asset/?id="..texture
+rain.CFrame = v.Character.HumanoidRootPart.CFrame + Vector3.new(math.random(-250,250),100,math.random(-250,250))
+wait(5) rain:Destroy()
+end
+end
+end
+end)
+end
+
+raining = false
+addcmd('rain','make it rain a mesh',{},
+function(args, speaker)
+raining = true
+repeat
+wait(0.5)
+spawnrain(args[1],args[2])
+until raining == false
+end)
+
+addcmd('norain','make it rain a mesh',{'unrain'},
+function(args, speaker)
+raining = false
+end)
+
+local rad = math.rad
+addcmd('earthquake','earthquake [power] [intensity]',{}, -- credit to DontAddMeh
+function(args, speaker)
+     for i = 1,args[1] do
+         wait()
+                local function ear(instance)
+                for i,v in pairs(instance:GetChildren())do
+                if v:IsA("Part") then
+        if v.Size.x > 1 then
+        v.CFrame = CFrame.new(v.Position) * CFrame.Angles(rad(math.random(-args[2],args[2])),rad(math.random(-args[2],args[2])),rad(math.random(-args[2],args[2])))
+        end end ear(v) end end ear(workspace)
+     end
+end)
+
+addcmd('cape','Gives the target player(s) a cape',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+		if _char(v):FindFirstChild("Humanoid") then
+			local plr = _players[v]
+			repeat wait() until plr and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart")
+			local torso = plr.Character.HumanoidRootPart
+			local p = Instance.new("Part", torso.Parent) p.Name = "IYcape" p.Anchored = false
+			p.CanCollide = false p.TopSurface = 0 p.BottomSurface = 0
+			if not args[2] then
+			p.Color = Color3.new(0,0,0)
+			p.Color = Color3.new(0,0,0) else
+			p.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+			p.Color = Color3.fromRGB((args[2]),(args[3]),(args[4])) end
+			p.formFactor = "Custom"
+			p.Size = Vector3.new(.2,.2,.2)
+			local msh = Instance.new("BlockMesh", p) msh.Scale = Vector3.new(9,17.5,.5)
+			local motor1 = Instance.new("Motor", p)
+			motor1.Part0 = p
+			motor1.Part1 = torso
+			motor1.MaxVelocity = .01
+			motor1.C0 = CFrame.new(0,1.75,0)*CFrame.Angles(0,math.rad(90),0)
+			motor1.C1 = CFrame.new(0,1,.45)*CFrame.Angles(0,math.rad(90),0)
+			local wave = false
+			repeat wait(1/44)
+			local ang = 0.1
+			local oldmag = torso.Velocity.magnitude
+			local mv = .002
+			if wave then ang = ang + ((torso.Velocity.magnitude/10)*.05)+.05 wave = false else wave = true end
+			ang = ang + math.min(torso.Velocity.magnitude/11, .5)
+			motor1.MaxVelocity = math.min((torso.Velocity.magnitude/111), .04) + mv
+			motor1.DesiredAngle = -ang
+			if motor1.CurrentAngle < -.2 and motor1.DesiredAngle > -.2 then motor1.MaxVelocity = .04 end
+			repeat wait() until motor1.CurrentAngle == motor1.DesiredAngle or math.abs(torso.Velocity.magnitude - oldmag)  >= (torso.Velocity.magnitude/10) + 1
+			if torso.Velocity.magnitude < .1 then wait(.1) end
+			until not p or p.Parent ~= torso.Parent
+		end
+	end)
+	end
+end)
+
+addcmd('uncape','Removes cape',{'nocape'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	local pchar=_char(v)
+	for _, child in pairs( pchar:GetChildren()) do
+    if child.Name == "IYcape" then
+        child:Destroy() end end
+	end
+end)
+
+addcmd('spasm','makes someone c r a z y',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	local pchar=_char(v)
+   local AnimationId = "33796059"
+   local Anim = Instance.new("Animation")
+   Anim.AnimationId = "rbxassetid://"..AnimationId
+   local k = pchar.Humanoid:LoadAnimation(Anim)
+   k:Play()
+   k:AdjustSpeed(99)
+    end
+end)
+
+addcmd('dance','makes someone d a n c e',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	local pchar=_char(v)
+		local anim = nil		
+		local dance1 = math.random(1,7)
+		if dance1 == 1 then
+		anim = '27789359'
+		end
+		if dance1 == 2 then
+		anim = '30196114'
+		end
+		if dance1 == 3 then
+		anim = '248263260'
+		end
+		if dance1 == 4 then
+		anim = '45834924'
+		end
+		if dance1 == 5 then
+		anim = '33796059'
+		end
+		if dance1 == 6 then
+		anim = '28488254'
+		end
+		if dance1 == 7 then
+		anim = '52155728'
+		end
+		local animation = Instance.new("Animation")
+		animation.AnimationId = "rbxassetid://"..anim
+		local animTrack = pchar.Humanoid:LoadAnimation(animation)
+		animTrack:Play()
+    end
+end)
+
+addcmd('plrsound','creates a sound inside of someone',{'playersound'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	if not args[1] and args[2] then return end
+	local pchar=_char(v)
+	for _, child in pairs( pchar:GetDescendants()) do
+    if child.ClassName == "Sound" then
+    child:Destroy() end end
+	local s = Instance.new("Sound")
+	s.Name = "IYplrsound"
+	s.SoundId = "http://www.roblox.com/asset/?id=" .. args[2]
+	s.Volume = 1
+	s.Pitch = 1
+	s.Looped = true
+	s.archivable = true
+	s.Parent = pchar.HumanoidRootPart
+	s:Play()
+    end
+end)
+
+addcmd('noplrsound','creates a sound inside of someone',{'noplayersound','unplayersound','unplrsound'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	if not args[1] then return end
+	local pchar=_char(v)
+	for _, child in pairs( pchar:GetDescendants()) do
+    if child.ClassName == "Sound" then
+    child:Destroy() end end
+    end
+end)
+
+addcmd('fly','makes you fly',{},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+sFLY()
+end
+end)
+
+addcmd('flyspeed','set the fly speed',{'flysp'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+if isNumber(args[1]) then
+iyflyspeed = args[1]
+end end end)
+
+addcmd('unfly','takes away fly',{'nofly'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+NOFLY()
+end
+end)
+
+addcmd('exit','kills roblox process',{},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+game:shutdown() 
+end
+end)
+
+addcmd('fire', 'set a player on fire',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+        local pchar=_char(v)
+        local Fire1 = Instance.new("Fire", pchar.Head)
+        local Fire2 = Instance.new("Fire", pchar.HumanoidRootPart)
+        local Fire3 = Instance.new("Fire", pchar["Left Arm"])
+        local Fire4 = Instance.new("Fire", pchar["Right Arm"])
+        local Fire5 = Instance.new("Fire", pchar["Left Leg"])
+        local Fire6 = Instance.new("Fire", pchar["Right Leg"])
+   		if not args[2] then return end
+        Fire1.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire1.SecondaryColor = Color3.new((args[2]),(args[3]),(args[4]))
+        Fire2.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire2.SecondaryColor = Color3.new((args[2]),(args[3]),(args[4]))
+        Fire3.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire3.SecondaryColor = Color3.new((args[2]),(args[3]),(args[4]))
+        Fire4.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire4.SecondaryColor = Color3.new((args[2]),(args[3]),(args[4]))
+        Fire5.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire5.SecondaryColor = Color3.new((args[2]),(args[3]),(args[4]))
+        Fire6.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+        Fire6.SecondaryColor = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+end)
+end
+end)
+
+addcmd('discomesh', 'body parts get  f u n k y',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+local plr = _players[v]
+local meshes = {"Brick","Cylinder","Head","Sphere","Torso","Wedge"}
+local h = _players[v].Character.Head.Mesh
+local t = Instance.new("SpecialMesh",_players[v].Character.Torso)
+local la = Instance.new("SpecialMesh",_players[v].Character["Left Arm"])
+local ra = Instance.new("SpecialMesh",_players[v].Character["Right Arm"])
+local ll = Instance.new("SpecialMesh",_players[v].Character["Left Leg"])
+local rl = Instance.new("SpecialMesh",_players[v].Character["Right Leg"])
+while true do wait()
+h.MeshType = meshes[math.random(1,#meshes)]
+h.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+h.Parent.BrickColor = BrickColor.Random()
+t.MeshType = meshes[math.random(1,#meshes)]
+t.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+t.Parent.BrickColor = BrickColor.Random()
+la.MeshType = meshes[math.random(1,#meshes)]
+la.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+la.Parent.BrickColor = BrickColor.Random()
+ra.MeshType = meshes[math.random(1,#meshes)]
+ra.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+ra.Parent.BrickColor = BrickColor.Random()
+ll.MeshType = meshes[math.random(1,#meshes)]
+ll.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+ll.Parent.BrickColor = BrickColor.Random()
+rl.MeshType = meshes[math.random(1,#meshes)]
+rl.Offset = Vector3.new(math.random() * 2 - 1,math.random() * 2 - 1,math.random() * 2 - 1);
+rl.Parent.BrickColor = BrickColor.Random()
+end end) end end)
+
+addcmd('chickenarms', 'I can fly!!1',{'chicken'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+local Chicken = _players[v].Character
+Chicken.Torso["Left Shoulder"].C0 = CFrame.new(-1.5, 0.5, 0) * CFrame.fromEulerAnglesXYZ(0,math.pi/2,0) * CFrame.fromEulerAnglesXYZ(math.pi/2, 0, 0) * CFrame.fromEulerAnglesXYZ(0,-math.pi/2,0)
+Chicken.Torso["Left Shoulder"].C1 = CFrame.new(0, 0.5, 0)
+Chicken.Torso["Right Shoulder"].C0 = CFrame.new(1.5, 0.5, 0) * CFrame.fromEulerAnglesXYZ(0,-math.pi/2,0) * CFrame.fromEulerAnglesXYZ(math.pi/2, 0, 0) * CFrame.fromEulerAnglesXYZ(0,-math.pi/2,0)
+Chicken.Torso["Right Shoulder"].C1 = CFrame.new(0, 0.5, 0)
+end) end end)
+
+addcmd('esp', 'view a player and a players status',{},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+	for _, child in pairs( game["CoreGui"]:GetChildren()) do
+    if child.Name == gPlayers[v].Name then
+	child:Destroy()
+end end wait(0.5)
+local m = game["Players"].LocalPlayer:GetMouse()
+local rs = game:GetService("RunService").RenderStepped
+local espplr = gPlayers[v]
+        if espplr.Character and espplr.Name ~= _players.LocalPlayer.Name then
+    for b,n in pairs (espplr.Character:GetChildren()) do
+        if (n:IsA("BasePart")) then
+        local a = Instance.new("BoxHandleAdornment", game.CoreGui)
+		a.Name = espplr.Name
+        a.Adornee = n
+        a.AlwaysOnTop = true
+        a.ZIndex = 0
+        a.Size = n.Size
+        a.Transparency = 0.7
+		local resetting = false
+        if espplr.TeamColor == _players.LocalPlayer.TeamColor then
+            a.Color = BrickColor.new("Lime green")
+   			else
+            a.Color = BrickColor.new("Really red")
+            end
+			if espplr.Character and espplr.Character:FindFirstChild('Head') then
+			local BillboardGui = Instance.new("BillboardGui", game.CoreGui)
+			local TextLabel = Instance.new("TextLabel")
+			BillboardGui.Adornee = espplr.Character.Head
+			BillboardGui.Name = espplr.Name
+			BillboardGui.Size = UDim2.new(0, 100, 0, 150)
+			BillboardGui.StudsOffset = Vector3.new(0, 1, 0)
+			BillboardGui.AlwaysOnTop = true
+			TextLabel.Parent = BillboardGui
+			TextLabel.BackgroundTransparency = 1
+			TextLabel.Position = UDim2.new(0, 0, 0, -50)
+			TextLabel.Size = UDim2.new(0, 100, 0, 100)
+			TextLabel.Font = Enum.Font.SourceSansSemibold
+			TextLabel.TextSize = 20
+			TextLabel.TextColor3 = Color3.new(1, 1, 1)
+			TextLabel.TextStrokeTransparency = 0
+			TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+			espplr.Character:WaitForChild("Humanoid").Died:connect(function()
+			BillboardGui:Destroy() a:Destroy() end)
+			_players.PlayerRemoving:connect(function(player)
+			if player.Name == espplr.Name then
+			BillboardGui:Destroy() a:Destroy()
+			end end)
+			game:GetService("RunService").RenderStepped:Connect(function()
+			if espplr.Character ~= nil and espplr.Character.Parent ~= nil and espplr.Character:FindFirstChild('HumanoidRootPart') and espplr.Character:FindFirstChild('Humanoid') and game.CoreGui:FindFirstChild(espplr.Name) then
+			local pos = math.floor((_players.LocalPlayer.Character.HumanoidRootPart.Position - espplr.Character.HumanoidRootPart.Position).magnitude)
+			TextLabel.Text = 'Name: '..espplr.Name..' | Health: '..espplr.Character.Humanoid.Health..' | Studs: '..pos else
+			BillboardGui:Destroy() a:Destroy() end end)
+			end
+        end
+    end
+end
+	end)
+	end
+end
+end)
+
+addcmd('noesp', 'removes esp',{'unesp'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+	for _, child in pairs( game["CoreGui"]:GetChildren()) do
+    if child.Name == gPlayers[v].Name then
+	child:Destroy()
+	end
+end end) end end end)
+
+addcmd('nofire', 'extinguish a player',{'unfire'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar:GetDescendants()) do
+		if v1:IsA("Fire") then
+		v1:Destroy()
+end end end end)
+
+addcmd('shiny', 'makes a player shine',{},
+function(args, speaker)
+local players = getPlayer(args[1], speaker)
+for i,v in pairs(players)do
+spawn(function()
+local pchar=_char(v)
+for i,v in pairs(pchar:GetChildren()) do
+if v.ClassName == "Decal" or v.ClassName == "Texture" then
+v:Destroy() end
+if v.ClassName == "Part" or v.ClassName == "WedgePart" or v.ClassName == "TrussPart" or v.ClassName == "UnionOperation" or v.ClassName == "CornerWedgePart" then
+v.Reflectance = 1
+v.Material = "Plastic"
+end
+end
+end)
+end
+end)
+
+addcmd('light', 'givs em light',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar.HumanoidRootPart:GetChildren()) do
+			if v1:IsA("PointLight") then
+				v1:Destroy()
+			end
+		end
+        local light = Instance.new("PointLight", pchar.HumanoidRootPart)
+		light.Range = 12
+		light.Brightness = 3
+		if not args[2] then return end
+        light.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+		light.Range = 12
+		light.Brightness = 3
+		end)
+    end
+end)
+
+bottle = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://01422895508")
+addcmd('begone', 'BEGONE THOT',{'thot'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+		local thotbottle = bottle:Clone()
+        local pchar=_char(v)
+		thotbottle.Name = 'THOT BEGONE'
+		thotbottle.Handle:Destroy()
+		execCmd('freeze '..gPlayers[v].Name)
+		execCmd('name '..gPlayers[v].Name..' THOT')
+		execCmd('spasm '..gPlayers[v].Name)
+		thotbottle.Parent = pchar
+		thotbottle:MoveTo(pchar.HumanoidRootPart.Position + Vector3.new(0, 0, 7))
+		local cf = pchar.HumanoidRootPart.CFrame
+		local newcf = cf + cf.lookVector * 6
+		thotbottle.Head.CFrame = newcf
+		local s = Instance.new("Sound")
+		s.Name = "BEGONE"
+		s.SoundId = "http://www.roblox.com/asset/?id=1095911222"
+		s.Volume = 10
+		s.Parent = thotbottle
+		s:play()
+		local d = Instance.new("Sound")
+		d.Name = "WuOOOH"
+		d.SoundId = "http://www.roblox.com/asset/?id=253143032"
+		d.Volume = 5
+		d.Parent = pchar
+		wait(4)
+		if gPlayers[v] then
+		execCmd('thaw '..gPlayers[v].Name)
+		execCmd('fling '..gPlayers[v].Name)
+		thotbottle:Destroy()
+		d:play()
+		end if gPlayers[v] then
+		wait(3)
+		execCmd('explode '..gPlayers[v].Name)
+		pchar:BreakJoints() end
+		end)
+    end
+end)
+
+addcmd('glowstick', 'givs em glo stik',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+	System = {}
+System.Create = function(a, c)
+	local e = Instance.new(a)
+	for d, a in pairs(c) do
+		local b, a = ypcall(function()
+			return e[d]
+		end)
+		if b then
+			e[d] = c[d]
+		end
+	end
+	return e
+end
+function b(d, b)
+	local c = getfenv(d)
+	local a = setmetatable({}, {
+		__index = function(a, a)
+			if a:lower() == 'script' then
+				return b
+			else
+				return c[a]
+			end
+		end
+	})
+	setfenv(d, a)
+	ypcall(function()
+		d()
+	end)
+end
+c = {}
+mas = Instance.new("Model",game:GetService("Lighting")) 
+mas.Name = "CompiledModel"
+o1 = System.Create("Tool",{
+["Name"] = "Glow Stick",
+["Parent"] = mas,
+["GripPos"] = Vector3.new(0, -0.300000012, 0),
+["CanBeDropped"] = false,
+})
+o2 = System.Create("Part",{
+["Name"] = "Handle",
+["Parent"] = o1,
+["Transparency"] = 0.10000000149012,
+["Position"] = Vector3.new(-9.38995171, 2.20000148, 42.3300056),
+["Rotation"] = Vector3.new(-180, 0, 0),
+["CFrame"] = CFrame.new(-9.38995171, 2.20000148, 42.3300056, 1, 0, 0, 0, -1, 0, 0, 0, -1),
+["FormFactor"] = Enum.FormFactor.Custom,
+["Size"] = Vector3.new(0.200000033, 1.80000019, 1),
+["BottomSurface"] = Enum.SurfaceType.Weld,
+["TopSurface"] = Enum.SurfaceType.Weld,
+["Material"] = "Neon",
+})
+o3 = System.Create("PointLight",{
+["Parent"] = o2,
+["Brightness"] = 8,
+["Range"] = 14,
+})
+o4 = System.Create("CylinderMesh",{
+["Parent"] = o2,
+})
+if not args[2] then
+o2.Color = Color3.new(1,1,1)
+o3.Color = Color3.new(1,1,1) else
+o2.Color = Color3.fromRGB((args[2]),(args[3]),(args[4]))
+o3.Color = Color3.fromRGB((args[2]),(args[3]),(args[4])) end
+mas.Parent = workspace
+mas:MakeJoints()
+local b = mas:GetChildren()
+for a = 1, #b do
+	b[a].Parent = gPlayers[v].Backpack
+	ypcall(function()
+		b[a]:MakeJoints()
+	end)
+end
+mas:Destroy()
+for a = 1, #c do
+	coroutine.resume(c[a])
+end
+		end)
+    end
+end)
+
+addcmd('keybind','Binds a command to a key',{},
+function(args,speaker)
+	if speaker.userId ~= LP.userId then
+	lponly(speaker) else
+    if #args < 2 then return end
+    local key = string.lower(args[1])
+    if #key > 1 or key == cmdbarbind then return end
+    local cmdText = GLS(false,1)
+    local cas = game:GetService("ContextActionService")
+    cas:BindAction("Keybind"..key,function(action,state,obj)
+        if state == Enum.UserInputState.Begin then
+            execCmd(cmdText,speaker)
+        end
+    end,false,key)
+    Notify("Binded "..cmdText.." to "..key)
+end
+end)
+
+addcmd('unkeybind','Removes a binded command from a key',{'unbind'},
+function(args,speaker)
+	if speaker.userId ~= LP.userId then
+	lponly(speaker) else
+    if #args < 1 then return end
+    local key = string.lower(args[1])
+    game:GetService("ContextActionService"):UnbindAction("Keybind"..key)
+    Notify("Unbinded "..key)
+end
+end)
+
+
+
+
+
+addcmd('trail', 'spawns a trail behind a player',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar.Torso:GetChildren()) do
+			if v1.Name == "TRAIL" then
+				v1:Destroy()
+			end
+end
+if args[2] then
+color1 = Color3.fromRGB(args[2],args[3],args[4])
+color2 = Color3.new(0,0,0) else
+color1 = Color3.new(1,1,1)
+color2 = Color3.new(0,0,0) end
+        if pchar:FindFirstChild("Torso") then
+local e = Instance.new("Trail", pchar.Torso)
+e.Name = "TRAIL"
+e.FaceCamera = true
+e.Color = ColorSequence.new(color1,color2)
+e.Attachment0 = pchar.Torso.WaistCenterAttachment
+e.Attachment1 = pchar.Torso.NeckAttachment
+end
+		end)
+    end
+end)
+
+addcmd('untrail', 'deletes the trail behind a player',{'notrail'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+	spawn(function()
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar.Torso:GetChildren()) do
+			if v1.Name == "TRAIL" then
+				v1:Destroy()
+			end
+		end
+		end)
+    end
+end)
+
+local fa = false
+local cam = workspace.CurrentCamera
+local cam1 = 0
+local cam2 = 0
+local cam3 = 0
+local k1 = false
+local k2 = false
+local k3 = false
+local k4 = false
+local k5 = false
+local k6 = false
+cs = 0.5
+function movecam()
+	local fc = game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC')
+	if fa == false then
+		repeat
+			if game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+				local fp = fc.Position
+				fc.CFrame = CFrame.new(Vector3.new(fp.X,fp.Y+cam3,fp.Z),cam.CFrame.p)*CFrame.new(cam2,0,cam1)
+				fa = true
+			end
+			game:GetService('RunService').RenderStepped:Wait()
+		until not game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC')
+		fa = false
+	end
+end
+function kp1(inputObject, gameProcessedEvent)
+	if not gameProcessedEvent and game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+		if inputObject.KeyCode == Enum.KeyCode.W or inputObject.KeyCode == Enum.KeyCode.Up then
+			k1 = true
+			cam1 = cs end
+		if inputObject.KeyCode == Enum.KeyCode.S or inputObject.KeyCode == Enum.KeyCode.Down then
+			k2 = true
+			cam1 = (cs*-1) end
+		if inputObject.KeyCode == Enum.KeyCode.A or inputObject.KeyCode == Enum.KeyCode.Left then
+			k3 = true
+			cam2 = cs end
+		if inputObject.KeyCode == Enum.KeyCode.D or inputObject.KeyCode == Enum.KeyCode.Right then
+			k4 = true
+			cam2 = (cs*-1) end
+		if inputObject.KeyCode == Enum.KeyCode.E or inputObject.KeyCode == Enum.KeyCode.Space then
+			k5 = true
+			cam3 = cs end
+		if inputObject.KeyCode == Enum.KeyCode.Q or inputObject.KeyCode == Enum.KeyCode.LeftControl then
+			k6 = true
+			cam3 = (cs*-1) end
+	end
+end
+game:GetService("UserInputService").InputBegan:connect(kp1)
+function kp2(inputObject, gameProcessedEvent)
+	if not gameProcessedEvent and game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+		if inputObject.KeyCode == Enum.KeyCode.W or inputObject.KeyCode == Enum.KeyCode.Up then
+			k1 = false
+			if k2 == false then
+				cam1 = 0
+			end
+		end
+		if inputObject.KeyCode == Enum.KeyCode.S or inputObject.KeyCode == Enum.KeyCode.Down then
+			k2 = false
+			if k1 == false then
+				cam1 = 0
+			end
+		end
+		if inputObject.KeyCode == Enum.KeyCode.A or inputObject.KeyCode == Enum.KeyCode.Left then
+			k3= false
+			if k4== false then
+				cam2 = 0
+			end
+		end
+		if inputObject.KeyCode == Enum.KeyCode.D or inputObject.KeyCode == Enum.KeyCode.Right then
+			k4 = false
+			if k3 == false then
+				cam2 = 0
+			end
+		end
+		if inputObject.KeyCode == Enum.KeyCode.E or inputObject.KeyCode == Enum.KeyCode.Space then
+			k5 = false
+			if k6 == false then
+				cam3 = 0
+			end
+		end
+		if inputObject.KeyCode == Enum.KeyCode.Q or inputObject.KeyCode == Enum.KeyCode.LeftControl then
+			k6 = false
+			if k5 == false then
+				cam3 = 0
+			end
+		end
+	end
+end
+game:GetService("UserInputService").InputEnded:connect(kp2)
+function FC()
+	if not game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+		game:GetService('Players').LocalPlayer.PlayerScripts.ControlScript.Disabled = true
+		local fc = Instance.new('Part',game:GetService('Players').LocalPlayer.Character)
+		fc.CanCollide = false
+		fc.Anchored = true
+		fc.Transparency = 1
+		fc.Size = Vector3.new(1,1,1)
+		fc.Name = 'xFC'
+		fc.CFrame = game:GetService('Players').LocalPlayer.Character.Head.CFrame
+		local cam = workspace.CurrentCamera
+		cam.CameraSubject = fc
+		cam.CameraType = 'Custom'
+		movecam()
+	end end
+function UFC()
+	game:GetService('Players').LocalPlayer.PlayerScripts.ControlScript.Disabled = false
+	if game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+		game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC'):Destroy()
+		local cam = workspace.CurrentCamera
+		cam.CameraSubject = game:GetService('Players').LocalPlayer.Character.Humanoid
+		cam.CameraType = 'Custom'
+	end end
+
+addcmd('freecam','freecam',{'fc'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+FC()
+end
+end)
+
+addcmd('fixcam','fixes camera',{},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+workspace.CurrentCamera:remove()
+wait(.1)
+workspace.CurrentCamera.CameraSubject = LP.Character.Humanoid
+workspace.CurrentCamera.CameraType = "Custom"
+LP.CameraMinZoomDistance = 0.5
+LP.CameraMaxZoomDistance = 400
+LP.CameraMode = "Classic"
+end
+end)
+
+addcmd('witchhunt', 'deletes the trail behind a player',{'burn','witch'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		local pchar=_char(v)
+				local char = pchar
+				local hum = char.Humanoid
+				for k,c in pairs(char:children()) do if c:IsA("Part") and c.Name~="HumanoidRootPart" then c.Anchored=true end end
+				hum.HealthDisplayDistance = 0
+				--execcmd god
+				local stake = Instance.new("Part",char)
+				stake.Anchored = true
+				stake.BrickColor = BrickColor.new("Reddish brown")
+				stake.Material = "Wood"
+				stake.Size = Vector3.new(1,7,1)
+				stake.CFrame = char.Torso.CFrame*CFrame.new(0,0,1)
+				local hay = Instance.new("Part",char)
+				hay.Anchored = true
+				hay.Material = "Grass"
+				hay.BrickColor = BrickColor.new("New Yeller")
+				hay.Size = Vector3.new(6,1,5)
+				hay.CFrame = char.Torso.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,2,0)
+				local hay2 = hay:clone()
+				hay2.Parent = char
+				hay2.CFrame = char.Torso.CFrame*CFrame.new(0,-2.6,0)*CFrame.Angles(0,6,0)
+				local fire = Instance.new("Fire",hay)
+				fire.Enabled = false
+				fire.Heat = 25
+				fire.Size = 2
+				fire.Color = Color3.new(170/255,85/255,0)
+				local smoke = Instance.new("Smoke",hay)
+				smoke.Enabled = false
+				smoke.Opacity = 1
+				smoke.RiseVelocity = 25
+				smoke.Size = 15
+				smoke.Color = Color3.new(0,0,0)
+				local light = Instance.new("PointLight",hay)
+				light.Color = Color3.new(170/255,85/255,0)
+				light.Range = 0
+				light.Brightness = 1
+				light.Enabled = false
+				--[[]]
+				local crack = Instance.new("Sound",hay)
+				crack.SoundId = "rbxassetid://239443642"
+				crack.Looped = true
+				crack.Volume = 0
+				local scream = Instance.new("Sound",char.Torso)
+				scream.SoundId = "rbxassetid://264227115"
+				scream.Looped = true
+				scream.Volume = 0
+				--]]
+				wait()
+				char['Left Arm'].CFrame = char.Torso.CFrame * CFrame.new(-0.8,0,0.7) * CFrame.Angles(-1,0,0.5)
+				char['Right Arm'].CFrame = char.Torso.CFrame * CFrame.new(0.8,0,0.7) * CFrame.Angles(-1,0,-0.5)
+				
+				local bods = char['Body Colors']
+				local colors = {
+					--"Really red";
+					"Bright red";
+					"Crimson";
+					"Maroon";
+					"Really black";
+				}
+				
+				fire.Enabled=true
+				smoke.Enabled=true
+				light.Enabled=true
+				crack:Play()
+				scream:Play()
+				scream.Pitch = 0.8
+				--scream.Volume = 0.5
+				for i=1,30 do
+					crack.Volume = crack.Volume+(1/30)
+					scream.Volume = crack.Volume
+					fire.Size=i
+					smoke.RiseVelocity=i-5
+					smoke.Size=i/2
+					light.Range=i*2
+					wait(1)
+				end
+				
+				for i=1,#colors do
+					bods.HeadColor=BrickColor.new(colors[i])
+					bods.LeftArmColor=BrickColor.new(colors[i])
+					bods.LeftLegColor=BrickColor.new(colors[i])
+					bods.RightArmColor=BrickColor.new(colors[i])
+					bods.RightLegColor=BrickColor.new(colors[i])
+					bods.TorsoColor=BrickColor.new(colors[i])
+					hay.BrickColor=BrickColor.new(colors[i])
+					hay2.BrickColor=BrickColor.new(colors[i])
+					stake.BrickColor=BrickColor.new(colors[i])
+					wait(5)
+				end
+				wait(10)
+				scream.Volume = 0.5
+				wait(1)
+				scream:Stop()
+				char:BreakJoints()
+			end
+		end)
+
+addcmd('unfreecam','unfreecam',{'nofreecam','unfc','nofc'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+UFC()
+end
+end)
+
+addcmd('freecamspeed','unfreecam',{'fcspeed'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+if isNumber(args[1]) then
+cs = args[1]
+end end end)
+
+addcmd('nolight', 'no more light',{'unlight'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+        for j,v1 in pairs(pchar.HumanoidRootPart:GetChildren()) do
+			if v1:IsA("PointLight") then
+				v1:Destroy()
+			end
+		end
+    end
+end)
+
+addcmd('ball', 'makes a hamster ball for a player',{'hamsterball'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        local pchar=_char(v)
+		  scale = 10
+ 
+function weld(tab)
+        local last = nil
+        for i,v in pairs(tab) do
+                if v:IsA("BasePart") then
+                        if last then
+                                local w = Instance.new("Weld",last)
+                                w.Part0 = w.Parent
+                                w.Part1 = v
+                                local pos = last.CFrame:toObjectSpace(v.CFrame)
+                                w.C0 = pos
+                        end
+                        last = v
+                end
+        end
+end        
+ 
+function makeball(pos)
+local model = Instance.new("Model",workspace)
+model.Name = gPlayers[v].Name .. "ball"
+local rand = BrickColor.Random()
+pchar.Head.Anchored = true
+for i=0,340,20 do
+        wait()
+        for z=-90,70,20 do
+                local p = Instance.new("Part",model)
+                p.formFactor = "Custom"
+                p.BrickColor = rand
+                p.Transparency = 0.5
+                p.Size = Vector3.new(scale/5.5,scale/5.5,scale/140)
+                p.Anchored = true
+                p.TopSurface = 0
+                p.BottomSurface = 0
+                p.CFrame = CFrame.new(pos) * CFrame.Angles(math.rad(z),math.rad(i),0) * CFrame.new(0,0,-scale/2)
+                p:breakJoints()
+        end
+end
+weld(model:children())
+for i,v in pairs(model:children()) do v.Anchored = false end 
+pchar.Head.Anchored = false
+model:MakeJoints()
+end
+ 
+        if pchar then
+                makeball(pchar.HumanoidRootPart.Position+Vector3.new(0,scale/2-2.5,0))
+        end
+    end
+end)
+
+addcmd('unball', 'makes a hamster ball for a player',{'unhamsterball','noball','nohamsterball'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+    local pchar=_char(v)
+	for _, child in pairs( workspace:GetChildren()) do
+    if child.Name == gPlayers[v].Name .. "ball" then
+        child:Destroy()
+    end
+end
+end
+end)
+
+local car = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://01308109587")
+
+local fastwait = function(time)
+	local expire = tick()+(time or 0.02999999999999999889)
+	while game:GetService("RunService").Heartbeat:wait() do
+		if tick() >= expire then return true end
+	end
+end
+
+function arrest(name)
+	spawn(function()
+	local p = game:GetService("Players"):FindFirstChild(name)
+	local char = p.Character 
+						local torso = p.Character:FindFirstChild("HumanoidRootPart") 
+						local humanoid = p.Character:FindFirstChild("Humanoid")
+						if torso and humanoid and not char:FindFirstChild("ADONIS_VAN") then 
+							local van = car:Clone()
+							if van then
+								local function check()
+									if not van or not van.Parent or not p or p.Parent ~= game:GetService("Players") or not torso or not humanoid or not torso.Parent or not humanoid.Parent or not char or not char.Parent then
+										return false
+									else
+										return true
+									end
+								end
+								
+								--local driver = van.Driver 
+								--local grabber = van.Clown 
+								local primary = van.Primary
+								--local door = van.Door
+								local tPos = torso.CFrame
+								
+								local sound = Instance.new("Sound",primary)
+								sound.SoundId = "rbxassetid://258529216"
+								sound.Looped = true
+								sound:Play()
+								
+								local chuckle = Instance.new("Sound",primary)
+								chuckle.SoundId = "rbxassetid://175964948"
+								chuckle.Looped = true
+								chuckle.Volume = 0.5
+								chuckle:Play()
+								
+								van.PrimaryPart = van.Primary
+								van.Name = "ADONIS_VAN"
+								van.Parent = workspace
+								humanoid.Name = "NoResetForYou"
+								humanoid.WalkSpeed = 0
+								sound.Pitch = 1.3
+								
+								local music = workspace:FindFirstChild("COPSONG") or Instance.new("Sound",workspace)
+								music.Name = "COPSONG"
+								music.SoundId = "rbxassetid://132007810"
+								music.Volume = 1
+								music.Looped = true
+								if not music.Playing then music:Play() end
+								
+								spawn(function()
+									while fastwait(0.2) do
+										van.Body.Lightbar.Red.PointLight.Enabled = true
+										van.Body.Lightbar.Blue.PointLight.Enabled = false
+										fastwait(0.2)
+										van.Body.Lightbar.Red.PointLight.Enabled = false
+										van.Body.Lightbar.Blue.PointLight.Enabled = true
+									end
+								end)
+								
+								for i = 1,200 do
+									if not check() then
+										break
+									else
+										van:SetPrimaryPartCFrame(tPos*(CFrame.new(-200+i,-1,-7)*CFrame.Angles(0,math.rad(270),0)))
+										fastwait(0.001*(i/5))
+									end
+								end
+								
+								sound.Pitch = 0.9
+								
+								fastwait(0.5)
+								if check() then
+									--door.Transparency = 1
+								end
+								
+								local freeze = Instance.new("Sound",primary)
+								freeze.SoundId = "rbxassetid://163732279"
+								freeze.Volume = 5
+								freeze:Play()
+								
+								fastwait(3)
+								
+								if check() then
+									torso.CFrame = primary.CFrame*(CFrame.new(0,2.3,0)*CFrame.Angles(0,math.rad(90),0))
+								end
+								
+								fastwait(0.5)
+								if check() then
+									--door.Transparency = 0
+								end
+								fastwait(0.5)
+								
+								sound.Pitch = 1.3
+								local gui = Instance.new("ScreenGui")
+								local frame = Instance.new("Frame",gui)
+								frame.BackgroundTransparency = 1
+								frame.BackgroundColor3 = Color3.new(0,0,0)
+								frame.Position = UDim2.new(0,0,0,-36)
+								frame.Size = UDim2.new(1,0,1,36)
+								spawn(function()
+									for i = 1,0,-0.01 do
+										frame.BackgroundTransparency = i
+										fastwait(0.1)
+									end
+									frame.BackgroundTransparency = 0
+								end)
+								
+								p.CameraMaxZoomDistance = 0.5
+								
+								torso.Anchored = true
+								
+								for i = 1,400 do
+									if not check() then
+										break
+									else
+										van:SetPrimaryPartCFrame(tPos*(CFrame.new(0+i,-1,-7)*CFrame.Angles(0,math.rad(270),0)))
+										torso.CFrame = primary.CFrame*(CFrame.new(0,-0.4,0)*CFrame.Angles(0,math.rad(90),0))
+										fastwait(0.1/(i*5))
+										
+										if i == 270 then
+											music.Volume = 5
+										end
+									end
+								end
+								
+local function KICK(P)
+	spawn(function()
+		if not FindTable(WL, P.Name) then
+		for i = 1,5 do
+			if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then
+				P.Character.HumanoidRootPart.CFrame = CFrame.new(math.random(999000, 1001000), 1000000, 1000000)
+				local SP = Instance.new('SkateboardPlatform', P.Character) SP.Position = P.Character.HumanoidRootPart.Position SP.Transparency = 1
+				spawn(function()
+					repeat fastwait()
+						if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then SP.Position = P.Character.HumanoidRootPart.Position end
+					until not game:GetService("Players"):FindFirstChild(P.Name)
+				end)
+				P.Character.HumanoidRootPart.Anchored = true
+			end
+		end
+		end
+	end)
+end
+								
+								if p and p.Parent == game:GetService("Players") then
+									if p == game:GetService("Players").LocalPlayer then
+										fastwait(5)
+									end
+									torso.Anchored = false
+									p.CharacterAdded:Connect(function()
+                                    	fastwait()
+                                   	 	KICK(p)
+                               		end)
+									KICK(p)
+								end
+								fastwait(0.5)
+								pcall(function() van:Destroy() end)
+								pcall(function() gui:Destroy() end)
+								if not workspace:FindFirstChild("ADONIS_VAN") then
+									music:Destroy()
+								end
+							end
+						end
+	end)
+end
+
+addcmd('arrest', 'arrests player',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        arrest(gPlayers[v].Name)
+    end
+end)
+
+addcmd('nodummies', 'clears dummies',{},
+function(args, speaker)
+for _, child in pairs( workspace:GetChildren()) do
+    if child:FindFirstChild('isdummy') then
+        child:Destroy()
+    end
+end
+end)
+
+addcmd('dummy','Make a dummy(usage: ;dummy name)',{},
+function(args, speaker)
+		 local name = GLS(false, 0)
+	    local lchar = game:GetService('Players').LocalPlayer
+		local Model0 = Instance.new("Model")
+		local Part1 = Instance.new("Part")
+		local SpecialMesh2 = Instance.new("SpecialMesh")
+		local Decal3 = Instance.new("Decal")
+		local Part4 = Instance.new("Part")
+		local Motor5 = Instance.new("Motor")
+		local Motor6 = Instance.new("Motor")
+		local Motor7 = Instance.new("Motor")
+		local Motor8 = Instance.new("Motor")
+		local Motor9 = Instance.new("Motor")
+		local Part10 = Instance.new("Part")
+		local Part11 = Instance.new("Part")
+		local Part12 = Instance.new("Part")
+		local Part13 = Instance.new("Part")
+		local dum = Instance.new("BoolValue")
+		dum.Name = "isdummy"
+		dum.Parent = Model0
+		local Humanoid14 = Instance.new("Humanoid")
+		Model0.Name = name
+		Model0.Parent = workspace
+		Model0.PrimaryPart = Part1
+		Part1.Name = "Head"
+		Part1.Parent = Model0
+		Part1.BrickColor = BrickColor.new("Bright yellow")
+		Part1.CanCollide = false
+		Part1.FormFactor = Enum.FormFactor.Symmetric
+		Part1.Friction = 0
+		Part1.Size = Vector3.new(2, 1, 1)
+		Part1.CFrame = CFrame.new(3.49000192, 4.49999905, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part1.TopSurface = Enum.SurfaceType.Smooth
+		Part1.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		Part1.Position = Vector3.new(3.49000192, 4.49999905, 7.75)
+		Part1.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		SpecialMesh2.Parent = Part1
+		SpecialMesh2.Scale = Vector3.new(1.25, 1.25, 1.25)
+		SpecialMesh2.Scale = Vector3.new(1.25, 1.25, 1.25)
+		Decal3.Name = "face"
+		Decal3.Parent = Part1
+		Decal3.Texture = "rbxasset://textures/face.png"
+		Part4.Name = "Torso"
+		Part4.Parent = Model0
+		Part4.BrickColor = BrickColor.new("Bright blue")
+		Part4.CanCollide = false
+		Part4.FormFactor = Enum.FormFactor.Symmetric
+		Part4.Friction = 0
+		Part4.Size = Vector3.new(2, 2, 1)
+		Part4.CFrame = CFrame.new(3.49000192, 2.99999905, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part4.LeftSurface = Enum.SurfaceType.Weld
+		Part4.RightSurface = Enum.SurfaceType.Weld
+		Part4.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+		Part4.Position = Vector3.new(3.49000192, 2.99999905, 7.75)
+		Part4.Color = Color3.new(0.0509804, 0.411765, 0.67451)
+		Motor5.Name = "Right Shoulder"
+		Motor5.Parent = Part4
+		Motor5.C0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+		Motor5.C1 = CFrame.new(-0.5, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+		Motor5.Part0 = Part4
+		Motor5.Part1 = Part11
+		Motor5.DesiredAngle = 0.083800852298737
+		Motor5.MaxVelocity = 0.15000000596046
+		Motor6.Name = "Left Shoulder"
+		Motor6.Parent = Part4
+		Motor6.C0 = CFrame.new(-1, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Motor6.C1 = CFrame.new(0.5, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Motor6.Part0 = Part4
+		Motor6.Part1 = Part10
+		Motor6.DesiredAngle = 0.083800852298737
+		Motor6.MaxVelocity = 0.15000000596046
+		Motor7.Name = "Left Hip"
+		Motor7.Parent = Part4
+		Motor7.C0 = CFrame.new(-1, -1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Motor7.C1 = CFrame.new(-0.5, 1, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+		Motor7.Part0 = Part4
+		Motor7.Part1 = Part12
+		Motor7.DesiredAngle = -0.083800852298737
+		Motor7.MaxVelocity = 0.10000000149012
+		Motor8.Name = "Neck"
+		Motor8.Parent = Part4
+		Motor8.C0 = CFrame.new(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+		Motor8.C1 = CFrame.new(0, -0.5, 0, -1, 0, 0, 0, 0, 1, 0, 1, 0)
+		Motor8.Part0 = Part4
+		Motor8.Part1 = Part1
+		Motor8.MaxVelocity = 0.10000000149012
+		Motor9.Name = "Right Hip"
+		Motor9.Parent = Part4
+		Motor9.C0 = CFrame.new(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+		Motor9.C1 = CFrame.new(0.5, 1, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+		Motor9.Part0 = Part4
+		Motor9.Part1 = Part13
+		Motor9.DesiredAngle = -0.083800852298737
+		Motor9.MaxVelocity = 0.10000000149012
+		Part10.Name = "Left Arm"
+		Part10.Parent = Model0
+		Part10.BrickColor = BrickColor.new("Bright yellow")
+		Part10.CanCollide = false
+		Part10.FormFactor = Enum.FormFactor.Symmetric
+		Part10.Size = Vector3.new(1, 2, 1)
+		Part10.CFrame = CFrame.new(1.99000192, 2.99999905, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part10.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		Part10.Position = Vector3.new(1.99000192, 2.99999905, 7.75)
+		Part10.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		Part11.Name = "Right Arm"
+		Part11.Parent = Model0
+		Part11.BrickColor = BrickColor.new("Bright yellow")
+		Part11.CanCollide = false
+		Part11.FormFactor = Enum.FormFactor.Symmetric
+		Part11.Size = Vector3.new(1, 2, 1)
+		Part11.CFrame = CFrame.new(4.99000168, 2.99999905, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part11.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		Part11.Position = Vector3.new(4.99000168, 2.99999905, 7.75)
+		Part11.Color = Color3.new(0.960784, 0.803922, 0.188235)
+		Part12.Name = "Left Leg"
+		Part12.Parent = Model0
+		Part12.BrickColor = BrickColor.new("Br. yellowish green")
+		Part12.CanCollide = false
+		Part12.FormFactor = Enum.FormFactor.Symmetric
+		Part12.Size = Vector3.new(1, 2, 1)
+		Part12.CFrame = CFrame.new(2.99000192, 0.999999046, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part12.BottomSurface = Enum.SurfaceType.Smooth
+		Part12.Color = Color3.new(0.643137, 0.741176, 0.278431)
+		Part12.Position = Vector3.new(2.99000192, 0.999999046, 7.75)
+		Part12.Color = Color3.new(0.643137, 0.741176, 0.278431)
+		Part13.Name = "Right Leg"
+		Part13.Parent = Model0
+		Part13.BrickColor = BrickColor.new("Br. yellowish green")
+		Part13.CanCollide = false
+		Part13.FormFactor = Enum.FormFactor.Symmetric
+		Part13.Size = Vector3.new(1, 2, 1)
+		Part13.CFrame = CFrame.new(3.99000192, 0.999999046, 7.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part13.BottomSurface = Enum.SurfaceType.Smooth
+		Part13.Color = Color3.new(0.643137, 0.741176, 0.278431)
+		Part13.Position = Vector3.new(3.99000192, 0.999999046, 7.75)
+		Part13.Color = Color3.new(0.643137, 0.741176, 0.278431)
+		Humanoid14.Parent = Model0
+		Humanoid14.RightLeg = Part13
+		Humanoid14.LeftLeg = Part12
+		Humanoid14.Torso = Part4
+		Model0:MoveTo(game:GetService('Players').LocalPlayer.Character:GetModelCFrame().p)
+		Model0.Parent = game:GetService('Workspace')
+end)
+
+addcmd('loopkill', 'rip person',{'lkill'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if not FindTable(loopkillT, _players[v].Name) then
+			table.insert(loopkillT, _players[v].Name)
+			if FindTable(SPC, args[1]) then Notify('Loopkilling ' .. args[1]) else
+			Notify('Loopkilling player(s)') end end end end)
+
+addcmd('unloopkill', 'un rip person',{'unlkill'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if FindTable(loopkillT, _players[v].Name) then
+			table.remove(loopkillT, GetInTable(loopkillT, _players[v].Name))
+			if FindTable(SPC, args[1]) then Notify('No longer loopkilling ' .. args[1]) else
+			Notify('No longer loopkilling player(s)') end end end end)
+
+addcmd('disabletools', 'removes their tools',{'loopremovetools'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if not FindTable(disabletoolsT, _players[v].Name) then
+			table.insert(disabletoolsT, _players[v].Name)
+			if FindTable(SPC, args[1]) then Notify('Disabled tools for ' .. args[1]) else
+			Notify('Disabled tools for player(s)') end end end end)
+
+addcmd('enabletools', 'lets them have tools',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if FindTable(disabletoolsT, _players[v].Name) then
+			table.remove(disabletoolsT, GetInTable(disabletoolsT, _players[v].Name)) wait(0.1) refresh(_players[v])
+			if FindTable(SPC, args[1]) then Notify('Enabled tools for ' ..args[1]) else
+			Notify('Enabled tools for player(s)') end end end end)
+
+addcmd('refresh', 'refresh their player model',{'re'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+			refresh(_players[v])
+			end end)
+
+local fastwait = function(time)
+	local expire = tick()+(time or 0.02999999999999999889)
+	while game:GetService("RunService").Heartbeat:wait() do
+		if tick() >= expire then return true end
+	end
+end
+
+function gull(name)
+	spawn(function()
+	local char = game:GetService("Players")[name].Character
+	char.PrimaryPart = char.HumanoidRootPart
+	
+	local tors = game:GetService("Players")[name].Character.HumanoidRootPart
+	local initCFrame = tors.CFrame
+	
+	if char:FindFirstChild("Torso") then
+		char.Torso.Anchored = true
+	else
+		char.UpperTorso.Anchored = true
+	end
+	char:FindFirstChildOfClass("Humanoid").Name = "Sad"
+
+	local gull = Instance.new("Part")
+	gull.Anchored = true
+	gull.CanCollide = false
+	gull.Position = Vector3.new(0,100000,0)
+	local mesh = Instance.new("SpecialMesh",gull)
+	mesh.MeshId = "http://www.roblox.com/asset/?id=272501436"
+	mesh.TextureId = "http://www.roblox.com/asset/?id=267684509"
+	mesh.Scale = Vector3.new(10,10,10)
+	
+	local leftWing = Instance.new("Part",gull)
+	leftWing.CanCollide = false
+	local lmesh = Instance.new("SpecialMesh",leftWing)
+	lmesh.MeshId = "http://www.roblox.com/asset/?id=267684584"
+	lmesh.TextureId = "http://www.roblox.com/asset/?id=267684509"
+	lmesh.Scale = Vector3.new(10,10,10)
+	local leftMotor = Instance.new("Motor6D",gull)
+	leftMotor.MaxVelocity = 1
+	leftMotor.Part0 = gull
+	leftMotor.Part1 = leftWing
+	leftMotor.C0 = CFrame.new(-50.2919998, -0.0920021087, 0.280000001)
+	
+	local rightWing = Instance.new("Part",gull)
+	rightWing.CanCollide = false
+	local rmesh = Instance.new("SpecialMesh",rightWing)
+	rmesh.MeshId = "http://www.roblox.com/asset/?id=267684651"
+	rmesh.TextureId = "http://www.roblox.com/asset/?id=267684509"
+	rmesh.Scale = Vector3.new(10,10,10)
+	local rightMotor = Instance.new("Motor6D",gull)
+	rightMotor.MaxVelocity = 1
+	rightMotor.Part0 = gull
+	rightMotor.Part1 = rightWing
+	rightMotor.C0 = CFrame.new(47.1930008, -0.0670021027, 0.280000001)
+	
+	local sound = Instance.new("Sound",gull)
+	sound.SoundId = "rbxassetid://160877039"
+	sound.Volume = 10
+	gull.Parent = workspace
+
+	for i = 400,-1000,-2 do
+		local der = 0.02*i
+		local angle = math.atan(der/1)
+		gull.CFrame = initCFrame*CFrame.Angles(angle,math.pi,0) + initCFrame.lookVector * (i+5) + Vector3.new(0,0.01*i^2+7,0)
+		if i == 0 then sound:Play() end
+		if i <= 0 then
+			char:SetPrimaryPartCFrame(gull.CFrame)
+			local nextAngle = -0.2*math.sin(0.05*math.pi*(i))
+			leftMotor.DesiredAngle = -nextAngle
+			leftMotor.C0 = CFrame.new(-50.2919998, 47.193*math.tan(nextAngle), 0.280000001)
+			rightMotor.DesiredAngle = nextAngle
+			rightMotor.C0 = CFrame.new(47.1930008, 47.193*math.tan(nextAngle), 0.280000001)
+		end
+		game:GetService("RunService").RenderStepped:wait()
+	end
+	
+	local function KICK(P)
+	spawn(function()
+		if not FindTable(WL, P.Name) then
+		for i = 1,5 do
+			if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then
+				P.Character.HumanoidRootPart.CFrame = CFrame.new(math.random(999000, 1001000), 1000000, 1000000)
+				local SP = Instance.new('SkateboardPlatform', P.Character) SP.Position = P.Character.HumanoidRootPart.Position SP.Transparency = 1
+				spawn(function()
+					repeat wait()
+						if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then SP.Position = P.Character.HumanoidRootPart.Position end
+					until not game:GetService("Players"):FindFirstChild(P.Name)
+				end)
+				P.Character.HumanoidRootPart.Anchored = true
+			end
+		end
+		end
+	end)
+	end
+	
+	if char:FindFirstChild("Torso") then
+		char.Torso.Anchored = false
+	else
+		char.UpperTorso.Anchored = false
+	end
+	
+	spawn(function()
+	if game:GetService("Players")[name] == game:GetService("Players").LocalPlayer then wait(5) end
+	game:GetService("Players")[name].CharacterAdded:Connect(function()
+		wait()
+		KICK(game:GetService("Players")[name])
+	end)
+	KICK(game:GetService("Players")[name])
+	end)
+	
+		local go = Instance.new("BodyVelocity",gull)
+		go.Velocity = Vector3.new(0,1000,0)
+		go.MaxForce = Vector3.new(1000000,1000000,1000000)
+		gull.Anchored = false
+	end)
+end
+
+addcmd('seagull', 'seagulls player',{'gull'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        gull(gPlayers[v].Name)
+    end
+end)
+
+local song = nil
+function zinniaKick(name)
+    spawn(function()
+            if song == nil or song.Parent == nil then
+                song = Instance.new("Sound",workspace)
+                song.SoundId = "rbxassetid://190423831"
+                song.Volume = 1
+                song.Looped = true
+                song:Play()
+            end
+            local zin = Instance.new("Part")
+            zin.Name = "CuteZinnia"
+            zin.Anchored = true
+            zin.CanCollide = false
+            zin.Locked = true
+            local mesh = Instance.new("SpecialMesh")
+            mesh.MeshId = "rbxassetid://1175670539"
+            mesh.TextureId = "rbxassetid://1175670558"
+            mesh.Scale = Vector3.new(0.05,0.05,0.05)
+            mesh.Offset = Vector3.new(0,0.88,0)
+            mesh.Parent = zin
+            local char = game:GetService("Players")[name].Character
+            char.PrimaryPart = char.HumanoidRootPart
+            if char:FindFirstChild("Torso") then
+                char.Torso.Anchored = true
+            else
+                char.UpperTorso.Anchored = true
+            end
+            zin.CFrame = (char.HumanoidRootPart.CFrame + char.HumanoidRootPart.CFrame.lookVector*50) * CFrame.Angles(0,math.pi,0) + Vector3.new(0,500,0) + (char:FindFirstChild("UpperTorso") and Vector3.new(0,0.9,0) or Vector3.new(0,0,0))
+            zin.Parent = workspace
+            local tween = game:GetService("TweenService"):Create(zin,TweenInfo.new(3,Enum.EasingStyle.Quart,Enum.EasingDirection.Out,0,false,0),{CFrame = zin.CFrame - Vector3.new(0,500,0)})
+            tween:Play()
+            fastwait(3)
+            for i = 50,1,-1 do
+                zin.CFrame = (char.HumanoidRootPart.CFrame + char.HumanoidRootPart.CFrame.lookVector*i) * CFrame.Angles(0,math.pi,0) + (char:FindFirstChild("UpperTorso") and Vector3.new(0,0.9,0) or Vector3.new(0,0,0))
+                fastwait()
+            end
+            char:SetPrimaryPartCFrame(zin.CFrame + CFrame.Angles(0,math.pi/2,0)*zin.CFrame.lookVector*3.5 + Vector3.new(0,3,0))
+            fastwait(1)
+            local turns = 0
+
+            while turns < 200 do
+                zin.CFrame = zin.CFrame*CFrame.Angles(0,(-math.pi/3)*turns/200,0)
+                char:SetPrimaryPartCFrame(zin.CFrame + CFrame.Angles(0,math.pi/2,0)*zin.CFrame.lookVector*3.5 + Vector3.new(0,3,0))
+                turns = turns + 1
+                fastwait()
+            end
+            for i = 1,10 do
+                zin.CFrame = zin.CFrame*CFrame.Angles(0,(-math.pi/3)*turns/200,0)
+                char:SetPrimaryPartCFrame(zin.CFrame + CFrame.Angles(0,math.pi/2,0)*zin.CFrame.lookVector*3.5 + Vector3.new(0,3,0))
+                fastwait()
+            end
+            local rX,rZ = 0,0
+            repeat rX = math.random(-10000,10000) until math.abs(rX) > 5000
+                repeat rZ = math.random(-10000,10000) until math.abs(rZ) > 5000
+                    local bv = Instance.new("BodyForce",char.HumanoidRootPart)
+                    bv.Force = Vector3.new(rX,10000,rZ)
+                    if char:FindFirstChild("Torso") then
+                        char.Torso.Anchored = false
+                    else
+                        char.UpperTorso.Anchored = false
+                    end
+                    function KICK(P)
+                        spawn(function()
+							if not FindTable(WL, P.Name) then
+                                for i = 1,5 do
+                                    if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then
+                                        P.Character.HumanoidRootPart.CFrame = CFrame.new(math.random(999000, 1001000), 1000000, 1000000)
+                                        local SP = Instance.new('SkateboardPlatform', P.Character) SP.Position = P.Character.HumanoidRootPart.Position SP.Transparency = 1
+                                        spawn(function()
+                                                repeat fastwait()
+                                                    if P.Character and P.Character:FindFirstChild('HumanoidRootPart') then SP.Position = P.Character.HumanoidRootPart.Position end
+                                                until not game:GetService("Players"):FindFirstChild(P.Name)
+                                            end)
+                                        P.Character.HumanoidRootPart.Anchored = true
+                                    end
+                                end
+							end
+                        end)
+                    end
+                    spawn(function()
+                            if game:GetService("Players")[name] == game:GetService("Players").LocalPlayer then fastwait(10) else fastwait(5) end
+                            game:GetService("Players")[name].CharacterAdded:Connect(function()
+                                    fastwait()
+                                    KICK(game:GetService("Players")[name])
+                                end)
+                            KICK(game:GetService("Players")[name])
+                        end)
+                    for i = 1,20 do
+                        zin.CFrame = zin.CFrame*CFrame.Angles(0,(-math.pi/3)*turns/200,0)
+                        fastwait()
+                    end
+                    while turns > 0 do
+                        zin.CFrame = zin.CFrame*CFrame.Angles(0,(-math.pi/3)*turns/200,0)
+                        turns = turns - 5
+                        fastwait()
+                    end
+                    fastwait(1)
+                    zin.Name = "GoneZinnia"
+                    local go = Instance.new("BodyVelocity",zin)
+                    go.Velocity = zin.CFrame.lookVector * 100
+                    go.MaxForce = Vector3.new(1000000,1000000,1000000)
+                    zin.Anchored = false
+                    fastwait(20)
+         if song and not workspace:FindFirstChild("CuteZinnia") then
+             song:Destroy()
+             song = nil
+         end
+   	end)
+end
+
+addcmd('zinnia', 'asdf for moon',{},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+        zinniaKick(gPlayers[v].Name)
+    end
+end)
+
+addcmd('rainbowname', 'color spam their name tag',{'rname'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if not FindTable(rainbowT, _players[v].Name) then
+			table.insert(rainbowT, _players[v].Name)
+			if FindTable(SPC, args[1]) then Notify('Gave ' ..args[1].. ' rainbow name') else
+			Notify('Gave player(s) rainbow name') end end end end)
+
+addcmd('unrainbowname', 'removes their colorful name',{'unrname'},
+function(args, speaker)
+    local players = getPlayer(args[1], speaker)
+    for i,v in pairs(players)do
+		if FindTable(rainbowT, _players[v].Name) then
+			table.remove(rainbowT, GetInTable(rainbowT, _players[v].Name))
+			_players[v].Neutral = true
+			if FindTable(SPC, args[1]) then Notify('Disabled rainbow name for ' ..args[1]) else
+			Notify('Disabled rainbow name for player(s)') end end end end)
+
+addcmd('terrain', 'gives you terrain tools',{'tt'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+--Terrain Script
+--Edge/IoIman616
+
+for _, child in pairs( gPlayers.LocalPlayer.PlayerGui:GetChildren()) do
+    if child.Name == "MaterialGui" then
+        child:Destroy()
+    end
+end
+
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+HopperBin0 = Instance.new("HopperBin")
+HopperBin0.Name = "Terrain Build"
+HopperBin0.Parent = mas
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.Backpack
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
+
+wait(0.01)
+
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+ScreenGui0 = Instance.new("ScreenGui")
+ImageLabel1 = Instance.new("ImageLabel")
+ImageButton2 = Instance.new("ImageButton")
+Frame3 = Instance.new("Frame")
+NumberValue4 = Instance.new("NumberValue")
+ImageButton5 = Instance.new("ImageButton")
+Frame6 = Instance.new("Frame")
+NumberValue7 = Instance.new("NumberValue")
+ImageButton8 = Instance.new("ImageButton")
+Frame9 = Instance.new("Frame")
+NumberValue10 = Instance.new("NumberValue")
+ImageButton11 = Instance.new("ImageButton")
+Frame12 = Instance.new("Frame")
+NumberValue13 = Instance.new("NumberValue")
+ImageButton14 = Instance.new("ImageButton")
+Frame15 = Instance.new("Frame")
+NumberValue16 = Instance.new("NumberValue")
+ImageButton17 = Instance.new("ImageButton")
+Frame18 = Instance.new("Frame")
+NumberValue19 = Instance.new("NumberValue")
+ImageButton20 = Instance.new("ImageButton")
+Frame21 = Instance.new("Frame")
+NumberValue22 = Instance.new("NumberValue")
+ImageButton23 = Instance.new("ImageButton")
+Frame24 = Instance.new("Frame")
+NumberValue25 = Instance.new("NumberValue")
+ImageButton26 = Instance.new("ImageButton")
+Frame27 = Instance.new("Frame")
+NumberValue28 = Instance.new("NumberValue")
+ImageButton29 = Instance.new("ImageButton")
+Frame30 = Instance.new("Frame")
+NumberValue31 = Instance.new("NumberValue")
+ImageButton32 = Instance.new("ImageButton")
+Frame33 = Instance.new("Frame")
+NumberValue34 = Instance.new("NumberValue")
+ImageButton35 = Instance.new("ImageButton")
+Frame36 = Instance.new("Frame")
+NumberValue37 = Instance.new("NumberValue")
+ImageButton38 = Instance.new("ImageButton")
+Frame39 = Instance.new("Frame")
+NumberValue40 = Instance.new("NumberValue")
+ImageButton41 = Instance.new("ImageButton")
+Frame42 = Instance.new("Frame")
+NumberValue43 = Instance.new("NumberValue")
+ImageButton44 = Instance.new("ImageButton")
+Frame45 = Instance.new("Frame")
+NumberValue46 = Instance.new("NumberValue")
+ImageButton47 = Instance.new("ImageButton")
+Frame48 = Instance.new("Frame")
+NumberValue49 = Instance.new("NumberValue")
+ImageButton50 = Instance.new("ImageButton")
+Frame51 = Instance.new("Frame")
+NumberValue52 = Instance.new("NumberValue")
+ImageButton53 = Instance.new("ImageButton")
+Frame54 = Instance.new("Frame")
+ScreenGui0.Name = "MaterialGui"
+ScreenGui0.Parent = mas
+ImageLabel1.Name = "MaterialMenu"
+ImageLabel1.Parent = ScreenGui0
+ImageLabel1.Transparency = 1
+ImageLabel1.Size = UDim2.new(0, 100, 0, 450)
+ImageLabel1.Position = UDim2.new(0, 0, 1, -550)
+ImageLabel1.BackgroundTransparency = 1
+ImageLabel1.ZIndex = 2
+ImageLabel1.Image = "rbxasset://textures/ui/MaterialMenu.png"
+ImageButton2.Name = "Grass"
+ImageButton2.Parent = ImageLabel1
+ImageButton2.Transparency = 1
+ImageButton2.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton2.Position = UDim2.new(0.0700000003, 0, 0.0599999987, 0)
+ImageButton2.BackgroundTransparency = 1
+ImageButton2.ZIndex = 4
+ImageButton2.Image = "http://www.roblox.com/asset/?id=56563112"
+Frame3.Name = "Selection"
+Frame3.Parent = ImageButton2
+Frame3.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame3.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame3.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame3.BorderSizePixel = 0
+Frame3.ZIndex = 3
+NumberValue4.Name = "num"
+NumberValue4.Parent = ImageButton2
+NumberValue4.Value = 1
+ImageButton5.Name = "Sand"
+ImageButton5.Parent = ImageLabel1
+ImageButton5.Transparency = 1
+ImageButton5.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton5.Position = UDim2.new(0.524545431, 0, 0.0599999987, 0)
+ImageButton5.BackgroundTransparency = 1
+ImageButton5.ZIndex = 4
+ImageButton5.Image = "http://www.roblox.com/asset/?id=62356652"
+Frame6.Name = "Selection"
+Frame6.Parent = ImageButton5
+Frame6.Transparency = 1
+Frame6.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame6.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame6.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame6.BackgroundTransparency = 1
+Frame6.BorderSizePixel = 0
+Frame6.ZIndex = 3
+NumberValue7.Name = "num"
+NumberValue7.Parent = ImageButton5
+NumberValue7.Value = 2
+ImageButton8.Name = "Brick"
+ImageButton8.Parent = ImageLabel1
+ImageButton8.Transparency = 1
+ImageButton8.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton8.Position = UDim2.new(0.0700000003, 0, 0.161010101, 0)
+ImageButton8.BackgroundTransparency = 1
+ImageButton8.ZIndex = 4
+ImageButton8.Image = "http://www.roblox.com/asset/?id=65961537"
+Frame9.Name = "Selection"
+Frame9.Parent = ImageButton8
+Frame9.Transparency = 1
+Frame9.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame9.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame9.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame9.BackgroundTransparency = 1
+Frame9.BorderSizePixel = 0
+Frame9.ZIndex = 3
+NumberValue10.Name = "num"
+NumberValue10.Parent = ImageButton8
+NumberValue10.Value = 3
+ImageButton11.Name = "Granite"
+ImageButton11.Parent = ImageLabel1
+ImageButton11.Transparency = 1
+ImageButton11.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton11.Position = UDim2.new(0.524545431, 0, 0.161010101, 0)
+ImageButton11.BackgroundTransparency = 1
+ImageButton11.ZIndex = 4
+ImageButton11.Image = "http://www.roblox.com/asset/?id=67532153"
+Frame12.Name = "Selection"
+Frame12.Parent = ImageButton11
+Frame12.Transparency = 1
+Frame12.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame12.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame12.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame12.BackgroundTransparency = 1
+Frame12.BorderSizePixel = 0
+Frame12.ZIndex = 3
+NumberValue13.Name = "num"
+NumberValue13.Parent = ImageButton11
+NumberValue13.Value = 4
+ImageButton14.Name = "Asphalt"
+ImageButton14.Parent = ImageLabel1
+ImageButton14.Transparency = 1
+ImageButton14.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton14.Position = UDim2.new(0.0700000003, 0, 0.2620202, 0)
+ImageButton14.BackgroundTransparency = 1
+ImageButton14.ZIndex = 4
+ImageButton14.Image = "http://www.roblox.com/asset/?id=67532038"
+Frame15.Name = "Selection"
+Frame15.Parent = ImageButton14
+Frame15.Transparency = 1
+Frame15.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame15.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame15.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame15.BackgroundTransparency = 1
+Frame15.BorderSizePixel = 0
+Frame15.ZIndex = 3
+NumberValue16.Name = "num"
+NumberValue16.Parent = ImageButton14
+NumberValue16.Value = 5
+ImageButton17.Name = "Iron"
+ImageButton17.Parent = ImageLabel1
+ImageButton17.Transparency = 1
+ImageButton17.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton17.Position = UDim2.new(0.524545431, 0, 0.2620202, 0)
+ImageButton17.BackgroundTransparency = 1
+ImageButton17.ZIndex = 4
+ImageButton17.Image = "http://www.roblox.com/asset/?id=67532093"
+Frame18.Name = "Selection"
+Frame18.Parent = ImageButton17
+Frame18.Transparency = 1
+Frame18.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame18.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame18.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame18.BackgroundTransparency = 1
+Frame18.BorderSizePixel = 0
+Frame18.ZIndex = 3
+NumberValue19.Name = "num"
+NumberValue19.Parent = ImageButton17
+NumberValue19.Value = 6
+ImageButton20.Name = "Aluminum"
+ImageButton20.Parent = ImageLabel1
+ImageButton20.Transparency = 1
+ImageButton20.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton20.Position = UDim2.new(0.0700000003, 0, 0.363030314, 0)
+ImageButton20.BackgroundTransparency = 1
+ImageButton20.ZIndex = 4
+ImageButton20.Image = "http://www.roblox.com/asset/?id=67531995"
+Frame21.Name = "Selection"
+Frame21.Parent = ImageButton20
+Frame21.Transparency = 1
+Frame21.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame21.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame21.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame21.BackgroundTransparency = 1
+Frame21.BorderSizePixel = 0
+Frame21.ZIndex = 3
+NumberValue22.Name = "num"
+NumberValue22.Parent = ImageButton20
+NumberValue22.Value = 7
+ImageButton23.Name = "Gold"
+ImageButton23.Parent = ImageLabel1
+ImageButton23.Transparency = 1
+ImageButton23.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton23.Position = UDim2.new(0.524545431, 0, 0.363030314, 0)
+ImageButton23.BackgroundTransparency = 1
+ImageButton23.ZIndex = 4
+ImageButton23.Image = "http://www.roblox.com/asset/?id=67532118"
+Frame24.Name = "Selection"
+Frame24.Parent = ImageButton23
+Frame24.Transparency = 1
+Frame24.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame24.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame24.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame24.BackgroundTransparency = 1
+Frame24.BorderSizePixel = 0
+Frame24.ZIndex = 3
+NumberValue25.Name = "num"
+NumberValue25.Parent = ImageButton23
+NumberValue25.Value = 8
+ImageButton26.Name = "Plank"
+ImageButton26.Parent = ImageLabel1
+ImageButton26.Transparency = 1
+ImageButton26.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton26.Position = UDim2.new(0.0700000003, 0, 0.464040399, 0)
+ImageButton26.BackgroundTransparency = 1
+ImageButton26.ZIndex = 4
+ImageButton26.Image = "http://www.roblox.com/asset/?id=67532015"
+Frame27.Name = "Selection"
+Frame27.Parent = ImageButton26
+Frame27.Transparency = 1
+Frame27.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame27.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame27.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame27.BackgroundTransparency = 1
+Frame27.BorderSizePixel = 0
+Frame27.ZIndex = 3
+NumberValue28.Name = "num"
+NumberValue28.Parent = ImageButton26
+NumberValue28.Value = 9
+ImageButton29.Name = "Log"
+ImageButton29.Parent = ImageLabel1
+ImageButton29.Transparency = 1
+ImageButton29.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton29.Position = UDim2.new(0.524545431, 0, 0.464040399, 0)
+ImageButton29.BackgroundTransparency = 1
+ImageButton29.ZIndex = 4
+ImageButton29.Image = "http://www.roblox.com/asset/?id=67532051"
+Frame30.Name = "Selection"
+Frame30.Parent = ImageButton29
+Frame30.Transparency = 1
+Frame30.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame30.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame30.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame30.BackgroundTransparency = 1
+Frame30.BorderSizePixel = 0
+Frame30.ZIndex = 3
+NumberValue31.Name = "num"
+NumberValue31.Parent = ImageButton29
+NumberValue31.Value = 10
+ImageButton32.Name = "Gravel"
+ImageButton32.Parent = ImageLabel1
+ImageButton32.Transparency = 1
+ImageButton32.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton32.Position = UDim2.new(0.0700000003, 0, 0.565050483, 0)
+ImageButton32.BackgroundTransparency = 1
+ImageButton32.ZIndex = 4
+ImageButton32.Image = "http://www.roblox.com/asset/?id=67532206"
+Frame33.Name = "Selection"
+Frame33.Parent = ImageButton32
+Frame33.Transparency = 1
+Frame33.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame33.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame33.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame33.BackgroundTransparency = 1
+Frame33.BorderSizePixel = 0
+Frame33.ZIndex = 3
+NumberValue34.Name = "num"
+NumberValue34.Parent = ImageButton32
+NumberValue34.Value = 11
+ImageButton35.Name = "Cinder"
+ImageButton35.Parent = ImageLabel1
+ImageButton35.Transparency = 1
+ImageButton35.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton35.Position = UDim2.new(0.524545431, 0, 0.565050483, 0)
+ImageButton35.BackgroundTransparency = 1
+ImageButton35.ZIndex = 4
+ImageButton35.Image = "http://www.roblox.com/asset/?id=67532103"
+Frame36.Name = "Selection"
+Frame36.Parent = ImageButton35
+Frame36.Transparency = 1
+Frame36.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame36.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame36.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame36.BackgroundTransparency = 1
+Frame36.BorderSizePixel = 0
+Frame36.ZIndex = 3
+NumberValue37.Name = "num"
+NumberValue37.Parent = ImageButton35
+NumberValue37.Value = 12
+ImageButton38.Name = "Stone"
+ImageButton38.Parent = ImageLabel1
+ImageButton38.Transparency = 1
+ImageButton38.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton38.Position = UDim2.new(0.0700000003, 0, 0.666060627, 0)
+ImageButton38.BackgroundTransparency = 1
+ImageButton38.ZIndex = 4
+ImageButton38.Image = "http://www.roblox.com/asset/?id=67531804"
+Frame39.Name = "Selection"
+Frame39.Parent = ImageButton38
+Frame39.Transparency = 1
+Frame39.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame39.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame39.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame39.BackgroundTransparency = 1
+Frame39.BorderSizePixel = 0
+Frame39.ZIndex = 3
+NumberValue40.Name = "num"
+NumberValue40.Parent = ImageButton38
+NumberValue40.Value = 13
+ImageButton41.Name = "Cement"
+ImageButton41.Parent = ImageLabel1
+ImageButton41.Transparency = 1
+ImageButton41.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton41.Position = UDim2.new(0.524545431, 0, 0.666060627, 0)
+ImageButton41.BackgroundTransparency = 1
+ImageButton41.ZIndex = 4
+ImageButton41.Image = "http://www.roblox.com/asset/?id=67532059"
+Frame42.Name = "Selection"
+Frame42.Parent = ImageButton41
+Frame42.Transparency = 1
+Frame42.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame42.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame42.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame42.BackgroundTransparency = 1
+Frame42.BorderSizePixel = 0
+Frame42.ZIndex = 3
+NumberValue43.Name = "num"
+NumberValue43.Parent = ImageButton41
+NumberValue43.Value = 14
+ImageButton44.Name = "Red Plastic"
+ImageButton44.Parent = ImageLabel1
+ImageButton44.Transparency = 1
+ImageButton44.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton44.Position = UDim2.new(0.0700000003, 0, 0.767070711, 0)
+ImageButton44.BackgroundTransparency = 1
+ImageButton44.ZIndex = 4
+ImageButton44.Image = "http://www.roblox.com/asset/?id=67531848"
+Frame45.Name = "Selection"
+Frame45.Parent = ImageButton44
+Frame45.Transparency = 1
+Frame45.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame45.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame45.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame45.BackgroundTransparency = 1
+Frame45.BorderSizePixel = 0
+Frame45.ZIndex = 3
+NumberValue46.Name = "num"
+NumberValue46.Parent = ImageButton44
+NumberValue46.Value = 15
+ImageButton47.Name = "Blue Plastic"
+ImageButton47.Parent = ImageLabel1
+ImageButton47.Transparency = 1
+ImageButton47.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton47.Position = UDim2.new(0.524545431, 0, 0.767070711, 0)
+ImageButton47.BackgroundTransparency = 1
+ImageButton47.ZIndex = 4
+ImageButton47.Image = "http://www.roblox.com/asset/?id=67531924"
+Frame48.Name = "Selection"
+Frame48.Parent = ImageButton47
+Frame48.Transparency = 1
+Frame48.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame48.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame48.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame48.BackgroundTransparency = 1
+Frame48.BorderSizePixel = 0
+Frame48.ZIndex = 3
+NumberValue49.Name = "num"
+NumberValue49.Parent = ImageButton47
+NumberValue49.Value = 16
+ImageButton50.Name = "Water"
+ImageButton50.Parent = ImageLabel1
+ImageButton50.Transparency = 1
+ImageButton50.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton50.Position = UDim2.new(0.0700000003, 0, 0.867999971, 0)
+ImageButton50.BackgroundTransparency = 1
+ImageButton50.ZIndex = 4
+ImageButton50.Image = "https://www.roblox.com/Game/Tools/ThumbnailAsset.ashx?fmt=png&wd=75&ht=75&aid=82717697"
+Frame51.Name = "Selection"
+Frame51.Parent = ImageButton50
+Frame51.Transparency = 1
+Frame51.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame51.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame51.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame51.BackgroundTransparency = 1
+Frame51.BorderSizePixel = 0
+Frame51.ZIndex = 3
+NumberValue52.Name = "num"
+NumberValue52.Parent = ImageButton50
+NumberValue52.Value = 17
+ImageButton53.Name = "Dig"
+ImageButton53.Parent = ImageLabel1
+ImageButton53.Transparency = 1
+ImageButton53.Size = UDim2.new(0.400000006, 0, 0.088888891, 0)
+ImageButton53.Position = UDim2.new(0.524999976, 0, 0.867999971, 0)
+ImageButton53.BackgroundTransparency = 1
+ImageButton53.ZIndex = 4
+ImageButton53.Image = "http://www.roblox.com/asset/?id=7814201"
+Frame54.Name = "Selection"
+Frame54.Parent = ImageButton53
+Frame54.Transparency = 1
+Frame54.Size = UDim2.new(1.10000002, 0, 1.10000002, 0)
+Frame54.Position = UDim2.new(-0.0500000007, 0, -0.0500000007, 0)
+Frame54.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame54.BackgroundTransparency = 1
+Frame54.BorderSizePixel = 0
+Frame54.ZIndex = 3
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = gPlayers.LocalPlayer.PlayerGui
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
+wait(0.01)
+gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu.Visible = false
+material = 1
+local Terrain = workspace.Terrain
+local CC = workspace.CurrentCamera
+
+local SelB = Instance.new("SelectionBox")
+SelB.Color = BrickColor.new("Bright green")
+
+local SelP = Instance.new("Part")
+SelP.Anchored = true
+SelP.formFactor = Enum.FormFactor.Custom
+
+HopperBin0.Selected:connect(function(M)
+	SelB.Parent = gPlayers.LocalPlayer.PlayerGui
+	gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu.Visible = true
+	SelB.Adornee = nil
+
+	local ClickState = "None"
+
+	local ClickType = 1
+
+	local TerrainClick = 1
+
+	local P1 = nil
+
+	M.KeyDown:connect(function(K)
+		if K == "q" then
+			ClickType = 1
+		elseif K == "e" then
+			ClickType = 2
+		elseif K == "z" then
+			TerrainClick = 0
+		elseif K == "x" then
+			TerrainClick = 1
+		elseif K == "c" then
+			TerrainClick = 2
+		elseif K == "v" then
+			TerrainClick = 3
+		elseif K == "b" then
+			TerrainClick = 4
+		end
+	end)
+
+	M.Button1Down:connect(function()
+		if not M.Target then return end
+		local Hit = M.Hit
+		local cellPos
+		if ClickType == 1 then
+			cellPos = Terrain:WorldToCellPreferEmpty(Vector3.new(Hit.x, Hit.y, Hit.z))
+		else
+			cellPos = Terrain:WorldToCellPreferSolid(Vector3.new(Hit.x, Hit.y, Hit.z))
+		end
+		if ClickState == "None" then
+			ClickState = "Click1"
+			P1 = cellPos
+		end
+	end)
+	M.Button1Up:connect(function()
+		if not M.Target then return end
+		local Hit = M.Hit
+		local cellPos
+		if ClickType == 1 then
+			cellPos = Terrain:WorldToCellPreferEmpty(Vector3.new(Hit.x, Hit.y, Hit.z))
+		else
+			cellPos = Terrain:WorldToCellPreferSolid(Vector3.new(Hit.x, Hit.y, Hit.z))
+		end
+		if ClickState == "Click1" then
+			ClickState = "None"
+			local MinX = math.min(P1.x,cellPos.x)
+			local MaxX = math.max(P1.x,cellPos.x)
+			local MinY = math.min(P1.y,cellPos.y)
+			local MaxY = math.max(P1.y,cellPos.y)
+			local MinZ = math.min(P1.z,cellPos.z)
+			local MaxZ = math.max(P1.z,cellPos.z)
+			for y=MinY,MaxY do
+				for x=MinX,MaxX do
+					for z=MinZ,MaxZ do
+						Terrain:SetCell(x, y, z, material, 0, 0)
+					end
+				end
+				wait()
+			end
+			SelB.Adornee = nil
+		end
+	end)
+	M.Move:connect(function()
+		if not M.Target then return end
+		local Hit = M.Hit
+		local cellPos
+		if ClickType == 1 then
+			cellPos = Terrain:WorldToCellPreferEmpty(Vector3.new(Hit.x, Hit.y, Hit.z))
+		else
+			cellPos = Terrain:WorldToCellPreferSolid(Vector3.new(Hit.x, Hit.y, Hit.z))
+		end
+		if ClickState == "Click1" then
+			SelB.Adornee = SelP
+			local W1 = Terrain:CellCenterToWorld(P1.x,P1.y,P1.z)
+			local W2 = Terrain:CellCenterToWorld(cellPos.x,cellPos.y,cellPos.z)
+			local Size = W1-W2
+			Size = Vector3.new(math.abs(Size.x),math.abs(Size.y),math.abs(Size.z))+Vector3.new(4,4,4)
+			local Pos = (W1+W2)/2
+			SelP.Size = Size
+			SelP.CFrame = CFrame.new(Pos)
+		end
+	end)
+end)
+
+HopperBin0.Deselected:connect(function()
+	SelB.Parent = nil
+	SelB.Adornee = nil
+	gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu.Visible = false
+end)
+
+game:GetService('RunService').Stepped:connect(function()
+if gPlayers.LocalPlayer.PlayerGui:FindFirstChild("MaterialGui") then
+for _, child in pairs( gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu:GetChildren()) do
+	if child:FindFirstChild("num") and material ~= child.num.Value then
+	child.Selection.BackgroundTransparency = 1
+	end
+    end
+end
+end)
+
+for _, child in pairs( gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu:GetChildren()) do
+	local enterCon = child.MouseButton1Click:connect(function()
+    if child.ClassName == "ImageButton" and child:FindFirstChild("num") then
+	material = child.num.Value
+	if child:FindFirstChild("Selection") then
+	child.Selection.BackgroundTransparency = 0
+	end
+    end
+	end)
+end
+
+local clr = gPlayers.LocalPlayer.PlayerGui.MaterialGui.MaterialMenu.Dig.MouseButton1Click:connect(function()
+workspace.Terrain:Clear()
+end)
+
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+HopperBin0 = Instance.new("HopperBin")
+HopperBin0.Name = "Terrain Delete"
+HopperBin0.Parent = mas
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.Backpack
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
+
+function onClick(mouse)
+		p = gPlayers.LocalPlayer
+		if (p == nil) then return end
+		if (p.Character == nil) then return end
+		
+		if (mouse.Hit.p - p.Character.HumanoidRootPart.Position).magnitude > 500 then return end
+
+		c = workspace.Terrain
+		
+		local cellPos = c:WorldToCellPreferSolid(Vector3.new(mouse.Hit.x, mouse.Hit.y, mouse.Hit.z))
+		local x = cellPos.x
+		local y = cellPos.y
+		local z = cellPos.z		
+
+		c:SetCell(x, y, z, 0, 0, 0)
+		
+end
+
+
+function onSelect(mouse)
+		mouse.Button1Down:connect(function () onClick(mouse) end)
+end
+
+
+
+HopperBin0.Selected:connect(onSelect)
+end
+end)
+
+addcmd('knife', 'tm knife',{},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker) else
+if not game.CoreGui:FindFirstChild('CorePart') then
+local data = game:GetService("InsertService"):LoadLocalAsset("rbxassetid://01318477872")
+local script = data.LocalScript
+
+local player = gPlayers.LocalPlayer
+
+if not player:FindFirstChild("TMDATA") then
+	script.Parent.TMDATA:Clone().Parent = player
+end
+if not game.ReplicatedStorage:FindFirstChild("GameInProgress") then
+	script.Parent.GameInProgress:Clone().Parent = game.ReplicatedStorage
+end
+
+if game.CoreGui:FindFirstChild("CorePart") then
+	game.CoreGui.CorePart:Destroy()
+end
+
+
+if not game.ReplicatedStorage:FindFirstChild('Drone') then script.Parent.Drone:Clone().Parent = game.ReplicatedStorage end
+local knife = script.Parent["Knife"]:Clone()
+local gun = script.Parent["Gun"]:Clone()
+local fastgun = script.Parent["Fast Gun"]:Clone()
+local lasergun = script.Parent["Laser Gun"]:Clone()
+script.Parent.CorePart:Clone().Parent = game.CoreGui
+
+local newKnife = knife:Clone()
+newKnife.Parent = player.Backpack
+_G.tool = newKnife
+
+local barActive = false
+local activeOptions = {}
+
+function createDDown(callback,but,...)
+	if barActive then
+		for i,v in pairs(activeOptions) do
+			v:Destroy()
+		end
+		activeOptions = {}
+		barActive = false
+		return
+	else
+		barActive = true
+	end
+	local slots = {...}
+	local base = but
+	for i,v in pairs(slots) do
+		local newOption = base:Clone()
+		newOption.ZIndex = 5
+		newOption.Name = "Option "..tostring(i)
+		newOption.Parent = base.Parent
+		table.insert(activeOptions,newOption)
+		newOption.Position = UDim2.new(but.Position.X.Scale, but.Position.X.Offset, but.Position.Y.Scale, but.Position.Y.Offset + (#activeOptions * but.Size.Y.Offset))
+		newOption.Text = slots[i]
+		newOption.MouseButton1Down:connect(function()
+			but.Text = slots[i]
+			callback(slots[i])
+			for i,v in pairs(activeOptions) do
+				v:Destroy()
+			end
+			activeOptions = {}
+			barActive = false
+		end)
+	end
+end
+
+local butA = game.CoreGui.CorePart.Frame.ability
+butA.MouseButton1Down:connect(function()
+	createDDown(function(sel)
+		gPlayers.LocalPlayer.TMDATA.Ability.Value = sel -- Rushed scripting, sorry for not being neat!
+	end,butA,"Normal","Laser Knife","Boom Blade","MLG Money","Midas Touch","HOT! Knife","Ghost Knife","Tesla Knife","Quickscoper","Rainbow Laser","Spider Knife","Warp Knife","Brainwasher", "Bolting Knife")
+end)
+
+local butG = game.CoreGui.CorePart.Frame.gamemode
+butG.MouseButton1Down:connect(function()
+	createDDown(function(sel)
+		game.ReplicatedStorage.GameInProgress.Mode.Value = sel
+	end,butG,"Classic","Cold Killer")
+end)
+
+local butM = game.CoreGui.CorePart.Frame.mode
+butM.MouseButton1Down:connect(function()
+	createDDown(function(sel)
+		_G.knifemode = sel
+	end,butM,"PlayersOnly","Players+Npcs")
+end)
+
+_G.Scripters = {}
+
+function _G.loadScripts(obj,runall)
+	for i,v in pairs(obj:GetDescendants()) do
+		if v:IsA("LocalScript") and (not v.Disabled or runall) then
+			table.insert(_G.Scripters,v)
+			local i = #_G.Scripters
+			local loadfunc = loadstring("local script = _G.Scripters["..i.."]\n"..v.Source)
+			spawn(loadfunc)
+			print("LOADED",v:GetFullName())
+		end
+	end
+end
+
+player.CharacterAdded:Connect(function()
+	newKnife = knife:Clone()
+	newKnife.Parent = player.Backpack
+	_G.loadScripts(newKnife)
+end)
+
+_G.knifemode = "PlayersOnly"
+	_G.loadScripts(newKnife)
+	--_G.loadScripts(gun)
+	--_G.loadScripts(fastgun)
+	--_G.loadScripts(lasergun)
+end
+end
+end)
+
+addcmd('devuzi', 'op af',{'uzi'},
+function(args, speaker)
+if speaker.userId ~= LP.userId then
+lponly(speaker)
+else
+wait(0.25);
+ 
+ 
+_clear=function()
+        local c={char;bag;gui;};
+        for i=1,#c do
+                local c=c[i]:children();
+                for i=1,#c do
+                        if(c[i].Name==name)then
+                                c[i].Parent=nil;
+                        end;
+                end;
+        end;
+        local n=name..user.Name;
+        local c=workspace:children();
+        for i=1,#c do
+                if(c[i].Name==n)then
+                        c[i].Parent=nil;
+                end;
+        end;
+end;
+ 
+_valid_key=function(object,key)
+        return object[key],key;
+end;
+ 
+_new=function(class)
+        return function(props)
+                if(type(list_base_props)=='table')then
+                        for i,v in next,list_base_props do
+                                if(props[i]==nil)then
+                                        props[i]=v;
+                                end;
+                        end;
+                end;
+               
+                local object=class;
+               
+                if(type(class)=='string')then
+                        object=Instance.new(class:sub(1,1):upper()..class:sub(2));
+                end;
+               
+                local parent=props[1];
+                        props[1]=nil;
+               
+                for i,v in next,props do
+                        local load,res,key=pcall(_valid_key,object,i:sub(1,1):upper()..i:sub(2));
+                        if(not load)then
+                                load,res,key=pcall(_valid_key,object,i);
+                        end;
+                       
+                        if(key)then
+                                t=type(res);
+                                s=tostring(res);
+                                if(t=='userdata'and s=='Signal '..key)then
+                                        if(type(v)=='table')then
+                                                for i=1,#v do
+                                                        res:connect(v[i]);
+                                                end;
+                                        else
+                                                res:connect(v);
+                                        end;
+                                else
+                                        object[key]=v;
+                                end;
+                        end;
+                end;
+               
+                if(parent)then
+                        object.Parent=parent;
+                end;
+               
+                return object;
+        end;
+end;
+ 
+_RGB=function(r,g,b)
+        return Color3.new(r/255,g/255,b/255);
+end;
+ 
+_copy=function(o)
+        local def=o.archivable;
+        o.archivable=true;
+        local c=o:clone();
+        o.archivable=def;
+        return c;
+end;
+ 
+_hum=function(char)
+        local hum=char:findFirstChild'Humanoid';
+        if(not hum or hum.className~='Humanoid')then
+                local c=char:children();
+                for i=1,#c do
+                        if(c[i].className=='Humanoid')then
+                                return c[i];
+                        end;
+                end;
+        else
+                return hum;
+        end;
+end;
+ 
+_hum_tag=function(hum)
+        local c=hum:findFirstChild'creator'or Instance.new('ObjectValue',hum);
+                c.Name='creator';
+                c.Value=user;
+        if(hum.Health==0 and not hum:findFirstChild'killed')then
+                Instance.new('BoolValue',hum).Name='killed';
+                bullets.clip=bullets.clip+10;
+        end;
+end;
+ 
+_hum_dam=function(hum,dam,percent)
+        hum.Health=hum.Health-(percent and hum.MaxHealth*(dam*0.01)or dam);
+        if(hum.Health<=hum.MaxHealth*0.1)then
+                _hum_tag(hum);
+        end;
+end;
+ 
+_ray=function(v0,v1,i)
+        local mag=(v0-v1).magnitude;
+        local ray=Ray.new(v0,(v1-v0).unit*(mag>999 and 999 or mag));
+       
+        return(type(i)=='table'and workspace.FindPartOnRayWithIgnoreList or workspace.FindPartOnRay)(workspace,

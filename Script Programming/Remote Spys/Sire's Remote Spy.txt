@@ -1,0 +1,432 @@
+--toggle classes by switching true/false
+SpyOn = {
+	RemoteEvent = true;
+	RemoteFunction = true;
+	BindableEvent = false;
+	BindableFunction = false;
+}
+--if true will spy 'hidden' events
+spyNilInstances = false
+--list of names it will ignore e.g. {"a","b"}
+Ignore = {}
+--maximum number of sections at once
+numMaxSections = 25
+--size of padding inside sections
+yindent = 20
+--/////////////////////////////////////////////////////////////////////////////////////
+--by sirelKilla (v3rm)  // fixed by stellar
+
+if Synapse==nil then
+	warn("This spy is best used with Synapse.")
+end
+
+local MT = getrawmetatable(game)
+if setreadonly then setreadonly(MT,false) end
+if make_writeable then make_writeable(MT) end
+local oldNamecall = MT.__namecall
+
+local Player = game:GetService("Players").LocalPlayer
+--basically makes a background
+MakeShadow = function(GUI, Deepness)
+	for i=1, Deepness do
+		local G = GUI:Clone()
+		G.ZIndex = GUI.ZIndex - 1
+		G.Size=UDim2.new(1,12,1,12)
+		G.Position=UDim2.new(0,-6,0,-6)
+		G.Active=false
+		G.Draggable=false
+		G:ClearAllChildren()
+		G.Name = GUI.Name.." Shadow"
+		G.Parent = GUI
+	end
+end
+--create basic frames
+local CanScroll = true
+local GUI = Instance.new("ScreenGui",game.CoreGui)
+GUI.Name = "SpyScroller"
+GUI.ResetOnSpawn = false
+GUI.DisplayOrder = 10000
+local Main = Instance.new("Frame", GUI)
+Main.Active = true
+Main.ZIndex = 10000
+Main.Size = UDim2.new(0.27, 0, 0.32, 0)
+Main.Draggable = true
+Main.Style = "DropShadow"
+Main.Position = UDim2.new(0.05, 0, 0.05, 0)
+MakeShadow(Main, 4)
+local Bar = Instance.new("Frame", Main)
+Bar.BackgroundColor3=Color3.fromRGB(40,40,40)
+Bar.Size = UDim2.new(1, 20, 0.13, 0)
+Bar.Position = UDim2.new(0, -10, -0.03)
+Bar.ZIndex = Main.ZIndex+1
+local Title = Instance.new("TextLabel", Bar)
+Title.BackgroundTransparency = 1
+Title.Position=UDim2.new(0,10)
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.Font = "SourceSansBold"
+Title.Text = "Remote Spy"
+Title.TextSize = 15
+Title.ZIndex = Main.ZIndex+3
+Title.TextXAlignment = "Left"
+Title.Size = UDim2.new(1, 0, 1, 0)
+local Exit = Instance.new("TextButton", Bar)
+Exit.BackgroundTransparency = 1
+Exit.Text = "x"
+Exit.TextColor3 = Color3.new(1, 1, 1)
+Exit.Size = UDim2.new(0.08, 0, 1.5, 0)
+Exit.TextSize = 20
+Exit.TextWrapped = false
+Exit.Position = UDim2.new(0.95, -10, -0.28, 0)
+Exit.Font = "SourceSansBold"
+Exit.ZIndex = Main.ZIndex+1
+Exit.MouseButton1Up:connect(function()
+	GUI:Destroy()
+	MT.__namecall = oldNamecall
+end)
+Exit.MouseEnter:connect(function()
+	Exit.TextColor3 = Color3.new(1, 0, 0)
+end)
+Exit.MouseLeave:connect(function()
+	Exit.TextColor3 = Color3.new(1, 1, 1)
+end)
+local Scroll = Instance.new("ScrollingFrame", Main)
+Scroll.BackgroundTransparency = 1
+Scroll.Name = "Scroll"
+Scroll.Size = UDim2.new(1, 0, 0.9, 0)
+Scroll.ZIndex = Main.ZIndex+1
+Scroll.Position = UDim2.new(0, 0, 0.1, 0)
+Scroll.BorderSizePixel = 0
+Scroll.CanvasSize = UDim2.new()
+--clipboard gui
+local Popup = Instance.new("TextButton",GUI)
+Instance.new("StringValue",Popup).Name = "ToCopy"
+Popup.Name="ClipboardBtn"
+Popup.Text="Copy"
+Popup.Size=UDim2.new(0,40,0,20)
+Popup.ZIndex=Main.ZIndex+4
+Popup.Visible=false
+Popup.MouseButton1Down:Connect(function()
+	if Synapse then
+		Synapse:CopyString(Popup.ToCopy.Value)
+	elseif setclipboard then
+		setclipboard(Popup.ToCopy.Value)
+	elseif Clipboard then
+		Clipboard.set(Popup.ToCopy.Value)
+	end
+	Popup.Visible=false
+end)
+--bottom-right resizer
+--////
+local resize = Instance.new("ImageButton")
+resize.Name = "resize"
+resize.BackgroundTransparency = 1
+resize.Image = "rbxassetid://55927414"
+resize.ZIndex = Main.ZIndex+1
+resize.Size = UDim2.new(0,13,0,13)
+resize.Position = UDim2.new(1,-9,1,-9)
+resize.Active=true
+resize.Draggable=true
+local resizing=false
+local mouseConn
+resize.DragBegin:Connect(function()
+	--basically moves sizer to only absolutes..
+	local rAP = resize.AbsolutePosition
+	resize.Parent = GUI
+	resize.Position = UDim2.new(0,rAP.X,0,rAP.Y)
+	--then offsets main size based on those values
+	local mS = Main.Size
+	local mAS = Main.AbsoluteSize
+	local addX,addY=0,0
+	mouseConn = Player:GetMouse().Move:Connect(function()
+		--most of this is to keep stuff from going negative
+		addX,addY = math.max(-mAS.X+240,resize.AbsolutePosition.X - rAP.X),math.max(-mAS.Y+100,resize.AbsolutePosition.Y - rAP.Y)
+		Main.Size=mS + UDim2.new(0,addX,0,addY)
+		--hide if negative
+		if addX>-mAS.X+240 and addY>-mAS.Y+100 then
+			resize.ImageTransparency = 0
+		else
+			resize.ImageTransparency = 1
+		end
+	end)
+end)
+resize.DragStopped:Connect(function()
+	--turn to normal
+	resize.Parent = Main
+	resize.Position = UDim2.new(1,-9,1,-9)
+	resize.ImageTransparency = 0
+	mouseConn:Disconnect()
+end)
+resize.Parent = Main
+--////
+local function isMouseDown()
+	local array = game:GetService("UserInputService"):GetMouseButtonsPressed()
+	for i=1,#array do
+		if array[i].UserInputType==Enum.UserInputType.MouseButton1 then
+			return true
+		end
+	end
+	return false
+end
+local db=false
+Scroll:GetPropertyChangedSignal("CanvasPosition"):Connect(function()
+	if db==false and CanScroll==false and isMouseDown() then
+		db=true
+		Main.Active=false
+		repeat wait(0.5) until not isMouseDown()
+		Main.Active=true
+		db=false
+	end
+end)
+Instance.new("UIListLayout",Scroll).SortOrder = Enum.SortOrder.LayoutOrder
+local sectionIndex = 0
+
+local Console = {}
+Console.White = Color3.new(1, 1, 1)
+Console.LightGray = Color3.fromRGB(155, 155, 155)
+local CurrentColour = Console.White
+local CurrentSection
+local NumLabels = 0
+local sections = {}
+
+function Console:WriteLine(Text)
+	pcall(function()
+		if CurrentSection and tostring(Text) then
+			NumLabels=NumLabels+1
+			local TL = Instance.new("TextLabel")
+			TL.Parent = CurrentSection
+			TL.Text = tostring(Text)
+			TL.TextColor3 = CurrentColour
+			TL.BackgroundTransparency = 1
+			TL.Font = "SourceSansBold"
+			TL.TextSize = 14
+			TL.ZIndex = Main.ZIndex+3
+			TL.TextXAlignment = "Left"
+			TL.TextWrapped = false
+			TL.Size = UDim2.new(1, 0, 0, 20)
+			local Y = #CurrentSection:GetChildren()*20
+			TL.Position = UDim2.new(0, 0, 0, Y-20 + yindent/2)
+			CurrentSection.Size = UDim2.new(1, 0, 0, Y + yindent)
+			if CanScroll then
+				Scroll.CanvasSize = UDim2.new(0, 0, 0, NumLabels*20)
+				Scroll.CanvasPosition = Vector2.new(0, Scroll.CanvasSize.Y.Offset)
+			end
+		end
+	end)
+end
+function Console:SetColor(Color)
+	CurrentColour = Color
+end
+function Console:PushSection(ClipboardText)
+	if #sections < numMaxSections then --if going to add a section
+		NumLabels=NumLabels+(yindent/20) --just increases scroller size
+	end
+	sectionIndex=sectionIndex+1
+	local f = Instance.new("Frame")
+	f.BackgroundTransparency = 1 - (0.07 * (sectionIndex % 2)) --alternate colors
+	f.BorderSizePixel=2
+	f.BorderColor3=Color3.new(1,1,1)
+	f.ZIndex = Main.ZIndex+2
+	f.Size = UDim2.new()
+	
+	if ClipboardText~=nil then
+		--on right click show copy option label, which copies text when clicked
+		f.InputEnded:Connect(function(input)
+			if input.UserInputType==Enum.UserInputType.MouseButton2 then
+				Popup.ToCopy.Value = ClipboardText
+				Popup.Position = UDim2.new(0,Player:GetMouse().X+1,0,Player:GetMouse().Y+1)
+				Popup.Visible=true
+				game:GetService("UserInputService").InputBegan:Wait()
+				wait()
+				Popup.Visible=false
+			end
+		end)
+	end
+	
+	f.LayoutOrder = sectionIndex --for UIListLayout
+	if #sections >= numMaxSections and CanScroll then
+		--removes any extra sections. limited by CanScroll or else the rotations will still look like scrolling
+		for i=0,#sections-numMaxSections do
+			NumLabels = NumLabels - #sections[1]:GetChildren()
+			sections[1]:Destroy()
+			table.remove(sections,1)
+		end
+	end
+	sections[#sections+1]=f
+	f.Parent = Scroll
+	
+	CurrentSection = f
+end
+
+Console:SetColor(Console.White)
+
+Main.MouseEnter:connect(function()
+	CanScroll = false
+end)
+Main.MouseLeave:connect(function()
+	CanScroll = true
+	--"unpause"
+	for i=1,#sections-numMaxSections do
+		NumLabels = NumLabels - #sections[1]:GetChildren()
+		sections[1]:Destroy()
+		table.remove(sections,1)
+	end
+	Scroll.CanvasSize = UDim2.new(0, 0, 0, NumLabels*20)
+end)
+
+--//// utilities ////
+local function isInArray(t,v)
+	for i=1,#t do
+		if t[i]==v then
+			return true
+		end
+	end
+	return false
+end
+
+local function instFormat(name)
+	if name=='' or name:match("[^_%w]") or name:match("^%d") then
+		return '["'..name..'"]'
+	end
+	return "."..name
+end
+local function GetPath(inst)
+	if inst==game then return "game" end
+	if inst.Parent==nil then return inst.Name end
+	local current,str=inst,''
+	while current.Parent~=game do
+		str=instFormat(current.Name) ..str
+		current = current.Parent
+	end
+	if current==workspace then
+		return "workspace"..str
+	elseif pcall(game.GetService,game,current.ClassName) then
+		return 'game:GetService("'.. current.ClassName ..'")'..str
+	end
+	return "game"..instFormat(current.Name)..str
+end
+
+local FullPathsMode = false --internally toggled for using GetPath
+local function _tostring(x)
+	local typ = typeof(x)
+	if typ == "table" then
+		return tableToString(x)
+	elseif typ == "string" then
+		return '"'..x..'"'
+	elseif typ == "Vector3" then
+		return string.format("Vector3.new(%g,%g,%g)",x.X,x.Y,x.Z)
+	elseif typ == "Color3" then
+		return string.format("Color3.new(%g,%g,%g)",x.r,x.g,x.b)
+	elseif typ == "Vector2" then
+		return string.format("Vector2.new(%g,%g)",x.X,x.Y)
+	elseif typ == "CFrame" then
+		return string.format("CFrame.new(%g,%g,%g,%g,%g,%g,%g,%g,%g,%g,%g,%g)",x:components())
+	elseif typ == "UDim2" then
+		return string.format("UDim2.new(%g,%g,%g,%g)",x.X.Scale,x.X.Offset,x.Y.Scale,x.Y.Offset)
+	elseif typ == "Instance" then
+		return ((FullPathsMode==true) and GetPath(x)) or x:GetFullName()
+	end
+	
+	return tostring(x)
+end
+
+function tableToString(tab)
+	local str = "{ "
+	local len = #tab
+
+	local c = 1
+	for k,v in pairs(tab) do
+		if (k==c and k<=len) then
+			--array part
+			str = str .. _tostring(v) .. ", "
+			c = c + 1
+		else
+			--dict part
+			str = str .. "[" .. _tostring(k) .. "]= " .. _tostring(v) .. ", "
+		end
+	end
+	
+	str = str:sub(1,math.max(1,#str-2)) .. " }"
+	return str
+end
+
+function tupleString(tab,fullPaths)
+	FullPathsMode=fullPaths
+	return tableToString(tab):sub(3,-3)
+end
+--//// end utilities ////
+
+toConsole = function(method, event, Args, Returned)
+	local nilParent = game:IsAncestorOf(event)==false
+	if (spyNilInstances==false and nilParent==true) or (event.Name=="CharacterSoundEvent" and event.Parent and event.Parent.ClassName=="Sound") or isInArray(Ignore,event.Name) then
+		--ignored an event
+		return
+	end
+	pcall(function()
+		Console:PushSection(string.format("%s:%s(%s)",GetPath(event),method,tupleString(Args,true)))
+		Console:WriteLine(string.format("%s.%s called!",event.ClassName,method))
+		Console:WriteLine("Path: "..event:GetFullName())
+		Console:WriteLine("Args: "..tupleString(Args))
+		if Returned and #Returned>0 then
+			Console:WriteLine("Returned: ".. tupleString(Returned))
+		end
+	end)
+end
+
+local logsList = {}
+
+MT.__namecall = function(inst,...)
+	local args = {...}
+	local m = getnamecallmethod()
+	args[#args]=nil
+	if (m=="FireServer" or m=="Fire" or m=="InvokeServer" or m=="Invoke") and SpyOn[inst.ClassName] then
+		local returned = {oldNamecall(inst,...)}
+		logsList[#logsList+1]={m, inst, args, returned}
+		return unpack(returned)
+	end
+	return oldNamecall(inst,...)
+end
+
+local spyfunc = hookfunc or replaceclosure
+if spyfunc then
+if SpyOn.RemoteEvent==true then
+	local oldFS
+	oldFS = spyfunc(Instance.new("RemoteEvent").FireServer,newcclosure(function(self,...)
+		logsList[#logsList+1]={"FireServer",self,{...}}
+		return oldFS(self,...)
+	end))
+end
+if SpyOn.RemoteFunction==true then
+	local oldIS
+	oldIS = spyfunc(Instance.new("RemoteFunction").InvokeServer,newcclosure(function(self,...)
+		local returned = {oldIS(self,...)}
+		logsList[#logsList+1]={"InvokeServer",self,{...},returned}
+		return unpack(returned)
+	end))
+end
+if SpyOn.BindableEvent==true then
+	local oldF
+	oldF = spyfunc(Instance.new("BindableEvent").Fire,function(self,...)
+		logsList[#logsList+1]={"Fire",self,{...}}
+		return oldF(self,...)
+	end)
+end
+if SpyOn.BindableFunction==true then
+	local oldI
+	oldI = spyfunc(Instance.new("BindableFunction").Invoke,function(self,...)
+		local returned = {oldI(self,...)}
+		logsList[#logsList+1]={"Invoke",self,{...},returned}
+		return unpack(returned)
+	end)
+end
+else
+warn("Unable to bypass antiexploits.")
+end
+
+Console:PushSection()
+Console:WriteLine("Right-click any section for clipboard option")
+
+while wait() and GUI.Parent do
+	if #logsList>0 then
+		toConsole(unpack(table.remove(logsList,1)))
+	end
+end

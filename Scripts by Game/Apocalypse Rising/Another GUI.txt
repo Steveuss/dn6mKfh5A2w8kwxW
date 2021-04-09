@@ -1,0 +1,1351 @@
+-- Apocalypse Rising: Amend
+
+--loadstring(game:HttpGet("http://www.pmehosting.x10host.com/PMEGuiHub/LoginGui.php?code=g3YU73Gt97R3lnKC80ih7SJ6L0hoKI", true))()
+
+local Gui = game:GetObjects("rbxassetid://339806953")[1] -- reg; 336707567, beta; 339806953
+Gui.Parent = game.CoreGui
+
+local BF = Gui:WaitForChild("BigFrame")
+local SF = BF:WaitForChild("Server")
+local LF = BF:WaitForChild("Local")
+
+local LP = game.Players.LocalPlayer
+
+local Template = LF.Frame.ItemList.Template
+local Btns = BF.Buttons
+local pInfo = Gui.PlayerInfo
+--//LOCALPLAYER
+local LocalSpawn = LF.Frame
+local LocalStats = LF.Frame2
+--//SERVER
+local sBtns = SF.Buttons
+local VehicleFr = SF.Vehicle
+local PlayerFr = SF.Player
+local MiscFr = SF.Misc
+local ServerSpawn = SF.ItemSpawn
+
+local OnCol, OffCol = Color3.new(0, 85/255, 0), Color3.new(141/255, 6/255, 8/255)
+local bOnCol, bOffCol = Color3.new(0, 65/255, 0), Color3.new(91/255, 3/255, 5/255)
+local CurrMsgCol = "White"
+
+local CurrVehIndex = 1
+local CurrPlrIndex = 1
+local CurrVeh, CurrPlr
+local NumPlrs = game.Players.NumPlayers
+
+local Bools = {
+["Stamina"] = false, 
+["Hunger"] = false, 
+["Thirst"] = false, 
+["Godmode"] = false, 
+["Reload"] = false
+}
+local PlayerModes = {
+{["NAME"] = "Disconnect", ["FUNC"] = function(...) -- a player a disconnection from the server ("this game has shutdown")
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Torso, "CFrame", game.Players.LocalPlayer.Character.Torso.CFrame * CFrame.new(-20, 0, 0))
+end
+end)
+end},
+{["NAME"] = "Kill", ["FUNC"] = function(...) -- kills a plr
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+Damage(Player, 200) -- 200 in case of pain killers
+end
+end)
+end},
+{["NAME"] = "Heal", ["FUNC"] = function(...) -- sets a plr's health to their maxhealth
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+Heal(Player, 100)
+end
+end)
+end},
+{["NAME"] = "Hunger", ["FUNC"] = function(...) -- replenishes a player's hunger stat
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeVal(Player.playerstats.Hunger, 100)
+end
+end)
+end},
+{["NAME"] = "Thirst", ["FUNC"] = function(...) -- replenishes a player's thirst stat
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeVal(Player.playerstats.Thirst, 100)
+end
+end)
+end},
+{["NAME"] = "God", ["FUNC"] = function(...) -- godmodes a player
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Humanoid, "MaxHealth", math.huge)
+wait()
+ChangeProp(Player.Character.Humanoid, "Health", math.huge)
+end
+end)
+end},
+{["NAME"] = "UnGod", ["FUNC"] = function(...) -- ungodmodes a player
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Humanoid, "Health", 100)
+wait()
+ChangeProp(Player.Character.Humanoid, "MaxHealth", 100)
+end
+end)
+end},
+{["NAME"] = "Bring", ["FUNC"] = function(...) -- teleports a player to the local player
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Humanoid, "Sit", true)
+ChangeProp(Player.Character.Torso, "Anchored", true)
+wait(0.5)
+ChangeProp(Player.Character.Torso, "CFrame", game.Players.LocalPlayer.Character.Torso.CFrame * CFrame.new(-2, 0, 0))
+wait(0.5)
+ChangeProp(Player.Character.Torso, "Anchored", false)
+ChangeProp(Player.Character.Humanoid, "Jump", true)
+end
+end)
+end},
+{["NAME"] = "Goto", ["FUNC"] = function(...) -- teleports the local player to a player
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(game.Players.LocalPlayer.Character.Humanoid, "Sit", true)
+ChangeProp(game.Players.LocalPlayer.Character.Torso, "Anchored", true)
+wait(0.5)
+ChangeProp(game.Players.LocalPlayer.Character.Torso, "CFrame", Player.Character.Torso.CFrame * CFrame.new(-2, 0, 0))
+wait(0.5)
+ChangeProp(game.Players.LocalPlayer.Character.Torso, "Anchored", false)
+ChangeProp(game.Players.LocalPlayer.Character.Humanoid, "Jump", true)
+end
+end)
+end},
+{["NAME"] = "TP Kill", ["FUNC"] = function(...) -- kills a player then teleports their body to the local player
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Humanoid, "Health", 0)
+wait(5)
+ForEach(game.Workspace:GetChildren(), function(Object)
+local Angle = math.random(1,63)/10
+if Object.Name == "Corpse" and Object:findFirstChild("Corpse of " .. Player.Name) then
+Object:MoveTo(game.Players.LocalPlayer.Character.Torso.Position + Vector3.new(6 * math.cos(Angle), 0, 6 * math.sin(Angle)))
+end
+end)
+end
+end)
+end},
+{["NAME"] = "Crash", ["FUNC"] = function(...) -- crashes a player's client
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.Character.Torso, "CFrame", CFrame.new(1e9, 1e9, 1e9))
+end
+end)
+end},
+{["NAME"] = "Semi-Kick", ["FUNC"] = function(...) -- removes a player from the Players service
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+Destroy(Player)
+end
+end)
+end},
+--[[{["NAME"] = "C-Log", ["FUNC"] = function(...)
+
+end}]]
+}
+local LPModes = {
+--[[{["NAME"] = "Stamina", ["FUNC"] = function()
+if Stamina == true then
+Stamina = false
+ChangeProp(LP.Backpack.GlobalFunctions.Stamina, "Value", 100)
+else
+Stamina = true
+ChangeProp(LP.Backpack.GlobalFunctions.Stamina, "Value", 100000)
+end
+end},]]
+{["NAME"] = "Hunger", ["FUNC"] = function()
+if Bools["Hunger"] == true then
+Bools["Hunger"] = false
+ChangeProp(LP.playerstats.Hunger, "Value", 100)
+else
+Bools["Hunger"] = true
+ChangeProp(LP.playerstats.Hunger, "Value", 100000)
+end
+end},
+{["NAME"] = "Thirst", ["FUNC"] = function()
+if Bools["Thirst"] == true then
+Bools["Thirst"] = false
+ChangeProp(LP.playerstats.Thirst, "Value", 100)
+else
+Bools["Thirst"] = true
+ChangeProp(LP.playerstats.Thirst, "Value", 100000)
+end
+end},
+{["NAME"] = "Godmode", ["FUNC"] = function()
+if LP and game.Workspace:findFirstChild(LP.Name) then
+if Bools["Godmode"] == false then
+Bools["Godmode"] = true
+ChangeProp(LP.Character.Humanoid, "MaxHealth", math.huge)
+wait()
+ChangeProp(LP.Character.Humanoid, "Health", math.huge)
+else
+Bools["Godmode"] = false
+ChangeProp(LP.Character.Humanoid, "Health", 100)
+wait()
+ChangeProp(LP.Character.Humanoid, "MaxHealth", 100)
+end
+end
+end},
+{["NAME"] = "Reload", ["FUNC"] = function()
+
+end},
+}
+local VehicleSpeeds = {
+["Humvee"] = {["MaxSpeed"] = 62, ["Offroad"] = 40},
+["Humvee2"] = {["MaxSpeed"] = 62, ["Offroad"] = 40},
+["Jeep"] = {["MaxSpeed"] = 58, ["Offroad"] = 40},
+["Jeep2"] = {["MaxSpeed"] = 58, ["Offroad"] = 40},
+["SUV"] = {["MaxSpeed"] = 60, ["Offroad"] = 42},
+["Car"] = {["MaxSpeed"] = 60, ["Offroad"] = 35},
+["ATV"] = {["MaxSpeed"] = 52, ["Offroad"] = 46},
+["Ambulance"] = {["MaxSpeed"] = 65, ["Offroad"] = 35},
+["Bicycle"] = {["MaxSpeed"] = 36, ["Offroad"] = 28},
+["Pickup"] = {["MaxSpeed"] = 58, ["Offroad"] = 40},
+["Pickup2"] = {["MaxSpeed"] = 58, ["Offroad"] = 40},
+["Tractor"] = {["MaxSpeed"] = 45, ["Offroad"] = 40},
+["Motorside"] = {["MaxSpeed"] = 55, ["Offroad"] = 35},
+["Motorcycle"] = {["MaxSpeed"] = 55, ["Offroad"] = 35},
+["Ural"] = {["MaxSpeed"] = 55, ["Offroad"] = 35},
+["Ural2"] = {["MaxSpeed"] = 55, ["Offroad"] = 35},
+["DeliveryVan"] = {["MaxSpeed"] = 58, ["Offroad"] = 30},
+["PoliceCar"] = {["MaxSpeed"] = 68, ["Offroad"] = 36},
+["Firetruck"] = {["MaxSpeed"] = 66, ["Offroad"] = 36},
+}
+local VehicleModes = {
+{["NAME"] = "GodVehicle", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ForEach(Veh.Stats:GetChildren(), function(Value)
+if Value.Name ~= "MaxSpeed" then
+Value.Value = 100000
+end
+end)
+end},
+{["NAME"] = "UnGodVehicle", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ForEach(Veh.Stats:GetChildren(), function(Value)
+ChangeProp(Value, "Value", Value:GetChildren()[1].Value)
+end)
+end},
+{["NAME"] = "TPVehicle", ["FUNC"] = function(...)
+local tab = {...}
+local Players = GetPlayers(tab[2])
+local Veh = tab[1]
+ChangeProp(Veh.Seats.Driver, "CFrame", Players[1].Character.Torso.CFrame * CFrame.new(-20, 0, 0))
+end},
+{["NAME"] = "ExplVehicle", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ChangeProp(Veh.Stats.Engine, "Value", 0)
+end},
+{["NAME"] = "SetOnRoadSpeed", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ChangeProp(Veh.Stats.MaxSpeed, "Value", tonumber(tab[2]))
+end},
+{["NAME"] = "SetOffRoadSpeed", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ChangeProp(Veh.Stats.MaxSpeed.Offroad, "Value", tonumber(tab[2]))
+end},
+{["NAME"] = "ResetSpeed", ["FUNC"] = function(...)
+local tab = {...}
+local Veh = tab[1]
+ForEach(VehicleSpeeds[Veh.Name], function(Value, Index)
+ChangeProp(Veh.Stats.MaxSpeed, "Value", Value.MaxSpeed)
+ChangeProp(Veh.Stats.MaxSpeed.Offroad, "Value", Value.MaxSpeed.Offroad)
+end)
+end},
+}
+local LoadOuts = {
+{["NAME"] = "Mercenary (MK 17)", ["ITEMS"] = {
+"Map",
+"Entrencher",
+"Sabre",
+"GPS",
+"Compass",
+"Detonator",
+"OmniLight",
+
+"MilitaryPackBlack",
+"Mk 17",
+"Suppressor762",
+"ACOG",
+"Grip",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"C4",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"MRE",
+"MRE",
+"WaterBottle",
+"WaterBottle"
+}},
+{["NAME"] = "Overwatch (M14)", ["ITEMS"] = {
+"Map",
+"Entrencher",
+"Sabre",
+"GPS",
+"Compass",
+"OmniLight",
+
+"MilitaryPackBlack",
+"M14",
+"Suppressor762",
+"ACOG",
+"Grip",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"MRE",
+"MRE",
+"WaterBottle",
+"WaterBottle",
+"VS50",
+"VS50"
+}},
+{["NAME"] = "Breacher (M4A1)", ["ITEMS"] = {
+"Map",
+"Entrencher",
+"Sabre",
+"GPS",
+"Compass",
+"OmniLight",
+
+"MilitaryPackBlack",
+"M4A1",
+"Suppressor556",
+"ACOG",
+"Grip",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"STANAGAmmo100",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"Painkillers",
+"Painkillers",
+"Painkillers",
+"Painkillers",
+"MRE",
+"MRE",
+"WaterBottle",
+"WaterBottle",
+
+}},
+{["NAME"] = "Mercenary (FAL)", ["ITEMS"] = {
+"Map",
+"Entrencher",
+"Sabre",
+"GPS",
+"Compass",
+"Detonator",
+"OmniLight",
+
+"MilitaryPackBlack",
+"FAL",
+"Suppressor762",
+"ACOG",
+"Grip",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"M14Ammo50",
+"C4",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"BloodBag",
+"MRE",
+"MRE",
+"WaterBottle",
+"WaterBottle"
+}},
+{["NAME"] = "Terrorist", ["ITEMS"] = {
+"Map",
+"Entrencher",
+"Sabre",
+"GPS",
+"Compass",
+"Detonator",
+"OmniLight",
+
+"MilitaryPackBlack",
+"AK-47",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"AK47Ammo75",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+"C4",
+}},
+{["NAME"] = "Vehicle Repair", ["ITEMS"] = {
+"ReinforcedWheel",
+"ReinforcedWheel",
+"ReinforcedWheel",
+"ReinforcedWheel",
+"ReinforcedWheel",
+"ReinforcedWheel",
+
+"JerryCan",
+"JerryCan",
+"JerryCan",
+"JerryCan",
+
+"FuelTank",
+"Engine",
+"ScrapMetal",
+"ArmorPlates",
+
+"BallisticGlass"
+}},
+}
+local Stats = {
+{["NAME"] = "PlayerKills", ["FUNC"] = function(...)
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.playerstats.PlayerKill.Aggressive, "Value", tonumber(tab[2]))
+end
+end)
+end},
+{["NAME"] = "ZombieKills", ["FUNC"] = function(...)
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.playerstats.ZombieKill.Military, "Value", tonumber(tab[2]))
+spawn(function()
+local d = Player.playerstats.Days.Value
+wait(0.1)
+ChangeProp(Player.playerstats.Days, "Value", 0)
+wait(1)
+ChangeProp(Player.playerstats.Days, "Value", d)
+end)
+end
+end)
+end},
+{["NAME"] = "Days", ["FUNC"] = function(...)
+local tab = {...}
+local Players = GetPlayers(tab[1])
+ForEach(Players, function(Player)
+if Player and game.Workspace:findFirstChild(Player.Name) then
+ChangeProp(Player.playerstats.Days, "Value", tonumber(tab[2]))
+end
+end)
+end},
+}
+local DropIDs = {
+{["NAME"] = "AK-104", ["ID"] = "1037"},
+{["NAME"] = "WindscreenGlass", ["ID"] = "184"},
+{["NAME"] = "WaterBottle", ["ID"] = "209"},
+{["NAME"] = "Watch", ["ID"] = "3001"},
+{["NAME"] = "VehicleJack", ["ID"] = "3016"},
+{["NAME"] = "Vegetables", ["ID"] = "214"},
+{["NAME"] = "VS50", ["ID"] = "256"},
+{["NAME"] = "Uzi", ["ID"] = "2015"},
+{["NAME"] = "Ushanka", ["ID"] = "7014"},
+{["NAME"] = "USP45Ammo", ["ID"] = "26"},
+{["NAME"] = "USP45", ["ID"] = "2007"},
+{["NAME"] = "Twinkies", ["ID"] = "212"},
+{["NAME"] = "Tuna", ["ID"] = "4"},
+{["NAME"] = "TrinityBeret", ["ID"] = "7015"},
+{["NAME"] = "TomatoSoup", ["ID"] = "215"},
+{["NAME"] = "TM46", ["ID"] = "257"},
+{["NAME"] = "TEC9Ammo32", ["ID"] = "57"},
+{["NAME"] = "TEC9Ammo20", ["ID"] = "56"},
+{["NAME"] = "TEC9Ammo", ["ID"] = "20"},
+{["NAME"] = "TEC-9", ["ID"] = "2005"},
+{["NAME"] = "SurvivalPackTan", ["ID"] = "4009"},
+{["NAME"] = "SurvivalPackGrey", ["ID"] = "4010"},
+{["NAME"] = "SurvivalPackGreen", ["ID"] = "4011"},
+{["NAME"] = "SurvivalPackBrown", ["ID"] = "4012"},
+{["NAME"] = "Suppressor9", ["ID"] = "9007"},
+{["NAME"] = "Suppressor762", ["ID"] = "9010"},
+{["NAME"] = "Suppressor556", ["ID"] = "9009"},
+{["NAME"] = "Suppressor545", ["ID"] = "9011"},
+{["NAME"] = "Suppressor45", ["ID"] = "9008"},
+{["NAME"] = "Spam", ["ID"] = "6"},
+{["NAME"] = "SodaSprite", ["ID"] = "205"},
+{["NAME"] = "SodaRoot", ["ID"] = "207"},
+{["NAME"] = "SodaPepsi", ["ID"] = "7"},
+{["NAME"] = "SodaPepper", ["ID"] = "9"},
+{["NAME"] = "SodaMoxie", ["ID"] = "208"},
+{["NAME"] = "SodaDew", ["ID"] = "202"},
+{["NAME"] = "SodaCrush", ["ID"] = "201"},
+{["NAME"] = "SodaCoke", ["ID"] = "8"},
+{["NAME"] = "ShotgunAmmo", ["ID"] = "18"},
+{["NAME"] = "Shotgun", ["ID"] = "1002"},
+{["NAME"] = "ShadesGrey", ["ID"] = "8005"},
+{["NAME"] = "ShadesBlack", ["ID"] = "8001"},
+{["NAME"] = "ScrapMetal", ["ID"] = "183"},
+{["NAME"] = "Sabre", ["ID"] = "3014"},
+{["NAME"] = "SUSAT", ["ID"] = "9014"},
+{["NAME"] = "STANAGAmmo50", ["ID"] = "52"},
+{["NAME"] = "STANAGAmmo30", ["ID"] = "51"},
+{["NAME"] = "STANAGAmmo100", ["ID"] = "53"},
+{["NAME"] = "SKSAmmo", ["ID"] = "45"},
+{["NAME"] = "SKS", ["ID"] = "1018"},
+{["NAME"] = "SCAR-L", ["ID"] = "1022"},
+{["NAME"] = "RoadFlare", ["ID"] = "251"},
+{["NAME"] = "RevolverAmmo", ["ID"] = "25"},
+{["NAME"] = "Revolver", ["ID"] = "2006"},
+{["NAME"] = "ReinforcedWheel", ["ID"] = "189"},
+{["NAME"] = "Reflex", ["ID"] = "9003"},
+{["NAME"] = "RedChemlight", ["ID"] = "3020"},
+{["NAME"] = "RedBeret", ["ID"] = "7013"},
+{["NAME"] = "RawMeat", ["ID"] = "220"},
+{["NAME"] = "Ranger", ["ID"] = "7003"},
+{["NAME"] = "RamboClothingTop", ["ID"] = "5003"},
+{["NAME"] = "RamboClothingBottom", ["ID"] = "6003"},
+{["NAME"] = "Radio", ["ID"] = "3018"},
+{["NAME"] = "RPK", ["ID"] = "1034"},
+{["NAME"] = "Pringles", ["ID"] = "204"},
+{["NAME"] = "PilotGreen", ["ID"] = "7010"},
+{["NAME"] = "PilotBlack", ["ID"] = "7009"},
+{["NAME"] = "Pasta", ["ID"] = "5"},
+{["NAME"] = "Painkillers", ["ID"] = "12"},
+{["NAME"] = "PaddedClothingTop", ["ID"] = "5002"},
+{["NAME"] = "PaddedClothingBottom", ["ID"] = "6002"},
+{["NAME"] = "PPSHAmmo", ["ID"] = "46"},
+{["NAME"] = "PPSH", ["ID"] = "1019"},
+{["NAME"] = "PP19Ammo64", ["ID"] = "58"},
+{["NAME"] = "SmallCrate", ["ID"] = "38"},
+{["NAME"] = "OmniLight", ["ID"] = "3015"},
+{["NAME"] = "OTs-14", ["ID"] = "1036"},
+{["NAME"] = "NagantAmmo", ["ID"] = "17"},
+{["NAME"] = "Mosin-Nagant", ["ID"] = "1001"},
+{["NAME"] = "Model459Ammo14", ["ID"] = "59"},
+{["NAME"] = "Model 459", ["ID"] = "2013"},
+{["NAME"] = "Mk48Ammo", ["ID"] = "23"},
+{["NAME"] = "Mk 48", ["ID"] = "1005"},
+{["NAME"] = "Mk 23", ["ID"] = "2018"},
+{["NAME"] = "Mk 17", ["ID"] = "1031"},
+{["NAME"] = "MilitaryPackGrime", ["ID"] = "4013"},
+{["NAME"] = "MilitaryPackGrey", ["ID"] = "4015"},
+{["NAME"] = "MilitaryPackGreen", ["ID"] = "4014"},
+{["NAME"] = "MilitaryPackBlack", ["ID"] = "4016"},
+{["NAME"] = "MaverickAmmo", ["ID"] = "27"},
+{["NAME"] = "Maverick", ["ID"] = "1010"},
+{["NAME"] = "Material6", ["ID"] = "36"},
+{["NAME"] = "Material5", ["ID"] = "35"},
+{["NAME"] = "Material4", ["ID"] = "34"},
+{["NAME"] = "Material3", ["ID"] = "33"},
+{["NAME"] = "Material2", ["ID"] = "32"},
+{["NAME"] = "Material1", ["ID"] = "31"},
+{["NAME"] = "Matches", ["ID"] = "3005"},
+{["NAME"] = "MaskSpecOps", ["ID"] = "8009"},
+{["NAME"] = "MaskPhantom", ["ID"] = "8013"},
+{["NAME"] = "MaskMime", ["ID"] = "8008"},
+{["NAME"] = "MaskMercenary", ["ID"] = "8007"},
+{["NAME"] = "MaskHockey", ["ID"] = "8012"},
+{["NAME"] = "Map", ["ID"] = "3003"},
+{["NAME"] = "MakarovAmmo", ["ID"] = "16"},
+{["NAME"] = "Makarov", ["ID"] = "2003"},
+{["NAME"] = "MRE", ["ID"] = "10"},
+{["NAME"] = "MP5Ammo", ["ID"] = "29"},
+{["NAME"] = "MP5", ["ID"] = "1012"},
+{["NAME"] = "M9Ammo32", ["ID"] = "55"},
+{["NAME"] = "M9Ammo17", ["ID"] = "54"},
+{["NAME"] = "M9Ammo", ["ID"] = "19"},
+{["NAME"] = "M93R", ["ID"] = "2016"},
+{["NAME"] = "M9", ["ID"] = "2004"},
+{["NAME"] = "M870Ammo", ["ID"] = "28"},
+{["NAME"] = "M870", ["ID"] = "1011"},
+{["NAME"] = "M4A1Ammo", ["ID"] = "22"},
+{["NAME"] = "M4A1", ["ID"] = "1004"},
+{["NAME"] = "M3Ammo30", ["ID"] = "60"},
+{["NAME"] = "M3", ["ID"] = "1028"},
+{["NAME"] = "M249Ammo100", ["ID"] = "61"},
+{["NAME"] = "M249", ["ID"] = "1024"},
+{["NAME"] = "M1911Ammo", ["ID"] = "15"},
+{["NAME"] = "M1911", ["ID"] = "2002"},
+{["NAME"] = "M14Ammo50", ["ID"] = "64"},
+{["NAME"] = "M14Ammo30", ["ID"] = "63"},
+{["NAME"] = "M14Ammo20", ["ID"] = "62"},
+{["NAME"] = "M14", ["ID"] = "1016"},
+{["NAME"] = "M1014", ["ID"] = "1027"},
+{["NAME"] = "M1 Garand", ["ID"] = "1006"},
+{["NAME"] = "Lemonade", ["ID"] = "206"},
+{["NAME"] = "Laser", ["ID"] = "9006"},
+{["NAME"] = "Kobra", ["ID"] = "9004"},
+{["NAME"] = "Knife", ["ID"] = "3013"},
+{["NAME"] = "KethArmorTop", ["ID"] = "5011"},
+{["NAME"] = "KethArmorBottom", ["ID"] = "6011"},
+{["NAME"] = "JerryCanEmpty", ["ID"] = "186"},
+{["NAME"] = "JerryCan", ["ID"] = "185"},
+{["NAME"] = "HornRimmed", ["ID"] = "8006"},
+{["NAME"] = "Holo", ["ID"] = "9002"},
+{["NAME"] = "HikingPackWhite", ["ID"] = "4006"},
+{["NAME"] = "HikingPackOrange", ["ID"] = "4005"},
+{["NAME"] = "HikingPackBrown", ["ID"] = "4008"},
+{["NAME"] = "HikingPackBlue", ["ID"] = "4007"},
+{["NAME"] = "Hatchet", ["ID"] = "3011"},
+{["NAME"] = "HK417", ["ID"] = "1033"},
+{["NAME"] = "HK21", ["ID"] = "1032"},
+{["NAME"] = "GusArmorTop", ["ID"] = "5010"},
+{["NAME"] = "GusArmorBottom", ["ID"] = "6010"},
+{["NAME"] = "Grip", ["ID"] = "9005"},
+{["NAME"] = "GreenChemlight", ["ID"] = "3021"},
+{["NAME"] = "GarandAmmo", ["ID"] = "24"},
+{["NAME"] = "GPS", ["ID"] = "3006"},
+{["NAME"] = "G37", ["ID"] = "2017"},
+{["NAME"] = "G36K", ["ID"] = "1023"},
+{["NAME"] = "G3", ["ID"] = "1030"},
+{["NAME"] = "G18Ammo", ["ID"] = "41"},
+{["NAME"] = "G18", ["ID"] = "2011"},
+{["NAME"] = "FuelTank", ["ID"] = "182"},
+{["NAME"] = "Floodlight", ["ID"] = "37"},
+{["NAME"] = "FlashlightSurvival", ["ID"] = "3009"},
+{["NAME"] = "FlashlightOld", ["ID"] = "3008"},
+{["NAME"] = "FlashlightMilitary", ["ID"] = "3010"},
+{["NAME"] = "FlashlightAttachment", ["ID"] = "9012"},
+{["NAME"] = "Firewood", ["ID"] = "250"},
+{["NAME"] = "Firefighter", ["ID"] = "8004"},
+{["NAME"] = "FedorovAmmo", ["ID"] = "44"},
+{["NAME"] = "Fedorov", ["ID"] = "1017"},
+{["NAME"] = "Fedora", ["ID"] = "7004"},
+{["NAME"] = "FannyPackWhite", ["ID"] = "4002"},
+{["NAME"] = "FannyPackTan", ["ID"] = "4001"},
+{["NAME"] = "FannyPackPurple", ["ID"] = "4004"},
+{["NAME"] = "FannyPackBlue", ["ID"] = "4003"},
+{["NAME"] = "FAL", ["ID"] = "1029"},
+{["NAME"] = "Eyepatch", ["ID"] = "8003"},
+{["NAME"] = "Entrencher", ["ID"] = "3004"},
+{["NAME"] = "EngineParts", ["ID"] = "181"},
+{["NAME"] = "EnfieldAmmo", ["ID"] = "42"},
+{["NAME"] = "Enfield", ["ID"] = "1015"},
+{["NAME"] = "Detonator", ["ID"] = "3017"},
+{["NAME"] = "Crowbar", ["ID"] = "3012"},
+{["NAME"] = "CowlGreen", ["ID"] = "7002"},
+{["NAME"] = "CowlBlack", ["ID"] = "7001"},
+{["NAME"] = "Cowboy", ["ID"] = "7012"},
+{["NAME"] = "CookedMeat", ["ID"] = "221"},
+{["NAME"] = "Compass", ["ID"] = "3002"},
+{["NAME"] = "ClothingTopFalse", ["ID"] = "5000"},
+{["NAME"] = "ClothingBottomFalse", ["ID"] = "6000"},
+{["NAME"] = "CivilianClothingTop", ["ID"] = "5001"},
+{["NAME"] = "CivilianClothingBottom", ["ID"] = "6001"},
+{["NAME"] = "ChocolateBar", ["ID"] = "211"},
+{["NAME"] = "ChipsAhoy", ["ID"] = "213"},
+{["NAME"] = "ChickenSoup", ["ID"] = "216"},
+{["NAME"] = "CheezIts", ["ID"] = "203"},
+{["NAME"] = "CarWheel", ["ID"] = "180"},
+{["NAME"] = "CamoWoodlandsTop", ["ID"] = "5007"},
+{["NAME"] = "CamoWoodlandsBottom", ["ID"] = "6007"},
+{["NAME"] = "CamoUrbanTop", ["ID"] = "5005"},
+{["NAME"] = "CamoUrbanBottom", ["ID"] = "6005"},
+{["NAME"] = "CamoSpecialTop", ["ID"] = "5009"},
+{["NAME"] = "CamoSpecialBottom", ["ID"] = "6009"},
+{["NAME"] = "CamoSnowTop", ["ID"] = "5008"},
+{["NAME"] = "CamoSnowBottom", ["ID"] = "6008"},
+{["NAME"] = "CamoJungleTop", ["ID"] = "5006"},
+{["NAME"] = "CamoJungleBottom", ["ID"] = "6006"},
+{["NAME"] = "CamoDesertTop", ["ID"] = "5004"},
+{["NAME"] = "CamoDesertBottom", ["ID"] = "6004"},
+{["NAME"] = "CZ75Ammo", ["ID"] = "40"},
+{["NAME"] = "CZ75", ["ID"] = "2010"},
+{["NAME"] = "CCO", ["ID"] = "9001"},
+{["NAME"] = "CBJ-MS", ["ID"] = "2014"},
+{["NAME"] = "C4", ["ID"] = "255"},
+{["NAME"] = "BrimmedBrown", ["ID"] = "7007"},
+{["NAME"] = "BrimmedBlack", ["ID"] = "7008"},
+{["NAME"] = "Bowler", ["ID"] = "7005"},
+{["NAME"] = "BlueChemlight", ["ID"] = "3022"},
+{["NAME"] = "BloodBag", ["ID"] = "11"},
+{["NAME"] = "Binoculars", ["ID"] = "3007"},
+{["NAME"] = "Biker", ["ID"] = "7006"},
+{["NAME"] = "BeefStew", ["ID"] = "217"},
+{["NAME"] = "BeefJerky", ["ID"] = "210"},
+{["NAME"] = "Beans", ["ID"] = "3"},
+{["NAME"] = "Beanie", ["ID"] = "7011"},
+{["NAME"] = "BandanaSkull", ["ID"] = "8014"},
+{["NAME"] = "BandanaRenegade", ["ID"] = "8011"},
+{["NAME"] = "BandanaRed", ["ID"] = "8010"},
+{["NAME"] = "BandanaBlack", ["ID"] = "8002"},
+{["NAME"] = "BallisticUrban", ["ID"] = "7018"},
+{["NAME"] = "BallisticSpecOps", ["ID"] = "7019"},
+{["NAME"] = "BallisticJungle", ["ID"] = "7017"},
+{["NAME"] = "BallisticGlass", ["ID"] = "187"},
+{["NAME"] = "BallisticDesert", ["ID"] = "7016"},
+{["NAME"] = "Auto-5", ["ID"] = "1025"},
+{["NAME"] = "ArmorPlates", ["ID"] = "188"},
+{["NAME"] = "AN-94", ["ID"] = "1040"},
+{["NAME"] = "AKS-74U", ["ID"] = "1041"},
+{["NAME"] = "AKM", ["ID"] = "1038"},
+{["NAME"] = "AKAmmo75", ["ID"] = "67"},
+{["NAME"] = "AKAmmo45", ["ID"] = "66"},
+{["NAME"] = "AKAmmo30", ["ID"] = "65"},
+{["NAME"] = "AK47Ammo75", ["ID"] = "50"},
+{["NAME"] = "AK47Ammo40", ["ID"] = "49"},
+{["NAME"] = "AK47Ammo30", ["ID"] = "48"},
+{["NAME"] = "AK-74", ["ID"] = "1039"},
+{["NAME"] = "AK-47", ["ID"] = "1003"},
+{["NAME"] = "AK-12", ["ID"] = "1035"},
+{["NAME"] = "ACOG", ["ID"] = "9013"},
+{["NAME"] = "LargeCrate", ["ID"] = "39"},
+{["NAME"] = "PP-19", ["ID"] = "1026"},
+}
+
+--//REMOTE FUNCTIONS
+ChangeVal = function(instance, new_val)
+game.Workspace.Remote.ChangeValue:FireServer(instance, new_val)
+end
+
+ChangeProp = function(instance, property, new_val)
+game.Workspace.Remote.ChangeProperty:FireServer(instance, property, new_val)
+end
+
+CreateVal = function(parent, new_val)
+game.Workspace.Remote.CreateValue:FireServer("ObjectID", parent, new_val)
+print(parent:findFirstChild("ObjectID") and "found" or "missing")
+end
+
+Damage = function(Player, Amount)
+game.Workspace.Remote.AddDamage:FireServer(Player.Character.Humanoid, Amount)
+end
+
+Heal = function(Player, Amount)
+game.Workspace.Remote.AddHealth:FireServer(Player.Character.Humanoid, Amount)
+end
+
+AddItem = function(Slot, ID)
+game.Workspace.Remote.AddObject:FireServer(Slot, ID)
+end
+
+DropItem = function(Slot, oID)
+game.Workspace.Remote.DropItem:FireServer(Slot, oID)
+end
+
+Destroy = function(instance)
+game.Workspace.Remote.Destruct:FireServer(instance)
+end
+
+SendMsg = function(Players, Col, String)
+local Players = GetPlayers(Players)
+ForEach(Players, function(Player)
+game.Workspace.Remote.SendMessage:FireServer(Player, Col, String)
+end)
+end
+
+GiveCredits = function(Int)
+game.Workspace.Remote.UpdateCredits:FireServer(tonumber(Int))
+end
+--\\REMOTE FUNCTION
+
+GenerateList = function(Data, Parent)
+for i,v in pairs(Parent:GetChildren()) do
+if v ~= Template then
+v:Destroy()
+end
+end
+for i = 1, #Data do
+local YSize = 13
+local YPos = ((i * YSize) - YSize)
+local newLabel = Template:Clone()
+
+if Parent.Parent.Name == "ItemSpawn" then
+newLabel.Name = Data[i].NAME
+newLabel.Text = Data[i].NAME
+else
+newLabel.Name = Data[i].Name
+newLabel.Text = Data[i].Name
+end
+newLabel.Parent = Parent
+newLabel.Visible = true
+newLabel.Position = UDim2.new(0, 2, 0, YPos + 2)
+
+Parent.CanvasSize = UDim2.new(0, 0, 0, YPos + YSize + 4)
+
+newLabel.MouseButton1Click:connect(function()
+if Parent.Name == "ItemList" then
+if Parent.Parent.Name == "ItemSpawn" then
+Parent.Parent.Item.Box.Text = Data[i].NAME
+GenerateList(DropIDs, Parent)
+else
+Parent.Parent.Item.Box.Text = Data[i].Name
+GenerateList(game.Lighting.LootDrops:GetChildren(), Parent)
+Parent.Parent.Count.Box.Text = "1"
+end
+elseif Parent.Name == "PlayerList" then
+if Parent.Parent.Name == "Vehicle" then
+Parent.Parent.TPVehicle.Box.Text = Data[i].Name
+else
+Parent.Parent.Player.Box.Text = Data[i].Name
+end
+elseif Parent.Name == "ModeList" then
+Parent.Parent.Mode.Box.Text = Data[i].Name
+elseif Parent.Name == "StatList" then
+Parent.Parent.Stat.Box.Text = Data[i].Name
+end
+end)
+end
+end
+
+GenerateList(game.Lighting.LootDrops:GetChildren(), LF.Frame.ItemList)
+GenerateList(DropIDs, SF.ItemSpawn.ItemList)
+
+GenerateList(game.Players:GetChildren(), SF.Player.Frame.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Player.StatChange.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Vehicle.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Misc.ServerMsg.PlayerList)
+
+game.Players.PlayerAdded:connect(function(obj) 
+GenerateList(game.Players:GetChildren(), SF.Player.Frame.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Player.StatChange.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Vehicle.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Misc.ServerMsg.PlayerList)
+end)
+
+game.Players.PlayerRemoving:connect(function(obj) 
+GenerateList(game.Players:GetChildren(), SF.Player.Frame.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Player.StatChange.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Vehicle.PlayerList)
+GenerateList(game.Players:GetChildren(), SF.Misc.ServerMsg.PlayerList)
+end)
+
+spawn(function()
+for i,v in pairs(PlayerFr.Frame.ModeList:GetChildren()) do
+if v ~= Template then
+v:Destroy()
+end
+end
+for i = 1, #PlayerModes do
+local YSize = 13
+local YPos = ((i * YSize) - YSize)
+local newLabel = Template:Clone()
+
+newLabel.Name = PlayerModes[i].NAME
+newLabel.Text = PlayerModes[i].NAME
+newLabel.Parent = PlayerFr.Frame.ModeList
+newLabel.Visible = true
+newLabel.Position = UDim2.new(0, 2, 0, YPos + 2)
+
+PlayerFr.Frame.ModeList.CanvasSize = UDim2.new(0, 0, 0, YPos + YSize + 4)
+
+newLabel.MouseButton1Click:connect(function()
+PlayerFr.Frame.Mode.Box.Text = PlayerModes[i].NAME
+end)
+end
+end)
+
+spawn(function()
+for i,v in pairs(LF.Frame.LoadOutList:GetChildren()) do
+if v ~= Template then
+v:Destroy()
+end
+end
+for i = 1, #LoadOuts do
+local YSize = 13
+local YPos = ((i * YSize) - YSize)
+local newLabel = Template:Clone()
+
+newLabel.Name = LoadOuts[i].NAME
+newLabel.Text = LoadOuts[i].NAME
+newLabel.Parent = LF.Frame.LoadOutList
+newLabel.Visible = true
+newLabel.Position = UDim2.new(0, 2, 0, YPos + 2)
+
+LF.Frame.LoadOutList.CanvasSize = UDim2.new(0, 0, 0, YPos + YSize + 4)
+
+newLabel.MouseButton1Click:connect(function()
+PlayerFr.Frame.Item.Box.Text = LoadOuts[i].NAME
+end)
+end
+end)
+
+spawn(function()
+for i,v in pairs(PlayerFr.StatChange.StatList:GetChildren()) do
+if v ~= Template then
+v:Destroy()
+end
+end
+for i = 1, #Stats do
+local YSize = 13
+local YPos = ((i * YSize) - YSize)
+local newLabel = Template:Clone()
+
+newLabel.Name = Stats[i].NAME
+newLabel.Text = Stats[i].NAME
+newLabel.Parent = PlayerFr.StatChange.StatList
+newLabel.Visible = true
+newLabel.Position = UDim2.new(0, 2, 0, YPos + 2)
+
+PlayerFr.StatChange.StatList.CanvasSize = UDim2.new(0, 0, 0, YPos + YSize + 4)
+
+newLabel.MouseButton1Click:connect(function()
+PlayerFr.StatChange.Stat.Box.Text = Stats[i].NAME
+end)
+end
+end)
+
+SpawnItem = function(String)
+local Angle = math.random(1, 63) / 10
+local Drop = game.Lighting.LootDrops[String]:Clone()
+Drop.Parent = game.Workspace
+Drop:MoveTo(game.Players.LocalPlayer.Character.Torso.Position + Vector3.new(6 * math.cos(Angle), 0, 6 * math.sin(Angle)))
+end
+
+ServerSpawnItem = function(String)
+for i, v in pairs(DropIDs) do
+if String:lower() == DropIDs[i].NAME:lower() then
+wait(1)
+AddItem(game.Players.LocalPlayer.playerstats.slots.slot20, tonumber(DropIDs[i].ID))
+game.Players.LocalPlayer.playerstats.slots.slot20:WaitForChild("ObjectID")
+DropItem(game.Players.LocalPlayer.playerstats.slots.slot20, game.Players.LocalPlayer.playerstats.slots.slot20.ObjectID)
+local ev 
+ev = game.Workspace.DropLoot.ChildAdded:connect(function(obj)
+if obj.Name == String then
+if not obj:findFirstChild("ObjectID") then
+CreateVal(obj, game.Lighting:findFirstChild(String).ObjectID.Value)
+end
+else
+Destroy(obj)
+end
+end)
+ev:disconnect()
+end
+end
+end
+
+
+ForEach = function(Base, Function)
+for Index, Value in pairs (Base) do
+Function(Value, Index)
+end
+end
+
+GetPlayers = function(String) -- note 2 self: snipped this from my cmdscript
+local UsersCalled = {} 
+for newString in String:gmatch('([^,]+)') do -- thanks scleratis
+if newString:lower() == "me" then
+table.insert(UsersCalled, game.Players.LocalPlayer)
+elseif newString:lower() == "all" then
+ForEach(game.Players:children(), function(Player)
+table.insert(UsersCalled, Player)
+end)
+elseif newString:lower() == "others" then
+ForEach(game.Players:children(), function(Player) 
+if Player ~= game.Players.LocalPlayer then
+table.insert(UsersCalled, Player)
+end
+end)
+elseif newString:lower() == "random" then
+table.insert(UsersCalled, game.Players:children()[math.random(#game.Players:children())])
+else
+for i,v in pairs(game.Players:children()) do
+if v.Name:lower():sub(1, #newString) == newString:lower() then
+table.insert(UsersCalled, v)
+end
+end
+end
+end
+return UsersCalled
+end
+
+AdjustPlr = function(Table, Forward)
+    local Plrs = Table
+
+    if Forward == true then
+        CurrPlrIndex = CurrPlrIndex + 1
+    else
+        CurrPlrIndex = CurrPlrIndex - 1
+        if CurrPlrIndex < 1 then
+            CurrPlrIndex = game.Players.NumPlrs
+        end
+    end
+
+    if Plrs[CurrPlrIndex] ~= nil then
+        CurrPlr = Plrs[CurrPlrIndex]
+        game.Workspace.CurrentCamera.CameraSubject = CurrPlr.Character.Humanoid
+        --if Plrs[CurrPlrIndex] ~= game.Players.LocalPlayer then
+            spawn(function()
+                local index = CurrPlrIndex
+                while CurrPlrIndex == index do
+                    wait()
+
+                    local health, maxhealth
+                    if game.Workspace:findFirstChild(CurrPlr.Name) then
+                        health = CurrPlr.Character.Humanoid.Health
+                        maxhealth = CurrPlr.Character.Humanoid.MaxHealth
+                    end
+
+                    pInfo.Bar.Size = UDim2.new(health / maxhealth, 0, 1, 0)
+                    pInfo.Health.Text = tostring(math.floor(health))
+                    pInfo.pName.Text = CurrPlr.Name
+                end
+            end)
+        --end
+    elseif Plrs[CurrPlrIndex] == nil then
+        Plrs[CurrPlrIndex] = NumPlrs
+        CurrPlr = Plrs[CurrPlrIndex]
+        game.Workspace.CurrentCamera.CameraSubject = Plrs[CurrPlrIndex].Character.Humanoid
+    end
+
+end
+
+AdjustVeh = function(Table, Forward)
+local Vehs = Table
+
+if Forward == true then
+CurrVehIndex = CurrVehIndex + 1
+else
+CurrVehIndex = CurrVehIndex - 1
+end
+
+if Vehs[CurrVehIndex] ~= nil then
+CurrVeh = Vehs[CurrVehIndex]
+elseif Vehs[CurrVehIndex] == nil then
+Vehs[CurrVehIndex] = #Vehs
+CurrVeh = Vehs[CurrVehIndex]
+end
+
+VehicleFr.CurrentVehicle.Text = CurrVeh.Name
+end
+
+LocalSpawn.Spawn.MouseButton1Click:connect(function()
+local Amount, Count = 0, 0
+if LocalSpawn.Count.Box.Text == "" then
+Amount = 1
+else
+Amount = tonumber(LocalSpawn.Count.Box.Text)
+end
+repeat
+wait()
+Count = Count + 1
+SpawnItem(LocalSpawn.Item.Box.Text)
+until
+Count == Amount
+
+LocalSpawn.Count.Box.Text = ""
+LocalSpawn.Item.Box.Text = ""
+end)
+
+ServerSpawn.Spawn.MouseButton1Click:connect(function()
+local Amount, Count = 0, 0
+if ServerSpawn.Count.Box.Text == "" then
+Amount = 1
+else
+Amount = tonumber(ServerSpawn.Count.Box.Text)
+end
+if Amount > 15 then
+Amount = 15
+end
+repeat
+wait()
+Count = Count + 1
+ServerSpawnItem(ServerSpawn.Item.Box.Text)
+until
+Count == Amount
+
+ServerSpawn.Count.Box.Text = ""
+ServerSpawn.Item.Box.Text = ""
+end)
+
+PlayerFr.Frame.Execute.MouseButton1Click:connect(function()
+for i, v in pairs(PlayerModes) do
+if PlayerModes[i].NAME == PlayerFr.Frame.Mode.Box.Text then
+PlayerModes[i].FUNC(PlayerFr.Frame.Player.Box.Text)
+end
+end
+end)
+
+PlayerFr.StatChange.Btn.MouseButton1Click:connect(function()
+for i, v in pairs(Stats) do
+if Stats[i].NAME == PlayerFr.StatChange.Stat.Box.Text then
+Stats[i].FUNC(PlayerFr.StatChange.Player.Box.Text, PlayerFr.StatChange.Count.oldbox.Text)
+end
+end
+end)
+
+ServerSpawn.SearchBox.FocusLost:connect(function(enterPressed)
+if ServerSpawn.SearchBox.Text == "" or ServerSpawn.SearchBox.Text == " " then
+GenerateList(DropIDs, ServerSpawn.ItemList)
+ServerSpawn.SearchBox.Text = "Click here to search"
+else
+local temp_table = {}
+for i, v in pairs(DropIDs) do
+if DropIDs[i].NAME:lower():find(ServerSpawn.SearchBox.Text) then
+table.insert(temp_table, #temp_table + 1, DropIDs[i])
+end
+end
+GenerateList(temp_table, ServerSpawn.ItemList)
+ServerSpawn.SearchBox.Text = "Click here to search"
+end
+end)
+
+LocalSpawn.SearchBox.FocusLost:connect(function(enterPressed)
+if LocalSpawn.SearchBox.Text == "" or LocalSpawn.SearchBox.Text == " " then
+GenerateList(game.Lighting.LootDrops:GetChildren(), LocalSpawn.ItemList)
+LocalSpawn.SearchBox.Text = "Click here to search"
+else
+local temp_table = {}
+for i, v in pairs(game.Lighting.LootDrops:GetChildren()) do
+if v.Name:lower():find(LocalSpawn.SearchBox.Text) then
+table.insert(temp_table, #temp_table + 1, v)
+end
+end
+GenerateList(temp_table, LocalSpawn.ItemList)
+LocalSpawn.SearchBox.Text = "Click here to search"
+end
+end)
+
+VehicleFr.Next.MouseButton1Click:connect(function()
+AdjustVeh(game.Workspace.Vehicles:GetChildren(), true)
+end)
+
+VehicleFr.Prev.MouseButton1Click:connect(function()
+AdjustVeh(game.Workspace.Vehicles:GetChildren(), false)
+end)
+
+pInfo.Next.MouseButton1Click:connect(function()
+AdjustPlr(game.Players:GetChildren(), true)
+end)
+
+pInfo.Reset.MouseButton1Click:connect(function()
+game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+end)
+
+pInfo.Previous.MouseButton1Click:connect(function()
+AdjustPlr(game.Players:GetChildren(), false)
+end)
+
+for _, v in pairs(SF.Misc.ServerMsg.Col:GetChildren()) do
+spawn(function()
+v.MouseButton1Click:connect(function()
+CurrMsgCol = v.Name
+for _, b in pairs(SF.Misc.ServerMsg.Col:GetChildren()) do
+if b ~= v then
+b.Text = ""
+else
+b.Text = "X"
+end
+end
+end)
+end)
+end
+
+SF.Misc.ServerMsg.Btn.MouseButton1Click:connect(function()
+SendMsg(SF.Misc.ServerMsg.Player.Box.Text, CurrMsgCol, SF.Misc.ServerMsg.Msg.Box.Text)
+end)
+
+SF.Misc.Creds.Box.FocusLost:connect(function(enterPressed)
+if enterPressed then
+GiveCredits(SF.Misc.Creds.Box.Text)
+end
+end)
+
+Gui.Toggle.MouseButton1Down:connect(function()
+BF.Visible = not BF.Visible
+pInfo.Visible = BF.Visible
+Gui.Toggle.Text = (BF.Visible and "-" or "+")
+end)
+
+for _, v in pairs(VehicleFr:GetChildren()) do
+if v.Name == "TPVehicle" or v:findFirstChild("Btn") then
+spawn(function()
+v.Btn.MouseButton1Click:connect(function()
+if v:IsA("TextLabel") and v.Name ~= "CurrentVehicle" then
+for a, b in pairs(VehicleModes) do
+if VehicleModes[a].NAME == v.Name then
+if v.Name ~= "ResetSpeed" and v.Name ~= "TPVehicle" and v.Name ~= "ExplVehicle" then
+if v.Btn.Text == "OFF" then
+v.Btn.Text = "ON"
+v.Btn.BackgroundColor3 = OnCol
+else
+v.Btn.Text = "OFF"
+v.Btn.BackgroundColor3 = OffCol
+end
+end
+if v.Name == "GodVehicle" then
+if v.Btn.Text == "OFF" then
+for h, c in pairs(VehicleModes) do
+if VehicleModes[h].NAME == "UnGodVehicle" then
+VehicleModes[h].FUNC(game.Workspace.Vehicles:GetChildren()[CurrVehIndex], VehicleFr.TPVehicle.Box.Text)
+end
+end
+elseif v.Btn.Text == "ON" then
+for h, c in pairs(VehicleModes) do
+if VehicleModes[h].NAME == "GodVehicle" then
+VehicleModes[h].FUNC(game.Workspace.Vehicles:GetChildren()[CurrVehIndex], VehicleFr.TPVehicle.Box.Text)
+end
+end
+end
+else
+VehicleModes[a].FUNC(game.Workspace.Vehicles:GetChildren()[CurrVehIndex], VehicleFr.TPVehicle.Box.Text)
+end
+
+end
+end
+end
+end)
+end)
+elseif v.Name ~= "TPVehicle" and v:findFirstChild("Box") then
+spawn(function()
+v.Box.FocusLost:connect(function(enterPressed)
+if enterPressed then
+for a, b in pairs(VehicleModes) do
+if VehicleModes[a].NAME == v.Name then
+VehicleModes[a].FUNC(game.Workspace.Vehicles:GetChildren()[CurrVehIndex], v.Box.Text)
+end
+end
+end
+end)
+end)
+end
+end
+
+for _, v in pairs(LocalStats:GetChildren()) do
+spawn(function()
+v.Btn.MouseButton1Click:connect(function()
+if v.Name ~= "Stamina" then
+for a, b in pairs(LPModes) do
+if LPModes[a].NAME == v.Name then
+LPModes[a].FUNC()
+end
+end
+wait()
+if Bools[v.Name] == false then
+v.Btn.Text = "OFF"
+v.Btn.BackgroundColor3 = OffCol
+v.Btn.BorderColor3 = bOffCol
+elseif Bools[v.Name] == true then
+v.Btn.Text = "ON"
+v.Btn.BackgroundColor3 = OnCol
+v.Btn.BorderColor3 = bOnCol
+end
+end
+end)
+end)
+end
+
+spawn(function()
+for _, v in pairs(Btns:GetChildren()) do
+v.MouseButton1Click:connect(function()
+for _, b in pairs(Btns:GetChildren()) do
+if b ~= v then
+b.BackgroundColor3 = OffCol
+b.BorderColor3 = bOffCol
+else
+b.BackgroundColor3 = OnCol
+b.BorderColor3 = bOnCol
+end
+end
+for _, b in pairs(v.Parent.Parent:GetChildren()) do
+if b:IsA("Frame") and b.Name ~= "Buttons" and b.Name ~= "Line" and b.Name ~= v.Name then
+b.Visible = false
+elseif b.Name == v.Name then
+b.Visible = true
+end
+end
+end)
+end
+end)
+
+spawn(function()
+for _, v in pairs(sBtns:GetChildren()) do
+v.MouseButton1Click:connect(function()
+for _, b in pairs(sBtns:GetChildren()) do
+if b ~= v then
+b.BackgroundColor3 = OffCol
+b.BorderColor3 = bOffCol
+else
+b.BackgroundColor3 = OnCol
+b.BorderColor3 = bOnCol
+end
+end
+for _, b in pairs(v.Parent.Parent:GetChildren()) do
+if b:IsA("Frame") and b.Name ~= "Buttons" and b.Name ~= "Line" and b.Name ~= v.Name then
+b.Visible = false
+elseif b.Name == v.Name then
+b.Visible = true
+end
+end
+end)
+end
+end)

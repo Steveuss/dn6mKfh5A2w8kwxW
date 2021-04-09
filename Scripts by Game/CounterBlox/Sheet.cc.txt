@@ -1,0 +1,1153 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local scheetcc = Instance.new("ScreenGui")
+local stt = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local aim = Instance.new("ImageButton")
+local vis = Instance.new("ImageButton")
+local misc = Instance.new("ImageButton")
+local visualfatyt = Instance.new("Frame")
+local boxenable = Instance.new("TextButton")
+local nadeesp = Instance.new("TextButton")
+local zuhnmode = Instance.new("TextButton")
+local boxenablelabel = Instance.new("TextLabel")
+local nadeesplabel = Instance.new("TextLabel")
+local zuhnmodelabel = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local aimfart = Instance.new("Frame")
+local aimenablelabel = Instance.new("TextLabel")
+local fovlabel = Instance.new("TextLabel")
+local smoothlabel = Instance.new("TextLabel")
+local smooth = Instance.new("TextBox")
+local fov = Instance.new("TextBox")
+local aimenable = Instance.new("TextButton")
+local misc_2 = Instance.new("Frame")
+local backtrack = Instance.new("TextButton")
+local bhop = Instance.new("TextButton")
+local hitsound = Instance.new("TextButton")
+local backtracklabel = Instance.new("TextLabel")
+local bhoplabel = Instance.new("TextLabel")
+local hitsoundlabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+--Properties:
+scheetcc.Name = "scheet.cc"
+scheetcc.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+scheetcc.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+stt.Name = "stt"
+stt.Parent = scheetcc
+stt.BackgroundColor3 = Color3.new(1, 1, 1)
+stt.BorderSizePixel = 3
+stt.Position = UDim2.new(0.338881493, 0, 0.263984382, 0)
+stt.Size = UDim2.new(0, 617, 0, 509)
+
+ImageLabel.Parent = stt
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 3
+ImageLabel.Size = UDim2.new(0, 617, 0, 509)
+ImageLabel.Image = "rbxassetid://11001487"
+
+ImageLabel_2.Parent = stt
+ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 3
+ImageLabel_2.Size = UDim2.new(0, 148, 0, 144)
+ImageLabel_2.Image = "rbxassetid://2583536"
+
+ImageLabel_3.Parent = stt
+ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 3
+ImageLabel_3.Position = UDim2.new(0, 0, 0.282907665, 0)
+ImageLabel_3.Size = UDim2.new(0, 148, 0, 365)
+ImageLabel_3.Image = "rbxassetid://36622253"
+
+aim.Name = "aim"
+aim.Parent = ImageLabel_3
+aim.BackgroundColor3 = Color3.new(1, 1, 1)
+aim.BorderColor3 = Color3.new(0, 0, 0)
+aim.BorderSizePixel = 3
+aim.Position = UDim2.new(0.162162155, 0, 0.0493150689, 0)
+aim.Size = UDim2.new(0, 100, 0, 100)
+aim.Image = "rbxassetid://7738635"
+
+vis.Name = "vis"
+vis.Parent = ImageLabel_3
+vis.BackgroundColor3 = Color3.new(1, 1, 1)
+vis.BorderColor3 = Color3.new(0, 0, 0)
+vis.BorderSizePixel = 3
+vis.Position = UDim2.new(0.162162155, 0, 0.361643821, 0)
+vis.Size = UDim2.new(0, 100, 0, 100)
+vis.Image = "rbxassetid://8468108"
+
+misc.Name = "misc"
+misc.Parent = ImageLabel_3
+misc.BackgroundColor3 = Color3.new(1, 1, 1)
+misc.BorderColor3 = Color3.new(0, 0, 0)
+misc.BorderSizePixel = 3
+misc.Position = UDim2.new(0.162162155, 0, 0.69315064, 0)
+misc.Size = UDim2.new(0, 100, 0, 100)
+misc.Image = "rbxassetid://31619251"
+
+visualfatyt.Name = "visualfatyt"
+visualfatyt.Parent = stt
+visualfatyt.BackgroundColor3 = Color3.new(0, 0, 0)
+visualfatyt.BackgroundTransparency = 0.30000001192093
+visualfatyt.Position = UDim2.new(0.303079426, 0, 0.0864440054, 0)
+visualfatyt.Size = UDim2.new(0, 380, 0, 410)
+visualfatyt.Visible = false
+
+boxenable.Name = "boxenable"
+boxenable.Parent = visualfatyt
+boxenable.BackgroundColor3 = Color3.new(0, 0, 0)
+boxenable.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+boxenable.BorderSizePixel = 2
+boxenable.Position = UDim2.new(0.0375939868, 0, 0.0487804897, 0)
+boxenable.Size = UDim2.new(0, 20, 0, 20)
+boxenable.Font = Enum.Font.SourceSans
+boxenable.Text = ""
+boxenable.TextColor3 = Color3.new(0, 0, 0)
+boxenable.TextSize = 14
+boxenable.TextStrokeTransparency = 0
+
+nadeesp.Name = "nadeesp"
+nadeesp.Parent = visualfatyt
+nadeesp.BackgroundColor3 = Color3.new(0, 0, 0)
+nadeesp.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+nadeesp.BorderSizePixel = 2
+nadeesp.Position = UDim2.new(0.0375939868, 0, 0.275609761, 0)
+nadeesp.Size = UDim2.new(0, 20, 0, 20)
+nadeesp.Font = Enum.Font.SourceSans
+nadeesp.Text = ""
+nadeesp.TextColor3 = Color3.new(0, 0, 0)
+nadeesp.TextSize = 14
+nadeesp.TextStrokeTransparency = 0
+
+zuhnmode.Name = "zuhnmode"
+zuhnmode.Parent = visualfatyt
+zuhnmode.BackgroundColor3 = Color3.new(0, 0, 0)
+zuhnmode.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+zuhnmode.BorderSizePixel = 2
+zuhnmode.Position = UDim2.new(0.0375939608, 0, 0.192682922, 0)
+zuhnmode.Size = UDim2.new(0, 56, 0, 23)
+zuhnmode.Font = Enum.Font.SourceSans
+zuhnmode.Text = ""
+zuhnmode.TextColor3 = Color3.new(0, 0, 0)
+zuhnmode.TextSize = 14
+zuhnmode.TextStrokeTransparency = 0
+
+boxenablelabel.Name = "boxenablelabel"
+boxenablelabel.Parent = visualfatyt
+boxenablelabel.BackgroundColor3 = Color3.new(1, 1, 1)
+boxenablelabel.BackgroundTransparency = 1
+boxenablelabel.Position = UDim2.new(0.140977427, 0, 0.0414634123, 0)
+boxenablelabel.Size = UDim2.new(0, 115, 0, 25)
+boxenablelabel.Font = Enum.Font.Highway
+boxenablelabel.Text = "Enable Box Esp"
+boxenablelabel.TextColor3 = Color3.new(0.788235, 0.294118, 1)
+boxenablelabel.TextSize = 15
+
+nadeesplabel.Name = "nadeesplabel"
+nadeesplabel.Parent = visualfatyt
+nadeesplabel.BackgroundColor3 = Color3.new(1, 1, 1)
+nadeesplabel.BackgroundTransparency = 1
+nadeesplabel.Position = UDim2.new(0.185714275, 0, 0.268292695, 0)
+nadeesplabel.Size = UDim2.new(0, 82, 0, 25)
+nadeesplabel.Font = Enum.Font.Antique
+nadeesplabel.Text = "Nade Esp"
+nadeesplabel.TextColor3 = Color3.new(1, 0.596078, 0.780392)
+nadeesplabel.TextSize = 15
+
+zuhnmodelabel.Name = "zuhnmodelabel"
+zuhnmodelabel.Parent = visualfatyt
+zuhnmodelabel.BackgroundColor3 = Color3.new(1, 1, 1)
+zuhnmodelabel.BackgroundTransparency = 1
+zuhnmodelabel.Position = UDim2.new(0.198872179, 0, 0.192682937, 0)
+zuhnmodelabel.Size = UDim2.new(0, 91, 0, 25)
+zuhnmodelabel.Font = Enum.Font.ArialBold
+zuhnmodelabel.Text = "Zuhn mode"
+zuhnmodelabel.TextColor3 = Color3.new(1, 0.192157, 0.192157)
+zuhnmodelabel.TextSize = 15
+
+TextLabel.Parent = stt
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.418084085, 0, 0.87677896, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "SCHEET.CC"
+TextLabel.TextColor3 = Color3.new(1, 0.001, 1)
+TextLabel.TextSize = 20
+
+aimfart.Name = "aimfart"
+aimfart.Parent = stt
+aimfart.BackgroundColor3 = Color3.new(0, 0, 0)
+aimfart.BackgroundTransparency = 0.30000001192093
+aimfart.Position = UDim2.new(0.303079426, 0, 0.0864440054, 0)
+aimfart.Size = UDim2.new(0, 380, 0, 410)
+aimfart.Visible = false
+
+aimenablelabel.Name = "aimenablelabel"
+aimenablelabel.Parent = aimfart
+aimenablelabel.BackgroundColor3 = Color3.new(1, 1, 1)
+aimenablelabel.BackgroundTransparency = 1
+aimenablelabel.Position = UDim2.new(0.175939858, 0, 0.0487804897, 0)
+aimenablelabel.Size = UDim2.new(0, 109, 0, 25)
+aimenablelabel.Font = Enum.Font.ArialBold
+aimenablelabel.Text = "AIM ASSIST MOUSE1"
+aimenablelabel.TextColor3 = Color3.new(1, 0.945098, 0.305882)
+aimenablelabel.TextSize = 15
+
+fovlabel.Name = "fovlabel"
+fovlabel.Parent = aimfart
+fovlabel.BackgroundColor3 = Color3.new(1, 1, 1)
+fovlabel.BackgroundTransparency = 1
+fovlabel.Position = UDim2.new(0.295864642, 0, 0.165853664, 0)
+fovlabel.Size = UDim2.new(0, 61, 0, 25)
+fovlabel.Font = Enum.Font.Arcade
+fovlabel.Text = "FOV"
+fovlabel.TextColor3 = Color3.new(0.792157, 0.298039, 1)
+fovlabel.TextSize = 15
+
+smoothlabel.Name = "smoothlabel"
+smoothlabel.Parent = aimfart
+smoothlabel.BackgroundColor3 = Color3.new(1, 1, 1)
+smoothlabel.BackgroundTransparency = 1
+smoothlabel.Position = UDim2.new(0.224812016, 0, 0.104878046, 0)
+smoothlabel.Size = UDim2.new(0, 115, 0, 25)
+smoothlabel.Font = Enum.Font.GothamBlack
+smoothlabel.Text = "Smoothness"
+smoothlabel.TextColor3 = Color3.new(1, 0.188235, 0.160784)
+smoothlabel.TextSize = 15
+
+smooth.Name = "smooth"
+smooth.Parent = aimfart
+smooth.BackgroundColor3 = Color3.new(0.772549, 0, 0.603922)
+smooth.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+smooth.BorderSizePixel = 2
+smooth.Position = UDim2.new(0.0375939831, 0, 0.117073171, 0)
+smooth.Size = UDim2.new(0, 65, 0, 15)
+smooth.Font = Enum.Font.Bodoni
+smooth.Text = "14"
+smooth.TextColor3 = Color3.new(1, 1, 1)
+smooth.TextSize = 14
+
+fov.Name = "fov"
+fov.Parent = aimfart
+fov.BackgroundColor3 = Color3.new(0.188235, 0.635294, 0.180392)
+fov.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+fov.BorderSizePixel = 2
+fov.Position = UDim2.new(0.0375939831, 0, 0.17804879, 0)
+fov.Size = UDim2.new(0, 65, 0, 15)
+fov.Font = Enum.Font.Arcade
+fov.Text = "100"
+fov.TextColor3 = Color3.new(1, 1, 1)
+fov.TextSize = 14
+
+aimenable.Name = "aimenable"
+aimenable.Parent = aimfart
+aimenable.BackgroundColor3 = Color3.new(0, 0, 0)
+aimenable.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+aimenable.BorderSizePixel = 2
+aimenable.Position = UDim2.new(0.0375939868, 0, 0.0487804897, 0)
+aimenable.Size = UDim2.new(0, 20, 0, 20)
+aimenable.Font = Enum.Font.SourceSans
+aimenable.Text = ""
+aimenable.TextColor3 = Color3.new(0, 0, 0)
+aimenable.TextSize = 14
+aimenable.TextStrokeTransparency = 0
+
+misc_2.Name = "misc"
+misc_2.Parent = stt
+misc_2.BackgroundColor3 = Color3.new(0, 0, 0)
+misc_2.BackgroundTransparency = 0.30000001192093
+misc_2.Position = UDim2.new(0.303079426, 0, 0.0864440054, 0)
+misc_2.Size = UDim2.new(0, 380, 0, 410)
+misc_2.Visible = false
+
+backtrack.Name = "backtrack"
+backtrack.Parent = misc_2
+backtrack.BackgroundColor3 = Color3.new(0, 0, 0)
+backtrack.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+backtrack.BorderSizePixel = 2
+backtrack.Position = UDim2.new(0.0375939868, 0, 0.0487804897, 0)
+backtrack.Size = UDim2.new(0, 20, 0, 20)
+backtrack.Font = Enum.Font.SourceSans
+backtrack.Text = ""
+backtrack.TextColor3 = Color3.new(0, 0, 0)
+backtrack.TextSize = 14
+backtrack.TextStrokeTransparency = 0
+
+bhop.Name = "bhop"
+bhop.Parent = misc_2
+bhop.BackgroundColor3 = Color3.new(0, 0, 0)
+bhop.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+bhop.BorderSizePixel = 2
+bhop.Position = UDim2.new(0.0375939868, 0, 0.124390244, 0)
+bhop.Size = UDim2.new(0, 20, 0, 20)
+bhop.Font = Enum.Font.SourceSans
+bhop.Text = ""
+bhop.TextColor3 = Color3.new(0, 0, 0)
+bhop.TextSize = 14
+bhop.TextStrokeTransparency = 0
+
+hitsound.Name = "hitsound"
+hitsound.Parent = misc_2
+hitsound.BackgroundColor3 = Color3.new(0, 0, 0)
+hitsound.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+hitsound.BorderSizePixel = 2
+hitsound.Position = UDim2.new(0.0375939868, 0, 0.202439025, 0)
+hitsound.Size = UDim2.new(0, 20, 0, 20)
+hitsound.Font = Enum.Font.SourceSans
+hitsound.Text = ""
+hitsound.TextColor3 = Color3.new(0, 0, 0)
+hitsound.TextSize = 14
+hitsound.TextStrokeTransparency = 0
+
+backtracklabel.Name = "backtracklabel"
+backtracklabel.Parent = misc_2
+backtracklabel.BackgroundColor3 = Color3.new(1, 1, 1)
+backtracklabel.BackgroundTransparency = 1
+backtracklabel.Position = UDim2.new(0.0883458629, 0, 0.0414634161, 0)
+backtracklabel.Size = UDim2.new(0, 131, 0, 25)
+backtracklabel.Font = Enum.Font.Gotham
+backtracklabel.Text = "Enable Backtrack"
+backtracklabel.TextColor3 = Color3.new(1, 1, 1)
+backtracklabel.TextSize = 15
+
+bhoplabel.Name = "bhoplabel"
+bhoplabel.Parent = misc_2
+bhoplabel.BackgroundColor3 = Color3.new(1, 1, 1)
+bhoplabel.BackgroundTransparency = 1
+bhoplabel.Position = UDim2.new(0.0883458629, 0, 0.117073171, 0)
+bhoplabel.Size = UDim2.new(0, 102, 0, 25)
+bhoplabel.Font = Enum.Font.Gotham
+bhoplabel.Text = "Enable Bhop"
+bhoplabel.TextColor3 = Color3.new(1, 1, 1)
+bhoplabel.TextSize = 15
+
+hitsoundlabel.Name = "hitsoundlabel"
+hitsoundlabel.Parent = misc_2
+hitsoundlabel.BackgroundColor3 = Color3.new(1, 1, 1)
+hitsoundlabel.BackgroundTransparency = 1
+hitsoundlabel.Position = UDim2.new(0.0883458629, 0, 0.195121944, 0)
+hitsoundlabel.Size = UDim2.new(0, 131, 0, 25)
+hitsoundlabel.Font = Enum.Font.Gotham
+hitsoundlabel.Text = "Enable Hitsound"
+hitsoundlabel.TextColor3 = Color3.new(1, 1, 1)
+hitsoundlabel.TextSize = 15
+
+Frame.Parent = scheetcc
+Frame.BackgroundColor3 = Color3.new(1, 0, 0.0156863)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.453882217, 0, 0.462037027, 0)
+Frame.Size = UDim2.new(0, 10, 0, 10)
+-- Scripts:
+function SCRIPT_DPYT67_FAKESCRIPT() -- aim.st 
+local script = Instance.new('LocalScript')
+script.Parent = aim
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_DPYT67_FAKESCRIPT))
+function SCRIPT_UEMZ79_FAKESCRIPT() -- vis.st 
+local script = Instance.new('LocalScript')
+script.Parent = vis
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_UEMZ79_FAKESCRIPT))
+function SCRIPT_ZOHR71_FAKESCRIPT() -- misc.st 
+local script = Instance.new('LocalScript')
+script.Parent = misc
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ZOHR71_FAKESCRIPT))
+function SCRIPT_VMFC84_FAKESCRIPT() -- ImageLabel_3.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = ImageLabel_3
+
+invis=function()
+script.Parent.Parent.visualfatyt.Visible=false
+script.Parent.Parent.aimfart.Visible=false
+script.Parent.Parent.misc.Visible=false
+end
+
+script.Parent.aim.MouseButton1Click:Connect(function()
+invis()
+script.Parent.Parent.aimfart.Visible=true
+end)
+script.Parent.vis.MouseButton1Click:Connect(function()
+invis()
+script.Parent.Parent.visualfatyt.Visible=true
+end)
+script.Parent.misc.MouseButton1Click:Connect(function()
+invis()
+script.Parent.Parent.misc.Visible=true
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VMFC84_FAKESCRIPT))
+function SCRIPT_EDJG74_FAKESCRIPT() -- boxenable.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = boxenable
+
+
+script.Parent.MouseButton1Down:Connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+local daswelp=Instance.new('BillboardGui')
+daswelp.AlwaysOnTop = true
+daswelp.Size = UDim2.new(2,1,2)
+stop=Instance.new('Folder',game.CoreGui)
+stop.Name='BOX'
+lc=function(v)
+repeat wait()until v.Character~=nil
+v.Character:WaitForChild'Humanoid'
+local nietzop=stop:FindFirstChild(v.Name)
+nietzop:ClearAllChildren()
+local b=daswelp:Clone()
+local frame=Instance.new('Frame',b)
+b.Name=v.Name..' k'
+b.Adornee=v.Character
+b.Parent=nietzop
+frame.BorderColor3=Color3.fromRGB(0,0,0)
+frame.BackgroundTransparency = 0.5
+frame.BorderSizePixel=3
+frame.Size = UDim2.new(2,0,3.3,0)
+frame.Position=UDim2.new(-0.5,0,-1.2,0)
+frame.Name='Frame'
+b.Frame.BackgroundColor3=Color3.new(v.TeamColor.r,v.TeamColor.g,v.TeamColor.b)
+end
+uc=function(v)
+local nietzop=stop:FindFirstChild(v.Name)
+if nietzop and nietzop:FindFirstChild(v.Name..'watgajewollahzeggen')~= nil then
+nietzop:ClearAllChildren()
+end
+end
+lp=function(v)
+local nietzop=Instance.new('Folder',stop)
+nietzop.Name=v.Name
+v.CharacterAdded:connect(function()
+pcall(lc,v)
+end)
+v.CharacterRemoving:connect(function()
+pcall(uc,v)
+end)
+lc(v)
+end
+up=function(v)
+uc(v)
+local nietzop=stop:FindFirstChild(v.Name)
+if nietzop then
+nietzop:Destroy()
+end
+end
+for _,v in pairs(game:service'Players':GetPlayers()) do
+if v.Name==game.Players.LocalPlayer.Name then
+print()
+else
+spawn(function() pcall(lp,v) end)
+end
+game:service'Players'.PlayerAdded:connect(function(v)
+pcall(lp,v)
+end)
+game:service'Players'.PlayerRemoving:connect(function(v)
+pcall(up,v)
+end)
+game.ItemChanged:connect(function(piele,insert)
+if piele.ClassName=='Player' and insert=='TeamColor' then
+if stop:FindFirstChild(insert.Name) then
+uc(insert)
+lc(insert)
+end
+end
+end)
+end
+else
+for _,v in pairs(game.CoreGui:GetDescendants()) do
+if v.Name=='BOX' then
+v:destroy()
+end
+end
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_EDJG74_FAKESCRIPT))
+function SCRIPT_ZLCI75_FAKESCRIPT() -- boxenable.st 
+local script = Instance.new('LocalScript')
+script.Parent = boxenable
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ZLCI75_FAKESCRIPT))
+function SCRIPT_KKWW85_FAKESCRIPT() -- nadeesp.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = nadeesp
+
+
+
+script.Parent.MouseButton1Down:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+else
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+end
+end)
+workspace.Debris.ChildAdded:Connect(function(instance)
+if script.Parent.BackgroundColor3==Color3.fromRGB(80,80,80) then
+if instance.Name == "Model" then 
+local daswelp=Instance.new'BoxHandleAdornment'
+local bb = Instance.new("BillboardGui")
+local frame = Instance.new("Frame", bb)
+local text = Instance.new("TextLabel", frame)
+bb.Adornee=instance
+bb.ExtentsOffset = Vector3.new(0, 1, 0)
+bb.AlwaysOnTop = true
+bb.Size = UDim2.new(0, 10, 0, 10)
+bb.Parent=game.CoreGui
+frame.ZIndex=10
+frame.BackgroundTransparency=1
+frame.Size = UDim2.new(1, 0, 1, 0)
+text.Name = "piel"
+text.TextSize = 15
+text.ZIndex=10
+text.TextStrokeTransparency = 0.5
+text.Size = UDim2.new(2, 0, 20, 0)
+text.Position = UDim2.new(0, 0, 0, -100)
+pcall(function()
+local poep = instance:WaitForChild("PinS")
+local poepie = instance:WaitForChild("Handle2")
+text.Text='MOLOTOV'
+if poep.MeshId == "rbxassetid://1744165270" then
+text.Text="MOLOTOV"
+end
+if poep.MeshId == "rbxassetid://1744179314" then
+text.Text="FLASH/DECOY"
+end
+if poep.MeshId == "rbxassetid://1395107625" then
+text.Text="GRENADE"
+end
+if poep.MeshId == "rbxassetid://1744165270" then
+text.Text="SMOKE"
+end
+end)
+text.BackgroundTransparency = 1
+text.Font = "SourceSansBold"
+daswelp.Name='ok'
+daswelp.Size=Vector3.new(0.5,1,0.5)
+daswelp.Transparency=0.3
+daswelp.ZIndex=0
+daswelp.AlwaysOnTop=true
+daswelp.Visible=true
+daswelp.Parent=game.CoreGui
+daswelp.Adornee=instance
+daswelp.Color3=Color3.new(255,10,10)
+wait(5)
+daswelp:Destroy()
+bb:Destroy()
+end
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_KKWW85_FAKESCRIPT))
+function SCRIPT_GQOF71_FAKESCRIPT() -- nadeesp.st 
+local script = Instance.new('LocalScript')
+script.Parent = nadeesp
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_GQOF71_FAKESCRIPT))
+function SCRIPT_LQVY80_FAKESCRIPT() -- zuhnmode.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = zuhnmode
+
+local zuhnny=Instance.new('ColorCorrectionEffect',workspace.CurrentCamera)
+script.Parent.MouseButton1Down:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+zuhnny.Saturation=1.2
+else
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+zuhnny.Saturation=0
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_LQVY80_FAKESCRIPT))
+function SCRIPT_UCEO77_FAKESCRIPT() -- zuhnmode.st 
+local script = Instance.new('LocalScript')
+script.Parent = zuhnmode
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_UCEO77_FAKESCRIPT))
+function SCRIPT_YHJI86_FAKESCRIPT() -- TextLabel.st 
+local script = Instance.new('LocalScript')
+script.Parent = TextLabel
+
+local texts={
+'scheet.cc',
+'dampoe lol',
+'FART XDDD',
+'lol this funny',
+'i need friends',
+'made by SjorsApenWorst#7911',
+'not skidded!',
+'scheet.cc',
+'SCHEET IS FART OK?',
+
+}
+decidething=function()
+local i=0
+local o=0
+for n,lol in pairs(texts) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,lol in pairs(texts) do
+o=o+1
+if n==randomchooser then
+script.Parent.Text=lol
+end
+end
+end
+
+while wait(0.25) do
+decidething()
+end
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_YHJI86_FAKESCRIPT))
+function SCRIPT_HTGV79_FAKESCRIPT() -- aimenable.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = aimenable
+
+
+script.Parent.MouseButton1Down:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+else
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+end
+end)
+
+game['Run Service'].Stepped:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(80,80,80) then
+local smallest = math.huge
+local inptSrvc = game:GetService("UserInputService")
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local mouse = plr:getMouse()
+local smoothamount = tonumber(script.Parent.Parent.smooth.Text)
+local fov = tonumber(script.Parent.Parent.fov.Text)
+for _,v in next, game:service'Players':GetPlayers() do
+if v.Name ~= game.Players.LocalPlayer.Name then
+if v.Team ~= game.Players.LocalPlayer.Team then
+pcall(function()
+if v.Character.Humanoid.Health > 0 then
+local plr = plrs.LocalPlayer
+local mouse = plr:GetMouse()
+local camera = workspace.CurrentCamera
+local worldPoint = v.Character.Head.Position
+local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
+local magnitude = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(vector.X, vector.Y)).magnitude
+if smallest>magnitude then
+smallest=magnitude
+new user=v
+end
+end
+end)
+end
+end
+end
+if smallest < fov then 
+if inptSrvc:IsMouseButtonPressed(0) then
+local worldPoint = new user.Character.Head.Position
+local camera = workspace.CurrentCamera
+local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
+local magnitudeX = mouse.X - vector.X
+local magnitudeY = mouse.Y - vector.Y
+wait()
+local legitX = magnitudeX/smoothamount
+local legitY = magnitudeY/smoothamount
+mousemoverel(-legitX,-legitY)
+end
+end
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_HTGV79_FAKESCRIPT))
+function SCRIPT_JCPN80_FAKESCRIPT() -- backtrack.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = backtrack
+
+
+script.Parent.MouseButton1Down:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+else
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+end
+end)
+
+local Remote = game.ReplicatedStorage.Events['HitPart']
+local inptSrvc = game:GetService("UserInputService")
+
+game['Run Service'].Stepped:connect(function()
+m=game:service'Players'.LocalPlayer:GetMouse()
+pcall(function()
+if inptSrvc:IsMouseButtonPressed(0) then
+if m.Target.Name=="fakebacktrackheadok" then
+local kanker=m.Target.poop
+local Arguments = {
+[1] = workspace[kanker.Value].Head,
+[2] = workspace[kanker.Value].Head.Position,
+[3] = workspace[game.Players.LocalPlayer.Name].EquippedTool.Value,
+[4] = 1,
+[5] = workspace[game.Players.LocalPlayer.Name].Gun,
+[8] = 1,
+[9] = false,
+[10] = false,
+[11] = Vector3.new(),
+[12] = 100,
+[13] = Vector3.new()
+}
+Remote:FireServer(unpack(Arguments))
+workspace.HITSOUNDKANGA:Play()
+end
+end
+end)
+if script.Parent.BackgroundColor3==Color3.fromRGB(80,80,80) then
+local smallest = math.huge
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local mouse = plr:getMouse()
+local smoothamount = 1
+local fov = 500
+for _,v in next, game:service'Players':GetPlayers() do
+if v.Name ~= game.Players.LocalPlayer.Name then
+if v.Team ~= game.Players.LocalPlayer.Team then
+pcall(function()
+if v.Character.Humanoid.Health > 0 then
+local plr = plrs.LocalPlayer
+local mouse = plr:GetMouse()
+local camera = workspace.CurrentCamera
+local worldPoint = v.Character.Head.Position
+local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
+local magnitude = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(vector.X, vector.Y)).magnitude
+if smallest>magnitude then
+smallest=magnitude
+new user=v
+end
+end
+end)
+end
+end
+end
+if smallest < fov then 
+if inptSrvc:IsMouseButtonPressed(0) then
+local worldPoint = new user.Character.Head.Position
+local camera = workspace.CurrentCamera
+local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
+local magnitudeX = mouse.X - vector.X
+local magnitudeY = mouse.Y - vector.Y
+wait()
+
+local fakehead=Instance.new("Part")
+local who=Instance.new("StringValue")
+fakehead.CanCollide=false
+fakehead.Parent=workspace
+fakehead.Position=new user.Character.Head.Position
+fakehead.Anchored=true
+fakehead.Size=new user.Character.Head.Size
+fakehead.BrickColor=BrickColor.new('White')
+fakehead.Rotation=new user.Character.Head.Rotation
+fakehead.Transparency=0.25
+fakehead.Name='fakebacktrackheadok'
+who.Parent=fakehead
+who.Value=new user.Name
+who.Name="poop"
+spawn(function()
+wait(0.5)
+fakehead:Destroy()
+end)
+
+end
+end
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_JCPN80_FAKESCRIPT))
+function SCRIPT_QWYY65_FAKESCRIPT() -- backtrack.st 
+local script = Instance.new('LocalScript')
+script.Parent = backtrack
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_QWYY65_FAKESCRIPT))
+function SCRIPT_CHGO78_FAKESCRIPT() -- bhop.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = bhop
+
+local bhop=script.Parent
+local piel = getsenv(game.Players.LocalPlayer.PlayerGui.Client)
+local KeyHeld = false
+local backup = {}
+backup.speed = piel.speedupdate
+bhop.MouseButton1Down:connect(function()
+if bhop.BackgroundColor3==Color3.fromRGB(0,0,0) then
+bhop.BackgroundColor3=Color3.fromRGB(80,80,80)
+KeyHeld = false
+function onKeyPress(inputObject,gameProcessed)
+if inputObject.KeyCode == Enum.KeyCode.Space then
+wait()
+KeyHeld = true
+while KeyHeld do
+wait()
+if bhop.BackgroundColor3==Color3.fromRGB(80,80,80) then
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+piel.speedupdate = function()
+end
+end
+end
+end
+end
+function onKeyRelease(inputObject,gameProcessed)
+if inputObject.KeyCode == Enum.KeyCode.Space then
+KeyHeld = false
+wait(0.25)
+piel.speedupdate = backup.speed
+wait()
+end
+end
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+game:GetService("UserInputService").InputEnded:connect(onKeyRelease)
+piel.speedupdate = backup.speed
+else
+bhop.BackgroundColor3=Color3.fromRGB(0,0,0)
+piel.speedupdate = backup.speed
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_CHGO78_FAKESCRIPT))
+function SCRIPT_FPZY90_FAKESCRIPT() -- bhop.st 
+local script = Instance.new('LocalScript')
+script.Parent = bhop
+
+local fart=Instance.new('Sound',workspace)
+local fartnoises={
+'205144935',
+'265373272',
+'743178171',
+'276154553',
+'130833677'
+}
+decidefart=function()
+local i=0
+local o=0
+for n,farts in pairs(fartnoises) do
+i=i+1
+end
+local randomchooser=math.random(1,i)
+for n,farts in pairs(fartnoises) do
+o=o+1
+if n==randomchooser then
+fart.SoundId='rbxassetid://'..farts
+end
+end
+end
+
+script.Parent.MouseButton1Click:Connect(function()
+decidefart()
+fart:Play()
+end)
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_FPZY90_FAKESCRIPT))
+function SCRIPT_DIXJ83_FAKESCRIPT() -- hitsound.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = hitsound
+
+script.Parent.MouseButton1Down:connect(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(0, 0, 0) then
+script.Parent.BackgroundColor3=Color3.fromRGB(80,80,80)
+else
+script.Parent.BackgroundColor3=Color3.fromRGB(0,0,0)
+end
+end)
+local sound=Instance.new('Sound',workspace)
+sound.SoundId='rbxassetid://130833677'
+sound.Volume=10
+local mouse=game.Players.LocalPlayer:GetMouse()
+local LOOO = game:GetService("UserInputService")
+spawn(function()
+while wait() do
+pcall(function()
+if script.Parent.BackgroundColor3==Color3.fromRGB(80,80,80) then
+for _,v in pairs(game.Players:GetChildren()) do
+if v.Name~=game.Players.LocalPlayer.Name then
+if v.Status.Team.Value~=game.Players.LocalPlayer.Status.Team.Value then
+if mouse.Target.Parent==v.Character or mouse.Target.Parent==v then
+if LOOO:IsMouseButtonPressed(0) then
+sound:Play()
+end
+end
+end
+end
+end
+end
+end)
+end
+end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_DIXJ83_FAKESCRIPT))
+function SCRIPT_CHHZ78_FAKESCRIPT() -- Frame.LocalScript 
+local script = Instance.new('LocalScript')
+script.Parent = Frame
+
+
+
+
+
+game:GetService("UserInputService").InputBegan:connect(function(key)
+if key.KeyCode == Enum.KeyCode.Insert then
+if script.Parent.Parent.stt.Visible==true then
+script.Parent.Parent.stt.Visible=false
+script.Parent.Visible=false
+game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.LockCenter
+else
+script.Parent.Parent.stt.Visible=true
+script.Parent.Visible=true
+game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.Default 
+end
+end
+end)
+
+spawn(function()
+while wait() do
+local muis=game.Players.LocalPlayer:GetMouse()
+script.Parent.Position=UDim2.new(0,muis.X,0,muis.Y)
+if script.Parent.Visible==true then
+script.Parent.Visible=true
+else
+script.Parent.Visible=false
+end
+end
+end)
+
+
+
+end
+coroutine.resume(coroutine.create(SCRIPT_CHHZ78_FAKESCRIPT))
