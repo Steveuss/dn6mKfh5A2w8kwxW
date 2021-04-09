@@ -1,0 +1,240 @@
+-- init
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("Destroyer", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("Home", 5012544693)
+local section1 = page:addSection("Info")
+
+section1:addButton("Current cost: 0.00$", function()
+print("Clicked")
+end)
+section1:addButton("Current version: 1.0", function()
+print("Clicked")
+end)
+section1:addButton("Is patched: No", function()
+print("Clicked")
+end)
+section1:addButton("Status: Working", function()
+print("Clicked")
+end)
+section1:addTextbox("Notes", "Enter note here...", function(value, focusLost)
+print("Input", value)
+
+if focusLost then
+venyx:Notify("Notes", value)
+end
+end)
+
+-- second page
+
+local scripts = venyx:addPage("Scripts", 5012544693)
+local section1 = scripts:addSection("FE/Standart scripts")
+local section2 = scripts:addSection("Admin Scripts")
+
+-- inf jump
+section1:addButton("[FE] Infinite Jump, toggle: F", function()
+_G.infinjump = true
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+if _G.infinjump then
+if k:byte() == 32 then
+Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+Humanoid:ChangeState("Jumping")
+wait(0.1)
+Humanoid:ChangeState("Seated")
+end
+end
+end)
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+k = k:lower()
+if k == "f" then
+if _G.infinjump == true then
+_G.infinjump = false
+else
+_G.infinjump = true
+end
+end
+end)
+end)
+
+section1:addButton("[FE] Ctrl+Click TP", function()
+local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+Mouse.Button1Down:connect(function()
+if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+if not Mouse.Target then return end
+Plr.Character:MoveTo(Mouse.Hit.p)
+end)
+end)
+
+section1:addButton("[FE] N to noclip", function()
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "n" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Loaded')
+print('Press "N" to noclip')
+end)
+
+section1:addButton("[FE] Double Jump by Shadow Wortex", function()
+local UserInputService = game:GetService("UserInputService")
+local localPlayer = game.Players.LocalPlayer
+local character
+local humanoid
+local canDoubleJump = false
+local hasDoubleJumped = false
+local oldPowerlocal TIME_BETWEEN_JUMPS = 0.1
+local DOUBLE_JUMP_POWER_MULTIPLIER = 1.5
+function onJumpRequest()
+ if not character or not humanoid or not character:IsDescendantOf(workspace) or
+  humanoid:GetState() == Enum.HumanoidStateType.Dead then
+  return
+ end
+ if canDoubleJump and not hasDoubleJumped then
+  hasDoubleJumped = true
+  humanoid.JumpPower = oldPower * DOUBLE_JUMP_POWER_MULTIPLIER  humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+ end
+end
+local function characterAdded(newCharacter)
+ character = newCharacter
+ humanoid = newCharacter:WaitForChild("Humanoid")
+ hasDoubleJumped = false
+ canDoubleJump = false
+ oldPower = humanoid.JumpPower 
+ humanoid.StateChanged:connect(function(old, new)
+  if new == Enum.HumanoidStateType.Landed then
+   canDoubleJump = false
+   hasDoubleJumped = false
+   humanoid.JumpPower = oldPower  elseif new == Enum.HumanoidStateType.Freefall then
+   wait(TIME_BETWEEN_JUMPS)   canDoubleJump = true
+  end
+ end)
+end
+if localPlayer.Character then
+ characterAdded(localPlayer.Character)
+end
+localPlayer.CharacterAdded:connect(characterAdded)
+UserInputService.JumpRequest:connect(onJumpRequest)
+end)
+
+section1:addButton("[FE] Alt to float", function()
+local testsquadAIR    = {
+    Airwalk    = Enum.KeyCode.LeftAlt;
+ }
+ local ContextAction = Game:GetService("ContextActionService")
+ local RunService    = Game:GetService("RunService")
+ local function ForEach(t, f)
+    for Index, Value in pairs(t) do
+        f(Value, Index)
+    end
+ end _G.ForEach=ForEach;
+ local function Create(ClassName)
+    local Object = Instance.new(ClassName)
+    return function(Properties)
+        ForEach(Properties, function(Value, Property)
+            Object[Property] = Value
+        end)
+        return Object
+    end
+ end _G.Create=Create;
+ do
+    local airwalkState     = false
+    local currentPart    = nil
+    RunService.RenderStepped:connect(function()
+        if airwalkState then
+            if not currentPart then
+                warn "On"
+                currentPart = Create "Part" {
+                    Parent = workspace.CurrentCamera;
+                    Name = "AWP";
+                    Transparency = 1;
+                    Size = Vector3.new(2, 1, 2);
+                    Anchored = true;
+                }
+            end
+            local character = game.Players.LocalPlayer.Character
+            if character then
+                currentPart.CFrame = character.HumanoidRootPart.CFrame - Vector3.new(0, 3.6, 0)
+            end
+        else
+            if currentPart then
+                warn "Off"
+                currentPart:Destroy()
+                currentPart = nil
+            end        
+        end
+    end)
+    ContextAction:BindAction("Airwalk", function(_, InputState)
+        if InputState == Enum.UserInputState.Begin then
+            warn "float loaded"
+            airwalkState = not airwalkState
+        end
+    end, false, testsquadAIR.Airwalk)
+ end
+end)
+
+section1:addButton("[FE] Invisible", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Steveuss/robloxscripts/main/Misc/FE%20Compatable/FE%20Invisible.txt", true))()
+end)
+
+section2:addButton("[ADMIN] Inf Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+section2:addButton("[ADMIN] CMD-X", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/HFkyyd1H",true))()
+end)
+
+section2:addButton("[ADMIN] Dark Dex: Synapse Edition", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/BtPiJ9SJ'))()
+end)
+
+section2:addButton("[ADMIN] Dark Dex: v4", function()
+loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
+end)
+
+section2:addButton("[ADMIN] FE Trolling Admin", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Steveuss/robloxscripts/main/Admins/FE%20Trolling%20Admin.lua"))()
+end)
+
+
+-- third page
+local theme = venyx:addPage("Theme", 5012544693)
+local colors = theme:addSection("Colors")
+
+for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+colors:addColorPicker(theme, color, function(color3)
+venyx:setTheme(theme, color3)
+end)
+end
+
+-- 4-th page
+local theme = venyx:addPage("Credits", 5012544693)
+
+
+-- load
+venyx:SelectPage(venyx.pages[1], true)
