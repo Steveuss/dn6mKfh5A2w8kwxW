@@ -1,3 +1,3 @@
-# robloxscripts
+# dn6mKfh5A2w8kwxW
 
-credits by Kolisnyk
+dn6mKfh5A2w8kwxW
